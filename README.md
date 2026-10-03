@@ -1,4 +1,4 @@
-# MODEL WARS
+# rocket league ml bot
 
 ### Rocket League · Machine learning · An overnight student AI competition
 
