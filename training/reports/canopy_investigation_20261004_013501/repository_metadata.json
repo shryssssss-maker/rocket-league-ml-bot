@@ -1,0 +1,99 @@
+﻿{
+    "_id":  "68b9c6b89c760f6782d946f8",
+    "id":  "FlameF0X/CanoPy",
+    "private":  false,
+    "pipeline_tag":  "reinforcement-learning",
+    "tags":  [
+                 "rlgym",
+                 "rocket-league",
+                 "RLBot",
+                 "PPO",
+                 "reinforcement-learning",
+                 "license:apache-2.0",
+                 "region:us"
+             ],
+    "downloads":  0,
+    "likes":  0,
+    "modelId":  "FlameF0X/CanoPy",
+    "author":  "FlameF0X",
+    "sha":  "c171a3f6235d134556ff315c087bbea60056d727",
+    "lastModified":  "2025-09-05T15:03:59.000Z",
+    "gated":  false,
+    "disabled":  false,
+    "model-index":  null,
+    "config":  {
+
+               },
+    "cardData":  {
+                     "license":  "apache-2.0",
+                     "pipeline_tag":  "reinforcement-learning",
+                     "tags":  [
+                                  "rlgym",
+                                  "rocket-league",
+                                  "RLBot",
+                                  "PPO"
+                              ]
+                 },
+    "siblings":  [
+                     {
+                         "rfilename":  ".gitattributes",
+                         "blobId":  "a6344aac8c09253b3b630fb776ae94478aa0275b",
+                         "size":  1519
+                     },
+                     {
+                         "rfilename":  "README.md",
+                         "blobId":  "f4d7e9dd5117ac5545ea9405c3211e89b9cb2714",
+                         "size":  2724
+                     },
+                     {
+                         "rfilename":  "model/BOOK_KEEPING_VARS.json",
+                         "blobId":  "09872b6cd9f06bee123387b18c33d84a885c3479",
+                         "size":  410
+                     },
+                     {
+                         "rfilename":  "model/PPO_POLICY.pt",
+                         "blobId":  "edd220dce8337df1f411c891e7acbbc7886f46fa",
+                         "size":  275942,
+                         "lfs":  {
+                                     "sha256":  "54162458cc17b8e21530befd717796c41b41a58545b9fafd5bfd10f6fbc4208c",
+                                     "size":  275942,
+                                     "pointerSize":  131
+                                 }
+                     },
+                     {
+                         "rfilename":  "model/PPO_POLICY_OPTIMIZER.pt",
+                         "blobId":  "f407a3702489ece42324a6f1f4e064c237396193",
+                         "size":  552318,
+                         "lfs":  {
+                                     "sha256":  "e9493eb6d023bb9ca62e0891f28640141ac2687301a94a18a73c5ba472d5a303",
+                                     "size":  552318,
+                                     "pointerSize":  131
+                                 }
+                     },
+                     {
+                         "rfilename":  "model/PPO_VALUE_NET.pt",
+                         "blobId":  "02c06c47ae4a03e3e7608d6b8ca90e3ebc367538",
+                         "size":  230084,
+                         "lfs":  {
+                                     "sha256":  "94e313eb0c28b4ca5441a5a84a4e977d14ee2bf2de8cdf75851a482bb2bd6b13",
+                                     "size":  230084,
+                                     "pointerSize":  131
+                                 }
+                     },
+                     {
+                         "rfilename":  "model/PPO_VALUE_NET_OPTIMIZER.pt",
+                         "blobId":  "768e10fee74e2a4b698e7564c9f77b1244f776d3",
+                         "size":  460672,
+                         "lfs":  {
+                                     "sha256":  "1e0f702774361e43e5295f5f881ff68c6239e81673c64bb00579153d4534bae5",
+                                     "size":  460672,
+                                     "pointerSize":  131
+                                 }
+                     }
+                 ],
+    "spaces":  [
+
+               ],
+    "createdAt":  "2025-09-04T17:04:56.000Z",
+    "usedStorage":  1519016
+}

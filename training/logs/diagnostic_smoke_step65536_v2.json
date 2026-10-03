@@ -1,0 +1,1113 @@
+{
+  "format_version": 1,
+  "checkpoint_step": 65536,
+  "checkpoint_config": {
+    "seed": 42,
+    "num_envs": 4,
+    "rollout_steps": 256,
+    "hidden_size": 128,
+    "episode_seconds": 8.0,
+    "learning_rate": 0.0003,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "clip_ratio": 0.2,
+    "epochs": 4,
+    "minibatch_size": 256,
+    "entropy_coef": 0.01,
+    "value_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "target_kl": 0.03,
+    "checkpoint_interval": 32768,
+    "scenario": "touch",
+    "opponent_version": "v1",
+    "reward_name": "goal0_touch1_approach0.02_face0.01_air0.001",
+    "ground_only": false,
+    "approach_weight": 0.02,
+    "goal_weight": 0.0,
+    "touch_weight": 1.0,
+    "face_weight": 0.01,
+    "air_weight": 0.001
+  },
+  "contract": {
+    "observation": "RLGym DefaultObs 92 float32",
+    "obs_config": {
+      "zero_padding": null,
+      "pos_coef": 0.0004347826086956522,
+      "ang_coef": 0.3183098861837907,
+      "lin_vel_coef": 0.0004347826086956522,
+      "ang_vel_coef": 0.3183098861837907,
+      "pad_timer_coef": 0.1,
+      "boost_coef": 0.01
+    },
+    "action_table": [
+      [
+        -1,
+        -1,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        -1,
+        -1,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        -1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        -1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        -1,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        -1,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        -1,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        -1,
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        -1,
+        0,
+        -1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        -1,
+        -1,
+        -1,
+        -1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        -1,
+        -1,
+        -1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        -1,
+        -1,
+        -1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        -1,
+        -1,
+        -1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        -1,
+        -1,
+        -1,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1,
+        0,
+        -1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        -1,
+        0,
+        -1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1,
+        0,
+        -1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        -1,
+        0,
+        -1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        -1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        -1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        -1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        -1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        -1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        -1,
+        1,
+        -1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        -1,
+        1,
+        -1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        -1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        -1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        -1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        -1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        -1,
+        0,
+        -1,
+        -1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        -1,
+        0,
+        -1,
+        -1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        -1,
+        0,
+        -1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        -1,
+        0,
+        -1,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        -1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        -1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        -1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        -1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        -1,
+        1,
+        -1,
+        -1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        -1,
+        1,
+        -1,
+        -1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        -1,
+        1,
+        -1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        -1,
+        1,
+        -1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        -1,
+        1,
+        -1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        -1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        -1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        -1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        -1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        -1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        -1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ]
+    ],
+    "action_repeat": 8,
+    "physics_ticks_per_second": 120,
+    "rlbot_delay": true,
+    "control_order": [
+      "throttle",
+      "steer",
+      "pitch",
+      "yaw",
+      "roll",
+      "jump",
+      "boost",
+      "handbrake"
+    ]
+  },
+  "versions": {
+    "torch": "2.11.0+cu128",
+    "rlgym": "2.0.1",
+    "rlgym-api": "2.0.0",
+    "rlgym-rocket-league": "2.0.1",
+    "rocketsim": "2.2.1",
+    "numpy": "1.26.4"
+  },
+  "fixture": {
+    "scenario": "bridge",
+    "seconds": 0.2,
+    "episodes": 1,
+    "seed": 5000,
+    "mode": "argmax",
+    "action_seed": 3000
+  },
+  "summary": {
+    "steps": 3,
+    "episodes": 1,
+    "positive_approach_steps": 3,
+    "positive_approach_without_throttle_or_boost": 0,
+    "no_propulsion_fraction_of_positive_approach": 0.0,
+    "positive_approach_reward_without_throttle_or_boost": 0,
+    "total_approach_reward": 0.005759763137153957,
+    "total_touch_reward": 0.0
+  },
+  "steps": [
+    {
+      "episode": 0,
+      "step": 1,
+      "time_seconds": 0.06666666666666667,
+      "learner": "blue-0",
+      "action_id": 39,
+      "action": {
+        "throttle": 1.0,
+        "steer": 0.0,
+        "pitch": -1.0,
+        "yaw": 0.0,
+        "roll": 1.0,
+        "jump": 0.0,
+        "boost": 1.0,
+        "handbrake": 0.0
+      },
+      "reward": {
+        "touch": 0.0,
+        "approach": 0.0005502198675404424,
+        "face": 0.0005850041311548763,
+        "air": 0.0,
+        "goal": 0.0,
+        "total": 0.0011352239986953186
+      },
+      "state": {
+        "speed_before": 0.0,
+        "speed_after": 136.69972229003906,
+        "speed_change": 136.69972229003906,
+        "velocity_toward_ball_before": 0.0,
+        "velocity_toward_ball_after": 134.55343627929688,
+        "velocity_toward_ball_change": 134.55343627929688,
+        "distance_to_ball_before": 613.8421630859375,
+        "distance_to_ball_after": 609.624267578125,
+        "distance_progress": 4.2178955078125,
+        "car_progress_toward_start_ball": 4.218352317810059,
+        "on_ground_before": true,
+        "on_ground_after": true,
+        "ball_touches": 0
+      },
+      "terminated": false,
+      "truncated": false
+    },
+    {
+      "episode": 0,
+      "step": 2,
+      "time_seconds": 0.13333333333333333,
+      "learner": "blue-0",
+      "action_id": 39,
+      "action": {
+        "throttle": 1.0,
+        "steer": 0.0,
+        "pitch": -1.0,
+        "yaw": 0.0,
+        "roll": 1.0,
+        "jump": 0.0,
+        "boost": 1.0,
+        "handbrake": 0.0
+      },
+      "reward": {
+        "touch": 0.0,
+        "approach": 0.0019477833042974054,
+        "face": 0.001268336252580617,
+        "air": 0.0,
+        "goal": 0.0,
+        "total": 0.0032161195568780224
+      },
+      "state": {
+        "speed_before": 136.69972229003906,
+        "speed_after": 296.6239318847656,
+        "speed_change": 159.92420959472656,
+        "velocity_toward_ball_before": 134.55343627929688,
+        "velocity_toward_ball_after": 291.7293395996094,
+        "velocity_toward_ball_change": 157.1759033203125,
+        "distance_to_ball_before": 609.624267578125,
+        "distance_to_ball_after": 594.6973266601562,
+        "distance_progress": 14.92694091796875,
+        "car_progress_toward_start_ball": 14.933005332946777,
+        "on_ground_before": true,
+        "on_ground_after": true,
+        "ball_touches": 0
+      },
+      "terminated": false,
+      "truncated": false
+    },
+    {
+      "episode": 0,
+      "step": 3,
+      "time_seconds": 0.2,
+      "learner": "blue-0",
+      "action_id": 39,
+      "action": {
+        "throttle": 1.0,
+        "steer": 0.0,
+        "pitch": -1.0,
+        "yaw": 0.0,
+        "roll": 1.0,
+        "jump": 0.0,
+        "boost": 1.0,
+        "handbrake": 0.0
+      },
+      "reward": {
+        "touch": 0.0,
+        "approach": 0.003261759965316109,
+        "face": 0.0019033681341983856,
+        "air": 0.0,
+        "goal": 0.0,
+        "total": 0.0051651280995144945
+      },
+      "state": {
+        "speed_before": 296.6239318847656,
+        "speed_after": 445.81622314453125,
+        "speed_change": 149.19229125976562,
+        "velocity_toward_ball_before": 291.7293395996094,
+        "velocity_toward_ball_after": 437.7942810058594,
+        "velocity_toward_ball_change": 146.06494140625,
+        "distance_to_ball_before": 594.6973266601562,
+        "distance_to_ball_after": 569.7090454101562,
+        "distance_progress": 24.98828125,
+        "car_progress_toward_start_ball": 25.006826400756836,
+        "on_ground_before": true,
+        "on_ground_after": true,
+        "ball_touches": 0
+      },
+      "terminated": false,
+      "truncated": true
+    }
+  ],
+  "checkpoint": "C:\\Users\\shreyas\\Desktop\\model wars\\training\\checkpoints\\early_reward_probe_v1\\baseline_step_65536.pt"
+}

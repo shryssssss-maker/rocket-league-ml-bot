@@ -1,0 +1,285 @@
+{
+  "repository_revision": "c171a3f6235d134556ff315c087bbea60056d727",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "versions": {
+    "torch": "2.11.0+cu128",
+    "rlgym": "2.0.1",
+    "rlgym-api": "2.0.0",
+    "rlgym-rocket-league": "2.0.1",
+    "rocketsim": "2.2.1",
+    "numpy": "1.26.4",
+    "cmeel": "0.61.0"
+  },
+  "files": {
+    ".gitattributes": {
+      "size": 1519,
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "metadata_size_match": true
+    },
+    "README.md": {
+      "size": 2724,
+      "sha256": "ecb3f1361b792dfd7faf3e83324524e6d0cf60b0f37ec8c009b5c2974cb3c042",
+      "metadata_size_match": true
+    },
+    "model/BOOK_KEEPING_VARS.json": {
+      "size": 410,
+      "sha256": "299b72d13630c0e6d484c90f81045b9558a0d2c6b69290e2b76eb8fed7c5cfdd",
+      "metadata_size_match": true
+    },
+    "model/PPO_POLICY.pt": {
+      "size": 275942,
+      "sha256": "54162458cc17b8e21530befd717796c41b41a58545b9fafd5bfd10f6fbc4208c",
+      "metadata_size_match": true,
+      "metadata_sha256_match": true,
+      "pickle_globals": [
+        "collections OrderedDict",
+        "torch._utils _rebuild_tensor_v2",
+        "torch FloatStorage"
+      ],
+      "unsafe_globals": [],
+      "loaded_type": "OrderedDict",
+      "tensors": {
+        "model.0.weight": {
+          "shape": [
+            256,
+            92
+          ],
+          "dtype": "torch.float32",
+          "finite": true
+        },
+        "model.0.bias": {
+          "shape": [
+            256
+          ],
+          "dtype": "torch.float32",
+          "finite": true
+        },
+        "model.2.weight": {
+          "shape": [
+            128,
+            256
+          ],
+          "dtype": "torch.float32",
+          "finite": true
+        },
+        "model.2.bias": {
+          "shape": [
+            128
+          ],
+          "dtype": "torch.float32",
+          "finite": true
+        },
+        "model.4.weight": {
+          "shape": [
+            90,
+            128
+          ],
+          "dtype": "torch.float32",
+          "finite": true
+        },
+        "model.4.bias": {
+          "shape": [
+            90
+          ],
+          "dtype": "torch.float32",
+          "finite": true
+        }
+      },
+      "parameter_count": 68314
+    },
+    "model/PPO_POLICY_OPTIMIZER.pt": {
+      "size": 552318,
+      "sha256": "e9493eb6d023bb9ca62e0891f28640141ac2687301a94a18a73c5ba472d5a303",
+      "metadata_size_match": true,
+      "metadata_sha256_match": true,
+      "pickle_globals": [
+        "torch._utils _rebuild_tensor_v2",
+        "torch FloatStorage",
+        "collections OrderedDict"
+      ],
+      "unsafe_globals": [],
+      "loaded_type": "dict",
+      "parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "params": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "optimizer_steps": {
+        "0": 114.0,
+        "1": 114.0,
+        "2": 114.0,
+        "3": 114.0,
+        "4": 114.0,
+        "5": 114.0
+      }
+    },
+    "model/PPO_VALUE_NET.pt": {
+      "size": 230084,
+      "sha256": "94e313eb0c28b4ca5441a5a84a4e977d14ee2bf2de8cdf75851a482bb2bd6b13",
+      "metadata_size_match": true,
+      "metadata_sha256_match": true,
+      "pickle_globals": [
+        "collections OrderedDict",
+        "torch._utils _rebuild_tensor_v2",
+        "torch FloatStorage"
+      ],
+      "unsafe_globals": [],
+      "loaded_type": "OrderedDict",
+      "tensors": {
+        "model.0.weight": {
+          "shape": [
+            256,
+            92
+          ],
+          "dtype": "torch.float32",
+          "finite": true
+        },
+        "model.0.bias": {
+          "shape": [
+            256
+          ],
+          "dtype": "torch.float32",
+          "finite": true
+        },
+        "model.2.weight": {
+          "shape": [
+            128,
+            256
+          ],
+          "dtype": "torch.float32",
+          "finite": true
+        },
+        "model.2.bias": {
+          "shape": [
+            128
+          ],
+          "dtype": "torch.float32",
+          "finite": true
+        },
+        "model.4.weight": {
+          "shape": [
+            1,
+            128
+          ],
+          "dtype": "torch.float32",
+          "finite": true
+        },
+        "model.4.bias": {
+          "shape": [
+            1
+          ],
+          "dtype": "torch.float32",
+          "finite": true
+        }
+      },
+      "parameter_count": 56833
+    },
+    "model/PPO_VALUE_NET_OPTIMIZER.pt": {
+      "size": 460672,
+      "sha256": "1e0f702774361e43e5295f5f881ff68c6239e81673c64bb00579153d4534bae5",
+      "metadata_size_match": true,
+      "metadata_sha256_match": true,
+      "pickle_globals": [
+        "torch._utils _rebuild_tensor_v2",
+        "torch FloatStorage",
+        "collections OrderedDict"
+      ],
+      "unsafe_globals": [],
+      "loaded_type": "dict",
+      "parameter_groups": [
+        {
+          "lr": 0.0001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0,
+          "amsgrad": false,
+          "maximize": false,
+          "foreach": null,
+          "capturable": false,
+          "differentiable": false,
+          "fused": null,
+          "params": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "optimizer_steps": {
+        "0": 114.0,
+        "1": 114.0,
+        "2": 114.0,
+        "3": 114.0,
+        "4": 114.0,
+        "5": 114.0
+      }
+    }
+  },
+  "diagnostic_scope": "Restricted deserialization and in-memory upstream-compatible network probe only; no verified CanoPy gameplay or teacher contract.",
+  "network_probe": {
+    "architecture_assumption": "AechPro DiscreteFF: Linear-ReLU-Linear-ReLU-Linear-Softmax",
+    "strict_load": "all keys matched",
+    "zero_input_92": {
+      "output_shape": [
+        1,
+        90
+      ],
+      "finite": true,
+      "sum": 0.9999999403953552,
+      "argmax": 17,
+      "softmax_logit_parity": true
+    },
+    "input_132": "matrix dimension mismatch",
+    "input_172": "matrix dimension mismatch"
+  },
+  "installed_default_obs_probe": {
+    "1v1_padding_none": 92,
+    "2v2_padding_none": 132,
+    "2v2_padding_2": 132,
+    "2v2_padding_3": 172,
+    "2v2_padding_3_zero_slots_inclusive": [
+      [
+        92,
+        111
+      ],
+      [
+        152,
+        171
+      ]
+    ],
+    "action_table_shape": [
+      90,
+      8
+    ],
+    "repeat_action_shape": [
+      8,
+      8
+    ]
+  }
+}

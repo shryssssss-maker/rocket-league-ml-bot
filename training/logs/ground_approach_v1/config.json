@@ -1,0 +1,23 @@
+{
+  "seed": 42,
+  "num_envs": 4,
+  "rollout_steps": 256,
+  "hidden_size": 128,
+  "episode_seconds": 4.0,
+  "learning_rate": 0.0003,
+  "gamma": 0.99,
+  "gae_lambda": 0.95,
+  "clip_ratio": 0.2,
+  "epochs": 4,
+  "minibatch_size": 256,
+  "entropy_coef": 0.01,
+  "value_coef": 0.5,
+  "max_grad_norm": 0.5,
+  "target_kl": 0.03,
+  "checkpoint_interval": 32768,
+  "scenario": "touch",
+  "opponent_version": "v1",
+  "reward_name": "goal10_touch0.1_approach0.02",
+  "ground_only": true,
+  "approach_weight": 0.02
+}

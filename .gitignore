@@ -1,0 +1,68 @@
+# Python bytecode and local environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+
+# Local credentials and machine-specific settings
+.env
+.env.*
+!.env.example
+
+# Python test, type-checker, and editor caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+nosetests.xml
+.cache/
+.idea/
+.vscode/
+*.code-workspace
+
+# Python packaging/build output
+build/
+dist/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+
+# Generated training weights and downloaded model binaries
+training/checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+
+# Large transient diagnostic captures; compact metrics, evaluations,
+# experiment configs, and written reports remain eligible for version control.
+python-example/logs/observation_diagnostics/live_observations_*.jsonl
+training/logs/guide_early_1m_v1/contact_diagnostics/
+training/logs/reward_scales/
+
+# Other generated output
+*.log
+*.tmp
+*.temp
+*.prof
+*.trace
+*.pid
+*.seed
+
+# This root lockfile has no matching package.json and declares no dependencies.
+/package-lock.json
+
+# OS metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
