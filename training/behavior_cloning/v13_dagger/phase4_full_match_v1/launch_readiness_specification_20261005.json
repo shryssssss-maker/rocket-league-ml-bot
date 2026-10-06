@@ -1,0 +1,19 @@
+{
+  "version": "student_full_match_v1",
+  "matches": 1,
+  "opponent_id": "human_b",
+  "human_side": "Orange",
+  "student_side": "Blue",
+  "native_match_minutes": 5,
+  "end_condition": "actual native MatchPhase.Ended",
+  "overtime": "Unlimited",
+  "original_teacher": "shadow-only",
+  "student_checkpoint_sha256": "579fa26010140514d2e9b7f0e2871bee569c594b7da8648e31ee1489007cd5b7",
+  "state_setting": false,
+  "intentional_receive_pauses": false,
+  "replay_manipulation": false,
+  "teacher_fallback": false,
+  "training": false,
+  "aggregation": false,
+  "additional_runs": false
+}

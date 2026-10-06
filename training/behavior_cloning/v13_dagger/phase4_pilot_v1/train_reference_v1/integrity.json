@@ -1,0 +1,15 @@
+{
+  "statistics_sha256": "15d8993f4bc33250776e1d2af9840ef9b0fbb9c06a53253291b719edb2ab6e9c",
+  "input_hashes": {
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\pilots\\pilot_20261004\\pilot_01\\raw\\trajectory.jsonl": "00cc8bb41fc155255cca85b56e657190345a8bd6bc4482aadd892679c6316f32",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\pilots\\pilot_20261004\\pilot_01\\processed\\observations.bin": "891cf47a96994268e6156a264eade3187d23379406622e30f9c2f3d1b2343c87",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v10\\matches\\v10_001\\raw\\trajectory.jsonl": "088fe1297f02bd0690cd4e7372d46911bf20af5a74ec9d2fc4de1da444c2cee0",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v10\\matches\\v10_001\\processed\\observations.bin": "32ed0e854acbedea5500ab3d5a2b350442b4d7317a92571b2ed9768c1387480a",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v10\\matches\\v10_004\\raw\\trajectory.jsonl": "f0c283550bb8cb4a8d1cf4d06fc42120bbeb520201d8cee18c8bc1f57fa1ac29",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v10\\matches\\v10_004\\processed\\observations.bin": "8288c7c01037ef23e2c9bb422b8caa19e11563061043232a45d7b4cd229e6b5a",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v10\\matches\\v10_006\\raw\\trajectory.jsonl": "8aa48c984eddf266e259d75a699996835afa26588da36ef460ca8fb5279e2291",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v10\\matches\\v10_006\\processed\\observations.bin": "6fa90dc3cc73a68e7cfa23f30750f6751e14214b9441550b44d71c79ce2f7aa5"
+  },
+  "source_manifest_sha256": "080943fd8f9a81ada800e0a2f9ff3593b67f66d32272211d67030c03cf433a83",
+  "builder_sha256": "d51560066885c6869625f5b57fdc7015adb5ff4fcb4a30217b47ee1040a2d260"
+}

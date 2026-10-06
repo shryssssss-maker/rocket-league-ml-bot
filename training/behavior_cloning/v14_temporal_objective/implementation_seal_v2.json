@@ -1,0 +1,15 @@
+{
+  "version": "v14_v2_implementation_v1",
+  "approved_mechanism": "Original V13 loss plus lambda=0.1 boundary-balanced adjacent-transition BCE",
+  "user_approved_implementation": true,
+  "files": {
+    "training/behavior_cloning/v14_temporal_objective/experiment.py": "cd01b80467c936f34b2ee878db1e8be3219b70e3f0165e6511d2135b9cc4efdb",
+    "training/behavior_cloning/v14_temporal_objective/boundary.py": "5fedfcb3b1d9526c234c7e07419d77f8b83345eb1a3653c339612e1b8f015f71",
+    "training/behavior_cloning/v14_temporal_objective/preflight.py": "5cf1cf299b1a26f47e26c807567206881a63e6f27917be63a5355769c537200c",
+    "training/behavior_cloning/v14_temporal_objective/README.md": "cc8413ac633b6facca8179617c65c7ea18afd749f6acd25a226933db36da7c2c",
+    "training/behavior_cloning/v14_temporal_objective/proposal_v2.md": "d47a663d982989b7d8bdb8e08569baf4fb98432ef3e009a6d6b9d8cf1c6bf005",
+    "training/behavior_cloning/v14_temporal_objective/proposal_v2.json": "271ba2af0b79f7bac09154f9388cc78022c9ba721ee2c17d2ef9e6ca04e2cc3b",
+    "training/behavior_cloning/v14_temporal_objective/proposal_v1.md": "80915ebe04ffb5f9dfbf20886103ab24bf6206d9a941ea6c148f22d471c81606",
+    "training/behavior_cloning/v14_temporal_objective/proposal_v1.json": "d3834742e991f61bf3215e2f36e0e7502739322aee6b41a79276e2a7fb2dd047"
+  }
+}

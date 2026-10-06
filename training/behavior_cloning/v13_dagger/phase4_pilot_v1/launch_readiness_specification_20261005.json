@@ -1,0 +1,273 @@
+{
+  "version": "v13_phase4_student_pilot_spec_v1",
+  "created_utc": "2026-10-04T23:29:57.348569+00:00",
+  "status": "specification_proposal_awaiting_explicit_review",
+  "phase3_formally_accepted_by_user": true,
+  "phase4_launch_approved": false,
+  "runnable_live_launcher_created": false,
+  "live_launched": false,
+  "proposed_run": {
+    "matches": 1,
+    "wall_seconds_after_first_verified_student_submission": 90,
+    "startup_seconds": 180,
+    "teacher_shadow_team": "Orange",
+    "student_team": "Orange",
+    "human_team": "Blue",
+    "opponent_id": "human_a only if the original pilot player actually participates; confirm identity before launch",
+    "natural_play": true,
+    "state_setting": false,
+    "intentional_receive_pauses": false,
+    "retain_replays": true,
+    "retain_countdown": true,
+    "scope": "A bounded partial match, not a full-match win-rate experiment",
+    "decision_status": "90-second configuration proposed; user preference question pending"
+  },
+  "authoritative_path": "Real Rocket League -> actual RLBot packet/BallPrediction -> unchanged 13D policy -> student ControllerState -> real Rocket League",
+  "controller": {
+    "sole_sender": "13D student",
+    "teacher_controls_sent": false,
+    "teacher_fallback": false,
+    "student_native_channels": [
+      "throttle",
+      "steer",
+      "pitch",
+      "yaw",
+      "roll",
+      "jump",
+      "boost",
+      "handbrake"
+    ],
+    "modes": [
+      "Neutral",
+      "Chase",
+      "Jump",
+      "Front dodge"
+    ],
+    "decode": "Existing argmax 4-mode and continuous tanh steering decode; no quantization",
+    "required_zero_support": [
+      "yaw",
+      "roll",
+      "boost",
+      "handbrake"
+    ],
+    "inference_process": "Existing training Python, CPU one thread, pinned accepted model",
+    "ipc_timeout_seconds": 2,
+    "source": "Reuse Phase3 worker/model/decoder; no fitting or parameter changes"
+  },
+  "checkpoint": {
+    "path": "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase2_bootstrap_v1\\B_best.pt",
+    "sha256": "579fa26010140514d2e9b7f0e2871bee569c594b7da8648e31ee1489007cd5b7",
+    "parameters": 26181,
+    "architecture": "13 -> Linear64/ReLU -> causal one-layer GRU64 -> 4 mode logits + continuous steering"
+  },
+  "observation": {
+    "features": [
+      "ball_forward",
+      "ball_right",
+      "ball_up",
+      "prediction_forward",
+      "prediction_right",
+      "prediction_up",
+      "ball_distance",
+      "car_speed",
+      "ball_present",
+      "prediction_valid",
+      "prediction_horizon",
+      "prediction_first_offset",
+      "callback_dt"
+    ],
+    "source_manifest_sha256": "080943fd8f9a81ada800e0a2f9ff3593b67f66d32272211d67030c03cf433a83",
+    "projection_sha256": "600023f7559b20945c2d94444395920419a5a1921ce053800af9507a134c11f2",
+    "builder_sha256": "e0f59f763d33e59f6815a86e9c452b3fcade87fe26727ca53c910ebb7e6db750",
+    "source_features": "Accepted 18D builder, retain columns 0 through 12 unchanged",
+    "private_teacher_memory_in_inputs": false,
+    "previous_action_inputs": false,
+    "first_callback_dt": 0,
+    "duplicate_or_backward_elapsed": "Record violation and stop; no clock repair or hidden reset"
+  },
+  "prediction": {
+    "provider": "Actual delivered RLBot BallPrediction, reuse logged explicitly",
+    "selector": "int((elapsed + 2 - first_slice_time) * 120)",
+    "gameplay_branch": "Exact original shadow branch, including IndexError on empty prediction when lookup is reached",
+    "observation_probe": "Same nonempty-prediction guard and original helper as accepted frozen recorder/Phase3; distinct from shadow gameplay decision",
+    "prohibited": [
+      "interpolation",
+      "timestamp shifts",
+      "clamping",
+      "synthetic slices",
+      "RocketSim",
+      "stale cutoff"
+    ]
+  },
+  "memory": {
+    "student_reset": "Once at match/session initialization only",
+    "shadow_reset": "Once at match/session initialization only",
+    "survives": [
+      "goal",
+      "replay",
+      "countdown",
+      "kickoff",
+      "missing ball",
+      "long callback gaps",
+      "student/shadow disagreement"
+    ],
+    "source": "Byte-identical validated OriginalShadow source logic and independent tracker/sequence with non-game sink",
+    "labels": "Temporal state is diagnostic only; neither copied into student nor reset to match student actions"
+  },
+  "execution_order": [
+    "Receive actual native packet/prediction and record receipt provenance",
+    "Build unchanged 13D input from current actual state/time and previous callback elapsed time",
+    "Advance independent original shadow once on that same callback stream",
+    "Advance student GRU once; decode and validate native controls",
+    "Submit only the student ControllerState; record submission evidence and receipt-time latency",
+    "On the next actually processed callback, link received physical state to prior student submission",
+    "Publish immutable diagnostic snapshots; never let publication I/O suppress otherwise valid student controls"
+  ],
+  "diagnostics": {
+    "role": "Quarantined Phase4 pilot diagnostics; NOT an approved DAgger training dataset",
+    "files": [
+      "metadata.json",
+      "callbacks.jsonl",
+      "events.jsonl",
+      "diagnostic_errors.jsonl",
+      "summary_snapshots/*.json",
+      "agent_closed.json",
+      "contract_report.md",
+      "contract_report.json"
+    ],
+    "record": [
+      "session/callback/frame IDs",
+      "canonical elapsed time and callback/frame gaps",
+      "match phase and agent/team identity",
+      "packet/prediction receipt counters, monotonic time and object identities",
+      "exact 13D float32 input",
+      "student logits, mode, continuous steering and exact eight controls",
+      "actual student controller submission and hidden-state hash chain",
+      "shadow eight controls, branch, selected index/timestamp/position and attempted selection",
+      "shadow sequence ID, before/after phase/index/start/done state",
+      "observation selector probe separately from shadow gameplay selection",
+      "current actual car/ball/opponent physics, scores and transition events",
+      "native air_state, has_jumped, has_double_jumped, has_dodged and demolition fields",
+      "previous submitted student action and link to next actually received state"
+    ],
+    "no_training_tensors": true,
+    "no_split_assignment": true,
+    "no_aggregation": true,
+    "response_link_scope": "Next received state is an observed result after student action hold, not a single-action counterfactual or exact per-physics-tick causal attribution"
+  },
+  "disagreement_metrics": {
+    "mode_confusion": true,
+    "analog_mae_and_max_by_channel": true,
+    "buttons_precision_recall": true,
+    "undefined_rare_metrics": "null with subset counts",
+    "steering_sign_deadband": 0.02,
+    "exact_native_agreement_tolerance": 1e-06,
+    "subsets": [
+      "near/far",
+      "missing ball",
+      "playable/nonplayable phase",
+      "shadow sequence phase and boundary",
+      "long callback gaps"
+    ],
+    "interpretation": "Live agreement with original shadow is distinct from gameplay competence or label usefulness"
+  },
+  "state_distribution": {
+    "reference_split": "train ONLY; never read/evaluate validation/test samples",
+    "primary_reference_matches": [
+      "pilot_01",
+      "v10_006"
+    ],
+    "primary_reason": "Natural Orange-teacher matches, matching proposed student side",
+    "secondary_reference_matches": [
+      "pilot_01",
+      "v10_001",
+      "v10_004",
+      "v10_006"
+    ],
+    "verification": "Verify frozen manifest and every required manifest-listed artifact before semantic reads; stop on missing/hash mismatch",
+    "preparation": "Read-only reference statistics only after specification approval; user runs any lengthy audit command",
+    "conditioning": [
+      "Kickoff/Active separately from Countdown/Goal/Replay",
+      "ball-relative features only with ball present",
+      "prediction-relative/time features only when prediction valid",
+      "first callback separated for dt"
+    ],
+    "metrics": [
+      "Counts/exposure by phase, masks, near/far, car-speed bands and relative geometry sectors",
+      "Per-feature min, median, p05/p95 and p01/p99 under original normalized representation",
+      "Fraction outside reference min/max and p01/p99 bounds",
+      "Fixed training-reference quantile-bin occupancy and per-feature Jensen-Shannon divergence",
+      "Both callback-count-weighted and actual elapsed-hold-time-weighted occupancy"
+    ],
+    "time_weighting": "A logged submission receives the interval to the next processed callback; final unobserved hold excluded; crossed phases labeled transition intervals",
+    "degenerate_features": "Record constant/repeated quantile edges explicitly; merge identical histogram edges for reporting only, never change observations",
+    "noncausal_limit": "One short match, different opponents/sessions, human actions, phases and callback delivery confound attribution. No significance or competence claim from marginal divergence alone",
+    "frozen_records_modified": false,
+    "samples_rebalanced": false
+  },
+  "off_policy_shadow": {
+    "definition": "Actual states reached while student actions, not teacher actions, control the game",
+    "required_evidence": [
+      "Verified student-only submissions before the states labeled learner-driven",
+      "Original shadow starts sequence while student does not produce the corresponding Jump",
+      "Subsequent actual learner-controlled callbacks show persistent original shadow sequence state",
+      "Shadow Front dodge after student omitted preceding jump, grouped by native air_state and has_jumped",
+      "Actual measured timing, ground/air status, ball-relative geometry and prediction selection at those disagreements"
+    ],
+    "missing_evidence": "Explicitly unobserved; no probes, teacher fallback, synthetic history or repeated rounds to manufacture coverage",
+    "usefulness_limit": "A stateful original expert can emit committed sequence actions in a physical state where the student did not perform the prerequisite. Report such cases; do not silently reset/relabel or assume these labels are suitable for training"
+  },
+  "stopping": {
+    "normal": "90-second proposed wall limit after first verified student submission, or natural match end, whichever occurs first",
+    "immediate": [
+      "user Ctrl+C",
+      "source/shadow selector exception",
+      "nonfinite/malformed/unsupported model output",
+      "missing controlled car",
+      "observation/timing contract violation",
+      "worker exit or 2-second timeout",
+      "unexpected controller sender or native transport mismatch",
+      "diagnostic integrity failure",
+      "server disconnect"
+    ],
+    "action_on_error": "Stop the match and disconnect; no teacher takeover, emergency scripted policy, hidden-state repair or synthetic inputs",
+    "log_limit_per_file_mib": 256,
+    "prohibition": "Never auto-start a second match"
+  },
+  "review": {
+    "technical_pass": "Every recorded callback accounted for, student-only native controls verified, final submission/shutdown clean, masks/times/input hashes valid, no source/artifact changes",
+    "research_evidence": "Separately classify actual learner-driven state occupancy and sequence-divergence continuation as observed or unobserved; technical completion alone does not satisfy this research evidence",
+    "report": [
+      "match duration/callbacks and phases",
+      "student/shadow disagreement and rare-mode subsets",
+      "learner-driven state occupancy versus frozen train-only reference",
+      "stateful off-policy examples and potentially unsupported shadow labels",
+      "unobserved categories",
+      "callback delivery/IPC/queue/error limits",
+      "integrity/source hashes",
+      "pass-with-scope versus incomplete/failure"
+    ],
+    "no_automatic_phase5_or_training": true
+  },
+  "required_preflight": [
+    "43 protected hashes and frozen artifact/source pins match; prior phases preserved",
+    "Shadow source/worker/decoder match validated code and student memory continuity survives phases",
+    "No teacher/shadow PlayerInput transport exists; only student outputs can be submitted",
+    "Natural 1v1 config: Epic, rendering optional, state-setting disabled, no receive-pause planner",
+    "Immutable summary publication, error accounting and final student submission gating",
+    "First callback/history/dt and exact 13D feature projection checks",
+    "Phase4-only diagnostics paths and no dataset/test/training imports in live path",
+    "Read-only training-reference metrics verified before any sample reads",
+    "Bounded timeout/user-stop/worker-failure paths do not trigger teacher fallback"
+  ],
+  "preflight_complete": false,
+  "protected_hashes_verified": 43,
+  "frozen_baseline_statistics_computed": false,
+  "reference_tensor_samples_read": false,
+  "validated_phase3_dependency_hashes": {
+    "reference.py": "89b453082e819a4f8b7bf0e882dffecce47eb4da58aa1a0d4a33bdf1a505819b",
+    "student_worker.py": "f72ba60ec1421e79c893fe7fb088fdd47f68883f7c2dcafa4eb5f18847c2a9a1",
+    "student_client.py": "f99460ccff28f6e94fa35d1f3a58c7e55d25d9459e6eea9dff218a50fe78b7d8",
+    "diagnostics.py": "ab52394967fe51041d4f9adbda39b4dae7091ef9d5e7bbd845261da17b14ad29"
+  }
+}

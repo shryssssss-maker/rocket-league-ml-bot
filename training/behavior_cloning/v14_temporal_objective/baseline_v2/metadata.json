@@ -1,0 +1,220 @@
+{
+  "started_at": "2026-10-06T19:21:34.788262+05:30",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "torch": "2.11.0+cu128",
+  "numpy": "1.26.4",
+  "device": "cuda",
+  "cuda_device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "cudnn_benchmark": false,
+  "deterministic_algorithms": false,
+  "approved_proposal": {
+    "version": "v14_boundary_temporal_objective_proposal_v2",
+    "status": "design_only_awaiting_review",
+    "training_run": false,
+    "live_launch": false,
+    "initialization": "Repeat V13 seeded fresh initialization; human approved",
+    "seed": 42,
+    "parameter_count": 26181,
+    "objective": {
+      "mechanism": "one boundary-balanced adjacent-transition BCE term added to original V13 loss",
+      "lambda": 0.1,
+      "epsilon": 1e-07,
+      "boundaries": [
+        "non_Jump->Jump",
+        "Jump->Neutral",
+        "Neutral->Front_dodge",
+        "Front_dodge->Neutral"
+      ],
+      "scores": [
+        "(1-p_prev_J)*p_J",
+        "p_prev_J*p_N",
+        "p_prev_N*p_D",
+        "p_prev_D*p_N"
+      ],
+      "targets": "binary indicators from adjacent actual teacher mode labels only",
+      "reduction": "per-type mean positive BCE and mean negative BCE averaged if both present; only present group otherwise; four-type mean; zero if no eligible pairs",
+      "formula": "original mean CE + Chase-only steering MSE + 0.1 * boundary_BCE",
+      "eligibility": "same match; both ball present; strictly increasing time; actual callback dt >0 and <=0.1 s",
+      "chunk_boundary": "detached cached preceding probabilities; labels/masks/time from actual preceding callback; no extra forward or reset"
+    },
+    "training": {
+      "optimizer": "Adam",
+      "lr": 0.001,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "max_epochs": 20,
+      "patience": 4,
+      "chunk_callbacks": 512,
+      "selection": "minimum original unweighted validation loss; strict improvement; earliest tie",
+      "reset": "match boundaries only",
+      "detach": "each training chunk",
+      "train_ids": [
+        "pilot_01",
+        "v10_001",
+        "v10_004",
+        "v10_006"
+      ],
+      "validation_ids": [
+        "pilot_02",
+        "v10_002"
+      ],
+      "test_reads": false
+    },
+    "temporal_metric": {
+      "specification": "proposal_v2.md: Baseline and unchanged timed-core metric",
+      "edge_tolerance_seconds": 0.016667666666666667,
+      "minimum_eligible_cores": 20,
+      "primary_threshold": "max(0.25, pinned_V13_timed_core_score + 0.15)",
+      "baseline_ceiling_review_threshold": 0.85,
+      "extra_core_rate_allowance_per_minute": 0.5,
+      "baseline_metric_status": "evaluation-only needed after approval, before fitting"
+    },
+    "regression_guards": {
+      "chase_accuracy_min": 0.9896232223028739,
+      "chase_steer_mae_max": 0.1695616946664056,
+      "overall_accuracy_min": 0.9522601595058281
+    },
+    "protected_hashes": {
+      "checked": 43,
+      "mismatches": []
+    },
+    "source_hashes": {
+      "training/behavior_cloning/datasets/v10_live_1v1_18d_20261005_v1/manifest.json": "080943fd8f9a81ada800e0a2f9ff3593b67f66d32272211d67030c03cf433a83",
+      "training/behavior_cloning/v13_dagger/bootstrap.py": "6c267c85293cc70ad2e12ca54894c31309092e9bded5a96d53460f196efb704f",
+      "training/behavior_cloning/v13_dagger/projection.py": "600023f7559b20945c2d94444395920419a5a1921ce053800af9507a134c11f2",
+      "training/behavior_cloning/v13_dagger/phase2_bootstrap_v1/experiment.json": "ec9e143100d3d1cd8b23d04b235b5a2c120a15d22ed96d21565f87cdc30ce1d5",
+      "training/behavior_cloning/v13_dagger/phase2_bootstrap_v1/B_best.pt": "579fa26010140514d2e9b7f0e2871bee569c594b7da8648e31ee1489007cd5b7",
+      "training/behavior_cloning/v13_dagger/phase2_bootstrap_v1/evaluation_recovery_v1/report.json": "8f58312a1acb7e8ef1eb7b2e438b43924bb28e7589db2f5c72410c8111bed545",
+      "training/behavior_cloning/v12/bakeoff.py": "dc09b0912e0c92c6c4bb80b0b271c66e21aab0b4fb61c013107a7c9ddb9325d1",
+      "training/v2_observation_test/observation_contract.py": "e0f59f763d33e59f6815a86e9c452b3fcade87fe26727ca53c910ebb7e6db750"
+    },
+    "proposal_sha256": "d47a663d982989b7d8bdb8e08569baf4fb98432ef3e009a6d6b9d8cf1c6bf005",
+    "validation_results": null,
+    "success_verdict": "not_run",
+    "next_step": "Review v2 objective and fixed lambda before implementation",
+    "alternative": {
+      "version": "proposal_v1",
+      "role": "documented alternative/ablation; not main or scheduled",
+      "files": {
+        "proposal_v1.md": "80915ebe04ffb5f9dfbf20886103ab24bf6206d9a941ea6c148f22d471c81606",
+        "proposal_v1.json": "d3834742e991f61bf3215e2f36e0e7502739322aee6b41a79276e2a7fb2dd047"
+      }
+    }
+  },
+  "implementation_seal": {
+    "version": "v14_v2_implementation_v1",
+    "approved_mechanism": "Original V13 loss plus lambda=0.1 boundary-balanced adjacent-transition BCE",
+    "user_approved_implementation": true,
+    "files": {
+      "training/behavior_cloning/v14_temporal_objective/experiment.py": "cd01b80467c936f34b2ee878db1e8be3219b70e3f0165e6511d2135b9cc4efdb",
+      "training/behavior_cloning/v14_temporal_objective/boundary.py": "5fedfcb3b1d9526c234c7e07419d77f8b83345eb1a3653c339612e1b8f015f71",
+      "training/behavior_cloning/v14_temporal_objective/preflight.py": "5cf1cf299b1a26f47e26c807567206881a63e6f27917be63a5355769c537200c",
+      "training/behavior_cloning/v14_temporal_objective/README.md": "cc8413ac633b6facca8179617c65c7ea18afd749f6acd25a226933db36da7c2c",
+      "training/behavior_cloning/v14_temporal_objective/proposal_v2.md": "d47a663d982989b7d8bdb8e08569baf4fb98432ef3e009a6d6b9d8cf1c6bf005",
+      "training/behavior_cloning/v14_temporal_objective/proposal_v2.json": "271ba2af0b79f7bac09154f9388cc78022c9ba721ee2c17d2ef9e6ca04e2cc3b",
+      "training/behavior_cloning/v14_temporal_objective/proposal_v1.md": "80915ebe04ffb5f9dfbf20886103ab24bf6206d9a941ea6c148f22d471c81606",
+      "training/behavior_cloning/v14_temporal_objective/proposal_v1.json": "d3834742e991f61bf3215e2f36e0e7502739322aee6b41a79276e2a7fb2dd047"
+    }
+  },
+  "authorized_artifacts": {
+    "training/behavior_cloning/pilots/pilot_20261004/pilot_02/processed/observations.bin": {
+      "path": "training/behavior_cloning/pilots/pilot_20261004/pilot_02/processed/observations.bin",
+      "bytes": 1972872,
+      "sha256": "1efa7cf3082674184f1f7f1290d2afbc7c80b60fc166f19cf02c2d844f328ff1"
+    },
+    "training/behavior_cloning/pilots/pilot_20261004/pilot_02/processed/analog_controls.bin": {
+      "path": "training/behavior_cloning/pilots/pilot_20261004/pilot_02/processed/analog_controls.bin",
+      "bytes": 548020,
+      "sha256": "2f1d85e1cf5a131647e941239cd14c5d80fbb91e7536b62cc3216ff47f0a9731"
+    },
+    "training/behavior_cloning/pilots/pilot_20261004/pilot_02/processed/buttons.bin": {
+      "path": "training/behavior_cloning/pilots/pilot_20261004/pilot_02/processed/buttons.bin",
+      "bytes": 82203,
+      "sha256": "14a0bf0d51c4b973d068c0cb0e4d7d8a20e77085219dce68f4e17f515eb00bc0"
+    },
+    "training/behavior_cloning/pilots/pilot_20261004/pilot_02/processed/mode.bin": {
+      "path": "training/behavior_cloning/pilots/pilot_20261004/pilot_02/processed/mode.bin",
+      "bytes": 27401,
+      "sha256": "bc7fdafe929a572eed07f28db88f5a274d4bb99c3d56efda2ecbc22401524231"
+    },
+    "training/behavior_cloning/pilots/pilot_20261004/pilot_02/processed/callback.bin": {
+      "path": "training/behavior_cloning/pilots/pilot_20261004/pilot_02/processed/callback.bin",
+      "bytes": 219208,
+      "sha256": "9eb9c9f5bd51bb8fd9e7eb2a0603719be52fc5088d0975ebf861a31fd9b8b9ca"
+    },
+    "training/behavior_cloning/pilots/pilot_20261004/pilot_02/processed/frame.bin": {
+      "path": "training/behavior_cloning/pilots/pilot_20261004/pilot_02/processed/frame.bin",
+      "bytes": 219208,
+      "sha256": "7cfd5d932489b674841fc42125fa206653bbc03e171eba1c7d493f3fd3e7d018"
+    },
+    "training/behavior_cloning/pilots/pilot_20261004/pilot_02/processed/time.bin": {
+      "path": "training/behavior_cloning/pilots/pilot_20261004/pilot_02/processed/time.bin",
+      "bytes": 219208,
+      "sha256": "a4216310c5bcbeb199cf0c9f63e5965525b03ee566602df46fff32f087526ff9"
+    },
+    "training/behavior_cloning/pilots/pilot_20261004/pilot_02/processed/dt.bin": {
+      "path": "training/behavior_cloning/pilots/pilot_20261004/pilot_02/processed/dt.bin",
+      "bytes": 219208,
+      "sha256": "0e8bf5e0fa92158b11c7839252840d5721bbc56e05c23090acaf15163b3bd97a"
+    },
+    "training/behavior_cloning/pilots/pilot_20261004/pilot_02/raw/trajectory.jsonl": {
+      "path": "training/behavior_cloning/pilots/pilot_20261004/pilot_02/raw/trajectory.jsonl",
+      "bytes": 67609017,
+      "sha256": "c595e7805270c6f53989fb1fb23ba6690fb72b23a9c061f5e7d3e3e7981c8974"
+    },
+    "training/behavior_cloning/v10/matches/v10_002/processed/observations.bin": {
+      "path": "training/behavior_cloning/v10/matches/v10_002/processed/observations.bin",
+      "bytes": 1430640,
+      "sha256": "e64e36192790dc5bef66fa9b73ace9ed4b3670f2636cd627edb3cfe6638ce37b"
+    },
+    "training/behavior_cloning/v10/matches/v10_002/processed/analog_controls.bin": {
+      "path": "training/behavior_cloning/v10/matches/v10_002/processed/analog_controls.bin",
+      "bytes": 397400,
+      "sha256": "2f38805ae90d6a93e8813dd5c6936f49f787a848633eaf7b4b9c63f63f3c4e2b"
+    },
+    "training/behavior_cloning/v10/matches/v10_002/processed/buttons.bin": {
+      "path": "training/behavior_cloning/v10/matches/v10_002/processed/buttons.bin",
+      "bytes": 59610,
+      "sha256": "743fe0b618f84d7d62185b99af4af7c454562d472aa13ed8f5a745b034a70cb0"
+    },
+    "training/behavior_cloning/v10/matches/v10_002/processed/mode.bin": {
+      "path": "training/behavior_cloning/v10/matches/v10_002/processed/mode.bin",
+      "bytes": 19870,
+      "sha256": "12c9e52fd40af99191ca53de0791331f3240a321bfbacc52d25d5f52d46e3b6f"
+    },
+    "training/behavior_cloning/v10/matches/v10_002/processed/callback.bin": {
+      "path": "training/behavior_cloning/v10/matches/v10_002/processed/callback.bin",
+      "bytes": 158960,
+      "sha256": "3865d17e7565c36fca9293da2eaf10fa4c4378289a5a33db8ddcbc35bdbd5f3b"
+    },
+    "training/behavior_cloning/v10/matches/v10_002/processed/frame.bin": {
+      "path": "training/behavior_cloning/v10/matches/v10_002/processed/frame.bin",
+      "bytes": 158960,
+      "sha256": "eb40bd8a263217b2af3120d5ba71bd422e02a13cfb6667c30bf278b3b6039b1a"
+    },
+    "training/behavior_cloning/v10/matches/v10_002/processed/time.bin": {
+      "path": "training/behavior_cloning/v10/matches/v10_002/processed/time.bin",
+      "bytes": 158960,
+      "sha256": "59db12f46628ce309e7e429c916d6683c0ee5327d4c1510bbeda5116190f7553"
+    },
+    "training/behavior_cloning/v10/matches/v10_002/processed/dt.bin": {
+      "path": "training/behavior_cloning/v10/matches/v10_002/processed/dt.bin",
+      "bytes": 158960,
+      "sha256": "ab5bbdcdff665b207361154bdcdf307c1fb943d11f2d29bb60e7d644ea21aece"
+    },
+    "training/behavior_cloning/v10/matches/v10_002/raw/trajectory.jsonl": {
+      "path": "training/behavior_cloning/v10/matches/v10_002/raw/trajectory.jsonl",
+      "bytes": 51695894,
+      "sha256": "21aa26e4e56f489765369ae32ca748ed7a74abc7b527a0c53df915e062fcd1d1"
+    }
+  },
+  "test_access": false,
+  "live": false,
+  "dagger": false,
+  "repeatability": "Same seeded V13 setup; GPU nondeterminism remains possible"
+}

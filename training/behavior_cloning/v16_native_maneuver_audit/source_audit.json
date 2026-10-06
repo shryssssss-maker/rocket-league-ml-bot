@@ -1,0 +1,197 @@
+{
+  "status": "source_and_descriptor_audit_complete_runtime_semantics_pending",
+  "versions": {
+    "rlbot": "2.0.0b55",
+    "rlbot-flatbuffers": "0.19.0",
+    "psutil": "7.2.2"
+  },
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "fields": {
+    "air_state": {
+      "source": "python-example/venv/Lib/site-packages/rlbot_flatbuffers/__init__.pyi",
+      "line": 5608,
+      "datatype": "AirState",
+      "installed_documentation": "Whether the player's car is on the ground or in the air, and what jump/dodging forces currently affects the car.",
+      "runtime_descriptor_available": true,
+      "lifecycle": "Copied from packet.players[index] before original.MyBot.get_output; engine sampling phase unresolved"
+    },
+    "has_jumped": {
+      "source": "python-example/venv/Lib/site-packages/rlbot_flatbuffers/__init__.pyi",
+      "line": 5673,
+      "datatype": "bool",
+      "installed_documentation": "True if the player has jumped into the air.\n    See dodge_timeout to know if a dodge/double jump is temporarily available.\n    Note that falling off a surface instead of jumping, does not activate the dodge timeout, and making a dodge/double jump possible indefinitely.\n    This is commonly known as a flip reset.\n    The car is holding a flip reset if `air_state == InAir && !has_jumped && !has_double_jumped && !has_dodged`.",
+      "runtime_descriptor_available": true,
+      "lifecycle": "Copied from packet.players[index] before original.MyBot.get_output; engine sampling phase unresolved"
+    },
+    "has_double_jumped": {
+      "source": "python-example/venv/Lib/site-packages/rlbot_flatbuffers/__init__.pyi",
+      "line": 5681,
+      "datatype": "bool",
+      "installed_documentation": "True if the player has doubled jumped since it left the ground. False while on the ground.",
+      "runtime_descriptor_available": true,
+      "lifecycle": "Copied from packet.players[index] before original.MyBot.get_output; engine sampling phase unresolved"
+    },
+    "has_dodged": {
+      "source": "python-example/venv/Lib/site-packages/rlbot_flatbuffers/__init__.pyi",
+      "line": 5685,
+      "datatype": "bool",
+      "installed_documentation": "True if the player has dodged since it left the ground. False while the ground.",
+      "runtime_descriptor_available": true,
+      "lifecycle": "Copied from packet.players[index] before original.MyBot.get_output; engine sampling phase unresolved"
+    },
+    "dodge_timeout": {
+      "source": "python-example/venv/Lib/site-packages/rlbot_flatbuffers/__init__.pyi",
+      "line": 5612,
+      "datatype": "float",
+      "installed_documentation": "How long until the player cannot dodge/double jump anymore.\n    The value is -1 while on ground or when airborne for too long after jumping.\n    A dodge/double jump is possible for 1.25 seconds after the first jump plus\n    up to an additional 0.2 seconds depending how long the jump button was pressed for the first jump.\n    Note that falling off a surface instead of jumping, does not activate the dodge timeout, and making a dodge/double jump possible indefinitely.\n    This is commonly known as a flip reset.\n    The car is holding a flip reset if `air_state == InAir && !has_jumped && !has_double_jumped && !has_dodged`.",
+      "runtime_descriptor_available": true,
+      "lifecycle": "Copied from packet.players[index] before original.MyBot.get_output; engine sampling phase unresolved"
+    },
+    "dodge_elapsed": {
+      "source": "python-example/venv/Lib/site-packages/rlbot_flatbuffers/__init__.pyi",
+      "line": 5689,
+      "datatype": "float",
+      "installed_documentation": "The time in seconds since the last dodge was initiated.\n    Resets to 0 when the player lands on the ground.",
+      "runtime_descriptor_available": true,
+      "lifecycle": "Copied from packet.players[index] before original.MyBot.get_output; engine sampling phase unresolved"
+    },
+    "dodge_dir": {
+      "source": "python-example/venv/Lib/site-packages/rlbot_flatbuffers/__init__.pyi",
+      "line": 5694,
+      "datatype": "Vector2",
+      "installed_documentation": "The unit direction of the latest dodge.\n    The value will be (0,0) if it was a stall.",
+      "runtime_descriptor_available": true,
+      "lifecycle": "Copied from packet.players[index] before original.MyBot.get_output; engine sampling phase unresolved"
+    },
+    "last_input": {
+      "source": "python-example/venv/Lib/site-packages/rlbot_flatbuffers/__init__.pyi",
+      "line": 5669,
+      "datatype": "ControllerState",
+      "installed_documentation": "The last controller input from this player.",
+      "runtime_descriptor_available": true,
+      "lifecycle": "Copied from packet.players[index] before original.MyBot.get_output; engine sampling phase unresolved"
+    },
+    "boost": {
+      "source": "python-example/venv/Lib/site-packages/rlbot_flatbuffers/__init__.pyi",
+      "line": 5644,
+      "datatype": "float",
+      "installed_documentation": "The current boost, from 0 to 100.",
+      "runtime_descriptor_available": true,
+      "lifecycle": "Copied from packet.players[index] before original.MyBot.get_output; engine sampling phase unresolved"
+    },
+    "demolished_timeout": {
+      "source": "python-example/venv/Lib/site-packages/rlbot_flatbuffers/__init__.pyi",
+      "line": 5622,
+      "datatype": "float",
+      "installed_documentation": "How long until the player is not demolished anymore.\n    The value is -1 if while not demolished.",
+      "runtime_descriptor_available": true,
+      "lifecycle": "Copied from packet.players[index] before original.MyBot.get_output; engine sampling phase unresolved"
+    },
+    "is_supersonic": {
+      "source": "python-example/venv/Lib/site-packages/rlbot_flatbuffers/__init__.pyi",
+      "line": 5627,
+      "datatype": "bool",
+      "installed_documentation": "Whether the player's car is moving at supersonic speed and can demolish.",
+      "runtime_descriptor_available": true,
+      "lifecycle": "Copied from packet.players[index] before original.MyBot.get_output; engine sampling phase unresolved"
+    },
+    "hitbox": {
+      "source": "python-example/venv/Lib/site-packages/rlbot_flatbuffers/__init__.pyi",
+      "line": 5593,
+      "datatype": "BoxShape",
+      "installed_documentation": "The hitbox of the player's car.\n    Note that the hitbox is not centered at the cars location.\n    See the hitbox offset.",
+      "runtime_descriptor_available": true,
+      "lifecycle": "Copied from packet.players[index] before original.MyBot.get_output; engine sampling phase unresolved"
+    },
+    "hitbox_offset": {
+      "source": "python-example/venv/Lib/site-packages/rlbot_flatbuffers/__init__.pyi",
+      "line": 5599,
+      "datatype": "Vector3",
+      "installed_documentation": "The center of the hitbox in local coordinates.",
+      "runtime_descriptor_available": true,
+      "lifecycle": "Copied from packet.players[index] before original.MyBot.get_output; engine sampling phase unresolved"
+    },
+    "latest_touch": {
+      "source": "python-example/venv/Lib/site-packages/rlbot_flatbuffers/__init__.pyi",
+      "line": 5603,
+      "datatype": "Touch | None",
+      "installed_documentation": "Information about the latest touch with a ball.\n    Is null if the player has yet to touch the ball.",
+      "runtime_descriptor_available": true,
+      "lifecycle": "Copied from packet.players[index] before original.MyBot.get_output; engine sampling phase unresolved"
+    }
+  },
+  "air_state_enum": {
+    "OnGround": 0,
+    "Jumping": 1,
+    "DoubleJumping": 2,
+    "Dodging": 3,
+    "InAir": 4
+  },
+  "features": [
+    "ball_forward",
+    "ball_right",
+    "ball_up",
+    "prediction_forward",
+    "prediction_right",
+    "prediction_up",
+    "ball_distance",
+    "car_speed",
+    "ball_present",
+    "prediction_valid",
+    "prediction_horizon",
+    "prediction_first_offset",
+    "callback_dt"
+  ],
+  "channels": [
+    "throttle",
+    "steer",
+    "pitch",
+    "yaw",
+    "roll",
+    "jump",
+    "boost",
+    "handbrake"
+  ],
+  "lifecycle_sources": [
+    {
+      "path": "python-example/venv/Lib/site-packages/rlbot/managers/bot.py",
+      "functions": [
+        "_handle_packet",
+        "_handle_ball_prediction",
+        "_packet_processor",
+        "_run"
+      ],
+      "findings": "Packet and prediction handlers assign separate latest objects. Queue draining coalesces packets. _packet_processor assigns latest prediction, calls get_output, then sends PlayerInput. No atomic packet/prediction pair guarantee."
+    },
+    {
+      "path": "python-example/venv/Lib/site-packages/rlbot/interface.py",
+      "functions": [
+        "handle_incoming_message",
+        "send_msg",
+        "send_bytes"
+      ],
+      "findings": "CorePacket.unpack dispatches handlers; send_msg packs InterfacePacket and socket.sendall. Return confirms local transport only, not engine application."
+    }
+  ],
+  "causal_classification": "All recorded native values are pre-current-action received packet snapshots. Current/historical semantics vary by field; engine tick boundary/reset implementation not proven.",
+  "last_input": {
+    "source_claim": "Last controller input from this player",
+    "unresolved": [
+      "Engine producer/build commit",
+      "Exact applied-versus-received tick phase",
+      "Equality to previous teacher submission",
+      "Proof of physical maneuver execution"
+    ],
+    "runtime_plan": "Compare native inputs with prior confirmed submissions at lags 1..8, and current-label coincidence separately; isolate changed-action callbacks. Never align/shift captured values."
+  },
+  "reset_caveats": [
+    "Stub documents double-jump/dodge false on ground and dodge_elapsed zero on landing; verify observationally, do not reset them ourselves.",
+    "Jumping documentation contains inconsistent 0.2-second/240-tick parenthetical; not timing authority.",
+    "Dodge direction reference frame and reset-on-ground semantics are not specified; record native components without inventing a frame.",
+    "No source guarantee that boost, demolition, or contact flags reset on every match phase transition."
+  ],
+  "upstream_schema_corrob": "https://github.com/RLBot/flatbuffers-schema/blob/main/schema/gamedata.fbs (not installed engine provenance)",
+  "protected_hashes_checked": 43,
+  "synthetic_native_instances": false,
+  "live_connection": false
+}

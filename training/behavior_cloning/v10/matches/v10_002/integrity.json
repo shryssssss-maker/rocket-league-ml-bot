@@ -1,0 +1,11 @@
+{
+  "agent_summary.json": "49d183910ddc7b465ca6819bccb17d68b09ddfed37f6cb4b2c9db58ff20f399d",
+  "bot.toml": "a3077db24258cf92ec001e48e542109dd09bb8799992208be8eead278d9c9108",
+  "match.toml": "98d611f553d3253a273eff2274066629ef02dee01409274e3f14610d43634f7c",
+  "metadata.json": "c94ecf81068acfd73c04d8e24c237232a9c35d9cad7dcac99a23addaf4142e41",
+  "recorder_closed.json": "4d4772b5ab98f9388fad15ade0bb682025016ac5fc1fb9c50ce71fb1d7866a31",
+  "run_agent.cmd": "2850bbc58fc53cabd3a16f301cd36edd605c6fdea3538c271ed0e6da67482e9b",
+  "run_summary.json": "b51229615bcd34b670c1757726141f0b015834e0a19175e9c794ad326c994380",
+  "raw/errors.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "raw/trajectory.jsonl": "21aa26e4e56f489765369ae32ca748ed7a74abc7b527a0c53df915e062fcd1d1"
+}

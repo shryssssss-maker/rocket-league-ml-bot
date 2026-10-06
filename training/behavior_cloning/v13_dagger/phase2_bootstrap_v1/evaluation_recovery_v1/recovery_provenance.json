@@ -1,0 +1,16 @@
+{
+  "reason": "Missing json in extracted helper namespace; dependency added, fitting unchanged",
+  "original_runner_sha256": "1a0dca0e257033c683a7c82fbffb59062f091d9ae082a72f2d262bcf9674e580",
+  "recovery_runner_sha256": "6c267c85293cc70ad2e12ca54894c31309092e9bded5a96d53460f196efb704f",
+  "original_files_sha256": {
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase2_bootstrap_v1\\B_best.pt": "579fa26010140514d2e9b7f0e2871bee569c594b7da8648e31ee1489007cd5b7",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase2_bootstrap_v1\\B_training.json": "9f0c6d69298a1645ddb0ded989973c4b9737095348a402efb432da9ab00c8188",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase2_bootstrap_v1\\code_hashes.json": "302dd479c1085cde9a0c0df7faa76ddb3120ccf58aba9e16fd02c6b76e82f163",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase2_bootstrap_v1\\experiment.json": "ec9e143100d3d1cd8b23d04b235b5a2c120a15d22ed96d21565f87cdc30ce1d5",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase2_bootstrap_v1\\failure.json": "75a20a57c6dee7a18a70c72b69d50660318e6795df83e3b9811ca206bca85b31",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase2_bootstrap_v1\\runtime.json": "bc24e41ae6b53683cff36ed891e4f25e13aefe55a1084d24714b41f797d93131",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase2_bootstrap_v1\\selection.json": "36ff0ff8d1c4f23188575c07fbc3975e5e82fd18678272141890bcec0bd63f3f"
+  },
+  "checkpoint_sha256": "579fa26010140514d2e9b7f0e2871bee569c594b7da8648e31ee1489007cd5b7",
+  "retrained": false
+}

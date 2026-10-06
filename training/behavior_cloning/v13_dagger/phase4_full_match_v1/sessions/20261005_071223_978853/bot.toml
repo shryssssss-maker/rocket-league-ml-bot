@@ -1,0 +1,6 @@
+[settings]
+name = "13D Student Full Match"
+agent_id = "local/v13_fullmatch_student"
+run_command = "run_agent.cmd"
+root_dir = "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase4_full_match_v1\\sessions\\20261005_071223_978853"
+loadout_file = "C:\\Users\\shreyas\\Desktop\\model wars\\python-example-original\\src\\loadout.toml"

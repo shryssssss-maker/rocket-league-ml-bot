@@ -1,0 +1,10 @@
+{
+  "status": "natural_match_ended",
+  "error": null,
+  "protected_ok": true,
+  "natural_end_packet": {
+    "frame": 48132,
+    "T": 401.1000061035156,
+    "phase": "MatchPhase.Ended"
+  }
+}

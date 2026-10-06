@@ -1,0 +1,125 @@
+{
+  "match_id": "v10_003",
+  "split": "test",
+  "features": [
+    "ball_forward",
+    "ball_right",
+    "ball_up",
+    "prediction_forward",
+    "prediction_right",
+    "prediction_up",
+    "ball_distance",
+    "car_speed",
+    "ball_present",
+    "prediction_valid",
+    "prediction_horizon",
+    "prediction_first_offset",
+    "callback_dt",
+    "previous_neutral",
+    "previous_chase",
+    "previous_jump",
+    "previous_dodge",
+    "previous_steer"
+  ],
+  "channels": [
+    "throttle",
+    "steer",
+    "pitch",
+    "yaw",
+    "roll",
+    "jump",
+    "boost",
+    "handbrake"
+  ],
+  "endianness": "little",
+  "tensors": {
+    "observations": {
+      "file": "observations.bin",
+      "dtype": "float32",
+      "shape": [
+        23982,
+        18
+      ],
+      "bytes": 1726704,
+      "sha256": "6d88af0c84196a9357fb91dd97574a82117afb9ead2dceb67a0dbca16dcfc9ce"
+    },
+    "analog_controls": {
+      "file": "analog_controls.bin",
+      "dtype": "float32",
+      "shape": [
+        23982,
+        5
+      ],
+      "bytes": 479640,
+      "sha256": "913e5e964ab4b019b11d6171a46a59a79b6a33f82246c0e928e5f8ec64f23dd8"
+    },
+    "buttons": {
+      "file": "buttons.bin",
+      "dtype": "uint8",
+      "shape": [
+        23982,
+        3
+      ],
+      "bytes": 71946,
+      "sha256": "62722e09718dd8a1ed8522e2fd92f99a55ed2c228320b378c1d0876a7b6081d7"
+    },
+    "mode": {
+      "file": "mode.bin",
+      "dtype": "uint8",
+      "shape": [
+        23982
+      ],
+      "bytes": 23982,
+      "sha256": "6875ae654dbdfbb713150f5cb69e274a1abfad3e6e25aba3de27adbdba878311"
+    },
+    "callback": {
+      "file": "callback.bin",
+      "dtype": "uint64",
+      "shape": [
+        23982
+      ],
+      "bytes": 191856,
+      "sha256": "e29d6d79283328551987096c3592f9a60b5afc386b3541c3c992717a97a09057"
+    },
+    "frame": {
+      "file": "frame.bin",
+      "dtype": "uint64",
+      "shape": [
+        23982
+      ],
+      "bytes": 191856,
+      "sha256": "ee235371d43a87546547871b37fb61f2af39981922e9797a22a1b0ad5993f26e"
+    },
+    "time": {
+      "file": "time.bin",
+      "dtype": "float64",
+      "shape": [
+        23982
+      ],
+      "bytes": 191856,
+      "sha256": "b88c99d49c33d3c5c744c99e368c0282d974bed6959f2f8f4b337a33fe81f002"
+    },
+    "dt": {
+      "file": "dt.bin",
+      "dtype": "float64",
+      "shape": [
+        23982
+      ],
+      "bytes": 191856,
+      "sha256": "b778766b16fbcd52d9aa707b38a33a3db0ce94fc209a7e7de2c95ba10130784e"
+    }
+  },
+  "raw_integrity": {
+    "agent_summary.json": "6c34115c659367fd83eb4b1e5bc396d6e140ccdf56e85ab33db918196c18bc7a",
+    "bot.toml": "c1c0c62b2ffad558221856defa588b5d6ffbd1f6cde5ef2795feef64b38c2cbe",
+    "match.toml": "98d611f553d3253a273eff2274066629ef02dee01409274e3f14610d43634f7c",
+    "metadata.json": "9b74a42e9d3c780af8c601c1a7bfe94b3275b18dcc4b411c3e156d603b019b32",
+    "recorder_closed.json": "ffeda92630643e9ba6f66523a27880a8a99232e024ebaca7139a4f08c2e1418c",
+    "run_agent.cmd": "2850bbc58fc53cabd3a16f301cd36edd605c6fdea3538c271ed0e6da67482e9b",
+    "run_summary.json": "133870e86e051a27cf16b2aacb69f0b448b18233ffaa5860a83da82edfbd21af",
+    "raw/errors.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "raw/trajectory.jsonl": "5269923ea7011a3a328c6911c43312cb6ddf5c7b25d7f5dca8fc65756b01a3fd"
+  },
+  "hidden_teacher_state_not_in_tensors": true,
+  "temporal_policy": "All actual processed callbacks in order; no resampling, rebalancing, chunks or phase resets."
+}

@@ -1,0 +1,99 @@
+{
+  "version": "v14_boundary_temporal_objective_proposal_v2",
+  "status": "design_only_awaiting_review",
+  "training_run": false,
+  "live_launch": false,
+  "initialization": "Repeat V13 seeded fresh initialization; human approved",
+  "seed": 42,
+  "parameter_count": 26181,
+  "objective": {
+    "mechanism": "one boundary-balanced adjacent-transition BCE term added to original V13 loss",
+    "lambda": 0.1,
+    "epsilon": 1e-07,
+    "boundaries": [
+      "non_Jump->Jump",
+      "Jump->Neutral",
+      "Neutral->Front_dodge",
+      "Front_dodge->Neutral"
+    ],
+    "scores": [
+      "(1-p_prev_J)*p_J",
+      "p_prev_J*p_N",
+      "p_prev_N*p_D",
+      "p_prev_D*p_N"
+    ],
+    "targets": "binary indicators from adjacent actual teacher mode labels only",
+    "reduction": "per-type mean positive BCE and mean negative BCE averaged if both present; only present group otherwise; four-type mean; zero if no eligible pairs",
+    "formula": "original mean CE + Chase-only steering MSE + 0.1 * boundary_BCE",
+    "eligibility": "same match; both ball present; strictly increasing time; actual callback dt >0 and <=0.1 s",
+    "chunk_boundary": "detached cached preceding probabilities; labels/masks/time from actual preceding callback; no extra forward or reset"
+  },
+  "training": {
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0,
+    "amsgrad": false,
+    "max_epochs": 20,
+    "patience": 4,
+    "chunk_callbacks": 512,
+    "selection": "minimum original unweighted validation loss; strict improvement; earliest tie",
+    "reset": "match boundaries only",
+    "detach": "each training chunk",
+    "train_ids": [
+      "pilot_01",
+      "v10_001",
+      "v10_004",
+      "v10_006"
+    ],
+    "validation_ids": [
+      "pilot_02",
+      "v10_002"
+    ],
+    "test_reads": false
+  },
+  "temporal_metric": {
+    "specification": "proposal_v2.md: Baseline and unchanged timed-core metric",
+    "edge_tolerance_seconds": 0.016667666666666667,
+    "minimum_eligible_cores": 20,
+    "primary_threshold": "max(0.25, pinned_V13_timed_core_score + 0.15)",
+    "baseline_ceiling_review_threshold": 0.85,
+    "extra_core_rate_allowance_per_minute": 0.5,
+    "baseline_metric_status": "evaluation-only needed after approval, before fitting"
+  },
+  "regression_guards": {
+    "chase_accuracy_min": 0.9896232223028739,
+    "chase_steer_mae_max": 0.1695616946664056,
+    "overall_accuracy_min": 0.9522601595058281
+  },
+  "protected_hashes": {
+    "checked": 43,
+    "mismatches": []
+  },
+  "source_hashes": {
+    "training/behavior_cloning/datasets/v10_live_1v1_18d_20261005_v1/manifest.json": "080943fd8f9a81ada800e0a2f9ff3593b67f66d32272211d67030c03cf433a83",
+    "training/behavior_cloning/v13_dagger/bootstrap.py": "6c267c85293cc70ad2e12ca54894c31309092e9bded5a96d53460f196efb704f",
+    "training/behavior_cloning/v13_dagger/projection.py": "600023f7559b20945c2d94444395920419a5a1921ce053800af9507a134c11f2",
+    "training/behavior_cloning/v13_dagger/phase2_bootstrap_v1/experiment.json": "ec9e143100d3d1cd8b23d04b235b5a2c120a15d22ed96d21565f87cdc30ce1d5",
+    "training/behavior_cloning/v13_dagger/phase2_bootstrap_v1/B_best.pt": "579fa26010140514d2e9b7f0e2871bee569c594b7da8648e31ee1489007cd5b7",
+    "training/behavior_cloning/v13_dagger/phase2_bootstrap_v1/evaluation_recovery_v1/report.json": "8f58312a1acb7e8ef1eb7b2e438b43924bb28e7589db2f5c72410c8111bed545",
+    "training/behavior_cloning/v12/bakeoff.py": "dc09b0912e0c92c6c4bb80b0b271c66e21aab0b4fb61c013107a7c9ddb9325d1",
+    "training/v2_observation_test/observation_contract.py": "e0f59f763d33e59f6815a86e9c452b3fcade87fe26727ca53c910ebb7e6db750"
+  },
+  "proposal_sha256": "d47a663d982989b7d8bdb8e08569baf4fb98432ef3e009a6d6b9d8cf1c6bf005",
+  "validation_results": null,
+  "success_verdict": "not_run",
+  "next_step": "Review v2 objective and fixed lambda before implementation",
+  "alternative": {
+    "version": "proposal_v1",
+    "role": "documented alternative/ablation; not main or scheduled",
+    "files": {
+      "proposal_v1.md": "80915ebe04ffb5f9dfbf20886103ab24bf6206d9a941ea6c148f22d471c81606",
+      "proposal_v1.json": "d3834742e991f61bf3215e2f36e0e7502739322aee6b41a79276e2a7fb2dd047"
+    }
+  }
+}

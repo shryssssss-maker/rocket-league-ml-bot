@@ -1,0 +1,21 @@
+{
+  "approval_scope": "User-approved run configuration; full launch specification/preflight still awaits review",
+  "matches": 1,
+  "wall_seconds_after_first_verified_student_submission": 90,
+  "human_team": "Blue",
+  "student_team": "Orange",
+  "sole_controller": "Pinned 13D student",
+  "shadow_teacher": "Original teacher diagnostic-only with independent validated temporal state",
+  "natural_play": true,
+  "state_setting": false,
+  "intentional_receive_pauses": false,
+  "replay_manipulation": false,
+  "retain_replays_and_countdown": true,
+  "additional_runs_until_review": false,
+  "record_actual_student_trajectory_and_shadow_expert_labels": true,
+  "diagnostics_are_training_dataset": false,
+  "dagger_aggregation_or_training": false,
+  "live_launched": false,
+  "specification_preflight_complete": false,
+  "precedence": "Overrides the pending run-duration/side preference in launch_readiness_specification_20261005.json; all other proposed specifications remain subject to explicit review"
+}

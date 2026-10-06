@@ -1,0 +1,225 @@
+{
+  "experiment": "V1",
+  "status": "PASS",
+  "control_order": [
+    "throttle",
+    "steer",
+    "pitch",
+    "yaw",
+    "roll",
+    "jump",
+    "boost",
+    "handbrake"
+  ],
+  "analog_tolerance": 1e-06,
+  "teacher_cases": 1004,
+  "chase_values": 1001,
+  "unique_wire_steering_values": 1001,
+  "transport_only_sentinels": 4,
+  "rejected_invalid_cases": [
+    {
+      "case": "yaw",
+      "error": "Teacher yaw/roll/boost/handbrake must remain zero/false"
+    },
+    {
+      "case": "roll",
+      "error": "Teacher yaw/roll/boost/handbrake must remain zero/false"
+    },
+    {
+      "case": "boost",
+      "error": "Teacher yaw/roll/boost/handbrake must remain zero/false"
+    },
+    {
+      "case": "handbrake",
+      "error": "Teacher yaw/roll/boost/handbrake must remain zero/false"
+    },
+    {
+      "case": "reverse",
+      "error": "Unsupported teacher controller combination"
+    },
+    {
+      "case": "partial throttle",
+      "error": "Unsupported teacher controller combination"
+    },
+    {
+      "case": "neutral steering",
+      "error": "Unsupported teacher controller combination"
+    },
+    {
+      "case": "pitch without jump",
+      "error": "Unsupported teacher controller combination"
+    },
+    {
+      "case": "positive pitch",
+      "error": "Unsupported teacher controller combination"
+    },
+    {
+      "case": "partial pitch",
+      "error": "Unsupported teacher controller combination"
+    },
+    {
+      "case": "nonbinary jump",
+      "error": "Buttons must be exactly binary"
+    },
+    {
+      "case": "nonbinary boost",
+      "error": "Buttons must be exactly binary"
+    },
+    {
+      "case": "nonbinary handbrake",
+      "error": "Buttons must be exactly binary"
+    },
+    {
+      "case": "NaN",
+      "error": "Invalid analog channel"
+    },
+    {
+      "case": "infinity",
+      "error": "Invalid analog channel"
+    },
+    {
+      "case": "out-of-range steer",
+      "error": "Invalid analog channel"
+    },
+    {
+      "case": "Boolean analog",
+      "error": "Invalid analog channel"
+    },
+    {
+      "case": "Chase plus jump",
+      "error": "Unsupported teacher controller combination"
+    },
+    {
+      "case": "Chase plus dodge pitch",
+      "error": "Unsupported teacher controller combination"
+    },
+    {
+      "case": "Jump plus steering",
+      "error": "Unsupported teacher controller combination"
+    },
+    {
+      "case": "Dodge plus steering",
+      "error": "Unsupported teacher controller combination"
+    },
+    {
+      "case": "short vector",
+      "error": "Expected exactly eight channels"
+    },
+    {
+      "case": "ninth channel",
+      "error": "Expected exactly eight channels"
+    },
+    {
+      "case": "invalid mode",
+      "error": "Unsupported mode: 4"
+    },
+    {
+      "case": "Boolean mode",
+      "error": "Unsupported mode: True"
+    },
+    {
+      "case": "non-Chase steering",
+      "error": "Unsupported teacher steering/mode combination"
+    },
+    {
+      "case": "decode out-of-range",
+      "error": "Unsupported teacher steering/mode combination"
+    },
+    {
+      "case": "RLBot use_item=true",
+      "error": "Teacher use_item must remain false"
+    }
+  ],
+  "mode_results": {
+    "Neutral": "PASS",
+    "Chase": "PASS",
+    "Jump": "PASS",
+    "Front dodge": "PASS"
+  },
+  "maximum_analog_round_trip_error": 2.95639037695139e-08,
+  "rlbot_wire_maximum_error": 2.95639037695139e-08,
+  "rocketsim_maximum_error": 2.95639037695139e-08,
+  "installed_engine_calls": 4032,
+  "source_chase_calls": 1001,
+  "test_code_sha256": "ed68a69f923650e935653aea9b2640f248d0c078a7381bafab664bcf0d73b1cc",
+  "protected_hash_count_before": 43,
+  "protected_hash_count_after": 43,
+  "versions": {
+    "live": {
+      "rlbot": "2.0.0b55",
+      "rlbot-flatbuffers": "0.19.0"
+    },
+    "simulation": {
+      "RocketSim": "2.2.1",
+      "rlgym-rocket-league": "2.0.1",
+      "numpy": "1.26.4"
+    }
+  },
+  "standalone_controller_probe": {
+    "input": [
+      1.0,
+      0.123456789,
+      0.0,
+      0.0,
+      0.0,
+      false,
+      false,
+      false
+    ],
+    "output": [
+      5.605193857299268e-45,
+      1.0,
+      0.12345679104328156,
+      0.0,
+      0.0,
+      false,
+      false,
+      false
+    ],
+    "equal": false
+  },
+  "source_sequence_controls": [
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      true,
+      false,
+      false
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      false,
+      false,
+      false
+    ],
+    [
+      0.0,
+      0.0,
+      -1.0,
+      0.0,
+      0.0,
+      true,
+      false,
+      false
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      false,
+      false,
+      false
+    ]
+  ],
+  "elapsed_seconds": 0.9295104000002539,
+  "limits": "Binary envelopes and native controls only; no network, arena, physics, timing or observations tested."
+}

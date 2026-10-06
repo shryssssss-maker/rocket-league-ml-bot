@@ -1,0 +1,404 @@
+{
+  "experiment": "V6_OPTION_A",
+  "status": "CONTRACT_PASS_LATENCY_PENDING",
+  "provider_identity": {
+    "version": "2.2.1",
+    "binary_sha256": "e3ee24ca82445b4bfcc754583f6778d7b0d8b7a7f7d64f872be8c65e621a63d0",
+    "exact_build_commit": null,
+    "meshes": {
+      "soccar\\mesh_0.cmf": "8764d43b87ba134cacf1be454d59d493630188e79c0d88639258b359bb511c4e",
+      "soccar\\mesh_1.cmf": "9d42e5db7cde5c7be0783c256e15e819bd09351fcb2debd3205e3d055073c993",
+      "soccar\\mesh_10.cmf": "36cc44e14a0e500aeb6167a4d5fce449b218b3d941df3ca46f398d269b01af3d",
+      "soccar\\mesh_11.cmf": "7f4468be0b0835a48996f92d1a2398f1290acbf1152d39e1c53c2701d1fb6ce3",
+      "soccar\\mesh_12.cmf": "952a90a0ff27c2733d507e59bdca8600968276eddad9a41b47a689010e805118",
+      "soccar\\mesh_13.cmf": "b441f782f07e81c2444ed7a5c4ed618c26ef3e1940ac2c63c362154620631750",
+      "soccar\\mesh_14.cmf": "085f7533c53a73da664c129c3b1c93f5ce08ceb302aa5b993ff5fe95af5d6ae8",
+      "soccar\\mesh_15.cmf": "21c1d1eb450f9e09ee8d7d55e1d41bf563518f9b2deb2ab5369c47139faa2e4a",
+      "soccar\\mesh_2.cmf": "762ec145db3c317d82314ad94af6f8b591e822c26860ed3c0ee106aba5591eee",
+      "soccar\\mesh_3.cmf": "0db5c559287bcd255b99e6f5db341b874ec9a5fcf6137247cf16d913e178db5c",
+      "soccar\\mesh_4.cmf": "92c3224da44f1a359140647845a44457df35541458b92485e7a3232bb596566a",
+      "soccar\\mesh_5.cmf": "776c24b1231b4f7ab5437af68e4cc1cc4d5cd7875b8cb386a67487162c3941a3",
+      "soccar\\mesh_6.cmf": "a2262bfa2bfacca3caf3a8334f02b9b52624056853cc33a1340a23c3a33804e6",
+      "soccar\\mesh_7.cmf": "c887df022d6a2b33e78a3cf8f5dd65d9cd61f4d72009781d40c32091119a06f3",
+      "soccar\\mesh_8.cmf": "3350567082d9a133f59f8471d941fde6cce20eb2b2bc26c2ab0566b7fb7a21e9",
+      "soccar\\mesh_9.cmf": "4864911a7f0a3add929f41cc8f676cde416dcc3c07ab08a30742c9893e8a6ce8"
+    }
+  },
+  "initialization_ms": 25.4684,
+  "contract_checks": {
+    "cases": 18,
+    "results": [
+      {
+        "case": 0,
+        "T": 0.0,
+        "count": 241,
+        "caller_unchanged": true,
+        "arena_released": true
+      },
+      {
+        "case": 0,
+        "T": 12.0,
+        "count": 241,
+        "caller_unchanged": true,
+        "arena_released": true
+      },
+      {
+        "case": 0,
+        "T": 500.12298583984375,
+        "count": 241,
+        "caller_unchanged": true,
+        "arena_released": true
+      },
+      {
+        "case": 1,
+        "T": 0.0,
+        "count": 241,
+        "caller_unchanged": true,
+        "arena_released": true
+      },
+      {
+        "case": 1,
+        "T": 12.0,
+        "count": 241,
+        "caller_unchanged": true,
+        "arena_released": true
+      },
+      {
+        "case": 1,
+        "T": 500.12298583984375,
+        "count": 241,
+        "caller_unchanged": true,
+        "arena_released": true
+      },
+      {
+        "case": 2,
+        "T": 0.0,
+        "count": 241,
+        "caller_unchanged": true,
+        "arena_released": true
+      },
+      {
+        "case": 2,
+        "T": 12.0,
+        "count": 241,
+        "caller_unchanged": true,
+        "arena_released": true
+      },
+      {
+        "case": 2,
+        "T": 500.12298583984375,
+        "count": 241,
+        "caller_unchanged": true,
+        "arena_released": true
+      },
+      {
+        "case": 3,
+        "T": 0.0,
+        "count": 241,
+        "caller_unchanged": true,
+        "arena_released": true
+      },
+      {
+        "case": 3,
+        "T": 12.0,
+        "count": 241,
+        "caller_unchanged": true,
+        "arena_released": true
+      },
+      {
+        "case": 3,
+        "T": 500.12298583984375,
+        "count": 241,
+        "caller_unchanged": true,
+        "arena_released": true
+      },
+      {
+        "case": 4,
+        "T": 0.0,
+        "count": 241,
+        "caller_unchanged": true,
+        "arena_released": true
+      },
+      {
+        "case": 4,
+        "T": 12.0,
+        "count": 241,
+        "caller_unchanged": true,
+        "arena_released": true
+      },
+      {
+        "case": 4,
+        "T": 500.12298583984375,
+        "count": 241,
+        "caller_unchanged": true,
+        "arena_released": true
+      },
+      {
+        "case": 5,
+        "T": 0.0,
+        "count": 241,
+        "caller_unchanged": true,
+        "arena_released": true
+      },
+      {
+        "case": 5,
+        "T": 12.0,
+        "count": 241,
+        "caller_unchanged": true,
+        "arena_released": true
+      },
+      {
+        "case": 5,
+        "T": 500.12298583984375,
+        "count": 241,
+        "caller_unchanged": true,
+        "arena_released": true
+      }
+    ],
+    "arena_events": [
+      {
+        "event": "created",
+        "id": 0
+      },
+      {
+        "event": "predicted",
+        "id": 0,
+        "count": 241
+      },
+      {
+        "event": "released",
+        "id": 0
+      },
+      {
+        "event": "created",
+        "id": 1
+      },
+      {
+        "event": "predicted",
+        "id": 1,
+        "count": 241
+      },
+      {
+        "event": "released",
+        "id": 1
+      },
+      {
+        "event": "created",
+        "id": 2
+      },
+      {
+        "event": "predicted",
+        "id": 2,
+        "count": 241
+      },
+      {
+        "event": "released",
+        "id": 2
+      },
+      {
+        "event": "created",
+        "id": 3
+      },
+      {
+        "event": "predicted",
+        "id": 3,
+        "count": 241
+      },
+      {
+        "event": "released",
+        "id": 3
+      },
+      {
+        "event": "created",
+        "id": 4
+      },
+      {
+        "event": "predicted",
+        "id": 4,
+        "count": 241
+      },
+      {
+        "event": "released",
+        "id": 4
+      },
+      {
+        "event": "created",
+        "id": 5
+      },
+      {
+        "event": "predicted",
+        "id": 5,
+        "count": 241
+      },
+      {
+        "event": "released",
+        "id": 5
+      },
+      {
+        "event": "created",
+        "id": 6
+      },
+      {
+        "event": "predicted",
+        "id": 6,
+        "count": 241
+      },
+      {
+        "event": "released",
+        "id": 6
+      },
+      {
+        "event": "created",
+        "id": 7
+      },
+      {
+        "event": "predicted",
+        "id": 7,
+        "count": 241
+      },
+      {
+        "event": "released",
+        "id": 7
+      },
+      {
+        "event": "created",
+        "id": 8
+      },
+      {
+        "event": "predicted",
+        "id": 8,
+        "count": 241
+      },
+      {
+        "event": "released",
+        "id": 8
+      },
+      {
+        "event": "created",
+        "id": 9
+      },
+      {
+        "event": "predicted",
+        "id": 9,
+        "count": 241
+      },
+      {
+        "event": "released",
+        "id": 9
+      },
+      {
+        "event": "created",
+        "id": 10
+      },
+      {
+        "event": "predicted",
+        "id": 10,
+        "count": 241
+      },
+      {
+        "event": "released",
+        "id": 10
+      },
+      {
+        "event": "created",
+        "id": 11
+      },
+      {
+        "event": "predicted",
+        "id": 11,
+        "count": 241
+      },
+      {
+        "event": "released",
+        "id": 11
+      },
+      {
+        "event": "created",
+        "id": 12
+      },
+      {
+        "event": "predicted",
+        "id": 12,
+        "count": 241
+      },
+      {
+        "event": "released",
+        "id": 12
+      },
+      {
+        "event": "created",
+        "id": 13
+      },
+      {
+        "event": "predicted",
+        "id": 13,
+        "count": 241
+      },
+      {
+        "event": "released",
+        "id": 13
+      },
+      {
+        "event": "created",
+        "id": 14
+      },
+      {
+        "event": "predicted",
+        "id": 14,
+        "count": 241
+      },
+      {
+        "event": "released",
+        "id": 14
+      },
+      {
+        "event": "created",
+        "id": 15
+      },
+      {
+        "event": "predicted",
+        "id": 15,
+        "count": 241
+      },
+      {
+        "event": "released",
+        "id": 15
+      },
+      {
+        "event": "created",
+        "id": 16
+      },
+      {
+        "event": "predicted",
+        "id": 16,
+        "count": 241
+      },
+      {
+        "event": "released",
+        "id": 16
+      },
+      {
+        "event": "created",
+        "id": 17
+      },
+      {
+        "event": "predicted",
+        "id": 17,
+        "count": 241
+      },
+      {
+        "event": "released",
+        "id": 17
+      }
+    ],
+    "original_selector_output": "Original selector checks PASS"
+  },
+  "benchmark": null,
+  "protected_hashes": 43,
+  "code_sha256": {
+    "training\\v6_prediction_test\\validate_option_a.py": "e78f46abda5300cdbe54b04fd7b48f68f64213b08e892eca0ce5d8a000b8598f",
+    "training\\v6_prediction_test\\constrained_provider.py": "42f48d79ee5f13bcfe309d2b52d6a6515b107259689f35cee71585f1501fe2ec"
+  },
+  "timestamp_rule": "game_seconds[i] = T + i / 120; no existing provider timestamps rewritten",
+  "scope": "Constrained experiment only; final provider not accepted, no V7/provider parity, demonstrations or ML."
+}

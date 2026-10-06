@@ -1,0 +1,13 @@
+{
+  "status": "natural_match_ended",
+  "error": null,
+  "cleanup_errors": [],
+  "recorder_shutdown_confirmed": true,
+  "server_pid": 32960,
+  "protected_ok": true,
+  "natural_end_packet": {
+    "frame": 47704,
+    "T": 397.5333251953125,
+    "phase": "MatchPhase.Ended"
+  }
+}

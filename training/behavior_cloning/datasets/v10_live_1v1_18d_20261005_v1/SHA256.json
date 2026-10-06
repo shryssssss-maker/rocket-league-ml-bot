@@ -1,0 +1,19 @@
+{
+  "manifest.json": "080943fd8f9a81ada800e0a2f9ff3593b67f66d32272211d67030c03cf433a83",
+  "report.json": "415ecce0998425372d726d5d6d71ff63aac0bbaa2e292faf738f3e90b083becd",
+  "report.md": "6eb0ec520b9f03bbdf70c9aa8bfb83a5893cea0ddc676df6d6aa1ccef2ffeb47",
+  "snapshots/training/behavior_cloning/common.py": "845137890ed50b7e0ae38cc174d496b63234533334767056ab623203963024c8",
+  "snapshots/training/behavior_cloning/dataset.py": "9ec43eef51655845e92e1f7c17750acf6ea06be29e83a1f002c0419eecd43931",
+  "snapshots/training/behavior_cloning/launch.py": "3a672ebbdfc04dca557d00280b0a800afa0872ff8c93ca26afe2b46fe5c60f6a",
+  "snapshots/training/behavior_cloning/recorder.py": "5bba6113ad2a41fe89d6f0b56a62fe9e49f94d790c8989fe6dcf78d6bf7013fb",
+  "snapshots/training/behavior_cloning/v10/collection.py": "e3c75358574bc4d5de29de7a7dcefe6b9b56eca98c9d5ba15c364d58d745c025",
+  "snapshots/training/behavior_cloning/v10/collection_plan.json": "23247c9429280d17b4440ac0b5adfba1e0fdca481b31867c5bcfe59aedda80d9",
+  "snapshots/training/behavior_cloning/v10/coverage_review.py": "e50a93170d4a416b37c43a50a471f81d38f8202c28fa623bfcea8d74e989b737",
+  "snapshots/training/behavior_cloning/v10/freeze_dataset.py": "13327f0e4d775ac28b96ee46edaec43e75dbfd91c555de312f4adc31637239ff",
+  "snapshots/training/behavior_cloning/v10/pilot_preservation.json": "e456c81470b0b6fea118a58178d2992d7e2b242bdfbb803ff2d72473bcf9d719",
+  "snapshots/training/live_reference_test/launch.py": "e1e238c81eb7810ab5ea98383c4741e11c9a1133c24706c4ee2ecffd228d88d6",
+  "snapshots/training/live_reference_test/source_hashes.json": "1f0ef3dbd12fbfc857f9a832d05788d0010aa1d2855165cca66a0cba2c387a9e",
+  "snapshots/training/reports/v10_collection_review_20261005.json": "c9b5d5af7e0426d614dd0d620a2cc403f2ea761491bee43091d785fc4a0ac5d3",
+  "snapshots/training/reports/v10_collection_review_20261005.md": "1ea1f5d7aaf411d3cd4f2ac37fd936d74f8760552090fc037ec0bbc23197e7bd",
+  "snapshots/training/v2_observation_test/observation_contract.py": "e0f59f763d33e59f6815a86e9c452b3fcade87fe26727ca53c910ebb7e6db750"
+}

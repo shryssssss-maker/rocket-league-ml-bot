@@ -1,0 +1,174 @@
+{
+  "experiment": "V2",
+  "status": "PASS",
+  "seed": 20261004,
+  "paired_states": 1000,
+  "unique_physical_states": 500,
+  "features": [
+    "ball_forward",
+    "ball_right",
+    "ball_up",
+    "prediction_forward",
+    "prediction_right",
+    "prediction_up",
+    "ball_distance",
+    "car_speed",
+    "ball_present",
+    "prediction_valid",
+    "prediction_horizon",
+    "prediction_first_offset",
+    "callback_dt",
+    "previous_neutral",
+    "previous_chase",
+    "previous_jump",
+    "previous_dodge",
+    "previous_steer"
+  ],
+  "dtype": "float32",
+  "dimension": 18,
+  "tolerance": 1e-05,
+  "maximum_normalized_feature_difference": 1.1920928955078125e-07,
+  "per_feature_maximum_difference": {
+    "ball_forward": 1.1920928955078125e-07,
+    "ball_right": 1.1920928955078125e-07,
+    "ball_up": 1.1920928955078125e-07,
+    "prediction_forward": 5.960464477539063e-08,
+    "prediction_right": 1.1920928955078125e-07,
+    "prediction_up": 1.1920928955078125e-07,
+    "ball_distance": 0.0,
+    "car_speed": 0.0,
+    "ball_present": 0.0,
+    "prediction_valid": 0.0,
+    "prediction_horizon": 0.0,
+    "prediction_first_offset": 0.0,
+    "callback_dt": 0.0,
+    "previous_neutral": 0.0,
+    "previous_chase": 0.0,
+    "previous_jump": 0.0,
+    "previous_dodge": 0.0,
+    "previous_steer": 0.0
+  },
+  "maximum_original_helper_oracle_difference": 0.0,
+  "maximum_rlgym_euler_path_difference": 2.384185791015625e-07,
+  "analytic_anchors": 11,
+  "rejected_invalid_inputs": [
+    {
+      "case": "position",
+      "error": "Expected exactly three vector components"
+    },
+    {
+      "case": "nonfinite position",
+      "error": "Expected finite numeric input"
+    },
+    {
+      "case": "nonfinite velocity",
+      "error": "Expected finite numeric input"
+    },
+    {
+      "case": "bad basis",
+      "error": "Orientation basis is not orthonormal"
+    },
+    {
+      "case": "missing ball coordinates",
+      "error": "Expected exactly three vector components"
+    },
+    {
+      "case": "nonboolean mask",
+      "error": "Availability masks must be Boolean"
+    },
+    {
+      "case": "missing prediction coordinates",
+      "error": "Expected exactly three vector components"
+    },
+    {
+      "case": "missing slice time",
+      "error": "Expected finite numeric input"
+    },
+    {
+      "case": "missing first time",
+      "error": "Expected finite numeric input"
+    },
+    {
+      "case": "invalid mode",
+      "error": "Unsupported previous transmitted action"
+    },
+    {
+      "case": "unsupported previous steering",
+      "error": "Unsupported previous transmitted action"
+    },
+    {
+      "case": "duplicate clock",
+      "error": "Duplicate/backward callback clock"
+    },
+    {
+      "case": "backward clock",
+      "error": "Duplicate/backward callback clock"
+    },
+    {
+      "case": "nonfinite time",
+      "error": "Expected finite numeric input"
+    },
+    {
+      "case": "nonboolean prediction mask",
+      "error": "Availability masks must be Boolean"
+    },
+    {
+      "case": "non-Chase previous steering",
+      "error": "Unsupported previous transmitted action"
+    }
+  ],
+  "comparator_mutations_detected": [
+    "right sign",
+    "wrong scale",
+    "mask lost",
+    "mode order",
+    "time scale",
+    "distance clipped"
+  ],
+  "adapter_guard_cases": [
+    {
+      "case": "missing live car",
+      "error": "Controlled car missing"
+    },
+    {
+      "case": "missing selected live slice",
+      "error": "Valid prediction requires a selected native slice"
+    },
+    {
+      "case": "missing simulation car",
+      "error": "Controlled car missing"
+    },
+    {
+      "case": "missing selected simulation state",
+      "error": "Valid prediction requires a selected native ball state"
+    }
+  ],
+  "coverage": {
+    "blue_states": 500,
+    "orange_states": 500,
+    "structured_states": 400,
+    "seeded_random_states": 600,
+    "ball_present": 600,
+    "ball_missing": 400,
+    "effective_valid_prediction": 200
+  },
+  "protected_hashes": 43,
+  "versions": {
+    "live": {
+      "rlbot": "2.0.0b55",
+      "rlbot-flatbuffers": "0.19.0"
+    },
+    "sim": {
+      "RocketSim": "2.2.1",
+      "rlgym-rocket-league": "2.0.1",
+      "numpy": "1.26.4"
+    }
+  },
+  "code_sha256": {
+    "observation_contract.py": "e0f59f763d33e59f6815a86e9c452b3fcade87fe26727ca53c910ebb7e6db750",
+    "run_v2.py": "8222417bd1f112aff28eefaf74783f74a4300862b741233f8bc15a77320fddac"
+  },
+  "fixture_sha256": "b8d33195869f21bd4f2c3ddc0af3433d64b1a080f1572a014f6e306540739c5c",
+  "elapsed_seconds": 0.7123275000003559,
+  "scope": "Synthetic matched native objects; supplied selection/time/action context; no physics, prediction lookup, live match or training."
+}

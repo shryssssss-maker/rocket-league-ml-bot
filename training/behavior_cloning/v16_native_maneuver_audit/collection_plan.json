@@ -1,0 +1,14 @@
+{
+  "version": "v16_native_observability_v1",
+  "user_supplied_assignments": true,
+  "evaluation": "leave-one-complete-match-out; no V10 validation/test reads",
+  "session_identity_note": "Literal user-provided IDs retained, including v10 in their names. Repeated IDs are shared sessions; do not claim six independent sessions or opponent-disjoint folds.",
+  "matches": [
+    {"match_id":"v16_001","opponent_id":"human_a","play_session_id":"human_a_v10_session_01","teacher_side":"Blue"},
+    {"match_id":"v16_002","opponent_id":"human_b","play_session_id":"human_b_v10_session_01","teacher_side":"Orange"},
+    {"match_id":"v16_003","opponent_id":"human_c","play_session_id":"human_c_v10_session_01","teacher_side":"Blue"},
+    {"match_id":"v16_004","opponent_id":"human_a","play_session_id":"human_a_v10_session_01","teacher_side":"Orange"},
+    {"match_id":"v16_005","opponent_id":"human_b","play_session_id":"human_b_v10_session_01","teacher_side":"Blue"},
+    {"match_id":"v16_006","opponent_id":"human_c","play_session_id":"human_c_v10_session_01","teacher_side":"Orange"}
+  ]
+}

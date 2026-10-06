@@ -1,0 +1,9 @@
+{
+  "status": "bounded_pilot_complete",
+  "error": null,
+  "cleanup_errors": [],
+  "protected_ok": true,
+  "immutable_ok": true,
+  "agent_closed": true,
+  "opponent_id": "human_b"
+}

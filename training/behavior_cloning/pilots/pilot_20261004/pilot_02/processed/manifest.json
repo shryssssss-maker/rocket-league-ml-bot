@@ -1,0 +1,296 @@
+{
+  "match_id": "pilot_02",
+  "split": "validation",
+  "endianness": "little",
+  "features": [
+    "ball_forward",
+    "ball_right",
+    "ball_up",
+    "prediction_forward",
+    "prediction_right",
+    "prediction_up",
+    "ball_distance",
+    "car_speed",
+    "ball_present",
+    "prediction_valid",
+    "prediction_horizon",
+    "prediction_first_offset",
+    "callback_dt",
+    "previous_neutral",
+    "previous_chase",
+    "previous_jump",
+    "previous_dodge",
+    "previous_steer"
+  ],
+  "channels": [
+    "throttle",
+    "steer",
+    "pitch",
+    "yaw",
+    "roll",
+    "jump",
+    "boost",
+    "handbrake"
+  ],
+  "tensors": {
+    "observations": {
+      "file": "observations.bin",
+      "dtype": "float32",
+      "shape": [
+        27401,
+        18
+      ],
+      "sha256": "1efa7cf3082674184f1f7f1290d2afbc7c80b60fc166f19cf02c2d844f328ff1",
+      "bytes": 1972872
+    },
+    "analog_controls": {
+      "file": "analog_controls.bin",
+      "dtype": "float32",
+      "shape": [
+        27401,
+        5
+      ],
+      "sha256": "2f1d85e1cf5a131647e941239cd14c5d80fbb91e7536b62cc3216ff47f0a9731",
+      "bytes": 548020
+    },
+    "buttons": {
+      "file": "buttons.bin",
+      "dtype": "uint8",
+      "shape": [
+        27401,
+        3
+      ],
+      "sha256": "14a0bf0d51c4b973d068c0cb0e4d7d8a20e77085219dce68f4e17f515eb00bc0",
+      "bytes": 82203
+    },
+    "mode": {
+      "file": "mode.bin",
+      "dtype": "uint8",
+      "shape": [
+        27401
+      ],
+      "sha256": "bc7fdafe929a572eed07f28db88f5a274d4bb99c3d56efda2ecbc22401524231",
+      "bytes": 27401
+    },
+    "callback": {
+      "file": "callback.bin",
+      "dtype": "uint64",
+      "shape": [
+        27401
+      ],
+      "sha256": "9eb9c9f5bd51bb8fd9e7eb2a0603719be52fc5088d0975ebf861a31fd9b8b9ca",
+      "bytes": 219208
+    },
+    "frame": {
+      "file": "frame.bin",
+      "dtype": "uint64",
+      "shape": [
+        27401
+      ],
+      "sha256": "7cfd5d932489b674841fc42125fa206653bbc03e171eba1c7d493f3fd3e7d018",
+      "bytes": 219208
+    },
+    "time": {
+      "file": "time.bin",
+      "dtype": "float64",
+      "shape": [
+        27401
+      ],
+      "sha256": "a4216310c5bcbeb199cf0c9f63e5965525b03ee566602df46fff32f087526ff9",
+      "bytes": 219208
+    },
+    "dt": {
+      "file": "dt.bin",
+      "dtype": "float64",
+      "shape": [
+        27401
+      ],
+      "sha256": "0e8bf5e0fa92158b11c7839252840d5721bbc56e05c23090acaf15163b3bd97a",
+      "bytes": 219208
+    }
+  },
+  "stats": {
+    "match_id": "pilot_02",
+    "split": "validation",
+    "callbacks": 27401,
+    "branches": {
+      "chase": 19583,
+      "jump": 94,
+      "neutral": 7439,
+      "front-dodge": 285
+    },
+    "teacher_logic_branches": {
+      "far_ball": 3733,
+      "pending_sequence": 1425,
+      "near_ball": 15871,
+      "missing_ball": 6372
+    },
+    "near_far": {
+      "far": 4685,
+      "near": 16344
+    },
+    "phases": {
+      "MatchPhase.Countdown": 2233,
+      "MatchPhase.Kickoff": 1733,
+      "MatchPhase.Active": 17054,
+      "MatchPhase.GoalScored": 1551,
+      "MatchPhase.Replay": 4821,
+      "MatchPhase.Ended": 9
+    },
+    "missing_ball": 6372,
+    "sequence_starts": 21,
+    "sequence_completions": 21,
+    "callback_dt_seconds": {
+      "count": 27400,
+      "minimum": 0.008331298828125,
+      "maximum": 0.216644287109375,
+      "mean": 0.016784063260050587,
+      "p50": 0.01666259765625,
+      "p90": 0.0166778564453125,
+      "p95": 0.016693115234375,
+      "p99": 0.02500152587890625
+    },
+    "action_channels": {
+      "throttle": {
+        "count": 27401,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "mean": 0.7146819459143827,
+        "p50": 1.0,
+        "p90": 1.0,
+        "p95": 1.0,
+        "p99": 1.0,
+        "zero_count": 7818,
+        "nonzero_count": 19583,
+        "minus_one_count": 0,
+        "plus_one_count": 19583
+      },
+      "steer": {
+        "count": 27401,
+        "minimum": -1.0,
+        "maximum": 1.0,
+        "mean": 0.05452717115601627,
+        "p50": 0.0,
+        "p90": 1.0,
+        "p95": 1.0,
+        "p99": 1.0,
+        "zero_count": 7818,
+        "nonzero_count": 19583,
+        "minus_one_count": 2508,
+        "plus_one_count": 3843
+      },
+      "pitch": {
+        "count": 27401,
+        "minimum": -1.0,
+        "maximum": 0.0,
+        "mean": -0.010401080252545528,
+        "p50": 0.0,
+        "p90": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "zero_count": 27116,
+        "nonzero_count": 285,
+        "minus_one_count": 285,
+        "plus_one_count": 0
+      },
+      "yaw": {
+        "count": 27401,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p90": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "zero_count": 27401,
+        "nonzero_count": 0,
+        "minus_one_count": 0,
+        "plus_one_count": 0
+      },
+      "roll": {
+        "count": 27401,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p90": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "zero_count": 27401,
+        "nonzero_count": 0,
+        "minus_one_count": 0,
+        "plus_one_count": 0
+      },
+      "jump": {
+        "count": 27401,
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "mean": 0.013831611984964052,
+        "p50": 0.0,
+        "p90": 0.0,
+        "p95": 0.0,
+        "p99": 1.0,
+        "zero_count": 27022,
+        "nonzero_count": 379,
+        "minus_one_count": 0,
+        "plus_one_count": 379
+      },
+      "boost": {
+        "count": 27401,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p90": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "zero_count": 27401,
+        "nonzero_count": 0,
+        "minus_one_count": 0,
+        "plus_one_count": 0
+      },
+      "handbrake": {
+        "count": 27401,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "mean": 0.0,
+        "p50": 0.0,
+        "p90": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "zero_count": 27401,
+        "nonzero_count": 0,
+        "minus_one_count": 0,
+        "plus_one_count": 0
+      }
+    },
+    "invalid_rows": 0,
+    "dropped_processed_rows": 0,
+    "transport_loss_claim": "Unknown; received callbacks only",
+    "prediction_reuse_callbacks": 6372,
+    "missing_ball_fraction": 0.23254625743586,
+    "sequence_starts_per_1000_callbacks": 0.7663953870296705,
+    "branch_fractions": {
+      "chase": 0.7146819459143827,
+      "jump": 0.003430531732418525,
+      "neutral": 0.27148644210065326,
+      "front-dodge": 0.010401080252545528
+    },
+    "callback_dt_nonpositive_count": 0,
+    "callback_dt_over_100ms_count": 2,
+    "callback_dt_over_1s_count": 0
+  },
+  "raw_integrity": {
+    "agent_summary.json": "72bd4133fc144c77d2b76f08d02578dbdc23b7cb972faae2a3d25332d28d4a84",
+    "bot.toml": "72a838db5d93e9103b4fe848bb74cd6677e6d11b2e704cc1e7efbfd5c2188b11",
+    "match.toml": "1234f585ebdc4479c98e320c1c36f8fff4ecf0c99f919d25e4911bb4692273f0",
+    "metadata.json": "f4896e01efc2f6489d7ed4a924582f942240ae7d44bea6bd2b9abfd3be136edd",
+    "recorder_closed.json": "8ba471ebe73387b56d149e201cc1570f8a430412e78af8819226343574851fbf",
+    "run_agent.cmd": "2850bbc58fc53cabd3a16f301cd36edd605c6fdea3538c271ed0e6da67482e9b",
+    "run_summary.json": "5b8522c3b312606e09ef48889865af97414d0b8027aaea55388860ae41ce28b6",
+    "raw/errors.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "raw/trajectory.jsonl": "c595e7805270c6f53989fb1fb23ba6690fb72b23a9c061f5e7d3e3e7981c8974"
+  },
+  "hidden_teacher_state_not_in_tensors": true,
+  "temporal_policy": "One row per processed callback, dt=0 only first callback; no chunks/resampling or phase resets. Buttons remain uint8 0/1; analog controls float32. All match rows share one split."
+}

@@ -1,0 +1,27 @@
+{
+  "files": {
+    "13D_A_H16_neighbors.npz": "8cb8a61199514822b362f8cda922f89377fe2a544536b7cae8cd8c94bc7fb29f",
+    "13D_A_H1_neighbors.npz": "01e47e094987ba0818a1a3600e37b3a20e2c2994ed1bebf64238a5f597b1fdab",
+    "13D_B_H16_neighbors.npz": "e92c252094001ef3100a8261016ef26d4405e11f0d6857d4ea58dfb2be297523",
+    "13D_B_H1_neighbors.npz": "5da036751cf8aad6fc7a0e7fe7cebc768016818d507b58363d5e461fa98189a4",
+    "13D_D_H16_neighbors.npz": "dcae2bc4d83c8f3a02965d60e83c6e1af4d82b525196e7604d2ea8c29afb0e34",
+    "13D_D_H1_neighbors.npz": "ca6087e7c25d1230ae8a6e895bb2ab592590ea607aca68f3a7e9931c526ba1fe",
+    "13D_E_H16_neighbors.npz": "2c213cb04183229f0c5e817961bb43bae77ba36a48e59fc656dd7882bd43038c",
+    "13D_E_H1_neighbors.npz": "c2f287f390a03d7f69afc37507d10eea88c0ece06f6f1b6b2d04a02643b47611",
+    "13D_H16_neighbors.npz": "2718540e4ad3a9697b0c08c7a8e4d96c169749670d94ab117084506fb1196308",
+    "13D_H16_query_evidence.json": "a8b52231da7819927f74925d6d320b7e59ce046cdb145a6ab3112c5b0ea92abd",
+    "13D_H1_neighbors.npz": "1dbdda0cde2ab3ebf2b8c8ea398218cd88d71a9462a41a9a5e4d7741a872e7de",
+    "13D_H1_query_evidence.json": "1ee7909ad6f612f672e0a5e76a637986c1d79b102289e10c6738aabc9088f07e",
+    "13D_H2_neighbors.npz": "3d6c821abd937a9b4e16851b376548b4681de2e7c24c28e8eeb5f08026e782fc",
+    "13D_H2_query_evidence.json": "a6835ae0bae38f3ba04b5eb38cf55ac90647010daf3b41ea4709931f7ee1b9c2",
+    "13D_H4_neighbors.npz": "96486406ca72c102e881c118c7799aa5f2ea9090a5ab67ebb7ad419cbb08e00b",
+    "13D_H4_query_evidence.json": "897e985f660d18bbd708ad9e9be96e7c3cf16fa9ef02f585912468dab9c4b575",
+    "13D_H8_neighbors.npz": "c30f274b9f359d84c219997e715a3586fbec943c0d0dfe9babc392dde35ebae6",
+    "13D_H8_query_evidence.json": "b73be51c3d06d022462bc9ed65436581728d1497bcbfc99ceed1cf31c87a77f9",
+    "report.json": "a263e3f4a3eb58ae57c4813d6ec7bd39e6f772962892edf689df668538de0dde",
+    "report.md": "c672471a90a55395e66b334be39ae6203b0bed36782b5e6c6a1418b3ae6a4383"
+  },
+  "report_sha256": "c672471a90a55395e66b334be39ae6203b0bed36782b5e6c6a1418b3ae6a4383",
+  "json_sha256": "a263e3f4a3eb58ae57c4813d6ec7bd39e6f772962892edf689df668538de0dde",
+  "protected": 43
+}

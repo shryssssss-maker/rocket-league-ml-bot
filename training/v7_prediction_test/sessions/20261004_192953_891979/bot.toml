@@ -1,0 +1,6 @@
+[settings]
+name = "V7 Prediction Capture"
+agent_id = "local/v7_capture"
+run_command = "run_agent.cmd"
+root_dir = "C:\\Users\\shreyas\\Desktop\\model wars\\training\\v7_prediction_test\\sessions\\20261004_192953_891979"
+loadout_file = "C:\\Users\\shreyas\\Desktop\\model wars\\python-example-original\\src\\loadout.toml"

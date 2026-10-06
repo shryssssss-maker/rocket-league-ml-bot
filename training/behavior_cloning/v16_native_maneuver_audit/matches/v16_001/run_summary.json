@@ -1,0 +1,9 @@
+{
+  "status": "diagnostic_or_teacher_error",
+  "error": null,
+  "cleanup_errors": [],
+  "natural_end_packet": null,
+  "recorder_closed": true,
+  "protected_hashes_unchanged": 43,
+  "monotonic": 57914.046
+}

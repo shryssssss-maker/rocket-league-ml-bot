@@ -1,0 +1,848 @@
+{
+  "status": "passed_with_scope",
+  "manifest_sha256": "080943fd8f9a81ada800e0a2f9ff3593b67f66d32272211d67030c03cf433a83",
+  "error": null,
+  "evidence": {
+    "per_match_history": [
+      {
+        "match_id": "pilot_01",
+        "rows": 32258,
+        "first_callback_reset": true,
+        "previous_action_exact": true,
+        "missing_ball_callbacks": 9435,
+        "causal_index_recipes": {
+          "2": {
+            "checked_endpoints": 32258,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "4": {
+            "checked_endpoints": 32258,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "8": {
+            "checked_endpoints": 32258,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "16": {
+            "checked_endpoints": 32258,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "32": {
+            "checked_endpoints": 32258,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "64": {
+            "checked_endpoints": 32258,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          }
+        }
+      },
+      {
+        "match_id": "pilot_02",
+        "rows": 27401,
+        "first_callback_reset": true,
+        "previous_action_exact": true,
+        "missing_ball_callbacks": 6372,
+        "causal_index_recipes": {
+          "2": {
+            "checked_endpoints": 27401,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "4": {
+            "checked_endpoints": 27401,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "8": {
+            "checked_endpoints": 27401,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "16": {
+            "checked_endpoints": 27401,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "32": {
+            "checked_endpoints": 27401,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "64": {
+            "checked_endpoints": 27401,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          }
+        }
+      },
+      {
+        "match_id": "pilot_03",
+        "rows": 36825,
+        "first_callback_reset": true,
+        "previous_action_exact": true,
+        "missing_ball_callbacks": 12358,
+        "causal_index_recipes": {
+          "2": {
+            "checked_endpoints": 36825,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "4": {
+            "checked_endpoints": 36825,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "8": {
+            "checked_endpoints": 36825,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "16": {
+            "checked_endpoints": 36825,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "32": {
+            "checked_endpoints": 36825,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "64": {
+            "checked_endpoints": 36825,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          }
+        }
+      },
+      {
+        "match_id": "v10_001",
+        "rows": 25376,
+        "first_callback_reset": true,
+        "previous_action_exact": true,
+        "missing_ball_callbacks": 4378,
+        "causal_index_recipes": {
+          "2": {
+            "checked_endpoints": 25376,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "4": {
+            "checked_endpoints": 25376,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "8": {
+            "checked_endpoints": 25376,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "16": {
+            "checked_endpoints": 25376,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "32": {
+            "checked_endpoints": 25376,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "64": {
+            "checked_endpoints": 25376,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          }
+        }
+      },
+      {
+        "match_id": "v10_002",
+        "rows": 19870,
+        "first_callback_reset": true,
+        "previous_action_exact": true,
+        "missing_ball_callbacks": 755,
+        "causal_index_recipes": {
+          "2": {
+            "checked_endpoints": 19870,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "4": {
+            "checked_endpoints": 19870,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "8": {
+            "checked_endpoints": 19870,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "16": {
+            "checked_endpoints": 19870,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "32": {
+            "checked_endpoints": 19870,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "64": {
+            "checked_endpoints": 19870,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          }
+        }
+      },
+      {
+        "match_id": "v10_003",
+        "rows": 23982,
+        "first_callback_reset": true,
+        "previous_action_exact": true,
+        "missing_ball_callbacks": 3038,
+        "causal_index_recipes": {
+          "2": {
+            "checked_endpoints": 23982,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "4": {
+            "checked_endpoints": 23982,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "8": {
+            "checked_endpoints": 23982,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "16": {
+            "checked_endpoints": 23982,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "32": {
+            "checked_endpoints": 23982,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "64": {
+            "checked_endpoints": 23982,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          }
+        }
+      },
+      {
+        "match_id": "v10_004",
+        "rows": 24230,
+        "first_callback_reset": true,
+        "previous_action_exact": true,
+        "missing_ball_callbacks": 3039,
+        "causal_index_recipes": {
+          "2": {
+            "checked_endpoints": 24230,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "4": {
+            "checked_endpoints": 24230,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "8": {
+            "checked_endpoints": 24230,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "16": {
+            "checked_endpoints": 24230,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "32": {
+            "checked_endpoints": 24230,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "64": {
+            "checked_endpoints": 24230,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          }
+        }
+      },
+      {
+        "match_id": "v10_005",
+        "rows": 23727,
+        "first_callback_reset": true,
+        "previous_action_exact": true,
+        "missing_ball_callbacks": 2380,
+        "causal_index_recipes": {
+          "2": {
+            "checked_endpoints": 23727,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "4": {
+            "checked_endpoints": 23727,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "8": {
+            "checked_endpoints": 23727,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "16": {
+            "checked_endpoints": 23727,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "32": {
+            "checked_endpoints": 23727,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "64": {
+            "checked_endpoints": 23727,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          }
+        }
+      },
+      {
+        "match_id": "v10_006",
+        "rows": 25536,
+        "first_callback_reset": true,
+        "previous_action_exact": true,
+        "missing_ball_callbacks": 2750,
+        "causal_index_recipes": {
+          "2": {
+            "checked_endpoints": 25536,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "4": {
+            "checked_endpoints": 25536,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "8": {
+            "checked_endpoints": 25536,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "16": {
+            "checked_endpoints": 25536,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "32": {
+            "checked_endpoints": 25536,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          },
+          "64": {
+            "checked_endpoints": 25536,
+            "rule": "[max(0,t-L+1), t] within this match; left context shorter at match start",
+            "materialized": false
+          }
+        }
+      }
+    ],
+    "recomputed_aggregate": {
+      "modes": {
+        "chase": 177174,
+        "jump": 1108,
+        "neutral": 57564,
+        "front-dodge": 3359
+      },
+      "branches": {
+        "far_ball": 43807,
+        "pending_sequence": 17276,
+        "near_ball": 133617,
+        "missing_ball": 44505
+      },
+      "near_far": {
+        "far": 54614,
+        "near": 140086,
+        "missing_ball": 44505
+      },
+      "phases": {
+        "MatchPhase.Countdown": 18843,
+        "MatchPhase.Kickoff": 13661,
+        "MatchPhase.Active": 162153,
+        "MatchPhase.GoalScored": 12926,
+        "MatchPhase.Replay": 31553,
+        "MatchPhase.Ended": 69
+      },
+      "speed_bands": {
+        "below_750": 36419,
+        "strict_flip_window_750_800": 1948,
+        "800_to_1410": 129232,
+        "above_1410": 71606
+      },
+      "geometry_sectors": {
+        "ahead": 152573,
+        "right": 98099,
+        "above": 185573,
+        "left": 96599,
+        "behind": 42127,
+        "below_or_level": 9127,
+        "center": 2
+      }
+    },
+    "recomputed_distributions": {
+      "steer": {
+        "count": 239205,
+        "minimum": -1.0,
+        "maximum": 1.0,
+        "mean": 0.003728804296249849,
+        "p50": 0.0,
+        "p90": 1.0,
+        "p95": 1.0,
+        "p99": 1.0
+      },
+      "callback_dt": {
+        "count": 239196,
+        "minimum": 0.00830078125,
+        "maximum": 0.241668701171875,
+        "mean": 0.016676038467140886,
+        "p50": 0.01666259765625,
+        "p90": 0.0166778564453125,
+        "p95": 0.016693115234375,
+        "p99": 0.024993896484375
+      },
+      "car_speed": {
+        "count": 239205,
+        "minimum": 0.0,
+        "maximum": 2299.999926688891,
+        "mean": 1223.9657440939202,
+        "p50": 1326.4165220631871,
+        "p90": 1853.7755485590133,
+        "p95": 2104.468744440494,
+        "p99": 2272.346436362876
+      },
+      "ball_forward": {
+        "count": 194700,
+        "minimum": -4105.485380751304,
+        "maximum": 4607.999999999995,
+        "mean": 721.6526111885216,
+        "p50": 346.362612811139,
+        "p90": 3257.482400631743,
+        "p95": 3839.0973708337,
+        "p99": 4607.062085836478
+      },
+      "ball_right": {
+        "count": 194700,
+        "minimum": -5953.152214602629,
+        "maximum": 4290.990046980945,
+        "mean": 8.266684554765751,
+        "p50": 3.1733810162267e-05,
+        "p90": 398.77692875181015,
+        "p95": 864.7727573004541,
+        "p99": 1979.7496970168054
+      },
+      "ball_up": {
+        "count": 194700,
+        "minimum": -3414.6716862742155,
+        "maximum": 4404.305465913325,
+        "mean": 261.1435497601595,
+        "p50": 122.69732323760236,
+        "p90": 753.7756575665403,
+        "p95": 1150.3941431315056,
+        "p99": 2313.768321489073
+      },
+      "ball_distance": {
+        "count": 194700,
+        "minimum": 0.0,
+        "maximum": 6085.849312985218,
+        "mean": 1269.2815425549163,
+        "p50": 817.0089557495803,
+        "p90": 3279.27439345434,
+        "p95": 3849.2690926415275,
+        "p99": 4608.622413212578
+      },
+      "ball_height": {
+        "count": 194700,
+        "minimum": 0.0,
+        "maximum": 1954.949951171875,
+        "mean": 291.83323699535805,
+        "p50": 136.47999572753906,
+        "p90": 765.1519653320314,
+        "p95": 1131.7404907226562,
+        "p99": 1471.4606604003914
+      },
+      "ball_speed": {
+        "count": 194700,
+        "minimum": 0.0,
+        "maximum": 3194.542302992273,
+        "mean": 797.4606715624517,
+        "p50": 714.2644489674963,
+        "p90": 1656.7502508356993,
+        "p95": 1797.4012254250995,
+        "p99": 1965.618921471438
+      },
+      "ball_spin": {
+        "count": 194700,
+        "minimum": 0.0,
+        "maximum": 6.000013593388681,
+        "mean": 3.695434616417543,
+        "p50": 4.263972854852344,
+        "p90": 5.999959501725216,
+        "p95": 5.99997712977043,
+        "p99": 6.000002020928265
+      },
+      "prediction_horizon": {
+        "count": 194700,
+        "minimum": 1.9911842346191406,
+        "maximum": 2.006805419921875,
+        "mean": 1.9989300956697604,
+        "p50": 1.99951171875,
+        "p90": 1.99951171875,
+        "p95": 1.999969482421875,
+        "p99": 2.0000037851929666
+      }
+    },
+    "recomputed_native_channels": {
+      "throttle": {
+        "count": 239205,
+        "values": {
+          "0.0": 62031,
+          "1.0": 177174
+        },
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "mean": 0.740678497523045
+      },
+      "steer": {
+        "count": 239205,
+        "minimum": -1.0,
+        "maximum": 1.0,
+        "mean": 0.003728804296249849,
+        "p50": 0.0,
+        "p90": 1.0,
+        "p95": 1.0,
+        "p99": 1.0
+      },
+      "pitch": {
+        "count": 239205,
+        "values": {
+          "-1.0": 3359,
+          "0.0": 235846
+        },
+        "minimum": -1.0,
+        "maximum": 0.0,
+        "mean": -0.014042348613114274
+      },
+      "yaw": {
+        "count": 239205,
+        "values": {
+          "0.0": 239205
+        },
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "mean": 0.0
+      },
+      "roll": {
+        "count": 239205,
+        "values": {
+          "0.0": 239205
+        },
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "mean": 0.0
+      },
+      "jump": {
+        "count": 239205,
+        "values": {
+          "False": 234738,
+          "True": 4467
+        },
+        "minimum": false,
+        "maximum": true,
+        "mean": 0.01867435881356995
+      },
+      "boost": {
+        "count": 239205,
+        "values": {
+          "False": 239205
+        },
+        "minimum": false,
+        "maximum": false,
+        "mean": 0.0
+      },
+      "handbrake": {
+        "count": 239205,
+        "values": {
+          "False": 239205
+        },
+        "minimum": false,
+        "maximum": false,
+        "mean": 0.0
+      }
+    },
+    "grouped_coverage": {
+      "split": {
+        "train": {
+          "matches": 4,
+          "callbacks": 107400,
+          "jump": 504,
+          "front_dodge": 1542,
+          "sequence_starts": 115,
+          "sequence_completions": 115,
+          "sides": [
+            "Blue",
+            "Orange"
+          ]
+        },
+        "validation": {
+          "matches": 2,
+          "callbacks": 47271,
+          "jump": 186,
+          "front_dodge": 568,
+          "sequence_starts": 42,
+          "sequence_completions": 42,
+          "sides": [
+            "Blue",
+            "Orange"
+          ]
+        },
+        "test": {
+          "matches": 3,
+          "callbacks": 84534,
+          "jump": 418,
+          "front_dodge": 1249,
+          "sequence_starts": 93,
+          "sequence_completions": 92,
+          "sides": [
+            "Blue",
+            "Orange"
+          ]
+        }
+      },
+      "teacher_side": {
+        "Orange": {
+          "matches": 5,
+          "callbacks": 145747,
+          "jump": 684,
+          "front_dodge": 2069,
+          "sequence_starts": 154,
+          "sequence_completions": 153,
+          "sides": [
+            "Orange"
+          ]
+        },
+        "Blue": {
+          "matches": 4,
+          "callbacks": 93458,
+          "jump": 424,
+          "front_dodge": 1290,
+          "sequence_starts": 96,
+          "sequence_completions": 96,
+          "sides": [
+            "Blue"
+          ]
+        }
+      },
+      "opponent_id": {
+        "human_a": {
+          "matches": 6,
+          "callbacks": 165712,
+          "jump": 737,
+          "front_dodge": 2231,
+          "sequence_starts": 166,
+          "sequence_completions": 165,
+          "sides": [
+            "Blue",
+            "Orange"
+          ]
+        },
+        "human_b": {
+          "matches": 2,
+          "callbacks": 49766,
+          "jump": 214,
+          "front_dodge": 646,
+          "sequence_starts": 48,
+          "sequence_completions": 48,
+          "sides": [
+            "Blue",
+            "Orange"
+          ]
+        },
+        "human_c": {
+          "matches": 1,
+          "callbacks": 23727,
+          "jump": 157,
+          "front_dodge": 482,
+          "sequence_starts": 36,
+          "sequence_completions": 36,
+          "sides": [
+            "Orange"
+          ]
+        }
+      },
+      "play_session_id": {
+        "pilot_20261004_session_identity_not_separately_recorded": {
+          "matches": 3,
+          "callbacks": 96484,
+          "jump": 428,
+          "front_dodge": 1292,
+          "sequence_starts": 96,
+          "sequence_completions": 95,
+          "sides": [
+            "Orange"
+          ]
+        },
+        "human_a_v10_session_01": {
+          "matches": 3,
+          "callbacks": 69228,
+          "jump": 309,
+          "front_dodge": 939,
+          "sequence_starts": 70,
+          "sequence_completions": 70,
+          "sides": [
+            "Blue"
+          ]
+        },
+        "human_b_v10_session_01": {
+          "matches": 2,
+          "callbacks": 49766,
+          "jump": 214,
+          "front_dodge": 646,
+          "sequence_starts": 48,
+          "sequence_completions": 48,
+          "sides": [
+            "Blue",
+            "Orange"
+          ]
+        },
+        "human_c_v10_session_01": {
+          "matches": 1,
+          "callbacks": 23727,
+          "jump": 157,
+          "front_dodge": 482,
+          "sequence_starts": 36,
+          "sequence_completions": 36,
+          "sides": [
+            "Orange"
+          ]
+        }
+      }
+    },
+    "split": {
+      "train": [
+        "pilot_01",
+        "v10_001",
+        "v10_004",
+        "v10_006"
+      ],
+      "validation": [
+        "pilot_02",
+        "v10_002"
+      ],
+      "test": [
+        "pilot_03",
+        "v10_003",
+        "v10_005"
+      ]
+    }
+  },
+  "architecture_tradeoffs": {
+    "single_callback_feedforward": {
+      "advantages": [
+        "Simple, low latency, no window assembly; consumes only frozen 18D."
+      ],
+      "limitations": [
+        "18D includes previous mode/steering and elapsed dt, but not sequence elapsed time, pending sequence identity or recurrent memory. Release and Coast both emit Neutral; private timing survives missing-ball/replay callbacks. A single callback is therefore not a sufficient exact temporal teacher state.",
+        "Shared previous-action inputs are teacher-forced in this dataset. Live student uses its own previous emitted action; errors can compound. Offline agreement does not prove live equivalence."
+      ],
+      "preprocessing_requirements": [
+        "Keep 18D/native targets unchanged; reset previous history at each match; preserve raw dt null versus processed zero; no scaling fit on validation/test. Any future learned scaling must use train only."
+      ]
+    },
+    "short_causal_history": {
+      "advantages": [
+        "Can expose prior mode changes and delivered callback timing without private labels."
+      ],
+      "limitations": [
+        "Fixed callback count spans variable elapsed time. Finite history may lose a pending sequence origin across missing-ball/replay/long gaps; no tested length is approved or guaranteed sufficient.",
+        "Teacher-forced previous actions versus student-generated actions remains a deployment issue."
+      ],
+      "preprocessing_requirements": [
+        "Use only rows <= current callback from the same match/split. Include the current observation; target is current action, not a future action.",
+        "At match start use explicit shorter history or separately reviewed validity masks; do not silently pad, repeat, or drop callbacks.",
+        "Do not reset at goals/replays/missing ball unless a future design explicitly approves a change; teacher memory can survive them.",
+        "No centered windows, backward interpolation from future packets, shuffled recurrent state, or private sequence labels as inputs."
+      ]
+    },
+    "decision": "Neither architecture selected; no history tensors, training examples, preprocessing exports or models created."
+  },
+  "scope": [
+    "Existing frozen tensors audited callback-by-callback; no sequence/window preprocessing implementation exists yet.",
+    "Causal index recipes exhaustively checked for lengths 2/4/8/16/32/64, without choosing a length or constructing data.",
+    "Frozen observation reconstruction depends on current physics/prediction and strictly prior submitted action only; prediction is a contemporaneous forecast, not a later recorded outcome.",
+    "Private sequence diagnostics only affect statistics; they are excluded from 18D and causal input recipes.",
+    "Match-disjoint splits are not fully opponent/session-disjoint. human_a spans all splits; human_b has two train matches sharing one session; human_c has one test match.",
+    "Historical protection evidence is hash-pinned in freeze metadata; current bot/source files are deliberately not read."
+  ],
+  "frozen_inputs_modified": false,
+  "preprocessing_exported": false,
+  "training_started": false,
+  "requirements": {
+    "1": {
+      "check": "Pinned manifest and all frozen/artifact SHA256 integrity",
+      "status": "pass"
+    },
+    "2": {
+      "check": "Exact tensor shapes/dtypes/channel ordering",
+      "status": "pass"
+    },
+    "3": {
+      "check": "18D feature ordering against frozen manifest",
+      "status": "pass"
+    },
+    "4": {
+      "check": "Native eight-channel ordering against frozen manifest",
+      "status": "pass"
+    },
+    "5": {
+      "check": "Previous-action features from immediately prior actual callback",
+      "status": "pass"
+    },
+    "6": {
+      "check": "History initialization at every match boundary",
+      "status": "pass"
+    },
+    "7": {
+      "check": "No split/sample/index recipe crosses a match boundary",
+      "status": "pass"
+    },
+    "8": {
+      "check": "Causal index recipes exclude future callbacks; no windows exported",
+      "status": "pass"
+    },
+    "9": {
+      "check": "Private sequence state remains diagnostic, excluded from model-input recipes",
+      "status": "pass"
+    },
+    "10": {
+      "check": "Missing-ball features exactly preserved",
+      "status": "pass"
+    },
+    "11": {
+      "check": "Initial raw null dt/history and tensor/observation zero dt explicit",
+      "status": "pass"
+    },
+    "12": {
+      "check": "All frozen per-match and aggregate distributions exactly reproduced",
+      "status": "pass"
+    }
+  }
+}

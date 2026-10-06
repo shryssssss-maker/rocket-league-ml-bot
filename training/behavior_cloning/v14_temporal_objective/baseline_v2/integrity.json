@@ -1,0 +1,26 @@
+{
+  "files": {
+    "metadata.json": "345bff5d1cc2c2dcf598fe5ae2196c91f188ae2baa6fb45f0b18a020a65496eb",
+    "pilot_02_predictions.npz": "1cf25f8140a94e64d0ef6bd369b55a3bd9155c4cf295a0e116ec66b86cf024f5",
+    "report.json": "739a30ab8c4a018d16e735cf721047e3b07840ec1a16f9ae0582c2149043dd47",
+    "v10_002_predictions.npz": "0cf4e5897cab0a386f7fc6d914e0ae36a704bce48f25bbc549bc22da247faa1b"
+  },
+  "protected_hashes_unchanged": 43,
+  "authorized_inputs_verified_after": true,
+  "implementation_seal": {
+    "version": "v14_v2_implementation_v1",
+    "approved_mechanism": "Original V13 loss plus lambda=0.1 boundary-balanced adjacent-transition BCE",
+    "user_approved_implementation": true,
+    "files": {
+      "training/behavior_cloning/v14_temporal_objective/experiment.py": "cd01b80467c936f34b2ee878db1e8be3219b70e3f0165e6511d2135b9cc4efdb",
+      "training/behavior_cloning/v14_temporal_objective/boundary.py": "5fedfcb3b1d9526c234c7e07419d77f8b83345eb1a3653c339612e1b8f015f71",
+      "training/behavior_cloning/v14_temporal_objective/preflight.py": "5cf1cf299b1a26f47e26c807567206881a63e6f27917be63a5355769c537200c",
+      "training/behavior_cloning/v14_temporal_objective/README.md": "cc8413ac633b6facca8179617c65c7ea18afd749f6acd25a226933db36da7c2c",
+      "training/behavior_cloning/v14_temporal_objective/proposal_v2.md": "d47a663d982989b7d8bdb8e08569baf4fb98432ef3e009a6d6b9d8cf1c6bf005",
+      "training/behavior_cloning/v14_temporal_objective/proposal_v2.json": "271ba2af0b79f7bac09154f9388cc78022c9ba721ee2c17d2ef9e6ca04e2cc3b",
+      "training/behavior_cloning/v14_temporal_objective/proposal_v1.md": "80915ebe04ffb5f9dfbf20886103ab24bf6206d9a941ea6c148f22d471c81606",
+      "training/behavior_cloning/v14_temporal_objective/proposal_v1.json": "d3834742e991f61bf3215e2f36e0e7502739322aee6b41a79276e2a7fb2dd047"
+    }
+  },
+  "test_access": false
+}

@@ -1,0 +1,8 @@
+{
+  "run_path": "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v12\\runs\\v12_bc_mlp_gru_20261005_v1_20261005_033125_751956",
+  "selected_checkpoint_sha256": {
+    "A": "80cd51065035b601a3d9bd4d6f9c8c60a594a95f339f00bee72282465e567a24",
+    "B": "0eaab20bd2860db2a981b4ca99a0a2256a7f95bc2dbdfd446b0354ffcce55295"
+  },
+  "policy": "Single final suite for the two already-selected models, both contexts; interrupted test requires review"
+}

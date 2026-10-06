@@ -1,0 +1,6 @@
+[settings]
+name = "V8 Original Teacher Shadow Check"
+agent_id = "local/v8_shadow"
+run_command = "run_agent.cmd"
+root_dir = "C:\\Users\\shreyas\\Desktop\\model wars\\training\\v8_temporal_test\\sessions\\20261004_204244_607247"
+loadout_file = "C:\\Users\\shreyas\\Desktop\\model wars\\python-example-original\\src\\loadout.toml"

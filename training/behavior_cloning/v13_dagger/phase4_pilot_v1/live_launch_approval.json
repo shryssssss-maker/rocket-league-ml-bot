@@ -1,0 +1,12 @@
+{
+  "approved": true,
+  "approved_utc": "2026-10-05T01:03:56.689860+00:00",
+  "authorization": "Explicit user approval: PHASE 4 LIVE LAUNCH APPROVED",
+  "readiness_sha256": "5318627e79eb1cb8f578145018e8e551924c70b334b9e5200b562e4718c428ae",
+  "protocol_sha256": "7370d990a557b49ce0bbaceead16f0b98f101ca06d5ce5ee957ed7d43ccae73e",
+  "maximum_runs": 1,
+  "student_only_controller": true,
+  "shadow_only_teacher": true,
+  "live_seconds": 90,
+  "no_training_or_aggregation": true
+}

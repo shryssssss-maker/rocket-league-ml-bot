@@ -1,0 +1,7574 @@
+{
+  "status": "incomplete_due_to_diagnostic_io_failure",
+  "phase3_passed": false,
+  "generated_utc": "2026-10-04T23:05:06.570962+00:00",
+  "session": "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase3_shadow_v1\\sessions\\20261005_042947_003076",
+  "raw_jsonl_lines": 1116,
+  "unique_processed_callbacks": 1115,
+  "duplicated_callback_ids": {
+    "1115": 2
+  },
+  "duplication_interpretation": "Callback 1115 was written once after comparison and again in the diagnostic exception handler; not an additional delivered callback. Raw evidence is unchanged.",
+  "shadow_contract": {
+    "compared_callbacks": 1115,
+    "mismatches": [],
+    "maximum_analog_difference": 0.0,
+    "analog_tolerance": 1e-06,
+    "buttons_sequence_selector_exact": true,
+    "submitted_callbacks": 1114,
+    "native_transport_mismatches": [],
+    "callbacks_without_submission_evidence": [
+      1115
+    ],
+    "student_hidden_chain_errors": []
+  },
+  "required_category_counts": {
+    "neutral_to_chase": 1,
+    "chase_to_jump": 2,
+    "release": 11,
+    "front_dodge": 18,
+    "coast": 106,
+    "completion": 2,
+    "missing_ball_pending": 426,
+    "goal_pending": 197,
+    "replay_pending": 229,
+    "kickoff_pending": 80,
+    "long_gap": 1,
+    "near_ball": 76,
+    "far_ball": 470,
+    "live_selector": 470,
+    "student_missed_sequence_start": 3,
+    "student_missed_prior_jump": 4,
+    "shadow_continues_after_student_divergence": 569
+  },
+  "unobserved_required_categories": [],
+  "coverage_examples": {
+    "far_ball": [
+      {
+        "callback": 1,
+        "frame": 13,
+        "elapsed": 0.10833333432674408,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          -0.5532859965910031,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.6101841330528259,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": null,
+        "callback_dt": null
+      },
+      {
+        "callback": 2,
+        "frame": 15,
+        "elapsed": 0.125,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          -0.5532859965910031,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.660057008266449,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 1,
+          "controls": [
+            1.0,
+            -0.6101841330528259,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.01666666567325592
+      },
+      {
+        "callback": 3,
+        "frame": 17,
+        "elapsed": 0.14166666567325592,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          -0.5532859965910031,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.661715030670166,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 2,
+          "controls": [
+            1.0,
+            -0.660057008266449,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.01666666567325592
+      },
+      {
+        "callback": 4,
+        "frame": 19,
+        "elapsed": 0.15833333134651184,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          -0.5532859965910031,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.6507896184921265,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 3,
+          "controls": [
+            1.0,
+            -0.661715030670166,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.01666666567325592
+      },
+      {
+        "callback": 5,
+        "frame": 21,
+        "elapsed": 0.17499999701976776,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          -0.5532859965910031,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.6354137659072876,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 4,
+          "controls": [
+            1.0,
+            -0.6507896184921265,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.01666666567325592
+      },
+      {
+        "callback": 6,
+        "frame": 25,
+        "elapsed": 0.2083333283662796,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          -0.5532859965910031,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.4972724914550781,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 5,
+          "controls": [
+            1.0,
+            -0.6354137659072876,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.03333333134651184
+      },
+      {
+        "callback": 7,
+        "frame": 27,
+        "elapsed": 0.22499999403953552,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          -0.5532859965910031,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.5548433065414429,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 6,
+          "controls": [
+            1.0,
+            -0.4972724914550781,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.01666666567325592
+      },
+      {
+        "callback": 8,
+        "frame": 29,
+        "elapsed": 0.24166665971279144,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          -0.5532859965910031,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.5682498216629028,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 7,
+          "controls": [
+            1.0,
+            -0.5548433065414429,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.01666666567325592
+      },
+      {
+        "callback": 9,
+        "frame": 31,
+        "elapsed": 0.25833332538604736,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          -0.5532859965910031,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.5685717463493347,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 8,
+          "controls": [
+            1.0,
+            -0.5682498216629028,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.01666666567325592
+      },
+      {
+        "callback": 10,
+        "frame": 33,
+        "elapsed": 0.2750000059604645,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          -0.5532859965910031,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.5657064914703369,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 9,
+          "controls": [
+            1.0,
+            -0.5685717463493347,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666680574417114
+      },
+      {
+        "callback": 11,
+        "frame": 35,
+        "elapsed": 0.2916666567325592,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          -0.5532904858971783,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.5618841648101807,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 10,
+          "controls": [
+            1.0,
+            -0.5657064914703369,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666650772094727
+      },
+      {
+        "callback": 12,
+        "frame": 37,
+        "elapsed": 0.3083333373069763,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          -0.553311226358827,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.558523952960968,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 11,
+          "controls": [
+            1.0,
+            -0.5618841648101807,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666680574417114
+      }
+    ],
+    "live_selector": [
+      {
+        "callback": 1,
+        "frame": 13,
+        "elapsed": 0.10833333432674408,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          -0.5532859965910031,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.6101841330528259,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": null,
+        "callback_dt": null
+      },
+      {
+        "callback": 2,
+        "frame": 15,
+        "elapsed": 0.125,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          -0.5532859965910031,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.660057008266449,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 1,
+          "controls": [
+            1.0,
+            -0.6101841330528259,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.01666666567325592
+      },
+      {
+        "callback": 3,
+        "frame": 17,
+        "elapsed": 0.14166666567325592,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          -0.5532859965910031,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.661715030670166,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 2,
+          "controls": [
+            1.0,
+            -0.660057008266449,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.01666666567325592
+      },
+      {
+        "callback": 4,
+        "frame": 19,
+        "elapsed": 0.15833333134651184,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          -0.5532859965910031,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.6507896184921265,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 3,
+          "controls": [
+            1.0,
+            -0.661715030670166,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.01666666567325592
+      },
+      {
+        "callback": 5,
+        "frame": 21,
+        "elapsed": 0.17499999701976776,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          -0.5532859965910031,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.6354137659072876,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 4,
+          "controls": [
+            1.0,
+            -0.6507896184921265,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.01666666567325592
+      },
+      {
+        "callback": 6,
+        "frame": 25,
+        "elapsed": 0.2083333283662796,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          -0.5532859965910031,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.4972724914550781,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 5,
+          "controls": [
+            1.0,
+            -0.6354137659072876,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.03333333134651184
+      },
+      {
+        "callback": 7,
+        "frame": 27,
+        "elapsed": 0.22499999403953552,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          -0.5532859965910031,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.5548433065414429,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 6,
+          "controls": [
+            1.0,
+            -0.4972724914550781,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.01666666567325592
+      },
+      {
+        "callback": 8,
+        "frame": 29,
+        "elapsed": 0.24166665971279144,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          -0.5532859965910031,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.5682498216629028,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 7,
+          "controls": [
+            1.0,
+            -0.5548433065414429,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.01666666567325592
+      },
+      {
+        "callback": 9,
+        "frame": 31,
+        "elapsed": 0.25833332538604736,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          -0.5532859965910031,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.5685717463493347,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 8,
+          "controls": [
+            1.0,
+            -0.5682498216629028,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.01666666567325592
+      },
+      {
+        "callback": 10,
+        "frame": 33,
+        "elapsed": 0.2750000059604645,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          -0.5532859965910031,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.5657064914703369,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 9,
+          "controls": [
+            1.0,
+            -0.5685717463493347,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666680574417114
+      },
+      {
+        "callback": 11,
+        "frame": 35,
+        "elapsed": 0.2916666567325592,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          -0.5532904858971783,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.5618841648101807,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 10,
+          "controls": [
+            1.0,
+            -0.5657064914703369,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666650772094727
+      },
+      {
+        "callback": 12,
+        "frame": 37,
+        "elapsed": 0.3083333373069763,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          -0.553311226358827,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.558523952960968,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 11,
+          "controls": [
+            1.0,
+            -0.5618841648101807,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666680574417114
+      }
+    ],
+    "near_ball": [
+      {
+        "callback": 418,
+        "frame": 849,
+        "elapsed": 7.074999809265137,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          0.007113612895779525,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.25816965103149414,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 417,
+          "controls": [
+            1.0,
+            -0.5037415623664856,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 419,
+        "frame": 851,
+        "elapsed": 7.0916666984558105,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          0.014150744628165585,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.10629704594612122,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 418,
+          "controls": [
+            1.0,
+            -0.25816965103149414,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666889190673828
+      },
+      {
+        "callback": 420,
+        "frame": 853,
+        "elapsed": 7.108333110809326,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          0.018696685777871543,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          0.005628395825624466,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 419,
+          "controls": [
+            1.0,
+            -0.10629704594612122,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 421,
+        "frame": 855,
+        "elapsed": 7.125,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          0.02164898074511905,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          0.07849576324224472,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 420,
+          "controls": [
+            1.0,
+            0.005628395825624466,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666889190673828
+      },
+      {
+        "callback": 422,
+        "frame": 857,
+        "elapsed": 7.141666889190674,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          0.02320638762059832,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          0.12489546090364456,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 421,
+          "controls": [
+            1.0,
+            0.07849576324224472,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666889190673828
+      },
+      {
+        "callback": 423,
+        "frame": 859,
+        "elapsed": 7.1583333015441895,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          0.02322347872653806,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          0.1542464643716812,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 422,
+          "controls": [
+            1.0,
+            0.12489546090364456,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 424,
+        "frame": 861,
+        "elapsed": 7.175000190734863,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          0.022749408532050854,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          0.17275294661521912,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 423,
+          "controls": [
+            1.0,
+            0.1542464643716812,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666889190673828
+      },
+      {
+        "callback": 425,
+        "frame": 863,
+        "elapsed": 7.191666603088379,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          0.02126950180151451,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          0.1841278076171875,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 424,
+          "controls": [
+            1.0,
+            0.17275294661521912,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 426,
+        "frame": 865,
+        "elapsed": 7.208333492279053,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          0.019355523003857636,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          0.19080469012260437,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 425,
+          "controls": [
+            1.0,
+            0.1841278076171875,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666889190673828
+      },
+      {
+        "callback": 427,
+        "frame": 867,
+        "elapsed": 7.224999904632568,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          0.017441788739645695,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          0.19439835846424103,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 426,
+          "controls": [
+            1.0,
+            0.19080469012260437,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 428,
+        "frame": 869,
+        "elapsed": 7.241666793823242,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          0.015482163375709911,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          0.19594499468803406,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 427,
+          "controls": [
+            1.0,
+            0.19439835846424103,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666889190673828
+      },
+      {
+        "callback": 429,
+        "frame": 871,
+        "elapsed": 7.258333206176758,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": null,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          0.01308936487711879,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          0.19603019952774048,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 428,
+          "controls": [
+            1.0,
+            0.19594499468803406,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666412353515625
+      }
+    ],
+    "chase_to_jump": [
+      {
+        "callback": 469,
+        "frame": 956,
+        "elapsed": 7.9666666984558105,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 0,
+        "teacher_mode": "Jump",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.07597523927688599,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 468,
+          "controls": [
+            1.0,
+            -0.0609014630317688,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666889190673828
+      },
+      {
+        "callback": 617,
+        "frame": 1252,
+        "elapsed": 10.433333396911621,
+        "match_phase": "MatchPhase.Active",
+        "sequence_id": 2,
+        "source_phase": 0,
+        "teacher_mode": "Jump",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.19118674099445343,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 616,
+          "controls": [
+            1.0,
+            -0.17728441953659058,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666412353515625
+      }
+    ],
+    "student_missed_sequence_start": [
+      {
+        "callback": 469,
+        "frame": 956,
+        "elapsed": 7.9666666984558105,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 0,
+        "teacher_mode": "Jump",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.07597523927688599,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 468,
+          "controls": [
+            1.0,
+            -0.0609014630317688,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666889190673828
+      },
+      {
+        "callback": 617,
+        "frame": 1252,
+        "elapsed": 10.433333396911621,
+        "match_phase": "MatchPhase.Active",
+        "sequence_id": 2,
+        "source_phase": 0,
+        "teacher_mode": "Jump",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.19118674099445343,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 616,
+          "controls": [
+            1.0,
+            -0.17728441953659058,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 674,
+        "frame": 1664,
+        "elapsed": 13.866666793823242,
+        "match_phase": "MatchPhase.Active",
+        "sequence_id": 3,
+        "source_phase": 0,
+        "teacher_mode": "Jump",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          0.19671784341335297,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 673,
+          "controls": [
+            1.0,
+            0.4082636535167694,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666412353515625
+      }
+    ],
+    "kickoff_pending": [
+      {
+        "callback": 470,
+        "frame": 958,
+        "elapsed": 7.983333110809326,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 0,
+        "teacher_mode": "Jump",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.08333142846822739,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 469,
+          "controls": [
+            1.0,
+            -0.07597523927688599,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 471,
+        "frame": 960,
+        "elapsed": 8.0,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 0,
+        "teacher_mode": "Jump",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.10293859988451004,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 470,
+          "controls": [
+            1.0,
+            -0.08333142846822739,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666889190673828
+      },
+      {
+        "callback": 472,
+        "frame": 962,
+        "elapsed": 8.016666412353516,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 0,
+        "teacher_mode": "Jump",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 471,
+          "controls": [
+            1.0,
+            -0.10293859988451004,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 473,
+        "frame": 964,
+        "elapsed": 8.033333778381348,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 0,
+        "teacher_mode": "Jump",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 472,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.01666736602783203
+      },
+      {
+        "callback": 474,
+        "frame": 966,
+        "elapsed": 8.050000190734863,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 1,
+        "teacher_mode": "Neutral",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 473,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 475,
+        "frame": 968,
+        "elapsed": 8.066666603088379,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 1,
+        "teacher_mode": "Neutral",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 474,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 476,
+        "frame": 970,
+        "elapsed": 8.083333015441895,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 1,
+        "teacher_mode": "Neutral",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 475,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 477,
+        "frame": 972,
+        "elapsed": 8.100000381469727,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 1,
+        "teacher_mode": "Neutral",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 476,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.01666736602783203
+      },
+      {
+        "callback": 478,
+        "frame": 974,
+        "elapsed": 8.116666793823242,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 477,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 479,
+        "frame": 976,
+        "elapsed": 8.133333206176758,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 478,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 480,
+        "frame": 978,
+        "elapsed": 8.149999618530273,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 479,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 481,
+        "frame": 980,
+        "elapsed": 8.166666984558105,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 480,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.01666736602783203
+      }
+    ],
+    "shadow_continues_after_student_divergence": [
+      {
+        "callback": 470,
+        "frame": 958,
+        "elapsed": 7.983333110809326,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 0,
+        "teacher_mode": "Jump",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.08333142846822739,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 469,
+          "controls": [
+            1.0,
+            -0.07597523927688599,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 471,
+        "frame": 960,
+        "elapsed": 8.0,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 0,
+        "teacher_mode": "Jump",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.10293859988451004,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 470,
+          "controls": [
+            1.0,
+            -0.08333142846822739,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666889190673828
+      },
+      {
+        "callback": 472,
+        "frame": 962,
+        "elapsed": 8.016666412353516,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 0,
+        "teacher_mode": "Jump",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 471,
+          "controls": [
+            1.0,
+            -0.10293859988451004,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 473,
+        "frame": 964,
+        "elapsed": 8.033333778381348,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 0,
+        "teacher_mode": "Jump",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 472,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.01666736602783203
+      },
+      {
+        "callback": 474,
+        "frame": 966,
+        "elapsed": 8.050000190734863,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 1,
+        "teacher_mode": "Neutral",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 473,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 475,
+        "frame": 968,
+        "elapsed": 8.066666603088379,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 1,
+        "teacher_mode": "Neutral",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 474,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 476,
+        "frame": 970,
+        "elapsed": 8.083333015441895,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 1,
+        "teacher_mode": "Neutral",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 475,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 477,
+        "frame": 972,
+        "elapsed": 8.100000381469727,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 1,
+        "teacher_mode": "Neutral",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 476,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.01666736602783203
+      },
+      {
+        "callback": 478,
+        "frame": 974,
+        "elapsed": 8.116666793823242,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 477,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 479,
+        "frame": 976,
+        "elapsed": 8.133333206176758,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 478,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 480,
+        "frame": 978,
+        "elapsed": 8.149999618530273,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 479,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 481,
+        "frame": 980,
+        "elapsed": 8.166666984558105,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 480,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.01666736602783203
+      }
+    ],
+    "release": [
+      {
+        "callback": 474,
+        "frame": 966,
+        "elapsed": 8.050000190734863,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 1,
+        "teacher_mode": "Neutral",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 473,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 475,
+        "frame": 968,
+        "elapsed": 8.066666603088379,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 1,
+        "teacher_mode": "Neutral",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 474,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 476,
+        "frame": 970,
+        "elapsed": 8.083333015441895,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 1,
+        "teacher_mode": "Neutral",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 475,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 477,
+        "frame": 972,
+        "elapsed": 8.100000381469727,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 1,
+        "teacher_mode": "Neutral",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 476,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.01666736602783203
+      },
+      {
+        "callback": 619,
+        "frame": 1406,
+        "elapsed": 11.716666221618652,
+        "match_phase": "MatchPhase.Active",
+        "sequence_id": 2,
+        "source_phase": 1,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 618,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.6999998092651367
+      },
+      {
+        "callback": 620,
+        "frame": 1408,
+        "elapsed": 11.733333587646484,
+        "match_phase": "MatchPhase.Active",
+        "sequence_id": 2,
+        "source_phase": 1,
+        "teacher_mode": "Neutral",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          0.4835922420024872,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 619,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.01666736602783203
+      },
+      {
+        "callback": 621,
+        "frame": 1410,
+        "elapsed": 11.75,
+        "match_phase": "MatchPhase.Active",
+        "sequence_id": 2,
+        "source_phase": 1,
+        "teacher_mode": "Neutral",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.054673802107572556,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 620,
+          "controls": [
+            1.0,
+            0.4835922420024872,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 622,
+        "frame": 1412,
+        "elapsed": 11.766666412353516,
+        "match_phase": "MatchPhase.Active",
+        "sequence_id": 2,
+        "source_phase": 1,
+        "teacher_mode": "Neutral",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.26121005415916443,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 621,
+          "controls": [
+            1.0,
+            -0.054673802107572556,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 678,
+        "frame": 1672,
+        "elapsed": 13.933333396911621,
+        "match_phase": "MatchPhase.Active",
+        "sequence_id": 3,
+        "source_phase": 1,
+        "teacher_mode": "Neutral",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.19550496339797974,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 677,
+          "controls": [
+            1.0,
+            0.12353261560201645,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 679,
+        "frame": 1674,
+        "elapsed": 13.949999809265137,
+        "match_phase": "MatchPhase.Active",
+        "sequence_id": 3,
+        "source_phase": 1,
+        "teacher_mode": "Neutral",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.22609536349773407,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 678,
+          "controls": [
+            1.0,
+            -0.19550496339797974,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 1106,
+        "frame": 2453,
+        "elapsed": 20.441667556762695,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": 3,
+        "source_phase": 1,
+        "teacher_mode": "Neutral",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          0.5693280696868896,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 1105,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016668319702148438
+      }
+    ],
+    "front_dodge": [
+      {
+        "callback": 478,
+        "frame": 974,
+        "elapsed": 8.116666793823242,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 477,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 479,
+        "frame": 976,
+        "elapsed": 8.133333206176758,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 478,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 480,
+        "frame": 978,
+        "elapsed": 8.149999618530273,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 479,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 481,
+        "frame": 980,
+        "elapsed": 8.166666984558105,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 480,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.01666736602783203
+      },
+      {
+        "callback": 482,
+        "frame": 982,
+        "elapsed": 8.183333396911621,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 481,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 483,
+        "frame": 984,
+        "elapsed": 8.199999809265137,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 482,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 484,
+        "frame": 986,
+        "elapsed": 8.216666221618652,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 483,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 485,
+        "frame": 988,
+        "elapsed": 8.233333587646484,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 484,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.01666736602783203
+      },
+      {
+        "callback": 486,
+        "frame": 990,
+        "elapsed": 8.25,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 485,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 487,
+        "frame": 992,
+        "elapsed": 8.266666412353516,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 486,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 488,
+        "frame": 994,
+        "elapsed": 8.283333778381348,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 487,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.01666736602783203
+      },
+      {
+        "callback": 489,
+        "frame": 996,
+        "elapsed": 8.300000190734863,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Front dodge",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 488,
+          "controls": [
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            true,
+            false,
+            false
+          ],
+          "mode": "Front dodge"
+        },
+        "callback_dt": 0.016666412353515625
+      }
+    ],
+    "coast": [
+      {
+        "callback": 492,
+        "frame": 1002,
+        "elapsed": 8.350000381469727,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 3,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 491,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.01666736602783203
+      },
+      {
+        "callback": 493,
+        "frame": 1004,
+        "elapsed": 8.366666793823242,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 3,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 492,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 494,
+        "frame": 1006,
+        "elapsed": 8.383333206176758,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 3,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 493,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 495,
+        "frame": 1008,
+        "elapsed": 8.399999618530273,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 3,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 494,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 496,
+        "frame": 1010,
+        "elapsed": 8.416666984558105,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 3,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 495,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.01666736602783203
+      },
+      {
+        "callback": 497,
+        "frame": 1012,
+        "elapsed": 8.433333396911621,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 3,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 496,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 498,
+        "frame": 1014,
+        "elapsed": 8.449999809265137,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 3,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 497,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 499,
+        "frame": 1016,
+        "elapsed": 8.466666221618652,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 3,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 498,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 500,
+        "frame": 1018,
+        "elapsed": 8.483333587646484,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 3,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 499,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.01666736602783203
+      },
+      {
+        "callback": 501,
+        "frame": 1020,
+        "elapsed": 8.5,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 3,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 500,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 502,
+        "frame": 1022,
+        "elapsed": 8.516666412353516,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 3,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 501,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 503,
+        "frame": 1024,
+        "elapsed": 8.533333778381348,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 3,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 502,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.01666736602783203
+      }
+    ],
+    "completion": [
+      {
+        "callback": 541,
+        "frame": 1100,
+        "elapsed": 9.166666984558105,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 3,
+        "teacher_mode": "Neutral",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.043563034385442734,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 540,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.01666736602783203
+      },
+      {
+        "callback": 673,
+        "frame": 1662,
+        "elapsed": 13.850000381469727,
+        "match_phase": "MatchPhase.Active",
+        "sequence_id": 2,
+        "source_phase": 3,
+        "teacher_mode": "Neutral",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          0.4082636535167694,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 672,
+          "controls": [
+            1.0,
+            0.4121350347995758,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.01666736602783203
+      }
+    ],
+    "neutral_to_chase": [
+      {
+        "callback": 542,
+        "frame": 1102,
+        "elapsed": 9.183333396911621,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": null,
+        "teacher_mode": "Chase",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          1.0,
+          -2.2653420902408223e-07,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.017201704904437065,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 541,
+          "controls": [
+            1.0,
+            -0.043563034385442734,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666412353515625
+      }
+    ],
+    "student_missed_prior_jump": [
+      {
+        "callback": 623,
+        "frame": 1490,
+        "elapsed": 12.416666984558105,
+        "match_phase": "MatchPhase.Active",
+        "sequence_id": 2,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 622,
+          "controls": [
+            1.0,
+            -0.26121005415916443,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.6500005722045898
+      },
+      {
+        "callback": 624,
+        "frame": 1564,
+        "elapsed": 13.033333778381348,
+        "match_phase": "MatchPhase.Active",
+        "sequence_id": 2,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 623,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.6166667938232422
+      },
+      {
+        "callback": 1107,
+        "frame": 2541,
+        "elapsed": 21.174999237060547,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": 3,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 1106,
+          "controls": [
+            1.0,
+            0.5693280696868896,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.7333316802978516
+      },
+      {
+        "callback": 1108,
+        "frame": 3056,
+        "elapsed": 25.46666717529297,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 3,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 1107,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 4.291667938232422
+      }
+    ],
+    "missing_ball_pending": [
+      {
+        "callback": 680,
+        "frame": 1676,
+        "elapsed": 13.966666221618652,
+        "match_phase": "MatchPhase.GoalScored",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 679,
+          "controls": [
+            1.0,
+            -0.22609536349773407,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 681,
+        "frame": 1678,
+        "elapsed": 13.983333587646484,
+        "match_phase": "MatchPhase.GoalScored",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 680,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.01666736602783203
+      },
+      {
+        "callback": 682,
+        "frame": 1680,
+        "elapsed": 14.0,
+        "match_phase": "MatchPhase.GoalScored",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 681,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 683,
+        "frame": 1682,
+        "elapsed": 14.016666412353516,
+        "match_phase": "MatchPhase.GoalScored",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 682,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 684,
+        "frame": 1684,
+        "elapsed": 14.033333778381348,
+        "match_phase": "MatchPhase.GoalScored",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 683,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.01666736602783203
+      },
+      {
+        "callback": 685,
+        "frame": 1686,
+        "elapsed": 14.050000190734863,
+        "match_phase": "MatchPhase.GoalScored",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 684,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 686,
+        "frame": 1688,
+        "elapsed": 14.066666603088379,
+        "match_phase": "MatchPhase.GoalScored",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 685,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 687,
+        "frame": 1690,
+        "elapsed": 14.083333015441895,
+        "match_phase": "MatchPhase.GoalScored",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 686,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 688,
+        "frame": 1692,
+        "elapsed": 14.100000381469727,
+        "match_phase": "MatchPhase.GoalScored",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 687,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.01666736602783203
+      },
+      {
+        "callback": 689,
+        "frame": 1694,
+        "elapsed": 14.116666793823242,
+        "match_phase": "MatchPhase.GoalScored",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 688,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 690,
+        "frame": 1695,
+        "elapsed": 14.125,
+        "match_phase": "MatchPhase.GoalScored",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 689,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.008333206176757812
+      },
+      {
+        "callback": 691,
+        "frame": 1697,
+        "elapsed": 14.141666412353516,
+        "match_phase": "MatchPhase.GoalScored",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 690,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      }
+    ],
+    "goal_pending": [
+      {
+        "callback": 680,
+        "frame": 1676,
+        "elapsed": 13.966666221618652,
+        "match_phase": "MatchPhase.GoalScored",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 679,
+          "controls": [
+            1.0,
+            -0.22609536349773407,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 681,
+        "frame": 1678,
+        "elapsed": 13.983333587646484,
+        "match_phase": "MatchPhase.GoalScored",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 680,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.01666736602783203
+      },
+      {
+        "callback": 682,
+        "frame": 1680,
+        "elapsed": 14.0,
+        "match_phase": "MatchPhase.GoalScored",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 681,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 683,
+        "frame": 1682,
+        "elapsed": 14.016666412353516,
+        "match_phase": "MatchPhase.GoalScored",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 682,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 684,
+        "frame": 1684,
+        "elapsed": 14.033333778381348,
+        "match_phase": "MatchPhase.GoalScored",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 683,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.01666736602783203
+      },
+      {
+        "callback": 685,
+        "frame": 1686,
+        "elapsed": 14.050000190734863,
+        "match_phase": "MatchPhase.GoalScored",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 684,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 686,
+        "frame": 1688,
+        "elapsed": 14.066666603088379,
+        "match_phase": "MatchPhase.GoalScored",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 685,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 687,
+        "frame": 1690,
+        "elapsed": 14.083333015441895,
+        "match_phase": "MatchPhase.GoalScored",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 686,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 688,
+        "frame": 1692,
+        "elapsed": 14.100000381469727,
+        "match_phase": "MatchPhase.GoalScored",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 687,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.01666736602783203
+      },
+      {
+        "callback": 689,
+        "frame": 1694,
+        "elapsed": 14.116666793823242,
+        "match_phase": "MatchPhase.GoalScored",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 688,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 690,
+        "frame": 1695,
+        "elapsed": 14.125,
+        "match_phase": "MatchPhase.GoalScored",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 689,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.008333206176757812
+      },
+      {
+        "callback": 691,
+        "frame": 1697,
+        "elapsed": 14.141666412353516,
+        "match_phase": "MatchPhase.GoalScored",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 690,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      }
+    ],
+    "replay_pending": [
+      {
+        "callback": 877,
+        "frame": 2037,
+        "elapsed": 16.975000381469727,
+        "match_phase": "MatchPhase.Replay",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 876,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 878,
+        "frame": 2039,
+        "elapsed": 16.991666793823242,
+        "match_phase": "MatchPhase.Replay",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 877,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 879,
+        "frame": 2041,
+        "elapsed": 17.008333206176758,
+        "match_phase": "MatchPhase.Replay",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 878,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 880,
+        "frame": 2043,
+        "elapsed": 17.024999618530273,
+        "match_phase": "MatchPhase.Replay",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 879,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 881,
+        "frame": 2045,
+        "elapsed": 17.04166603088379,
+        "match_phase": "MatchPhase.Replay",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 880,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 882,
+        "frame": 2047,
+        "elapsed": 17.058332443237305,
+        "match_phase": "MatchPhase.Replay",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 881,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 883,
+        "frame": 2049,
+        "elapsed": 17.075000762939453,
+        "match_phase": "MatchPhase.Replay",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 882,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016668319702148438
+      },
+      {
+        "callback": 884,
+        "frame": 2051,
+        "elapsed": 17.09166717529297,
+        "match_phase": "MatchPhase.Replay",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 883,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 885,
+        "frame": 2053,
+        "elapsed": 17.108333587646484,
+        "match_phase": "MatchPhase.Replay",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 884,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 886,
+        "frame": 2055,
+        "elapsed": 17.125,
+        "match_phase": "MatchPhase.Replay",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 885,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 887,
+        "frame": 2057,
+        "elapsed": 17.141666412353516,
+        "match_phase": "MatchPhase.Replay",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 886,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 888,
+        "frame": 2059,
+        "elapsed": 17.15833282470703,
+        "match_phase": "MatchPhase.Replay",
+        "sequence_id": 3,
+        "source_phase": null,
+        "teacher_mode": "Neutral",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 887,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016666412353515625
+      }
+    ],
+    "countdown_pending": [
+      {
+        "callback": 1106,
+        "frame": 2453,
+        "elapsed": 20.441667556762695,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": 3,
+        "source_phase": 1,
+        "teacher_mode": "Neutral",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          0.5693280696868896,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 1105,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.016668319702148438
+      },
+      {
+        "callback": 1107,
+        "frame": 2541,
+        "elapsed": 21.174999237060547,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": 3,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 1106,
+          "controls": [
+            1.0,
+            0.5693280696868896,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.7333316802978516
+      }
+    ],
+    "long_gap": [
+      {
+        "callback": 1108,
+        "frame": 3056,
+        "elapsed": 25.46666717529297,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 3,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 1107,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 4.291667938232422
+      }
+    ]
+  },
+  "sequence_starts": [
+    {
+      "callback": 469,
+      "frame": 956,
+      "elapsed": 7.9666666984558105,
+      "match_phase": "MatchPhase.Kickoff",
+      "sequence_id": 1,
+      "source_phase": 0,
+      "teacher_mode": "Jump",
+      "student_mode": "Chase",
+      "teacher_controls": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        true,
+        false,
+        false
+      ],
+      "student_controls": [
+        1.0,
+        -0.07597523927688599,
+        0.0,
+        0.0,
+        0.0,
+        false,
+        false,
+        false
+      ],
+      "previous_student": {
+        "callback": 468,
+        "controls": [
+          1.0,
+          -0.0609014630317688,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "mode": "Chase"
+      },
+      "callback_dt": 0.016666889190673828
+    },
+    {
+      "callback": 617,
+      "frame": 1252,
+      "elapsed": 10.433333396911621,
+      "match_phase": "MatchPhase.Active",
+      "sequence_id": 2,
+      "source_phase": 0,
+      "teacher_mode": "Jump",
+      "student_mode": "Chase",
+      "teacher_controls": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        true,
+        false,
+        false
+      ],
+      "student_controls": [
+        1.0,
+        -0.19118674099445343,
+        0.0,
+        0.0,
+        0.0,
+        false,
+        false,
+        false
+      ],
+      "previous_student": {
+        "callback": 616,
+        "controls": [
+          1.0,
+          -0.17728441953659058,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "mode": "Chase"
+      },
+      "callback_dt": 0.016666412353515625
+    },
+    {
+      "callback": 674,
+      "frame": 1664,
+      "elapsed": 13.866666793823242,
+      "match_phase": "MatchPhase.Active",
+      "sequence_id": 3,
+      "source_phase": 0,
+      "teacher_mode": "Jump",
+      "student_mode": "Chase",
+      "teacher_controls": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        true,
+        false,
+        false
+      ],
+      "student_controls": [
+        1.0,
+        0.19671784341335297,
+        0.0,
+        0.0,
+        0.0,
+        false,
+        false,
+        false
+      ],
+      "previous_student": {
+        "callback": 673,
+        "controls": [
+          1.0,
+          0.4082636535167694,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "mode": "Chase"
+      },
+      "callback_dt": 0.016666412353515625
+    }
+  ],
+  "sequence_completions": [
+    {
+      "callback": 541,
+      "frame": 1100,
+      "elapsed": 9.166666984558105,
+      "match_phase": "MatchPhase.Kickoff",
+      "sequence_id": 1,
+      "source_phase": 3,
+      "teacher_mode": "Neutral",
+      "student_mode": "Chase",
+      "teacher_controls": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        false,
+        false,
+        false
+      ],
+      "student_controls": [
+        1.0,
+        -0.043563034385442734,
+        0.0,
+        0.0,
+        0.0,
+        false,
+        false,
+        false
+      ],
+      "previous_student": {
+        "callback": 540,
+        "controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "mode": "Neutral"
+      },
+      "callback_dt": 0.01666736602783203
+    },
+    {
+      "callback": 673,
+      "frame": 1662,
+      "elapsed": 13.850000381469727,
+      "match_phase": "MatchPhase.Active",
+      "sequence_id": 2,
+      "source_phase": 3,
+      "teacher_mode": "Neutral",
+      "student_mode": "Chase",
+      "teacher_controls": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        false,
+        false,
+        false
+      ],
+      "student_controls": [
+        1.0,
+        0.4082636535167694,
+        0.0,
+        0.0,
+        0.0,
+        false,
+        false,
+        false
+      ],
+      "previous_student": {
+        "callback": 672,
+        "controls": [
+          1.0,
+          0.4121350347995758,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "mode": "Chase"
+      },
+      "callback_dt": 0.01666736602783203
+    }
+  ],
+  "same_pending_sequence_across_goal_replay_kickoff": [
+    3
+  ],
+  "student_disagreement": {
+    "mode_disagreement_callbacks": 83,
+    "missed_sequence_starts": [
+      {
+        "callback": 469,
+        "frame": 956,
+        "elapsed": 7.9666666984558105,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 0,
+        "teacher_mode": "Jump",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.07597523927688599,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 468,
+          "controls": [
+            1.0,
+            -0.0609014630317688,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666889190673828
+      },
+      {
+        "callback": 617,
+        "frame": 1252,
+        "elapsed": 10.433333396911621,
+        "match_phase": "MatchPhase.Active",
+        "sequence_id": 2,
+        "source_phase": 0,
+        "teacher_mode": "Jump",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.19118674099445343,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 616,
+          "controls": [
+            1.0,
+            -0.17728441953659058,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      {
+        "callback": 674,
+        "frame": 1664,
+        "elapsed": 13.866666793823242,
+        "match_phase": "MatchPhase.Active",
+        "sequence_id": 3,
+        "source_phase": 0,
+        "teacher_mode": "Jump",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          0.19671784341335297,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 673,
+          "controls": [
+            1.0,
+            0.4082636535167694,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666412353515625
+      }
+    ],
+    "front_dodge_after_student_previous_jump_false": [
+      {
+        "callback": 623,
+        "frame": 1490,
+        "elapsed": 12.416666984558105,
+        "match_phase": "MatchPhase.Active",
+        "sequence_id": 2,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 622,
+          "controls": [
+            1.0,
+            -0.26121005415916443,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.6500005722045898
+      },
+      {
+        "callback": 624,
+        "frame": 1564,
+        "elapsed": 13.033333778381348,
+        "match_phase": "MatchPhase.Active",
+        "sequence_id": 2,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 623,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.6166667938232422
+      },
+      {
+        "callback": 1107,
+        "frame": 2541,
+        "elapsed": 21.174999237060547,
+        "match_phase": "MatchPhase.Countdown",
+        "sequence_id": 3,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 1106,
+          "controls": [
+            1.0,
+            0.5693280696868896,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.7333316802978516
+      },
+      {
+        "callback": 1108,
+        "frame": 3056,
+        "elapsed": 25.46666717529297,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 3,
+        "source_phase": 2,
+        "teacher_mode": "Front dodge",
+        "student_mode": "Neutral",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          -1.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 1107,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 4.291667938232422
+      }
+    ]
+  },
+  "shadow_continuation_after_student_divergence": {
+    "1": {
+      "start": {
+        "callback": 469,
+        "frame": 956,
+        "elapsed": 7.9666666984558105,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 0,
+        "teacher_mode": "Jump",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.07597523927688599,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 468,
+          "controls": [
+            1.0,
+            -0.0609014630317688,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666889190673828
+      },
+      "continuation_callbacks": 72,
+      "completion": {
+        "callback": 541,
+        "frame": 1100,
+        "elapsed": 9.166666984558105,
+        "match_phase": "MatchPhase.Kickoff",
+        "sequence_id": 1,
+        "source_phase": 3,
+        "teacher_mode": "Neutral",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.043563034385442734,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 540,
+          "controls": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Neutral"
+        },
+        "callback_dt": 0.01666736602783203
+      },
+      "pending_phases": [
+        "MatchPhase.Kickoff"
+      ]
+    },
+    "2": {
+      "start": {
+        "callback": 617,
+        "frame": 1252,
+        "elapsed": 10.433333396911621,
+        "match_phase": "MatchPhase.Active",
+        "sequence_id": 2,
+        "source_phase": 0,
+        "teacher_mode": "Jump",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          -0.19118674099445343,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 616,
+          "controls": [
+            1.0,
+            -0.17728441953659058,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      "continuation_callbacks": 56,
+      "completion": {
+        "callback": 673,
+        "frame": 1662,
+        "elapsed": 13.850000381469727,
+        "match_phase": "MatchPhase.Active",
+        "sequence_id": 2,
+        "source_phase": 3,
+        "teacher_mode": "Neutral",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          0.4082636535167694,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 672,
+          "controls": [
+            1.0,
+            0.4121350347995758,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.01666736602783203
+      },
+      "pending_phases": [
+        "MatchPhase.Active"
+      ]
+    },
+    "3": {
+      "start": {
+        "callback": 674,
+        "frame": 1664,
+        "elapsed": 13.866666793823242,
+        "match_phase": "MatchPhase.Active",
+        "sequence_id": 3,
+        "source_phase": 0,
+        "teacher_mode": "Jump",
+        "student_mode": "Chase",
+        "teacher_controls": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          true,
+          false,
+          false
+        ],
+        "student_controls": [
+          1.0,
+          0.19671784341335297,
+          0.0,
+          0.0,
+          0.0,
+          false,
+          false,
+          false
+        ],
+        "previous_student": {
+          "callback": 673,
+          "controls": [
+            1.0,
+            0.4082636535167694,
+            0.0,
+            0.0,
+            0.0,
+            false,
+            false,
+            false
+          ],
+          "mode": "Chase"
+        },
+        "callback_dt": 0.016666412353515625
+      },
+      "continuation_callbacks": 441,
+      "completion": null,
+      "pending_phases": [
+        "MatchPhase.Active",
+        "MatchPhase.Countdown",
+        "MatchPhase.GoalScored",
+        "MatchPhase.Kickoff",
+        "MatchPhase.Replay"
+      ]
+    }
+  },
+  "off_policy_scope": "Actual independent shadow continuation after student action disagreements was observed on teacher-controlled physics. No student action reached the game; learner-induced off-policy state continuation was NOT tested.",
+  "diagnostics_errors": [
+    {
+      "callback": 1115,
+      "type": "PermissionError",
+      "error": "PermissionError(13, 'Access is denied')",
+      "comparison_failures": []
+    }
+  ],
+  "agent_status": "error",
+  "supervisor_status": "coverage_complete_awaiting_review",
+  "automatic_report_corrections": {
+    "raw_lines_not_callbacks": true,
+    "repeated_1115_transport_entry_is_one_unsubmitted_callback": true,
+    "hidden_chain_discrepancy_is_duplicate_error_row_not_a_reset": true,
+    "coverage_complete_is_not_clean_success": true
+  },
+  "delivery": {
+    "packet_receipts": 1230,
+    "prediction_receipts": 804,
+    "adjacent_processed_callbacks_reusing_prediction_receipt": 426,
+    "controlled_pauses": [
+      {
+        "kind": "controlled_receive_pause",
+        "monotonic": 83206.406,
+        "payload": {
+          "seconds": 1.25,
+          "label": "phase 0 long-gap probe",
+          "controls_already_submitted": {
+            "callback": 617,
+            "T": 10.433333396911621,
+            "controls": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              true,
+              false,
+              false
+            ],
+            "monotonic": 83206.406
+          }
+        }
+      },
+      {
+        "kind": "controlled_receive_pause",
+        "monotonic": 83207.734,
+        "payload": {
+          "seconds": 1.25,
+          "label": "phase 2 long-gap probe",
+          "controls_already_submitted": {
+            "callback": 622,
+            "T": 11.766666412353516,
+            "controls": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              false,
+              false,
+              false
+            ],
+            "monotonic": 83207.734
+          }
+        }
+      },
+      {
+        "kind": "controlled_receive_pause",
+        "monotonic": 83218.015,
+        "payload": {
+          "seconds": 5.0,
+          "label": "pending sequence across real countdown/kickoff",
+          "controls_already_submitted": {
+            "callback": 1106,
+            "T": 20.441667556762695,
+            "controls": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              false,
+              false,
+              false
+            ],
+            "monotonic": 83218.015
+          }
+        }
+      }
+    ],
+    "callback_dt": {
+      "count": 1114,
+      "minimum": 0.008333206176757812,
+      "median": 0.016666412353515625,
+      "p95": 0.01666736602783203,
+      "maximum": 4.291667938232422
+    },
+    "frame_gaps": {
+      "count": 1114,
+      "minimum": 1,
+      "median": 2.0,
+      "p95": 2,
+      "maximum": 515
+    },
+    "student_ipc_seconds": {
+      "count": 1115,
+      "minimum": 0.0005416999920271337,
+      "median": 0.0007898000039858744,
+      "p95": 0.0011474999919300899,
+      "maximum": 0.003544299994246103
+    },
+    "queue_full_warnings": "User terminal reports thresholds 1, 10 and 100 missed messages; not a complete drop count.",
+    "lossless_delivery_proved": false
+  },
+  "error_cause": {
+    "established": "Windows denied os.replace(agent_summary.tmp, agent_summary.json) at callback 1115. It raised before returning controls to the SDK; SDK exception path sent no PlayerInput.",
+    "uncertain": "Concurrent reader/file-sharing or shutdown timing may explain the denial. The process holding the file was not captured; exact OS-level cause remains unproven.",
+    "status_race": "Supervisor cached coverage_complete before the agent entered error; final agent summary/closed marker says error."
+  },
+  "protected_hashes_verified": 43,
+  "immutable_anchors_verified": true,
+  "inherited_full_immutable_verification": true,
+  "no_test_evaluation": true,
+  "no_dagger_training_dataset": true,
+  "no_training_or_deployment": true,
+  "input_hashes": {
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase3_shadow_v1\\sessions\\20261005_042947_003076\\agent_closed.json": "063427a3066b8db9f18b6e9364bc6cc4ad17e4907a132c16ac7c58a9e018543c",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase3_shadow_v1\\sessions\\20261005_042947_003076\\agent_summary.json": "3651e98bab68cff76d7e85359d1286b20bbc2368fe0616e22da3edb0997d3dfd",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase3_shadow_v1\\sessions\\20261005_042947_003076\\bot.toml": "03265fe860d4181c638697fee27485c83ec8f903a8d42e1b1edb69e73edd934b",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase3_shadow_v1\\sessions\\20261005_042947_003076\\callbacks.jsonl": "f62920e0c07ca50fac87932d00183d8afe469bcb523b45d984e9685350793dc1",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase3_shadow_v1\\sessions\\20261005_042947_003076\\contract_report.json": "adeb95d20371769059907d3db958d85bb1dedea385b53f51ff87f40913de5612",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase3_shadow_v1\\sessions\\20261005_042947_003076\\contract_report.md": "379adde3dee9225a341cb243960cddf07f36b0f5d7161557a48a5012cf877f3d",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase3_shadow_v1\\sessions\\20261005_042947_003076\\events.jsonl": "57e1330c89a691ffa8d738820670dbc2face0fa1ada20a490ca82566faf73490",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase3_shadow_v1\\sessions\\20261005_042947_003076\\match.toml": "25bd22c6d2d2d63f25548f8505b33cf5b6a4591581d5df392655264b70153d3d",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase3_shadow_v1\\sessions\\20261005_042947_003076\\metadata.json": "9353dc76eaf31890ceebb99c364362a987b5cbb747be4db2fd0a6d0759082cc6",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase3_shadow_v1\\sessions\\20261005_042947_003076\\run_agent.cmd": "f7a79d5095f32311e0f3c77028893400499b0e574ec65146e5b2bd9de4f7682b",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase3_shadow_v1\\sessions\\20261005_042947_003076\\student_stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase3_shadow_v1\\sessions\\20261005_042947_003076\\supervisor.json": "1bfef4851b07d3e6d4aed76fd96d3edc8f7c6cdfd7177b4ea3f5f79350570c26"
+  },
+  "capture_code_hashes_verified": true,
+  "recommendation": "Do not advance to Phase 4. Review a minimal diagnostic-only fix for summary publication/final status/error accounting, then authorize any rerun separately. Do not change teacher, selector, model or observation contract."
+}

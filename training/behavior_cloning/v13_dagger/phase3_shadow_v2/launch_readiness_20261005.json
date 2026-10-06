@@ -1,0 +1,84 @@
+{
+  "status": "prepared_awaiting_launch_review",
+  "phase3_passed": false,
+  "live_launched": false,
+  "preflight": {
+    "status": "passed_nonlive",
+    "worker": {
+      "status": "ready",
+      "checkpoint_sha256": "579fa26010140514d2e9b7f0e2871bee569c594b7da8648e31ee1489007cd5b7",
+      "parameters": 26181,
+      "torch": "2.11.0+cu128",
+      "device": "cpu",
+      "hidden_resets": 1,
+      "role": "diagnostic_only"
+    },
+    "numerical_callbacks": 4,
+    "worker_hidden_hash_chain": true,
+    "shadow_controller_guard": true,
+    "independent_original_actor_and_tracker": true,
+    "no_game_packet_or_prediction_constructed": true,
+    "live_categories_observed": 0,
+    "diagnostic_regression_checks": {
+      "status": "passed",
+      "immutable_summary_while_old_handle_open": true,
+      "injected_publication_denial_nonfatal": true,
+      "actual_harness_summary_denial_nonfatal": true,
+      "completion_requires_final_submission": true,
+      "final_error_overrides_cached_completion": true,
+      "duplicate_accounting": {
+        "raw_lines": 1116,
+        "unique_callbacks": 1115,
+        "duplicate_ids": {
+          "1115": 2
+        }
+      },
+      "behavior_probe_function_ast_identity": [
+        "observe_original",
+        "cover",
+        "count",
+        "transition_sequence_ids",
+        "complete",
+        "request",
+        "plan",
+        "_handle_packet",
+        "_handle_ball_prediction"
+      ],
+      "teacher_shadow_observation_student_decision_block_ast_identical": true,
+      "byte_identical_shadow_model_worker_and_client": true,
+      "old_evidence_sha256": "f62920e0c07ca50fac87932d00183d8afe469bcb523b45d984e9685350793dc1",
+      "no_live_connection": true,
+      "no_game_packet_or_prediction_constructed": true
+    }
+  },
+  "protected_hashes_unchanged": 43,
+  "completed_artifacts_unchanged": true,
+  "prepared_config_folder": "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase3_shadow_v2\\prepared\\20261005_044323_229694",
+  "scope": [
+    "Only actual processed RLBot callbacks; not lossless delivery or equivalence on undelivered physics ticks.",
+    "Receive pauses can cause queue-full warnings; IPC/profiling/logging can change delivered callback scheduling.",
+    "Teacher drives; student outputs never reach the game. No learner-induced physical-state coverage is established.",
+    "Shadow is an independent original-source actor; exact equivalence does not prove learned sequence competence.",
+    "Requested probe states do not count as evidence; only actual later packets/sequence transitions do.",
+    "Observation prediction probe is distinct from whether the original gameplay branch consulted prediction.",
+    "Diagnostic callback logs are not a DAgger training dataset; no tensor export, aggregation, fitting or test evaluation."
+  ],
+  "launch_command": "& '.\\python-example\\venv\\Scripts\\python.exe' -u -B '.\\training\\behavior_cloning\\v13_dagger\\phase3_shadow_v2\\launch.py' --run",
+  "required_live_evidence": [
+    "Neutral->Chase",
+    "Chase->Jump",
+    "Release",
+    "Front dodge",
+    "Coast/completion",
+    "At least two starts/two completions",
+    "Missing ball with pending sequence",
+    "Same pending sequence across goal/replay/kickoff",
+    "Actual long gap >=1 second",
+    "Near/far branches",
+    "Actual selector index/timestamp/position",
+    "Exact native eight-channel submission",
+    "Student misses a teacher sequence start",
+    "Teacher dodge after student prior jump=False",
+    "Independent shadow continuation after student divergence"
+  ]
+}

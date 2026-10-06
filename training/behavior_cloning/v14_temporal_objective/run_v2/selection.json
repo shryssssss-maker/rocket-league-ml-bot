@@ -1,0 +1,6 @@
+{
+  "checkpoint": "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v14_temporal_objective\\run_v2\\B_best.pt",
+  "checkpoint_sha256": "fe25a208d3fedaef02db27481c40b6eb7d771331c67109d9d7e22a29c65fff82",
+  "best_epoch": 16,
+  "validation_loss": 0.18274027168409054
+}

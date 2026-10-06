@@ -1,0 +1,58 @@
+{
+  "version": "student_full_match_v1",
+  "status": "ready",
+  "nonlive_preflight_complete": true,
+  "live_launched": false,
+  "checks": {
+    "status": "code_preflight_passed",
+    "worker": {
+      "status": "ready",
+      "checkpoint_sha256": "579fa26010140514d2e9b7f0e2871bee569c594b7da8648e31ee1489007cd5b7",
+      "parameters": 26181,
+      "torch": "2.11.0+cu128",
+      "device": "cpu",
+      "hidden_resets": 1,
+      "role": "diagnostic_only"
+    },
+    "shadow_transport_rejected": true,
+    "byte_identical_shadow_worker_decoder_client_and_publication": true,
+    "student_is_only_returned_controller": true,
+    "causal_hidden_chain": true,
+    "native_float_and_button_conversion_exact": true,
+    "unexpected_controls_wrong_agent_and_unset_expected_rejected": true,
+    "no_state_setting_or_intentional_pauses": true,
+    "no_dataset_or_training_reader_in_live_path": true,
+    "immutable_summary_and_injected_denial_checks": true,
+    "game_packet_or_prediction_constructed": false,
+    "actual_live_callbacks": 0,
+    "preflight_outputs_diagnostic_only": true
+  },
+  "reference": {
+    "status": "verified_train_only_description",
+    "verified": true,
+    "sha256": "15d8993f4bc33250776e1d2af9840ef9b0fbb9c06a53253291b719edb2ab6e9c",
+    "primary_callbacks": 57794,
+    "all_train_callbacks": 107400,
+    "sample_use": "description_only"
+  },
+  "protected_hashes_unchanged": 43,
+  "completed_artifacts_unchanged": true,
+  "config_folder": "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase4_full_match_v1\\prepared\\20261005_071046_250082",
+  "approved_protocol": "One natural five-minute game: human_b Orange, pinned student Blue; native replays/countdown/overtime; original teacher shadow-only",
+  "runner_code_hashes": {
+    "common.py": "80dad0e272bda6cbb83c7ee27858c089524b898f556acf62480564974a14f00f",
+    "diagnostics.py": "ab52394967fe51041d4f9adbda39b4dae7091ef9d5e7bbd845261da17b14ad29",
+    "launch.py": "132ef44162de314b469311b9007be56c7f0a0572c444d5b16bebb6ccd95ca927",
+    "live_agent.py": "4a0b10385915ec27acaacab3dbfa790227f4dc8ffb6927c6d0d2194acfb5a513",
+    "pilot_report.py": "32d4a6462b4ec49a3447f7084821520938c00ae8878b4f26e99a780736dcb3ae",
+    "reference.py": "89b453082e819a4f8b7bf0e882dffecce47eb4da58aa1a0d4a33bdf1a505819b",
+    "reference_statistics.py": "d51560066885c6869625f5b57fdc7015adb5ff4fcb4a30217b47ee1040a2d260",
+    "student_client.py": "f99460ccff28f6e94fa35d1f3a58c7e55d25d9459e6eea9dff218a50fe78b7d8",
+    "student_worker.py": "f72ba60ec1421e79c893fe7fb088fdd47f68883f7c2dcafa4eb5f18847c2a9a1"
+  },
+  "approved_spec_sha256": "f7676a667daba6537f9cc7c6e722f8a2196884d2e409dc772275b5ec504e9829",
+  "model_sha256": "579fa26010140514d2e9b7f0e2871bee569c594b7da8648e31ee1489007cd5b7",
+  "validation_or_test_samples_read": false,
+  "training_or_aggregation": false,
+  "one_run_only": true
+}

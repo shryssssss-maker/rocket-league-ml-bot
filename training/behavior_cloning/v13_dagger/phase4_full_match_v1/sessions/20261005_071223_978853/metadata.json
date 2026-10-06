@@ -1,0 +1,47 @@
+{
+  "version": "phase4_student_pilot_v1",
+  "not_training_dataset": true,
+  "code_hashes": {
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase4_full_match_v1\\runner\\common.py": "80dad0e272bda6cbb83c7ee27858c089524b898f556acf62480564974a14f00f",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase4_full_match_v1\\runner\\diagnostics.py": "ab52394967fe51041d4f9adbda39b4dae7091ef9d5e7bbd845261da17b14ad29",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase4_full_match_v1\\runner\\launch.py": "132ef44162de314b469311b9007be56c7f0a0572c444d5b16bebb6ccd95ca927",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase4_full_match_v1\\runner\\live_agent.py": "4a0b10385915ec27acaacab3dbfa790227f4dc8ffb6927c6d0d2194acfb5a513",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase4_full_match_v1\\runner\\pilot_report.py": "32d4a6462b4ec49a3447f7084821520938c00ae8878b4f26e99a780736dcb3ae",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase4_full_match_v1\\runner\\reference.py": "89b453082e819a4f8b7bf0e882dffecce47eb4da58aa1a0d4a33bdf1a505819b",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase4_full_match_v1\\runner\\reference_statistics.py": "d51560066885c6869625f5b57fdc7015adb5ff4fcb4a30217b47ee1040a2d260",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase4_full_match_v1\\runner\\student_client.py": "f99460ccff28f6e94fa35d1f3a58c7e55d25d9459e6eea9dff218a50fe78b7d8",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase4_full_match_v1\\runner\\student_worker.py": "f72ba60ec1421e79c893fe7fb088fdd47f68883f7c2dcafa4eb5f18847c2a9a1"
+  },
+  "config_hashes": {
+    "bot.toml": "08018ffe100b0e726cdb1c2e5c36b525f4b14478c02978886d53e28ca2e625b5",
+    "match.toml": "ce413f823ec62952042a45d39d92a74e40c9dcd89e6a038c68cbe085dfed6953",
+    "run_agent.cmd": "ceea53dc58a24deac2c7f6562b0f31372d1223b1f70650eb5ef9448b4d28c987"
+  },
+  "model_sha256": "579fa26010140514d2e9b7f0e2871bee569c594b7da8648e31ee1489007cd5b7",
+  "source_manifest_sha256": "080943fd8f9a81ada800e0a2f9ff3593b67f66d32272211d67030c03cf433a83",
+  "reference": {
+    "status": "verified_train_only_description",
+    "verified": true,
+    "sha256": "15d8993f4bc33250776e1d2af9840ef9b0fbb9c06a53253291b719edb2ab6e9c",
+    "primary_callbacks": 57794,
+    "all_train_callbacks": 107400,
+    "sample_use": "description_only"
+  },
+  "reference_description_only": true,
+  "opponent_id": "human_b",
+  "student_only_controller": true,
+  "original_shadow_only": true,
+  "natural_run_seconds": null,
+  "native_match_minutes": 5,
+  "human_side": "Orange",
+  "student_side": "Blue",
+  "native_overtime": true,
+  "state_setting": false,
+  "receive_pauses": false,
+  "versions": {
+    "rlbot": "2.0.0b55",
+    "rlbot-flatbuffers": "0.19.0",
+    "psutil": "7.2.2"
+  },
+  "phase4_spec_sha256": "f7676a667daba6537f9cc7c6e722f8a2196884d2e409dc772275b5ec504e9829"
+}

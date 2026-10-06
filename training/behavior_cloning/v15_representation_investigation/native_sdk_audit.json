@@ -1,0 +1,44 @@
+{
+  "rlbot_version": "2.0.0b55",
+  "flatbuffers_version": "0.19.0",
+  "PlayerInfo_fields": {
+    "physics": true,
+    "air_state": true,
+    "last_input": true,
+    "has_jumped": true,
+    "has_double_jumped": true,
+    "has_dodged": true,
+    "dodge_timeout": true,
+    "dodge_elapsed": true,
+    "dodge_dir": true,
+    "boost": true,
+    "demolished_timeout": true,
+    "is_supersonic": true,
+    "hitbox": true,
+    "latest_touch": true
+  },
+  "Physics_fields": {
+    "location": true,
+    "rotation": true,
+    "velocity": true,
+    "angular_velocity": true
+  },
+  "ControllerState_fields": {
+    "throttle": true,
+    "steer": true,
+    "pitch": true,
+    "yaw": true,
+    "roll": true,
+    "jump": true,
+    "boost": true,
+    "handbrake": true
+  },
+  "AirState_fields": {
+    "OnGround": true,
+    "Jumping": true,
+    "DoubleJumping": true,
+    "Dodging": true,
+    "InAir": true
+  },
+  "method": "Class descriptor inspection only; no game state instantiated, no RLBot connection"
+}

@@ -1,0 +1,11 @@
+{
+  "status": "natural_match_ended",
+  "error": null,
+  "cleanup_errors": [],
+  "native_five_minute_match": true,
+  "no_wall_clock_deadline": true,
+  "protected_ok": true,
+  "immutable_ok": true,
+  "agent_closed": true,
+  "opponent_id": "human_b"
+}

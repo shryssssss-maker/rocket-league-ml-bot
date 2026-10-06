@@ -1,0 +1,15 @@
+{
+  "started_at": "2026-10-05T03:31:25.751956+05:30",
+  "code_sha256": {
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v12\\bakeoff.py": "dc09b0912e0c92c6c4bb80b0b271c66e21aab0b4fb61c013107a7c9ddb9325d1",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v12\\experiment.json": "58ce29ff9a7005262c8449bcc0f0ed7696b0c80fa3722eb4737a356d23f4ed74",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v11\\audit.py": "2fc0b6b0097eb3f2e0545a90a584d5c6a98d8a3338b8c483a4f6e20e8a2a2f73"
+  },
+  "manifest_sha256": "080943fd8f9a81ada800e0a2f9ff3593b67f66d32272211d67030c03cf433a83",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "torch": "2.11.0+cu128",
+  "numpy": "1.26.4",
+  "device": "cuda",
+  "cuda_device": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "repeatability": "Seeded one-run comparison; GPU kernels may have residual nondeterminism. No multi-seed confidence claim."
+}

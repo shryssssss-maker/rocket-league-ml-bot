@@ -1,0 +1,26 @@
+{
+  "callbacks": 14785,
+  "status": "callback_error",
+  "last_submission": {
+    "callback": 14785,
+    "T": 247.39166259765625,
+    "frame": 29687,
+    "before_send_monotonic": 57913.859,
+    "order": 57477,
+    "controls": [
+      1.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      false,
+      false,
+      false
+    ],
+    "status": "local_send_returned",
+    "after_send_monotonic": 57913.859,
+    "engine_application_acknowledged": false
+  },
+  "diagnostic_errors": [],
+  "publication_errors": []
+}

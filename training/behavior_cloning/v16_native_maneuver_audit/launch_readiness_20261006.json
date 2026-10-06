@@ -1,0 +1,87 @@
+{
+  "status": "stage1_preparation_pass_with_scope_awaiting_explicit_live_authorization",
+  "source_manifest_sha256": "bcf0dde28a3cec66bb54caafeb0b8af18de65cc1b831b917920d165652682bdd",
+  "pinned_source_entries": 92,
+  "original_revision": "fd061f457bf19175b4a9b3b3d7811a987044c64d",
+  "installed_rlbot": "2.0.0b55",
+  "installed_flatbuffers": "0.19.0",
+  "analysis_numpy": "1.26.4",
+  "source_audit": "source_audit.json",
+  "protocol": "protocol.md",
+  "source_preflight": "Installed descriptor/source audit, 43 protected hashes, previous V13/V14 checksum anchors verified",
+  "final_collection_preflight": "preflight/20261006_211614_172404/result.json",
+  "analysis_preflight": "encoding, sentinel preservation, causal history flattening; no dataset reads",
+  "independent_numerical_preflight": "14 exhaustive-distance comparisons (all seven histories, base and C) plus exact tie-order check; generic algebra matrices only, no packet/trajectory generation",
+  "corrected_during_preparation": "Bind V16_SESSION inside each isolated run_agent.cmd so an existing server cannot retain another match path. Initial seal/preflight artifacts preserved separately.",
+  "native_capture_point": "Same actual packet, copied to primitive values before unchanged original teacher decision",
+  "prediction_delivery": "Actual latest delivered RLBot BallPrediction selected by installed SDK; asynchronous receipts documented",
+  "transport_scope": "PlayerInput send return, exact native output comparison; not engine execution acknowledgement",
+  "last_input_scope": "Received pre-decision packet value. Engine applied/last received/tick phase and prior-submission equivalence remain unresolved pending live observational evidence.",
+  "matches": [
+    {
+      "match_id": "v16_001",
+      "opponent_id": "human_a",
+      "play_session_id": "human_a_v10_session_01",
+      "teacher_side": "Blue"
+    },
+    {
+      "match_id": "v16_002",
+      "opponent_id": "human_b",
+      "play_session_id": "human_b_v10_session_01",
+      "teacher_side": "Orange"
+    },
+    {
+      "match_id": "v16_003",
+      "opponent_id": "human_c",
+      "play_session_id": "human_c_v10_session_01",
+      "teacher_side": "Blue"
+    },
+    {
+      "match_id": "v16_004",
+      "opponent_id": "human_a",
+      "play_session_id": "human_a_v10_session_01",
+      "teacher_side": "Orange"
+    },
+    {
+      "match_id": "v16_005",
+      "opponent_id": "human_b",
+      "play_session_id": "human_b_v10_session_01",
+      "teacher_side": "Blue"
+    },
+    {
+      "match_id": "v16_006",
+      "opponent_id": "human_c",
+      "play_session_id": "human_c_v10_session_01",
+      "teacher_side": "Orange"
+    }
+  ],
+  "match_disjoint_evaluation": "Leave-one-complete-match-out; not opponent/session-disjoint",
+  "live_collection_commands_after_approval": [
+    "& '.\\python-example\\venv\\Scripts\\python.exe' -u -B '.\\training\\behavior_cloning\\v16_native_maneuver_audit\\collector\\launch.py' --run --match-id v16_001",
+    "& '.\\python-example\\venv\\Scripts\\python.exe' -u -B '.\\training\\behavior_cloning\\v16_native_maneuver_audit\\collector\\launch.py' --run --match-id v16_002",
+    "& '.\\python-example\\venv\\Scripts\\python.exe' -u -B '.\\training\\behavior_cloning\\v16_native_maneuver_audit\\collector\\launch.py' --run --match-id v16_003",
+    "& '.\\python-example\\venv\\Scripts\\python.exe' -u -B '.\\training\\behavior_cloning\\v16_native_maneuver_audit\\collector\\launch.py' --run --match-id v16_004",
+    "& '.\\python-example\\venv\\Scripts\\python.exe' -u -B '.\\training\\behavior_cloning\\v16_native_maneuver_audit\\collector\\launch.py' --run --match-id v16_005",
+    "& '.\\python-example\\venv\\Scripts\\python.exe' -u -B '.\\training\\behavior_cloning\\v16_native_maneuver_audit\\collector\\launch.py' --run --match-id v16_006"
+  ],
+  "analysis_command_after_collection_and_review": "& '.\\training\\venv\\Scripts\\python.exe' -u -B '.\\training\\behavior_cloning\\v16_native_maneuver_audit\\analysis.py' --run",
+  "expected_collection_output": "V16 ASSIGNMENT; progress every 10 seconds; V16 STOPPED: natural_match_ended. Failure/Ctrl+C is incomplete; no automatic next run.",
+  "expected_collection_paths": "matches/<ID>/raw/callbacks.jsonl, submissions.jsonl, errors.jsonl; metadata/config, immutable summaries, closure, run summary, integrity",
+  "expected_analysis_paths": "results_v1; training/reports/v16_native_maneuver_observability_20261006.md and .json only after collection/analysis",
+  "runtime_caveats": [
+    "Normal five-minute game can take longer with startup/replays/overtime",
+    "Startup bound 180 seconds; supervisor safety bound 20 minutes after first callbacks marks timeout incomplete",
+    "Exhaustive H64 analysis is CPU intensive, with periodic progress",
+    "SDK coalesces queued packets; no lossless physics-tick claim",
+    "Natural maneuver counts are not guaranteed",
+    "Incomplete/invalid/hash-mismatched matches stop analysis for review"
+  ],
+  "protected_hashes_unchanged": 43,
+  "frozen_sample_reads": false,
+  "models_loaded_or_trained": false,
+  "test_access": false,
+  "actual_live_matches_launched": 0,
+  "actual_callbacks_collected": 0,
+  "official_observation_changed": false,
+  "original_teacher_changed": false
+}

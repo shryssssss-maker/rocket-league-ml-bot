@@ -1,0 +1,6 @@
+[settings]
+name = "Phase 3 Original Teacher Shadow Diagnostic"
+agent_id = "local/v13_phase3_shadow"
+run_command = "run_agent.cmd"
+root_dir = "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase3_shadow_v2\\sessions\\20261005_044354_817769"
+loadout_file = "C:\\Users\\shreyas\\Desktop\\model wars\\python-example-original\\src\\loadout.toml"

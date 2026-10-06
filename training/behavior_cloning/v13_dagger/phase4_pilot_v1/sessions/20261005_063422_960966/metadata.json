@@ -1,0 +1,43 @@
+{
+  "version": "phase4_student_pilot_v1",
+  "not_training_dataset": true,
+  "code_hashes": {
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase4_pilot_v1\\runner\\common.py": "dd5904e762e71ebe1dd7f03fa62a5744be8897f14edde3cabbc0e67533fa1cd3",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase4_pilot_v1\\runner\\diagnostics.py": "ab52394967fe51041d4f9adbda39b4dae7091ef9d5e7bbd845261da17b14ad29",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase4_pilot_v1\\runner\\launch.py": "ecb042d291ecf642a163452b420d7a5cf7a44a53ff8ad38d2104c368d44eeebc",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase4_pilot_v1\\runner\\live_agent.py": "9d61107b602d5fd6b66d5a1e2edf7b032d5d9bd50dfbe355adc7f477b593b0f1",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase4_pilot_v1\\runner\\pilot_report.py": "f3f964378bf44c336c7452a1657132ebf6e9a6f701bb5a341026c2c338922951",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase4_pilot_v1\\runner\\reference.py": "89b453082e819a4f8b7bf0e882dffecce47eb4da58aa1a0d4a33bdf1a505819b",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase4_pilot_v1\\runner\\reference_statistics.py": "d51560066885c6869625f5b57fdc7015adb5ff4fcb4a30217b47ee1040a2d260",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase4_pilot_v1\\runner\\student_client.py": "f99460ccff28f6e94fa35d1f3a58c7e55d25d9459e6eea9dff218a50fe78b7d8",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase4_pilot_v1\\runner\\student_worker.py": "f72ba60ec1421e79c893fe7fb088fdd47f68883f7c2dcafa4eb5f18847c2a9a1"
+  },
+  "config_hashes": {
+    "bot.toml": "97f2f8e9e95bd34da4c9d1a7fe3e95f918db8369157665d0d9df4c70ed43868e",
+    "match.toml": "aec02026470504964079fbe44854f0924005e84380a54d01a19bcbcd130ef01e",
+    "run_agent.cmd": "155a00fce1d1abeedd58cd110668e50a0fc7c738cdfde05587e4b93a13be9438"
+  },
+  "model_sha256": "579fa26010140514d2e9b7f0e2871bee569c594b7da8648e31ee1489007cd5b7",
+  "source_manifest_sha256": "080943fd8f9a81ada800e0a2f9ff3593b67f66d32272211d67030c03cf433a83",
+  "reference": {
+    "status": "verified_train_only_description",
+    "verified": true,
+    "sha256": "15d8993f4bc33250776e1d2af9840ef9b0fbb9c06a53253291b719edb2ab6e9c",
+    "primary_callbacks": 57794,
+    "all_train_callbacks": 107400,
+    "sample_use": "description_only"
+  },
+  "reference_description_only": true,
+  "opponent_id": "human_b",
+  "student_only_controller": true,
+  "original_shadow_only": true,
+  "natural_run_seconds": 90,
+  "state_setting": false,
+  "receive_pauses": false,
+  "versions": {
+    "rlbot": "2.0.0b55",
+    "rlbot-flatbuffers": "0.19.0",
+    "psutil": "7.2.2"
+  },
+  "phase4_spec_sha256": "7370d990a557b49ce0bbaceead16f0b98f101ca06d5ce5ee957ed7d43ccae73e"
+}

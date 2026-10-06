@@ -1,0 +1,1506 @@
+{
+  "experiment": "V6_NATIVE",
+  "status": "MEASURED_PROVENANCE_OR_API_LIMITATIONS_REMAIN",
+  "source": {
+    "revision": "2da51b1dac7b8127127613a5ff30e490bdd70dd8",
+    "path": "C:\\Users\\shreyas\\Desktop\\model wars\\training\\reports\\v6_upstream_source_2da51b1dac7b8127127613a5ff30e490bdd70dd8",
+    "files": {
+      "pyproject.toml": {
+        "sha256": "62f7499d8d8f34062734fd5b91d0c5b4d7726070758e95244c1adc99c431acad",
+        "git_blob": "5e8fe0540dc3647e799153777cf7ff5cf304146a"
+      },
+      "python-mtheall/Arena.cpp": {
+        "sha256": "2a0716e1ce1e79484ab61973a376885784bc6744da8d55c892474d4c96c12fa2",
+        "git_blob": "a0c0b8c50676f966b04735bd76d36c6afb333351"
+      },
+      "python-mtheall/BallPredictor.cpp": {
+        "sha256": "1235f24131c3d67aecccd9f54a34a4abf3100591c17d9cc197e4e62733d7c62d",
+        "git_blob": "94396c40a5d92664130fb956aea63fc267137f9c"
+      },
+      "src/Sim/BallPredTracker/BallPredTracker.cpp": {
+        "sha256": "16558cc77f059e7d02ecae638f5c1655d8fc251032ca1b29ea67151584cd4376",
+        "git_blob": "3b625968f7f168080212ffbc6a87a64080f23b86"
+      },
+      "src/Sim/BallPredTracker/BallPredTracker.h": {
+        "sha256": "ae539827cb4f9a3336ad5c4f49bb1b5eb35e16ed78551468ce12ee6cbee8c2f6",
+        "git_blob": "1e0e326190431151376b0442b7eeade9bf20e103"
+      },
+      "src/Sim/Ball/Ball.cpp": {
+        "sha256": "9c95eeb66654e664534713be06455347561e740069645f95e5367166cb285b86",
+        "git_blob": "7a4f0ad44b48da8703433a07dfbc95d011ae1966"
+      },
+      "python-mtheall/BallState.cpp": {
+        "sha256": "db5526aeb2068c58325161e31794d0f2f60866f3809b034e720ae5395aeaa5db",
+        "git_blob": "fecb0289c33498722e66331677d996ab84aceb85"
+      },
+      "python-mtheall/Ball.cpp": {
+        "sha256": "9d4ca20f4521f80db6cd5791662d765d436152acf8fce8129d3d34ef96c35139",
+        "git_blob": "40797a16ba4d53bc2f2df75f0e53babd165ec0dc"
+      }
+    }
+  },
+  "installed": {
+    "version": "2.2.1",
+    "path": "C:\\Users\\shreyas\\Desktop\\model wars\\training\\venv\\Lib\\site-packages\\RocketSim.pyd",
+    "sha256": "e3ee24ca82445b4bfcc754583f6778d7b0d8b7a7f7d64f872be8c65e621a63d0",
+    "size": 867840,
+    "record_verified": true,
+    "direct_url": null,
+    "wheel": "Wheel-Version: 1.0\nGenerator: cmeel 0.59.0\nRoot-Is-Purelib: false\nTag: cp311-cp311-win_amd64\nBuild: 0\n\n",
+    "exact_source_commit_established": false
+  },
+  "arena_probes": [
+    {
+      "count": 1,
+      "stride": 1,
+      "offsets": [
+        0
+      ],
+      "tick_rate": 119.99999237060547,
+      "tick_time": 0.008333333767950535,
+      "maximum_initial_error": 0.0,
+      "maximum_after_two_ticks_error": 0.0,
+      "inferred_offsets_after_two_ticks": [
+        2
+      ],
+      "offset_disambiguation_bound": 0.01,
+      "first_sample": {
+        "position": [
+          0.0,
+          0.0,
+          1200.0
+        ],
+        "velocity": [
+          600.0,
+          200.0,
+          100.0
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      },
+      "last_sample": {
+        "position": [
+          0.0,
+          0.0,
+          1200.0
+        ],
+        "velocity": [
+          600.0,
+          200.0,
+          100.0
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      },
+      "unchanged_repeat_exact": true,
+      "caller_not_advanced_by_prediction": true
+    },
+    {
+      "count": 12,
+      "stride": 1,
+      "offsets": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "tick_rate": 119.99999237060547,
+      "tick_time": 0.008333333767950535,
+      "maximum_initial_error": 0.0,
+      "maximum_after_two_ticks_error": 0.0001220703125,
+      "inferred_offsets_after_two_ticks": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "offset_disambiguation_bound": 0.01,
+      "first_sample": {
+        "position": [
+          0.0,
+          0.0,
+          1200.0
+        ],
+        "velocity": [
+          600.0,
+          200.0,
+          100.0
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      },
+      "last_sample": {
+        "position": [
+          54.916316986083984,
+          18.30544090270996,
+          1206.1761474609375
+        ],
+        "velocity": [
+          598.3270874023438,
+          199.44235229492188,
+          40.21338653564453
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      },
+      "unchanged_repeat_exact": true,
+      "caller_not_advanced_by_prediction": true
+    },
+    {
+      "count": 12,
+      "stride": 2,
+      "offsets": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22
+      ],
+      "tick_rate": 119.99999237060547,
+      "tick_time": 0.008333333767950535,
+      "maximum_initial_error": 0.0,
+      "maximum_after_two_ticks_error": 0.0,
+      "inferred_offsets_after_two_ticks": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24
+      ],
+      "offset_disambiguation_bound": 0.01,
+      "first_sample": {
+        "position": [
+          0.0,
+          0.0,
+          1200.0
+        ],
+        "velocity": [
+          600.0,
+          200.0,
+          100.0
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      },
+      "last_sample": {
+        "position": [
+          109.67951965332031,
+          36.55984115600586,
+          1206.880126953125
+        ],
+        "velocity": [
+          596.6587524414062,
+          198.88624572753906,
+          -19.406526565551758
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      },
+      "unchanged_repeat_exact": true,
+      "caller_not_advanced_by_prediction": true
+    },
+    {
+      "count": 12,
+      "stride": 3,
+      "offsets": [
+        0,
+        3,
+        6,
+        9,
+        12,
+        15,
+        18,
+        21,
+        24,
+        27,
+        30,
+        33
+      ],
+      "tick_rate": 119.99999237060547,
+      "tick_time": 0.008333333767950535,
+      "maximum_initial_error": 0.0,
+      "maximum_after_two_ticks_error": 0.0,
+      "inferred_offsets_after_two_ticks": [
+        2,
+        5,
+        8,
+        11,
+        14,
+        17,
+        20,
+        23,
+        26,
+        29,
+        32,
+        35
+      ],
+      "offset_disambiguation_bound": 0.01,
+      "first_sample": {
+        "position": [
+          0.0,
+          0.0,
+          1200.0
+        ],
+        "velocity": [
+          600.0,
+          200.0,
+          100.0
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      },
+      "last_sample": {
+        "position": [
+          164.29002380371094,
+          54.76333999633789,
+          1202.12744140625
+        ],
+        "velocity": [
+          594.9951782226562,
+          198.33169555664062,
+          -78.8602066040039
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      },
+      "unchanged_repeat_exact": true,
+      "caller_not_advanced_by_prediction": true
+    },
+    {
+      "count": 12,
+      "stride": 8,
+      "offsets": [
+        0,
+        8,
+        16,
+        24,
+        32,
+        40,
+        48,
+        56,
+        64,
+        72,
+        80,
+        88
+      ],
+      "tick_rate": 119.99999237060547,
+      "tick_time": 0.008333333767950535,
+      "maximum_initial_error": 0.0,
+      "maximum_after_two_ticks_error": 0.0,
+      "inferred_offsets_after_two_ticks": [
+        2,
+        10,
+        18,
+        26,
+        34,
+        42,
+        50,
+        58,
+        66,
+        74,
+        82,
+        90
+      ],
+      "offset_disambiguation_bound": 0.01,
+      "first_sample": {
+        "position": [
+          0.0,
+          0.0,
+          1200.0
+        ],
+        "velocity": [
+          600.0,
+          200.0,
+          100.0
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      },
+      "last_sample": {
+        "position": [
+          435.0670471191406,
+          145.02235412597656,
+          1097.0411376953125
+        ],
+        "velocity": [
+          586.7464599609375,
+          195.58212280273438,
+          -373.65087890625
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      },
+      "unchanged_repeat_exact": true,
+      "caller_not_advanced_by_prediction": true
+    },
+    {
+      "count": 241,
+      "stride": 1,
+      "offsets": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240
+      ],
+      "tick_rate": 119.99999237060547,
+      "tick_time": 0.008333333767950535,
+      "maximum_initial_error": 0.0,
+      "maximum_after_two_ticks_error": 0.0001220703125,
+      "inferred_offsets_after_two_ticks": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242
+      ],
+      "offset_disambiguation_bound": 0.01,
+      "first_sample": {
+        "position": [
+          0.0,
+          0.0,
+          1200.0
+        ],
+        "velocity": [
+          600.0,
+          200.0,
+          100.0
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      },
+      "last_sample": {
+        "position": [
+          1164.031982421875,
+          388.0107116699219,
+          114.5880126953125
+        ],
+        "velocity": [
+          564.5397338867188,
+          188.1798858642578,
+          -1167.2662353515625
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      },
+      "unchanged_repeat_exact": true,
+      "caller_not_advanced_by_prediction": true
+    }
+  ],
+  "arena_keyword_tests": {
+    "num_ticks": {
+      "accepted": false,
+      "error": "'num_ticks' is an invalid keyword argument for this function"
+    },
+    "num_states": {
+      "accepted": true,
+      "length": 12
+    }
+  },
+  "predictor_probes": [
+    {
+      "stride": 1,
+      "count": 12,
+      "ticks_since_last_update": 0,
+      "input": {
+        "position": [
+          0.0,
+          0.0,
+          1200.0
+        ],
+        "velocity": [
+          600.0,
+          200.0,
+          100.0
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      },
+      "input_unchanged": true,
+      "first_sample": {
+        "position": [
+          0.0,
+          0.0,
+          1200.0
+        ],
+        "velocity": [
+          600.0,
+          200.0,
+          100.0
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      },
+      "maximum_reference_error": 0.0,
+      "sampling_matches_reference": true
+    },
+    {
+      "stride": 2,
+      "count": 12,
+      "ticks_since_last_update": 0,
+      "input": {
+        "position": [
+          0.0,
+          0.0,
+          1200.0
+        ],
+        "velocity": [
+          600.0,
+          200.0,
+          100.0
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      },
+      "input_unchanged": true,
+      "first_sample": {
+        "position": [
+          0.0,
+          0.0,
+          1200.0
+        ],
+        "velocity": [
+          600.0,
+          200.0,
+          100.0
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      },
+      "maximum_reference_error": 0.0,
+      "sampling_matches_reference": true
+    },
+    {
+      "stride": 3,
+      "count": 12,
+      "ticks_since_last_update": 0,
+      "input": {
+        "position": [
+          0.0,
+          0.0,
+          1200.0
+        ],
+        "velocity": [
+          600.0,
+          200.0,
+          100.0
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      },
+      "input_unchanged": true,
+      "first_sample": {
+        "position": [
+          0.0,
+          0.0,
+          1200.0
+        ],
+        "velocity": [
+          600.0,
+          200.0,
+          100.0
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      },
+      "maximum_reference_error": 0.0,
+      "sampling_matches_reference": true
+    },
+    {
+      "stride": 8,
+      "count": 12,
+      "ticks_since_last_update": 0,
+      "input": {
+        "position": [
+          0.0,
+          0.0,
+          1200.0
+        ],
+        "velocity": [
+          600.0,
+          200.0,
+          100.0
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      },
+      "input_unchanged": true,
+      "first_sample": {
+        "position": [
+          0.0,
+          0.0,
+          1200.0
+        ],
+        "velocity": [
+          600.0,
+          200.0,
+          100.0
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      },
+      "maximum_reference_error": 0.0,
+      "sampling_matches_reference": true
+    },
+    {
+      "stride": 1,
+      "count": 12,
+      "ticks_since_last_update": 1,
+      "first_sample": {
+        "position": [
+          0.0,
+          0.0,
+          1200.0
+        ],
+        "velocity": [
+          600.0,
+          200.0,
+          100.0
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      },
+      "maximum_reference_error": 0.0,
+      "sampling_matches_reference": true
+    },
+    {
+      "stride": 1,
+      "count": 12,
+      "ticks_since_last_update": 2,
+      "first_sample": {
+        "position": [
+          0.0,
+          0.0,
+          1200.0
+        ],
+        "velocity": [
+          600.0,
+          200.0,
+          100.0
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      },
+      "maximum_reference_error": 0.0,
+      "sampling_matches_reference": true
+    },
+    {
+      "stride": 1,
+      "count": 12,
+      "ticks_since_last_update": 12,
+      "first_sample": {
+        "position": [
+          0.0,
+          0.0,
+          1200.0
+        ],
+        "velocity": [
+          600.0,
+          200.0,
+          100.0
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      },
+      "maximum_reference_error": 0.0,
+      "sampling_matches_reference": true
+    }
+  ],
+  "protected_hashes": 43,
+  "predictor_cache_probes": [
+    {
+      "ticks_since_last_update": 0,
+      "maximum_error": 0.0,
+      "inferred_offsets": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "first_sample": {
+        "position": [
+          0.0,
+          0.0,
+          1200.0
+        ],
+        "velocity": [
+          600.0,
+          200.0,
+          100.0
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      },
+      "supplied": {
+        "position": [
+          0.0,
+          0.0,
+          1200.0
+        ],
+        "velocity": [
+          600.0,
+          200.0,
+          100.0
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      }
+    },
+    {
+      "ticks_since_last_update": 2,
+      "maximum_error": 0.0001220703125,
+      "inferred_offsets": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "first_sample": {
+        "position": [
+          9.996193885803223,
+          3.332064628601074,
+          1201.5306396484375
+        ],
+        "velocity": [
+          599.6954345703125,
+          199.89849853515625,
+          89.1172866821289
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      },
+      "supplied": {
+        "position": [
+          9.996193885803223,
+          3.332064628601074,
+          1201.5306396484375
+        ],
+        "velocity": [
+          599.6954345703125,
+          199.89849853515625,
+          89.1172866821289
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      }
+    },
+    {
+      "ticks_since_last_update": 12,
+      "maximum_error": 1.9073486328125e-06,
+      "inferred_offsets": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "first_sample": {
+        "position": [
+          69.86690521240234,
+          23.288970947265625,
+          1206.9102783203125
+        ],
+        "velocity": [
+          597.87158203125,
+          199.29054260253906,
+          23.93689727783203
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      },
+      "supplied": {
+        "position": [
+          69.86690521240234,
+          23.288970947265625,
+          1206.9102783203125
+        ],
+        "velocity": [
+          597.87158203125,
+          199.29054260253906,
+          23.93689727783203
+        ],
+        "angular_velocity": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896
+        ]
+      }
+    },
+    {
+      "changed_state": true,
+      "ticks_since_last_update": 0,
+      "maximum_error": 0.0,
+      "first_sample": {
+        "position": [
+          100.0,
+          200.0,
+          1400.0
+        ],
+        "velocity": [
+          -300.0,
+          400.0,
+          200.0
+        ],
+        "angular_velocity": [
+          0.20000000298023224,
+          0.10000000149011612,
+          0.0
+        ]
+      },
+      "supplied": {
+        "position": [
+          100.0,
+          200.0,
+          1400.0
+        ],
+        "velocity": [
+          -300.0,
+          400.0,
+          200.0
+        ],
+        "angular_velocity": [
+          0.20000000298023224,
+          0.10000000149011612,
+          0.0
+        ]
+      }
+    },
+    {
+      "sub_margin_change": true,
+      "ticks_since_last_update": 0,
+      "supplied": {
+        "position": [
+          100.0999984741211,
+          200.0,
+          1400.0
+        ],
+        "velocity": [
+          -300.0,
+          400.0,
+          200.0
+        ],
+        "angular_velocity": [
+          0.20000000298023224,
+          0.10000000149011612,
+          0.0
+        ]
+      },
+      "first_sample": {
+        "position": [
+          100.0,
+          200.0,
+          1400.0
+        ],
+        "velocity": [
+          -300.0,
+          400.0,
+          200.0
+        ],
+        "angular_velocity": [
+          0.20000000298023224,
+          0.10000000149011612,
+          0.0
+        ]
+      },
+      "first_sample_input_difference": 0.09999847412109375,
+      "previous_cache_reused": true
+    }
+  ],
+  "initialization_probes": [
+    {
+      "style": "keyword",
+      "supplied": {
+        "position": [
+          0.0,
+          0.0,
+          1200.0
+        ],
+        "velocity": [
+          600.0,
+          200.0,
+          100.0
+        ],
+        "angular_velocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "first_sample": {
+        "position": [
+          0.0,
+          0.0,
+          1200.0
+        ],
+        "velocity": [
+          600.0,
+          200.0,
+          100.0
+        ],
+        "angular_velocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "maximum_reference_error": 0.0,
+      "matches": true
+    },
+    {
+      "style": "assigned_fields",
+      "supplied": {
+        "position": [
+          0.0,
+          0.0,
+          1200.0
+        ],
+        "velocity": [
+          600.0,
+          200.0,
+          100.0
+        ],
+        "angular_velocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "first_sample": {
+        "position": [
+          0.0,
+          0.0,
+          93.1500015258789
+        ],
+        "velocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "angular_velocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "maximum_reference_error": 1113.0261459350586,
+      "matches": false
+    }
+  ],
+  "teacher_selector_hashes_unchanged": {
+    "training\\v6_prediction_test\\run_v6.py": "521b7e3ad7b6bb2b485fd733876604de7152543aa3595cb9f4b85fde87737407",
+    "training\\reports\\v6_prediction_selection_20261004.json": "f43768f4ca4eb93dc2dc1d0aee5596f6dff6b0d7d6636a369349d9e3182e49f6"
+  },
+  "code_sha256": "ab15db4055df40e268596e086541a2a00c4f3aecc30323f639bd10a975f501f6",
+  "elapsed_seconds": 3.293900999997277,
+  "safety": "Positive counts/strides; fresh caches for each combination; no horizon growth at zero elapsed ticks, no trimming, no production provider selected.",
+  "scope": "Car-free native sampling against separately stepped RocketSim only; not RLBot/RocketSim parity."
+}

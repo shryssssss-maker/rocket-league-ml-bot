@@ -1,0 +1,6 @@
+[settings]
+name = "Original Teacher Trajectory Recorder"
+agent_id = "local/v9_source_recorder"
+run_command = "run_agent.cmd"
+root_dir = "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\pilots\\pilot_20261004\\pilot_03"
+loadout_file = "C:\\Users\\shreyas\\Desktop\\model wars\\python-example-original\\src\\loadout.toml"

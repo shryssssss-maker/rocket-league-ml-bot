@@ -1,0 +1,33 @@
+{
+  "files": {
+    "B_best.pt": "fe25a208d3fedaef02db27481c40b6eb7d771331c67109d9d7e22a29c65fff82",
+    "history.json": "7381df16c1fbb3ec40e36785d27ce9969d0c87c9f033c33d4b754a09330c5084",
+    "initialization.json": "e65628a3544a6ab224ccf520e661dc9d8f5ca1bbe7693986ec818f723522a409",
+    "metadata.json": "c96dcac9046db66adc469ebc0cf6a3e76622618a62897929cdec3d10b3612b0e",
+    "pilot_02_predictions.npz": "75c425e6d74ca1d17500aaac88c6bb8f9a81eedb1d15c7a87dda0adc2a36228e",
+    "pre_run_design_report.json": "271ba2af0b79f7bac09154f9388cc78022c9ba721ee2c17d2ef9e6ca04e2cc3b",
+    "pre_run_design_report.md": "e220f5da4d5ca19c1130e4a89e75283eec79677abe7c0cc7430de5ed5d1b7e24",
+    "report.json": "9bb66c4bb2a54a661d601aab53273a2737596d43fdbdba6d128a2a32926b4e9a",
+    "report.md": "a35e8d3a9a32515d87ec8572b6fe85181860cc51bc1cf9fc55134dbbf4e1d05b",
+    "selection.json": "8fe2c32b715b6da039c87bec6c994c92283e57add41495b0c3ada564dd0ca5a2",
+    "v10_002_predictions.npz": "7fecf8e54679bfe31aa1be0830de0ff9711fbba0c29047a53b1e23aa457ff686"
+  },
+  "protected_hashes_unchanged": 43,
+  "authorized_inputs_verified_after": true,
+  "implementation_seal": {
+    "version": "v14_v2_implementation_v1",
+    "approved_mechanism": "Original V13 loss plus lambda=0.1 boundary-balanced adjacent-transition BCE",
+    "user_approved_implementation": true,
+    "files": {
+      "training/behavior_cloning/v14_temporal_objective/experiment.py": "cd01b80467c936f34b2ee878db1e8be3219b70e3f0165e6511d2135b9cc4efdb",
+      "training/behavior_cloning/v14_temporal_objective/boundary.py": "5fedfcb3b1d9526c234c7e07419d77f8b83345eb1a3653c339612e1b8f015f71",
+      "training/behavior_cloning/v14_temporal_objective/preflight.py": "5cf1cf299b1a26f47e26c807567206881a63e6f27917be63a5355769c537200c",
+      "training/behavior_cloning/v14_temporal_objective/README.md": "cc8413ac633b6facca8179617c65c7ea18afd749f6acd25a226933db36da7c2c",
+      "training/behavior_cloning/v14_temporal_objective/proposal_v2.md": "d47a663d982989b7d8bdb8e08569baf4fb98432ef3e009a6d6b9d8cf1c6bf005",
+      "training/behavior_cloning/v14_temporal_objective/proposal_v2.json": "271ba2af0b79f7bac09154f9388cc78022c9ba721ee2c17d2ef9e6ca04e2cc3b",
+      "training/behavior_cloning/v14_temporal_objective/proposal_v1.md": "80915ebe04ffb5f9dfbf20886103ab24bf6206d9a941ea6c148f22d471c81606",
+      "training/behavior_cloning/v14_temporal_objective/proposal_v1.json": "d3834742e991f61bf3215e2f36e0e7502739322aee6b41a79276e2a7fb2dd047"
+    }
+  },
+  "test_access": false
+}

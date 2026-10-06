@@ -1,0 +1,8 @@
+{
+  "torch": "2.11.0+cu128",
+  "numpy": "1.26.4",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "device": "cuda",
+  "projection_manifest_sha256": "3a5d5fc5afb4c49c609ffd7d89fe7d859f8a0297c4ca73ac9d20b9b1c9dd536b",
+  "source_manifest_sha256": "080943fd8f9a81ada800e0a2f9ff3593b67f66d32272211d67030c03cf433a83"
+}

@@ -1,0 +1,4671 @@
+{
+  "overall": {
+    "callbacks": 47271,
+    "total_loss": 0.16538622975349426,
+    "mode_cross_entropy": 0.11239364743232727,
+    "steering_loss": 0.05299258977174759,
+    "per_channel_loss": {
+      "throttle": 0.033022360432400415,
+      "steer": 0.07697444419624445,
+      "pitch": 0.009773434029320302,
+      "yaw": 0.0,
+      "roll": 0.0,
+      "jump": 0.012946626895982739,
+      "boost": 0.0,
+      "handbrake": 0.0
+    },
+    "per_channel_loss_definition": "native decoded channel MSE, diagnostic; optimization uses mode CE plus masked steering MSE",
+    "per_channel_mae": {
+      "throttle": 0.033022360432400415,
+      "steer": 0.14065021202979325,
+      "pitch": 0.009773434029320302,
+      "yaw": 0.0,
+      "roll": 0.0,
+      "jump": 0.012946626895982739,
+      "boost": 0.0,
+      "handbrake": 0.0
+    },
+    "throttle_mae": 0.033022360432400415,
+    "steer_mae": 0.14065021202979325,
+    "pitch_accuracy": 0.9902265659706797,
+    "pitch_mae": 0.009773434029320302,
+    "jump": {
+      "accuracy": 0.9870533731040173,
+      "precision": 0.8349056603773585,
+      "recall": 0.23474801061007958,
+      "tp": 177,
+      "fp": 35,
+      "fn": 577
+    },
+    "front_dodge": {
+      "accuracy": 0.9902265659706797,
+      "precision": 0.7623762376237624,
+      "recall": 0.2711267605633803,
+      "tp": 154,
+      "fp": 48,
+      "fn": 414
+    },
+    "mode_accuracy": 0.9622601595058281,
+    "mode_confusion_matrix": [
+      [
+        8328,
+        957,
+        2,
+        33
+      ],
+      [
+        200,
+        36997,
+        0,
+        0
+      ],
+      [
+        24,
+        139,
+        8,
+        15
+      ],
+      [
+        149,
+        265,
+        0,
+        154
+      ]
+    ],
+    "exact_native_action_agreement": 0.17960271625309387,
+    "analog_1e6_buttons_exact_agreement": 0.17960271625309387
+  },
+  "by_mode_and_diagnostics": {
+    "neutral": {
+      "callbacks": 9320,
+      "total_loss": 0.2592158913612366,
+      "mode_cross_entropy": 0.2592158913612366,
+      "steering_loss": 0.0,
+      "per_channel_loss": {
+        "throttle": 0.1026824034334764,
+        "steer": 0.07503401141473298,
+        "pitch": 0.0035407725321888414,
+        "yaw": 0.0,
+        "roll": 0.0,
+        "jump": 0.0037553648068669528,
+        "boost": 0.0,
+        "handbrake": 0.0
+      },
+      "per_channel_loss_definition": "native decoded channel MSE, diagnostic; optimization uses mode CE plus masked steering MSE",
+      "per_channel_mae": {
+        "throttle": 0.1026824034334764,
+        "steer": 0.0840550979904135,
+        "pitch": 0.0035407725321888414,
+        "yaw": 0.0,
+        "roll": 0.0,
+        "jump": 0.0037553648068669528,
+        "boost": 0.0,
+        "handbrake": 0.0
+      },
+      "throttle_mae": 0.1026824034334764,
+      "steer_mae": 0.0840550979904135,
+      "pitch_accuracy": 0.9964592274678111,
+      "pitch_mae": 0.0035407725321888414,
+      "jump": {
+        "accuracy": 0.996244635193133,
+        "precision": 0.0,
+        "recall": null,
+        "tp": 0,
+        "fp": 35,
+        "fn": 0
+      },
+      "front_dodge": {
+        "accuracy": 0.9964592274678111,
+        "precision": 0.0,
+        "recall": null,
+        "tp": 0,
+        "fp": 33,
+        "fn": 0
+      },
+      "mode_accuracy": 0.8935622317596567,
+      "mode_confusion_matrix": [
+        [
+          8328,
+          957,
+          2,
+          33
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_native_action_agreement": 0.8935622317596567,
+      "analog_1e6_buttons_exact_agreement": 0.8935622317596567
+    },
+    "chase": {
+      "callbacks": 37197,
+      "total_loss": 0.09274041652679443,
+      "mode_cross_entropy": 0.025395933538675308,
+      "steering_loss": 0.06734447926282883,
+      "per_channel_loss": {
+        "throttle": 0.005376777697126112,
+        "steer": 0.07188712966403796,
+        "pitch": 0.0,
+        "yaw": 0.0,
+        "roll": 0.0,
+        "jump": 0.0,
+        "boost": 0.0,
+        "handbrake": 0.0
+      },
+      "per_channel_loss_definition": "native decoded channel MSE, diagnostic; optimization uses mode CE plus masked steering MSE",
+      "per_channel_mae": {
+        "throttle": 0.005376777697126112,
+        "steer": 0.14956169466640562,
+        "pitch": 0.0,
+        "yaw": 0.0,
+        "roll": 0.0,
+        "jump": 0.0,
+        "boost": 0.0,
+        "handbrake": 0.0
+      },
+      "throttle_mae": 0.005376777697126112,
+      "steer_mae": 0.14956169466640562,
+      "pitch_accuracy": 1.0,
+      "pitch_mae": 0.0,
+      "jump": {
+        "accuracy": 1.0,
+        "precision": null,
+        "recall": null,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "front_dodge": {
+        "accuracy": 1.0,
+        "precision": null,
+        "recall": null,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "mode_accuracy": 0.9946232223028739,
+      "mode_confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          200,
+          36997,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_native_action_agreement": 0.0,
+      "analog_1e6_buttons_exact_agreement": 0.0
+    },
+    "jump": {
+      "callbacks": 186,
+      "total_loss": 3.2578775882720947,
+      "mode_cross_entropy": 3.2578775882720947,
+      "steering_loss": 0.0,
+      "per_channel_loss": {
+        "throttle": 0.7473118279569892,
+        "steer": 0.4107647004872911,
+        "pitch": 0.08064516129032258,
+        "yaw": 0.0,
+        "roll": 0.0,
+        "jump": 0.8763440860215054,
+        "boost": 0.0,
+        "handbrake": 0.0
+      },
+      "per_channel_loss_definition": "native decoded channel MSE, diagnostic; optimization uses mode CE plus masked steering MSE",
+      "per_channel_mae": {
+        "throttle": 0.7473118279569892,
+        "steer": 0.48059112525054365,
+        "pitch": 0.08064516129032258,
+        "yaw": 0.0,
+        "roll": 0.0,
+        "jump": 0.8763440860215054,
+        "boost": 0.0,
+        "handbrake": 0.0
+      },
+      "throttle_mae": 0.7473118279569892,
+      "steer_mae": 0.48059112525054365,
+      "pitch_accuracy": 0.9193548387096774,
+      "pitch_mae": 0.08064516129032258,
+      "jump": {
+        "accuracy": 0.12365591397849462,
+        "precision": 1.0,
+        "recall": 0.12365591397849462,
+        "tp": 23,
+        "fp": 0,
+        "fn": 163
+      },
+      "front_dodge": {
+        "accuracy": 0.9193548387096774,
+        "precision": 0.0,
+        "recall": null,
+        "tp": 0,
+        "fp": 15,
+        "fn": 0
+      },
+      "mode_accuracy": 0.043010752688172046,
+      "mode_confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          24,
+          139,
+          8,
+          15
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_native_action_agreement": 0.043010752688172046,
+      "analog_1e6_buttons_exact_agreement": 0.043010752688172046
+    },
+    "front-dodge": {
+      "callbacks": 568,
+      "total_loss": 2.3705103397369385,
+      "mode_cross_entropy": 2.3705103397369385,
+      "steering_loss": 0.0,
+      "per_channel_loss": {
+        "throttle": 0.4665492957746479,
+        "steer": 0.3326657901610982,
+        "pitch": 0.7288732394366197,
+        "yaw": 0.0,
+        "roll": 0.0,
+        "jump": 0.7288732394366197,
+        "boost": 0.0,
+        "handbrake": 0.0
+      },
+      "per_channel_loss_definition": "native decoded channel MSE, diagnostic; optimization uses mode CE plus masked steering MSE",
+      "per_channel_mae": {
+        "throttle": 0.4665492957746479,
+        "steer": 0.37437738342748456,
+        "pitch": 0.7288732394366197,
+        "yaw": 0.0,
+        "roll": 0.0,
+        "jump": 0.7288732394366197,
+        "boost": 0.0,
+        "handbrake": 0.0
+      },
+      "throttle_mae": 0.4665492957746479,
+      "steer_mae": 0.37437738342748456,
+      "pitch_accuracy": 0.2711267605633803,
+      "pitch_mae": 0.7288732394366197,
+      "jump": {
+        "accuracy": 0.2711267605633803,
+        "precision": 1.0,
+        "recall": 0.2711267605633803,
+        "tp": 154,
+        "fp": 0,
+        "fn": 414
+      },
+      "front_dodge": {
+        "accuracy": 0.2711267605633803,
+        "precision": 1.0,
+        "recall": 0.2711267605633803,
+        "tp": 154,
+        "fp": 0,
+        "fn": 414
+      },
+      "mode_accuracy": 0.2711267605633803,
+      "mode_confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          149,
+          265,
+          0,
+          154
+        ]
+      ],
+      "exact_native_action_agreement": 0.2711267605633803,
+      "analog_1e6_buttons_exact_agreement": 0.2711267605633803
+    },
+    "boundary": {
+      "callbacks": 1801,
+      "total_loss": 1.5562238693237305,
+      "mode_cross_entropy": 1.5283994674682617,
+      "steering_loss": 0.02782450057566166,
+      "per_channel_loss": {
+        "throttle": 0.4036646307606885,
+        "steer": 0.3078725334383447,
+        "pitch": 0.21377012770682954,
+        "yaw": 0.0,
+        "roll": 0.0,
+        "jump": 0.29705719044975015,
+        "boost": 0.0,
+        "handbrake": 0.0
+      },
+      "per_channel_loss_definition": "native decoded channel MSE, diagnostic; optimization uses mode CE plus masked steering MSE",
+      "per_channel_mae": {
+        "throttle": 0.4036646307606885,
+        "steer": 0.35436858716606856,
+        "pitch": 0.21377012770682954,
+        "yaw": 0.0,
+        "roll": 0.0,
+        "jump": 0.29705719044975015,
+        "boost": 0.0,
+        "handbrake": 0.0
+      },
+      "throttle_mae": 0.4036646307606885,
+      "steer_mae": 0.35436858716606856,
+      "pitch_accuracy": 0.7862298722931704,
+      "pitch_mae": 0.21377012770682954,
+      "jump": {
+        "accuracy": 0.7029428095502499,
+        "precision": 0.8121546961325967,
+        "recall": 0.22685185185185186,
+        "tp": 147,
+        "fp": 34,
+        "fn": 501
+      },
+      "front_dodge": {
+        "accuracy": 0.7862298722931704,
+        "precision": 0.7251461988304093,
+        "recall": 0.2683982683982684,
+        "tp": 124,
+        "fp": 47,
+        "fn": 338
+      },
+      "mode_accuracy": 0.4869516935036091,
+      "mode_confusion_matrix": [
+        [
+          361,
+          299,
+          2,
+          32
+        ],
+        [
+          75,
+          384,
+          0,
+          0
+        ],
+        [
+          24,
+          139,
+          8,
+          15
+        ],
+        [
+          124,
+          214,
+          0,
+          124
+        ]
+      ],
+      "exact_native_action_agreement": 0.27373681288173235,
+      "analog_1e6_buttons_exact_agreement": 0.27373681288173235
+    },
+    "missing": {
+      "callbacks": 7127,
+      "total_loss": 0.0004690400091931224,
+      "mode_cross_entropy": 0.0004690400091931224,
+      "steering_loss": 0.0,
+      "per_channel_loss": {
+        "throttle": 0.0,
+        "steer": 0.0,
+        "pitch": 0.0,
+        "yaw": 0.0,
+        "roll": 0.0,
+        "jump": 0.0,
+        "boost": 0.0,
+        "handbrake": 0.0
+      },
+      "per_channel_loss_definition": "native decoded channel MSE, diagnostic; optimization uses mode CE plus masked steering MSE",
+      "per_channel_mae": {
+        "throttle": 0.0,
+        "steer": 0.0,
+        "pitch": 0.0,
+        "yaw": 0.0,
+        "roll": 0.0,
+        "jump": 0.0,
+        "boost": 0.0,
+        "handbrake": 0.0
+      },
+      "throttle_mae": 0.0,
+      "steer_mae": 0.0,
+      "pitch_accuracy": 1.0,
+      "pitch_mae": 0.0,
+      "jump": {
+        "accuracy": 1.0,
+        "precision": null,
+        "recall": null,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "front_dodge": {
+        "accuracy": 1.0,
+        "precision": null,
+        "recall": null,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "mode_accuracy": 1.0,
+      "mode_confusion_matrix": [
+        [
+          7127,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_native_action_agreement": 1.0,
+      "analog_1e6_buttons_exact_agreement": 1.0
+    },
+    "around_missing": {
+      "callbacks": 7217,
+      "total_loss": 0.0031732190400362015,
+      "mode_cross_entropy": 0.002743729157373309,
+      "steering_loss": 0.00042949008638970554,
+      "per_channel_loss": {
+        "throttle": 0.0008313703755022863,
+        "steer": 0.0010891747224349476,
+        "pitch": 0.0,
+        "yaw": 0.0,
+        "roll": 0.0,
+        "jump": 0.0,
+        "boost": 0.0,
+        "handbrake": 0.0
+      },
+      "per_channel_loss_definition": "native decoded channel MSE, diagnostic; optimization uses mode CE plus masked steering MSE",
+      "per_channel_mae": {
+        "throttle": 0.0008313703755022863,
+        "steer": 0.002479414566685541,
+        "pitch": 0.0,
+        "yaw": 0.0,
+        "roll": 0.0,
+        "jump": 0.0,
+        "boost": 0.0,
+        "handbrake": 0.0
+      },
+      "throttle_mae": 0.0008313703755022863,
+      "steer_mae": 0.002479414566685541,
+      "pitch_accuracy": 1.0,
+      "pitch_mae": 0.0,
+      "jump": {
+        "accuracy": 1.0,
+        "precision": null,
+        "recall": null,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "front_dodge": {
+        "accuracy": 1.0,
+        "precision": null,
+        "recall": null,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "mode_accuracy": 0.9991686296244977,
+      "mode_confusion_matrix": [
+        [
+          7127,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          84,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_native_action_agreement": 0.9875294443674657,
+      "analog_1e6_buttons_exact_agreement": 0.9875294443674657
+    },
+    "long_gap": {
+      "callbacks": 2,
+      "total_loss": 1.5065999031066895,
+      "mode_cross_entropy": 1.0988959074020386,
+      "steering_loss": 0.4077039062976837,
+      "per_channel_loss": {
+        "throttle": 0.5,
+        "steer": 0.9074405350051895,
+        "pitch": 0.0,
+        "yaw": 0.0,
+        "roll": 0.0,
+        "jump": 0.0,
+        "boost": 0.0,
+        "handbrake": 0.0
+      },
+      "per_channel_loss_definition": "native decoded channel MSE, diagnostic; optimization uses mode CE plus masked steering MSE",
+      "per_channel_mae": {
+        "throttle": 0.5,
+        "steer": 0.9513538163155317,
+        "pitch": 0.0,
+        "yaw": 0.0,
+        "roll": 0.0,
+        "jump": 0.0,
+        "boost": 0.0,
+        "handbrake": 0.0
+      },
+      "throttle_mae": 0.5,
+      "steer_mae": 0.9513538163155317,
+      "pitch_accuracy": 1.0,
+      "pitch_mae": 0.0,
+      "jump": {
+        "accuracy": 1.0,
+        "precision": null,
+        "recall": null,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "front_dodge": {
+        "accuracy": 1.0,
+        "precision": null,
+        "recall": null,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "mode_accuracy": 0.5,
+      "mode_confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_native_action_agreement": 0.0,
+      "analog_1e6_buttons_exact_agreement": 0.0
+    },
+    "jump_or_dodge": {
+      "callbacks": 754,
+      "total_loss": 2.589409589767456,
+      "mode_cross_entropy": 2.589409589767456,
+      "steering_loss": 0.0,
+      "per_channel_loss": {
+        "throttle": 0.5358090185676393,
+        "steer": 0.3519315691009814,
+        "pitch": 0.5689655172413793,
+        "yaw": 0.0,
+        "roll": 0.0,
+        "jump": 0.7652519893899205,
+        "boost": 0.0,
+        "handbrake": 0.0
+      },
+      "per_channel_loss_definition": "native decoded channel MSE, diagnostic; optimization uses mode CE plus masked steering MSE",
+      "per_channel_mae": {
+        "throttle": 0.5358090185676393,
+        "steer": 0.4005786513042604,
+        "pitch": 0.5689655172413793,
+        "yaw": 0.0,
+        "roll": 0.0,
+        "jump": 0.7652519893899205,
+        "boost": 0.0,
+        "handbrake": 0.0
+      },
+      "throttle_mae": 0.5358090185676393,
+      "steer_mae": 0.4005786513042604,
+      "pitch_accuracy": 0.43103448275862066,
+      "pitch_mae": 0.5689655172413793,
+      "jump": {
+        "accuracy": 0.23474801061007958,
+        "precision": 1.0,
+        "recall": 0.23474801061007958,
+        "tp": 177,
+        "fp": 0,
+        "fn": 577
+      },
+      "front_dodge": {
+        "accuracy": 0.43103448275862066,
+        "precision": 0.9112426035502958,
+        "recall": 0.2711267605633803,
+        "tp": 154,
+        "fp": 15,
+        "fn": 414
+      },
+      "mode_accuracy": 0.21485411140583555,
+      "mode_confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          24,
+          139,
+          8,
+          15
+        ],
+        [
+          149,
+          265,
+          0,
+          154
+        ]
+      ],
+      "exact_native_action_agreement": 0.21485411140583555,
+      "analog_1e6_buttons_exact_agreement": 0.21485411140583555
+    }
+  },
+  "by_phase": {
+    "Jump": {
+      "callbacks": 186,
+      "total_loss": 3.2578775882720947,
+      "mode_cross_entropy": 3.2578775882720947,
+      "steering_loss": 0.0,
+      "per_channel_loss": {
+        "throttle": 0.7473118279569892,
+        "steer": 0.4107647004872911,
+        "pitch": 0.08064516129032258,
+        "yaw": 0.0,
+        "roll": 0.0,
+        "jump": 0.8763440860215054,
+        "boost": 0.0,
+        "handbrake": 0.0
+      },
+      "per_channel_loss_definition": "native decoded channel MSE, diagnostic; optimization uses mode CE plus masked steering MSE",
+      "per_channel_mae": {
+        "throttle": 0.7473118279569892,
+        "steer": 0.48059112525054365,
+        "pitch": 0.08064516129032258,
+        "yaw": 0.0,
+        "roll": 0.0,
+        "jump": 0.8763440860215054,
+        "boost": 0.0,
+        "handbrake": 0.0
+      },
+      "throttle_mae": 0.7473118279569892,
+      "steer_mae": 0.48059112525054365,
+      "pitch_accuracy": 0.9193548387096774,
+      "pitch_mae": 0.08064516129032258,
+      "jump": {
+        "accuracy": 0.12365591397849462,
+        "precision": 1.0,
+        "recall": 0.12365591397849462,
+        "tp": 23,
+        "fp": 0,
+        "fn": 163
+      },
+      "front_dodge": {
+        "accuracy": 0.9193548387096774,
+        "precision": 0.0,
+        "recall": null,
+        "tp": 0,
+        "fp": 15,
+        "fn": 0
+      },
+      "mode_accuracy": 0.043010752688172046,
+      "mode_confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          24,
+          139,
+          8,
+          15
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_native_action_agreement": 0.043010752688172046,
+      "analog_1e6_buttons_exact_agreement": 0.043010752688172046
+    },
+    "Release": {
+      "callbacks": 183,
+      "total_loss": 1.8246614933013916,
+      "mode_cross_entropy": 1.8246614933013916,
+      "steering_loss": 0.0,
+      "per_channel_loss": {
+        "throttle": 0.5355191256830601,
+        "steer": 0.34905126032559003,
+        "pitch": 0.14207650273224043,
+        "yaw": 0.0,
+        "roll": 0.0,
+        "jump": 0.15300546448087432,
+        "boost": 0.0,
+        "handbrake": 0.0
+      },
+      "per_channel_loss_definition": "native decoded channel MSE, diagnostic; optimization uses mode CE plus masked steering MSE",
+      "per_channel_mae": {
+        "throttle": 0.5355191256830601,
+        "steer": 0.4087413983836852,
+        "pitch": 0.14207650273224043,
+        "yaw": 0.0,
+        "roll": 0.0,
+        "jump": 0.15300546448087432,
+        "boost": 0.0,
+        "handbrake": 0.0
+      },
+      "throttle_mae": 0.5355191256830601,
+      "steer_mae": 0.4087413983836852,
+      "pitch_accuracy": 0.8579234972677595,
+      "pitch_mae": 0.14207650273224043,
+      "jump": {
+        "accuracy": 0.8469945355191257,
+        "precision": 0.0,
+        "recall": null,
+        "tp": 0,
+        "fp": 28,
+        "fn": 0
+      },
+      "front_dodge": {
+        "accuracy": 0.8579234972677595,
+        "precision": 0.0,
+        "recall": null,
+        "tp": 0,
+        "fp": 26,
+        "fn": 0
+      },
+      "mode_accuracy": 0.3114754098360656,
+      "mode_confusion_matrix": [
+        [
+          57,
+          98,
+          2,
+          26
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_native_action_agreement": 0.3114754098360656,
+      "analog_1e6_buttons_exact_agreement": 0.3114754098360656
+    },
+    "Front dodge": {
+      "callbacks": 568,
+      "total_loss": 2.3705103397369385,
+      "mode_cross_entropy": 2.3705103397369385,
+      "steering_loss": 0.0,
+      "per_channel_loss": {
+        "throttle": 0.4665492957746479,
+        "steer": 0.3326657901610982,
+        "pitch": 0.7288732394366197,
+        "yaw": 0.0,
+        "roll": 0.0,
+        "jump": 0.7288732394366197,
+        "boost": 0.0,
+        "handbrake": 0.0
+      },
+      "per_channel_loss_definition": "native decoded channel MSE, diagnostic; optimization uses mode CE plus masked steering MSE",
+      "per_channel_mae": {
+        "throttle": 0.4665492957746479,
+        "steer": 0.37437738342748456,
+        "pitch": 0.7288732394366197,
+        "yaw": 0.0,
+        "roll": 0.0,
+        "jump": 0.7288732394366197,
+        "boost": 0.0,
+        "handbrake": 0.0
+      },
+      "throttle_mae": 0.4665492957746479,
+      "steer_mae": 0.37437738342748456,
+      "pitch_accuracy": 0.2711267605633803,
+      "pitch_mae": 0.7288732394366197,
+      "jump": {
+        "accuracy": 0.2711267605633803,
+        "precision": 1.0,
+        "recall": 0.2711267605633803,
+        "tp": 154,
+        "fp": 0,
+        "fn": 414
+      },
+      "front_dodge": {
+        "accuracy": 0.2711267605633803,
+        "precision": 1.0,
+        "recall": 0.2711267605633803,
+        "tp": 154,
+        "fp": 0,
+        "fn": 414
+      },
+      "mode_accuracy": 0.2711267605633803,
+      "mode_confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          149,
+          265,
+          0,
+          154
+        ]
+      ],
+      "exact_native_action_agreement": 0.2711267605633803,
+      "analog_1e6_buttons_exact_agreement": 0.2711267605633803
+    },
+    "Coast": {
+      "callbacks": 2010,
+      "total_loss": 1.0341475009918213,
+      "mode_cross_entropy": 1.0341475009918213,
+      "steering_loss": 0.0,
+      "per_channel_loss": {
+        "throttle": 0.427363184079602,
+        "steer": 0.3161396048486211,
+        "pitch": 0.003482587064676617,
+        "yaw": 0.0,
+        "roll": 0.0,
+        "jump": 0.003482587064676617,
+        "boost": 0.0,
+        "handbrake": 0.0
+      },
+      "per_channel_loss_definition": "native decoded channel MSE, diagnostic; optimization uses mode CE plus masked steering MSE",
+      "per_channel_mae": {
+        "throttle": 0.427363184079602,
+        "steer": 0.35253424744598977,
+        "pitch": 0.003482587064676617,
+        "yaw": 0.0,
+        "roll": 0.0,
+        "jump": 0.003482587064676617,
+        "boost": 0.0,
+        "handbrake": 0.0
+      },
+      "throttle_mae": 0.427363184079602,
+      "steer_mae": 0.35253424744598977,
+      "pitch_accuracy": 0.9965174129353234,
+      "pitch_mae": 0.003482587064676617,
+      "jump": {
+        "accuracy": 0.9965174129353234,
+        "precision": 0.0,
+        "recall": null,
+        "tp": 0,
+        "fp": 7,
+        "fn": 0
+      },
+      "front_dodge": {
+        "accuracy": 0.9965174129353234,
+        "precision": 0.0,
+        "recall": null,
+        "tp": 0,
+        "fp": 7,
+        "fn": 0
+      },
+      "mode_accuracy": 0.5691542288557214,
+      "mode_confusion_matrix": [
+        [
+          1144,
+          859,
+          0,
+          7
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "exact_native_action_agreement": 0.5691542288557214,
+      "analog_1e6_buttons_exact_agreement": 0.5691542288557214
+    }
+  },
+  "pure_jump": {
+    "tp": 8,
+    "fp": 2,
+    "fn": 178,
+    "precision": 0.8,
+    "recall": 0.043010752688172046
+  },
+  "per_match": [
+    {
+      "match_id": "pilot_02",
+      "metrics": {
+        "callbacks": 27401,
+        "total_loss": 0.1361110508441925,
+        "mode_cross_entropy": 0.09982754290103912,
+        "steering_loss": 0.036283500492572784,
+        "per_channel_loss": {
+          "throttle": 0.028101164191087918,
+          "steer": 0.05667818776502556,
+          "pitch": 0.007554468815006751,
+          "yaw": 0.0,
+          "roll": 0.0,
+          "jump": 0.010036130068245684,
+          "boost": 0.0,
+          "handbrake": 0.0
+        },
+        "per_channel_loss_definition": "native decoded channel MSE, diagnostic; optimization uses mode CE plus masked steering MSE",
+        "per_channel_mae": {
+          "throttle": 0.028101164191087918,
+          "steer": 0.11257703226049737,
+          "pitch": 0.007554468815006751,
+          "yaw": 0.0,
+          "roll": 0.0,
+          "jump": 0.010036130068245684,
+          "boost": 0.0,
+          "handbrake": 0.0
+        },
+        "throttle_mae": 0.028101164191087918,
+        "steer_mae": 0.11257703226049737,
+        "pitch_accuracy": 0.9924455311849932,
+        "pitch_mae": 0.007554468815006751,
+        "jump": {
+          "accuracy": 0.9899638699317543,
+          "precision": 0.8209876543209876,
+          "recall": 0.35092348284960423,
+          "tp": 133,
+          "fp": 29,
+          "fn": 246
+        },
+        "front_dodge": {
+          "accuracy": 0.9924455311849932,
+          "precision": 0.756578947368421,
+          "recall": 0.40350877192982454,
+          "tp": 115,
+          "fp": 37,
+          "fn": 170
+        },
+        "mode_accuracy": 0.9681033538921937,
+        "mode_confusion_matrix": [
+          [
+            6937,
+            473,
+            2,
+            27
+          ],
+          [
+            116,
+            19467,
+            0,
+            0
+          ],
+          [
+            13,
+            63,
+            8,
+            10
+          ],
+          [
+            52,
+            118,
+            0,
+            115
+          ]
+        ],
+        "exact_native_action_agreement": 0.2576548301156892,
+        "analog_1e6_buttons_exact_agreement": 0.2576548301156892
+      }
+    },
+    {
+      "match_id": "v10_002",
+      "metrics": {
+        "callbacks": 19870,
+        "total_loss": 0.20575711131095886,
+        "mode_cross_entropy": 0.129722461104393,
+        "steering_loss": 0.07603465020656586,
+        "per_channel_loss": {
+          "throttle": 0.03980875691997987,
+          "steer": 0.10496325760700584,
+          "pitch": 0.012833417211877201,
+          "yaw": 0.0,
+          "roll": 0.0,
+          "jump": 0.01696024157020634,
+          "boost": 0.0,
+          "handbrake": 0.0
+        },
+        "per_channel_loss_definition": "native decoded channel MSE, diagnostic; optimization uses mode CE plus masked steering MSE",
+        "per_channel_mae": {
+          "throttle": 0.03980875691997987,
+          "steer": 0.17936350839911763,
+          "pitch": 0.012833417211877201,
+          "yaw": 0.0,
+          "roll": 0.0,
+          "jump": 0.01696024157020634,
+          "boost": 0.0,
+          "handbrake": 0.0
+        },
+        "throttle_mae": 0.03980875691997987,
+        "steer_mae": 0.17936350839911763,
+        "pitch_accuracy": 0.9871665827881227,
+        "pitch_mae": 0.012833417211877201,
+        "jump": {
+          "accuracy": 0.9830397584297936,
+          "precision": 0.88,
+          "recall": 0.11733333333333333,
+          "tp": 44,
+          "fp": 6,
+          "fn": 331
+        },
+        "front_dodge": {
+          "accuracy": 0.9871665827881227,
+          "precision": 0.78,
+          "recall": 0.13780918727915195,
+          "tp": 39,
+          "fp": 11,
+          "fn": 244
+        },
+        "mode_accuracy": 0.9542023150478107,
+        "mode_confusion_matrix": [
+          [
+            1391,
+            484,
+            0,
+            6
+          ],
+          [
+            84,
+            17530,
+            0,
+            0
+          ],
+          [
+            11,
+            76,
+            0,
+            5
+          ],
+          [
+            97,
+            147,
+            0,
+            39
+          ]
+        ],
+        "exact_native_action_agreement": 0.07196779063915451,
+        "analog_1e6_buttons_exact_agreement": 0.07196779063915451
+      }
+    }
+  ],
+  "temporal": {
+    "eligible": 42,
+    "successful": 0,
+    "score": 0.0,
+    "ordering_only_rate": 0.0,
+    "extra_cores": 3,
+    "validation_minutes": 13.177638787031174,
+    "extra_cores_per_minute": 0.22765838770390806,
+    "edge_errors": {
+      "Jump": {
+        "signed": null,
+        "absolute": null
+      },
+      "Release": {
+        "signed": null,
+        "absolute": null
+      },
+      "Dodge": {
+        "signed": null,
+        "absolute": null
+      },
+      "Coast": {
+        "signed": null,
+        "absolute": null
+      }
+    },
+    "duration_errors": {
+      "Jump": {
+        "signed": null,
+        "absolute": null
+      },
+      "Release": {
+        "signed": null,
+        "absolute": null
+      },
+      "Dodge": {
+        "signed": null,
+        "absolute": null
+      }
+    },
+    "by_match": [
+      {
+        "match_id": "pilot_02",
+        "eligible": 21,
+        "successful": 0,
+        "matched_ordered": 0,
+        "predicted_cores": 3,
+        "extra_cores": 3,
+        "minutes": 7.664722222089767,
+        "cores": [
+          {
+            "teacher_edges": [
+              413,
+              417,
+              422,
+              435
+            ],
+            "teacher_times": [
+              7.324999809265137,
+              7.391666889190674,
+              7.474999904632568,
+              7.691666603088379
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              1833,
+              1838,
+              1842,
+              1856
+            ],
+            "teacher_times": [
+              31.71666717529297,
+              31.799999237060547,
+              31.866666793823242,
+              32.099998474121094
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              1924,
+              1929,
+              1932,
+              1945
+            ],
+            "teacher_times": [
+              33.233333587646484,
+              33.31666564941406,
+              33.391666412353516,
+              33.608333587646484
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              7051,
+              7055,
+              7060,
+              7073
+            ],
+            "teacher_times": [
+              120.23332977294922,
+              120.30000305175781,
+              120.38333129882812,
+              120.5999984741211
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              7159,
+              7163,
+              7167,
+              7180
+            ],
+            "teacher_times": [
+              122.03333282470703,
+              122.0999984741211,
+              122.16666412353516,
+              122.38333129882812
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              9301,
+              9305,
+              9309,
+              9323
+            ],
+            "teacher_times": [
+              158.43333435058594,
+              158.5,
+              158.56666564941406,
+              158.8000030517578
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              9384,
+              9388,
+              9392,
+              9406
+            ],
+            "teacher_times": [
+              159.81666564941406,
+              159.88333129882812,
+              159.9499969482422,
+              160.18333435058594
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              10485,
+              10490,
+              10494,
+              10508
+            ],
+            "teacher_times": [
+              178.40834045410156,
+              178.49166870117188,
+              178.55833435058594,
+              178.7916717529297
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              10598,
+              10602,
+              10606,
+              10620
+            ],
+            "teacher_times": [
+              180.31666564941406,
+              180.38333129882812,
+              180.4499969482422,
+              180.68333435058594
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              12141,
+              12146,
+              12150,
+              12164
+            ],
+            "teacher_times": [
+              205.72500610351562,
+              205.80833435058594,
+              205.875,
+              206.10833740234375
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              13234,
+              13238,
+              13242,
+              13256
+            ],
+            "teacher_times": [
+              224.18333435058594,
+              224.25,
+              224.31666564941406,
+              224.5500030517578
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              13404,
+              13408,
+              13412,
+              13426
+            ],
+            "teacher_times": [
+              227.0500030517578,
+              227.11666870117188,
+              227.18333435058594,
+              227.4166717529297
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              15585,
+              15590,
+              15594,
+              15608
+            ],
+            "teacher_times": [
+              263.5833435058594,
+              263.6666564941406,
+              263.73333740234375,
+              263.9666748046875
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              16948,
+              16952,
+              16957,
+              16971
+            ],
+            "teacher_times": [
+              285.9333190917969,
+              286.0,
+              286.0833435058594,
+              286.3166809082031
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              20005,
+              20010,
+              20015,
+              20028
+            ],
+            "teacher_times": [
+              337.0083312988281,
+              337.0916748046875,
+              337.17498779296875,
+              337.39166259765625
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              21366,
+              21370,
+              21375,
+              21389
+            ],
+            "teacher_times": [
+              359.4166564941406,
+              359.48333740234375,
+              359.5666809082031,
+              359.79998779296875
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              23815,
+              23819,
+              23824,
+              23837
+            ],
+            "teacher_times": [
+              400.6499938964844,
+              400.7166748046875,
+              400.79998779296875,
+              401.01666259765625
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              24209,
+              24214,
+              24218,
+              24232
+            ],
+            "teacher_times": [
+              407.32501220703125,
+              407.4083251953125,
+              407.4750061035156,
+              407.73333740234375
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              24289,
+              24294,
+              24298,
+              24312
+            ],
+            "teacher_times": [
+              408.6916809082031,
+              408.7749938964844,
+              408.8416748046875,
+              409.07501220703125
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              25401,
+              25406,
+              25411,
+              25423
+            ],
+            "teacher_times": [
+              426.8833312988281,
+              426.9666748046875,
+              427.04998779296875,
+              427.2749938964844
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              26734,
+              26739,
+              26744,
+              26757
+            ],
+            "teacher_times": [
+              448.98333740234375,
+              449.0666809082031,
+              449.1499938964844,
+              449.3666687011719
+            ],
+            "matched": false,
+            "success": false
+          }
+        ],
+        "excluded_complete_patterns": [],
+        "jump_runs_without_complete_pattern": 0,
+        "incomplete_or_censored_jump_runs": []
+      },
+      {
+        "match_id": "v10_002",
+        "eligible": 21,
+        "successful": 0,
+        "matched_ordered": 0,
+        "predicted_cores": 0,
+        "extra_cores": 0,
+        "minutes": 5.512916564941406,
+        "cores": [
+          {
+            "teacher_edges": [
+              438,
+              443,
+              447,
+              461
+            ],
+            "teacher_times": [
+              7.675000190734863,
+              7.758333206176758,
+              7.824999809265137,
+              8.058333396911621
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              727,
+              731,
+              735,
+              749
+            ],
+            "teacher_times": [
+              12.5,
+              12.566666603088379,
+              12.633333206176758,
+              12.866666793823242
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              2039,
+              2043,
+              2048,
+              2061
+            ],
+            "teacher_times": [
+              34.474998474121094,
+              34.54166793823242,
+              34.625,
+              34.84166717529297
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              2166,
+              2171,
+              2176,
+              2190
+            ],
+            "teacher_times": [
+              36.59166717529297,
+              36.67499923706055,
+              36.75833511352539,
+              36.99166488647461
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              2306,
+              2311,
+              2316,
+              2329
+            ],
+            "teacher_times": [
+              38.93333435058594,
+              39.016666412353516,
+              39.099998474121094,
+              39.31666564941406
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              4191,
+              4196,
+              4200,
+              4213
+            ],
+            "teacher_times": [
+              69.76667022705078,
+              69.8499984741211,
+              69.91666412353516,
+              70.13333129882812
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              4594,
+              4598,
+              4603,
+              4616
+            ],
+            "teacher_times": [
+              76.48332977294922,
+              76.55000305175781,
+              76.63333129882812,
+              76.8499984741211
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              4839,
+              4844,
+              4848,
+              4861
+            ],
+            "teacher_times": [
+              80.58333587646484,
+              80.66666412353516,
+              80.73332977294922,
+              80.94999694824219
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              4927,
+              4932,
+              4936,
+              4949
+            ],
+            "teacher_times": [
+              82.05000305175781,
+              82.13333129882812,
+              82.19999694824219,
+              82.41666412353516
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              7620,
+              7624,
+              7628,
+              7641
+            ],
+            "teacher_times": [
+              126.94166564941406,
+              127.00833129882812,
+              127.07499694824219,
+              127.29166412353516
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              8664,
+              8668,
+              8673,
+              8687
+            ],
+            "teacher_times": [
+              144.34165954589844,
+              144.40834045410156,
+              144.49166870117188,
+              144.72500610351562
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              8756,
+              8760,
+              8764,
+              8778
+            ],
+            "teacher_times": [
+              145.875,
+              145.94166564941406,
+              146.00833129882812,
+              146.24166870117188
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              8984,
+              8988,
+              8992,
+              9006
+            ],
+            "teacher_times": [
+              149.6750030517578,
+              149.74166870117188,
+              149.80833435058594,
+              150.0416717529297
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              9121,
+              9125,
+              9130,
+              9144
+            ],
+            "teacher_times": [
+              151.96665954589844,
+              152.03334045410156,
+              152.11666870117188,
+              152.35000610351562
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              10149,
+              10154,
+              10158,
+              10172
+            ],
+            "teacher_times": [
+              169.10000610351562,
+              169.18333435058594,
+              169.25,
+              169.48333740234375
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              11632,
+              11636,
+              11640,
+              11654
+            ],
+            "teacher_times": [
+              193.81666564941406,
+              193.88333129882812,
+              193.9499969482422,
+              194.18333435058594
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              11715,
+              11719,
+              11723,
+              11736
+            ],
+            "teacher_times": [
+              195.1999969482422,
+              195.26666259765625,
+              195.3333282470703,
+              195.5500030517578
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              12874,
+              12878,
+              12882,
+              12895
+            ],
+            "teacher_times": [
+              214.51666259765625,
+              214.5833282470703,
+              214.64999389648438,
+              214.86666870117188
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              16535,
+              16539,
+              16544,
+              16558
+            ],
+            "teacher_times": [
+              275.5416564941406,
+              275.60833740234375,
+              275.6916809082031,
+              275.92498779296875
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              16624,
+              16628,
+              16633,
+              16646
+            ],
+            "teacher_times": [
+              277.0249938964844,
+              277.0916748046875,
+              277.17498779296875,
+              277.39166259765625
+            ],
+            "matched": false,
+            "success": false
+          },
+          {
+            "teacher_edges": [
+              18278,
+              18283,
+              18287,
+              18300
+            ],
+            "teacher_times": [
+              304.6000061035156,
+              304.6833190917969,
+              304.75,
+              304.9666748046875
+            ],
+            "matched": false,
+            "success": false
+          }
+        ],
+        "excluded_complete_patterns": [],
+        "jump_runs_without_complete_pattern": 0,
+        "incomplete_or_censored_jump_runs": []
+      }
+    ]
+  },
+  "boundary_loss_diagnostics": {
+    "callback_weighted_chunk_mean": 0.619342152402694,
+    "chunks": [
+      {
+        "match_id": "pilot_02",
+        "start": 0,
+        "callbacks": 512,
+        "boundary_loss": 0.9886683225631714,
+        "eligible_pairs": 511,
+        "cross_chunk_pairs": 0,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "negative": [
+          510,
+          510,
+          510,
+          510
+        ],
+        "clamp_count": 756,
+        "per_type_loss": [
+          0.8977770209312439,
+          1.4559540748596191,
+          1.0970244407653809,
+          0.5039178133010864
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 512,
+        "callbacks": 512,
+        "boundary_loss": 0.00023570243502035737,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 662,
+        "per_type_loss": [
+          0.0008851338061504066,
+          1.391799196426291e-05,
+          2.2301290300674736e-05,
+          2.145666985597927e-05
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 1024,
+        "callbacks": 512,
+        "boundary_loss": 8.272236300399527e-05,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 913,
+        "per_type_loss": [
+          0.0003288327425252646,
+          5.52579649593099e-07,
+          7.553211389677017e-07,
+          7.488027904400951e-07
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 1536,
+        "callbacks": 512,
+        "boundary_loss": 2.054927349090576,
+        "eligible_pairs": 511,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "negative": [
+          509,
+          509,
+          509,
+          509
+        ],
+        "clamp_count": 33,
+        "per_type_loss": [
+          2.072286605834961,
+          2.3912136554718018,
+          2.0858428478240967,
+          1.6703665256500244
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 2048,
+        "callbacks": 512,
+        "boundary_loss": 0.00015490401710849255,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 891,
+        "per_type_loss": [
+          0.0006125322543084621,
+          2.0677766769949812e-06,
+          2.5575091058271937e-06,
+          2.4585281153122196e-06
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 2560,
+        "callbacks": 512,
+        "boundary_loss": 3.498040314298123e-05,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 1405,
+        "per_type_loss": [
+          0.00013960972137283534,
+          1.0607340072965599e-07,
+          1.0318340315507157e-07,
+          1.0263406124977337e-07
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 3072,
+        "callbacks": 512,
+        "boundary_loss": 3.086342621827498e-05,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 1481,
+        "per_type_loss": [
+          0.0001231464120792225,
+          1.0537421246681333e-07,
+          1.0113547688206381e-07,
+          1.0078451850858983e-07
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 3584,
+        "callbacks": 512,
+        "boundary_loss": 8.816341869533062e-05,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 1151,
+        "per_type_loss": [
+          0.0003464173641987145,
+          1.4401335874936194e-06,
+          2.404643282716279e-06,
+          2.391513817201485e-06
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 4096,
+        "callbacks": 512,
+        "boundary_loss": 0.0008437277865596116,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 903,
+        "per_type_loss": [
+          0.0028992751613259315,
+          0.00013379065785557032,
+          0.00016996711201500148,
+          0.00017187840421684086
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 4608,
+        "callbacks": 512,
+        "boundary_loss": 0.0005812295130454004,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 123,
+        "per_type_loss": [
+          0.0021449942141771317,
+          3.9451406337320805e-05,
+          7.04542180756107e-05,
+          7.001827179919928e-05
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 5120,
+        "callbacks": 512,
+        "boundary_loss": 0.0001167004375020042,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 948,
+        "per_type_loss": [
+          0.0004517190100159496,
+          2.780441491267993e-06,
+          6.1667901718465146e-06,
+          6.13553629591479e-06
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 5632,
+        "callbacks": 512,
+        "boundary_loss": 9.802387648960575e-05,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 835,
+        "per_type_loss": [
+          0.0003894160035997629,
+          7.298984314729751e-07,
+          9.780990239960374e-07,
+          9.715233773022192e-07
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 6144,
+        "callbacks": 512,
+        "boundary_loss": 7.812263356754556e-05,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 756,
+        "per_type_loss": [
+          0.0003108910459559411,
+          4.09992679806237e-07,
+          5.972585199742753e-07,
+          5.922264563196222e-07
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 6656,
+        "callbacks": 512,
+        "boundary_loss": 3.8647642135620117,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          2,
+          2,
+          2,
+          1
+        ],
+        "negative": [
+          510,
+          510,
+          510,
+          511
+        ],
+        "clamp_count": 624,
+        "per_type_loss": [
+          2.531511068344116,
+          4.342151165008545,
+          4.282482624053955,
+          4.302911758422852
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 7168,
+        "callbacks": 512,
+        "boundary_loss": 0.5323492884635925,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          511
+        ],
+        "clamp_count": 373,
+        "per_type_loss": [
+          0.001165409805253148,
+          6.521472823806107e-05,
+          0.0006108791567385197,
+          2.1275556087493896
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 7680,
+        "callbacks": 512,
+        "boundary_loss": 0.0003293883055448532,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 1304,
+        "per_type_loss": [
+          0.001204051193781197,
+          3.936953726224601e-05,
+          3.6896166420774534e-05,
+          3.723626650753431e-05
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 8192,
+        "callbacks": 512,
+        "boundary_loss": 0.00014194982941262424,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 594,
+        "per_type_loss": [
+          0.0005535202217288315,
+          3.0078890631557442e-06,
+          5.619782768917503e-06,
+          5.651416813634569e-06
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 8704,
+        "callbacks": 512,
+        "boundary_loss": 0.00015739847731310874,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 1073,
+        "per_type_loss": [
+          0.0006173937581479549,
+          3.535109954100335e-06,
+          4.33477180195041e-06,
+          4.330222964199493e-06
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 9216,
+        "callbacks": 512,
+        "boundary_loss": 2.2903029918670654,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "negative": [
+          510,
+          510,
+          510,
+          510
+        ],
+        "clamp_count": 602,
+        "per_type_loss": [
+          2.514193534851074,
+          2.5886220932006836,
+          2.375422239303589,
+          1.6829735040664673
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 9728,
+        "callbacks": 512,
+        "boundary_loss": 8.736137533560395e-05,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 726,
+        "per_type_loss": [
+          0.0003448608622420579,
+          7.395262855425244e-07,
+          1.9272513327450724e-06,
+          1.9178478396497667e-06
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 10240,
+        "callbacks": 512,
+        "boundary_loss": 1.8777878284454346,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "negative": [
+          510,
+          510,
+          510,
+          510
+        ],
+        "clamp_count": 287,
+        "per_type_loss": [
+          1.7329050302505493,
+          2.1502444744110107,
+          1.575415849685669,
+          2.0525858402252197
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 10752,
+        "callbacks": 512,
+        "boundary_loss": 0.00012699411308858544,
+        "eligible_pairs": 406,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          406,
+          406,
+          406,
+          406
+        ],
+        "clamp_count": 912,
+        "per_type_loss": [
+          0.0004959838115610182,
+          3.2263035336654866e-06,
+          4.405719664646313e-06,
+          4.360610546427779e-06
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 11264,
+        "callbacks": 512,
+        "boundary_loss": 0.0,
+        "eligible_pairs": 0,
+        "cross_chunk_pairs": 0,
+        "empty_eligible_chunk": 1,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "clamp_count": 0,
+        "per_type_loss": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 11776,
+        "callbacks": 512,
+        "boundary_loss": 1.19553542137146,
+        "eligible_pairs": 402,
+        "cross_chunk_pairs": 0,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "negative": [
+          401,
+          401,
+          401,
+          401
+        ],
+        "clamp_count": 674,
+        "per_type_loss": [
+          1.4797619581222534,
+          1.4948328733444214,
+          1.3993462324142456,
+          0.40820080041885376
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 12288,
+        "callbacks": 512,
+        "boundary_loss": 0.0007697718101553619,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 440,
+        "per_type_loss": [
+          0.002673117443919182,
+          9.515333658782765e-05,
+          0.00015501944290008396,
+          0.0001557971554575488
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 12800,
+        "callbacks": 512,
+        "boundary_loss": 4.32149076461792,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "negative": [
+          511,
+          511,
+          511,
+          511
+        ],
+        "clamp_count": 0,
+        "per_type_loss": [
+          3.0608127117156982,
+          5.553330898284912,
+          5.021357536315918,
+          3.6504616737365723
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 13312,
+        "callbacks": 512,
+        "boundary_loss": 3.7973740100860596,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "negative": [
+          511,
+          511,
+          511,
+          511
+        ],
+        "clamp_count": 875,
+        "per_type_loss": [
+          2.601755142211914,
+          4.226665019989014,
+          3.706559896469116,
+          4.654516220092773
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 13824,
+        "callbacks": 512,
+        "boundary_loss": 0.00019497136236168444,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 613,
+        "per_type_loss": [
+          0.0007703743176534772,
+          2.9666678074136144e-06,
+          3.3014682685461594e-06,
+          3.242982529627625e-06
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 14336,
+        "callbacks": 512,
+        "boundary_loss": 0.0001320142619078979,
+        "eligible_pairs": 33,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          33,
+          33,
+          33,
+          33
+        ],
+        "clamp_count": 29,
+        "per_type_loss": [
+          0.0005221599130891263,
+          1.6593074860793422e-06,
+          2.146265615010634e-06,
+          2.0915190361847635e-06
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 14848,
+        "callbacks": 512,
+        "boundary_loss": 7.901748904259875e-05,
+        "eligible_pairs": 50,
+        "cross_chunk_pairs": 0,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          50,
+          50,
+          50,
+          50
+        ],
+        "clamp_count": 0,
+        "per_type_loss": [
+          0.0003084223426412791,
+          3.487266894808272e-06,
+          2.2861402158014243e-06,
+          1.8742018710327102e-06
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 15360,
+        "callbacks": 512,
+        "boundary_loss": 0.8969104886054993,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "negative": [
+          511,
+          511,
+          511,
+          511
+        ],
+        "clamp_count": 745,
+        "per_type_loss": [
+          0.8157573342323303,
+          1.258387804031372,
+          1.140096664428711,
+          0.3734002411365509
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 15872,
+        "callbacks": 512,
+        "boundary_loss": 0.0003075088025070727,
+        "eligible_pairs": 66,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          66,
+          66,
+          66,
+          66
+        ],
+        "clamp_count": 111,
+        "per_type_loss": [
+          0.0012252522865310311,
+          2.488671725586755e-06,
+          1.1758753544199863e-06,
+          1.1183170727235847e-06
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 16384,
+        "callbacks": 512,
+        "boundary_loss": 4.536582491709851e-05,
+        "eligible_pairs": 218,
+        "cross_chunk_pairs": 0,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          218,
+          218,
+          218,
+          218
+        ],
+        "clamp_count": 402,
+        "per_type_loss": [
+          0.00018035774701274931,
+          4.24362809781087e-07,
+          4.215294211462606e-07,
+          2.5966562589019304e-07
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 16896,
+        "callbacks": 512,
+        "boundary_loss": 0.9945505857467651,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "negative": [
+          511,
+          511,
+          511,
+          511
+        ],
+        "clamp_count": 483,
+        "per_type_loss": [
+          1.040769338607788,
+          1.3164149522781372,
+          1.190929889678955,
+          0.43008795380592346
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 17408,
+        "callbacks": 512,
+        "boundary_loss": 9.219657658832148e-05,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 877,
+        "per_type_loss": [
+          0.00036012037890031934,
+          1.3534345271182247e-06,
+          3.65410051017534e-06,
+          3.6583710425475147e-06
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 17920,
+        "callbacks": 512,
+        "boundary_loss": 0.0008666523499414325,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 678,
+        "per_type_loss": [
+          0.0026452243328094482,
+          0.00017119476979132742,
+          0.0003280001110397279,
+          0.00032218999695032835
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 18432,
+        "callbacks": 512,
+        "boundary_loss": 7.351413660217077e-05,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 894,
+        "per_type_loss": [
+          0.0002915390068665147,
+          5.638073616864858e-07,
+          9.770592441782355e-07,
+          9.76660885498859e-07
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 18944,
+        "callbacks": 512,
+        "boundary_loss": 5.2730232710018754e-05,
+        "eligible_pairs": 50,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          50,
+          50,
+          50,
+          50
+        ],
+        "clamp_count": 134,
+        "per_type_loss": [
+          0.00021057823323644698,
+          1.2394770010359935e-07,
+          1.1058848770062468e-07,
+          1.0815378459483327e-07
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 19456,
+        "callbacks": 512,
+        "boundary_loss": 3.692633254104294e-05,
+        "eligible_pairs": 238,
+        "cross_chunk_pairs": 0,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          238,
+          238,
+          238,
+          238
+        ],
+        "clamp_count": 483,
+        "per_type_loss": [
+          0.00014718920283485204,
+          2.0387956567446963e-07,
+          1.7244251182546577e-07,
+          1.3980761082166282e-07
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 19968,
+        "callbacks": 512,
+        "boundary_loss": 0.9925892949104309,
+        "eligible_pairs": 388,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "negative": [
+          387,
+          387,
+          387,
+          387
+        ],
+        "clamp_count": 501,
+        "per_type_loss": [
+          0.9751855134963989,
+          1.2507009506225586,
+          1.2059098482131958,
+          0.5385611057281494
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 20480,
+        "callbacks": 512,
+        "boundary_loss": 0.0,
+        "eligible_pairs": 0,
+        "cross_chunk_pairs": 0,
+        "empty_eligible_chunk": 1,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "clamp_count": 0,
+        "per_type_loss": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 20992,
+        "callbacks": 512,
+        "boundary_loss": 0.8993253707885742,
+        "eligible_pairs": 410,
+        "cross_chunk_pairs": 0,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "negative": [
+          409,
+          409,
+          409,
+          409
+        ],
+        "clamp_count": 175,
+        "per_type_loss": [
+          0.8228009343147278,
+          1.3163881301879883,
+          1.0749714374542236,
+          0.3831409513950348
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 21504,
+        "callbacks": 512,
+        "boundary_loss": 6.985570507822558e-05,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 1105,
+        "per_type_loss": [
+          0.0002761820796877146,
+          6.881044782858226e-07,
+          1.2788379990524845e-06,
+          1.2737976931020967e-06
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 22016,
+        "callbacks": 512,
+        "boundary_loss": 0.00021137139992788434,
+        "eligible_pairs": 511,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          511,
+          511,
+          511,
+          511
+        ],
+        "clamp_count": 638,
+        "per_type_loss": [
+          0.0007174592465162277,
+          2.226827564300038e-05,
+          5.6673146900720894e-05,
+          4.908495975541882e-05
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 22528,
+        "callbacks": 512,
+        "boundary_loss": 0.00035926897544413805,
+        "eligible_pairs": 63,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          63,
+          63,
+          63,
+          63
+        ],
+        "clamp_count": 0,
+        "per_type_loss": [
+          0.0014201002195477486,
+          5.080052687844727e-06,
+          5.996406343911076e-06,
+          5.899285497434903e-06
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 23040,
+        "callbacks": 512,
+        "boundary_loss": 2.4241089704446495e-05,
+        "eligible_pairs": 6,
+        "cross_chunk_pairs": 0,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          6,
+          6,
+          6,
+          6
+        ],
+        "clamp_count": 0,
+        "per_type_loss": [
+          9.244637476513162e-05,
+          1.1976176210737322e-06,
+          2.1945188564131968e-06,
+          1.1258542826908524e-06
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 23552,
+        "callbacks": 512,
+        "boundary_loss": 1.1543101072311401,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "negative": [
+          511,
+          511,
+          511,
+          511
+        ],
+        "clamp_count": 869,
+        "per_type_loss": [
+          1.2863878011703491,
+          1.4851771593093872,
+          1.3570797443389893,
+          0.48859545588493347
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 24064,
+        "callbacks": 512,
+        "boundary_loss": 2.725869655609131,
+        "eligible_pairs": 255,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "negative": [
+          253,
+          253,
+          253,
+          253
+        ],
+        "clamp_count": 358,
+        "per_type_loss": [
+          1.9347273111343384,
+          3.335212230682373,
+          2.817824363708496,
+          2.8157145977020264
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 24576,
+        "callbacks": 512,
+        "boundary_loss": 0.0,
+        "eligible_pairs": 0,
+        "cross_chunk_pairs": 0,
+        "empty_eligible_chunk": 1,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "clamp_count": 0,
+        "per_type_loss": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 25088,
+        "callbacks": 512,
+        "boundary_loss": 0.9430786371231079,
+        "eligible_pairs": 475,
+        "cross_chunk_pairs": 0,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "negative": [
+          474,
+          474,
+          474,
+          474
+        ],
+        "clamp_count": 453,
+        "per_type_loss": [
+          0.816974937915802,
+          1.2601704597473145,
+          1.1429331302642822,
+          0.5522360801696777
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 25600,
+        "callbacks": 512,
+        "boundary_loss": 0.0003992615093011409,
+        "eligible_pairs": 140,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          140,
+          140,
+          140,
+          140
+        ],
+        "clamp_count": 299,
+        "per_type_loss": [
+          0.0015665056416764855,
+          1.2774742572219111e-05,
+          9.485260306973942e-06,
+          8.280439033114817e-06
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 26112,
+        "callbacks": 512,
+        "boundary_loss": 3.4473268897272646e-05,
+        "eligible_pairs": 148,
+        "cross_chunk_pairs": 0,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          148,
+          148,
+          148,
+          148
+        ],
+        "clamp_count": 262,
+        "per_type_loss": [
+          0.000136454458697699,
+          4.537377265023679e-07,
+          6.265010483730293e-07,
+          3.5836495726471185e-07
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 26624,
+        "callbacks": 512,
+        "boundary_loss": 0.977767825126648,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "negative": [
+          511,
+          511,
+          511,
+          511
+        ],
+        "clamp_count": 445,
+        "per_type_loss": [
+          0.992882490158081,
+          1.266840934753418,
+          1.1558423042297363,
+          0.49550557136535645
+        ]
+      },
+      {
+        "match_id": "pilot_02",
+        "start": 27136,
+        "callbacks": 265,
+        "boundary_loss": 3.857406409224495e-05,
+        "eligible_pairs": 265,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          265,
+          265,
+          265,
+          265
+        ],
+        "clamp_count": 713,
+        "per_type_loss": [
+          0.00015393603825941682,
+          1.2379700820019934e-07,
+          1.1807637889660327e-07,
+          1.1835264501769416e-07
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 0,
+        "callbacks": 512,
+        "boundary_loss": 0.9505686163902283,
+        "eligible_pairs": 511,
+        "cross_chunk_pairs": 0,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "negative": [
+          510,
+          510,
+          510,
+          510
+        ],
+        "clamp_count": 72,
+        "per_type_loss": [
+          0.8678699135780334,
+          1.4578498601913452,
+          1.0927902460098267,
+          0.3837645351886749
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 512,
+        "callbacks": 512,
+        "boundary_loss": 1.6295019388198853,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "negative": [
+          511,
+          511,
+          511,
+          511
+        ],
+        "clamp_count": 749,
+        "per_type_loss": [
+          1.3059486150741577,
+          1.9384862184524536,
+          1.4718691110610962,
+          1.801703929901123
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 1024,
+        "callbacks": 512,
+        "boundary_loss": 5.783582309959456e-05,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 577,
+        "per_type_loss": [
+          0.00022447219816967845,
+          6.074025691304996e-07,
+          3.134714916086523e-06,
+          3.128982825728599e-06
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 1536,
+        "callbacks": 512,
+        "boundary_loss": 1.343161940574646,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "negative": [
+          511,
+          511,
+          512,
+          512
+        ],
+        "clamp_count": 1359,
+        "per_type_loss": [
+          2.42861270904541,
+          2.9439375400543213,
+          4.799150337930769e-05,
+          4.961195372743532e-05
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 2048,
+        "callbacks": 512,
+        "boundary_loss": 2.6042490005493164,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          2,
+          2,
+          3,
+          3
+        ],
+        "negative": [
+          510,
+          510,
+          509,
+          509
+        ],
+        "clamp_count": 153,
+        "per_type_loss": [
+          2.132946014404297,
+          3.1536967754364014,
+          2.668966293334961,
+          2.4613869190216064
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 2560,
+        "callbacks": 512,
+        "boundary_loss": 0.00010101616499014199,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 1142,
+        "per_type_loss": [
+          0.0004030329000670463,
+          3.7559820498245244e-07,
+          3.2708172170714533e-07,
+          3.2911520975176245e-07
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 3072,
+        "callbacks": 512,
+        "boundary_loss": 2.4991999453050084e-05,
+        "eligible_pairs": 88,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          88,
+          88,
+          88,
+          88
+        ],
+        "clamp_count": 264,
+        "per_type_loss": [
+          9.966799552785233e-05,
+          1.0000001537946446e-07,
+          1.0000001537946446e-07,
+          1.0000001537946446e-07
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 3584,
+        "callbacks": 512,
+        "boundary_loss": 2.5193163310177624e-05,
+        "eligible_pairs": 180,
+        "cross_chunk_pairs": 0,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          180,
+          180,
+          180,
+          180
+        ],
+        "clamp_count": 497,
+        "per_type_loss": [
+          0.00010033936996478587,
+          1.4410082371796307e-07,
+          1.5751841431210778e-07,
+          1.3166224732685805e-07
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 4096,
+        "callbacks": 512,
+        "boundary_loss": 1.2761706113815308,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          2,
+          2,
+          2,
+          1
+        ],
+        "negative": [
+          510,
+          510,
+          510,
+          511
+        ],
+        "clamp_count": 700,
+        "per_type_loss": [
+          1.3522157669067383,
+          1.7246264219284058,
+          1.5365229845046997,
+          0.49131718277931213
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 4608,
+        "callbacks": 512,
+        "boundary_loss": 2.5319712162017822,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          2,
+          2,
+          2,
+          3
+        ],
+        "negative": [
+          510,
+          510,
+          510,
+          509
+        ],
+        "clamp_count": 9,
+        "per_type_loss": [
+          1.9050233364105225,
+          2.9533679485321045,
+          2.605590343475342,
+          2.66390323638916
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 5120,
+        "callbacks": 512,
+        "boundary_loss": 0.0003472183016128838,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 655,
+        "per_type_loss": [
+          0.001340234070084989,
+          1.6682441128068604e-05,
+          1.609292121429462e-05,
+          1.5863759472267702e-05
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 5632,
+        "callbacks": 512,
+        "boundary_loss": 0.0002202608302468434,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 620,
+        "per_type_loss": [
+          0.0008624882902950048,
+          4.873538273386657e-06,
+          6.821946044510696e-06,
+          6.85952454659855e-06
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 6144,
+        "callbacks": 512,
+        "boundary_loss": 8.75551049830392e-05,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 960,
+        "per_type_loss": [
+          0.00034794985549524426,
+          5.955067194918229e-07,
+          8.428177693531325e-07,
+          8.322410849359585e-07
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 6656,
+        "callbacks": 512,
+        "boundary_loss": 9.254366887034848e-05,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 752,
+        "per_type_loss": [
+          0.000367070606444031,
+          7.321657449210761e-07,
+          1.187132511404343e-06,
+          1.1847681662402465e-06
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 7168,
+        "callbacks": 512,
+        "boundary_loss": 2.195382595062256,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "negative": [
+          511,
+          511,
+          511,
+          511
+        ],
+        "clamp_count": 729,
+        "per_type_loss": [
+          1.8406543731689453,
+          2.9141182899475098,
+          2.752232789993286,
+          1.2745251655578613
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 7680,
+        "callbacks": 512,
+        "boundary_loss": 0.0008270496036857367,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 618,
+        "per_type_loss": [
+          0.00126136455219239,
+          0.00021560495952144265,
+          0.0009314708295278251,
+          0.0008997578988783062
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 8192,
+        "callbacks": 512,
+        "boundary_loss": 1.1474295854568481,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "negative": [
+          511,
+          511,
+          511,
+          511
+        ],
+        "clamp_count": 524,
+        "per_type_loss": [
+          1.2193806171417236,
+          1.3906668424606323,
+          0.9421761631965637,
+          1.0374950170516968
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 8704,
+        "callbacks": 512,
+        "boundary_loss": 3.216029405593872,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "negative": [
+          509,
+          509,
+          509,
+          509
+        ],
+        "clamp_count": 84,
+        "per_type_loss": [
+          2.3247082233428955,
+          4.315937042236328,
+          4.3199849128723145,
+          1.9034875631332397
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 9216,
+        "callbacks": 512,
+        "boundary_loss": 0.0031722099520266056,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 416,
+        "per_type_loss": [
+          0.004480248317122459,
+          0.0011971304193139076,
+          0.0035123699344694614,
+          0.003499090438708663
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 9728,
+        "callbacks": 512,
+        "boundary_loss": 2.502150058746338,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "negative": [
+          511,
+          511,
+          511,
+          511
+        ],
+        "clamp_count": 123,
+        "per_type_loss": [
+          1.964421272277832,
+          3.364640474319458,
+          3.3076276779174805,
+          1.3719115257263184
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 10240,
+        "callbacks": 512,
+        "boundary_loss": 8.590907964389771e-05,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 984,
+        "per_type_loss": [
+          0.00033568774233572185,
+          1.250400600838475e-06,
+          3.278523990957183e-06,
+          3.4196716569567798e-06
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 10752,
+        "callbacks": 512,
+        "boundary_loss": 0.0001380258472636342,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 812,
+        "per_type_loss": [
+          0.0005355422617867589,
+          3.064919155804091e-06,
+          6.73751992508187e-06,
+          6.758682047802722e-06
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 11264,
+        "callbacks": 512,
+        "boundary_loss": 1.896248698234558,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "negative": [
+          510,
+          510,
+          510,
+          510
+        ],
+        "clamp_count": 549,
+        "per_type_loss": [
+          2.054283380508423,
+          2.012810707092285,
+          1.815016508102417,
+          1.7028840780258179
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 11776,
+        "callbacks": 512,
+        "boundary_loss": 0.00033013001666404307,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 1135,
+        "per_type_loss": [
+          0.0004723355232272297,
+          8.72652162797749e-05,
+          0.0003919587470591068,
+          0.00036896058009006083
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 12288,
+        "callbacks": 512,
+        "boundary_loss": 0.002007407834753394,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 467,
+        "per_type_loss": [
+          0.00489453412592411,
+          0.0009171146084554493,
+          0.0011138698318973184,
+          0.0011041124816983938
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 12800,
+        "callbacks": 512,
+        "boundary_loss": 1.354813575744629,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "negative": [
+          511,
+          511,
+          511,
+          511
+        ],
+        "clamp_count": 55,
+        "per_type_loss": [
+          1.241176724433899,
+          1.6107794046401978,
+          1.0348732471466064,
+          1.5324251651763916
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 13312,
+        "callbacks": 512,
+        "boundary_loss": 0.00014584005111828446,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 597,
+        "per_type_loss": [
+          0.0005717999301850796,
+          2.5822191673796624e-06,
+          4.499137503444217e-06,
+          4.478882601688383e-06
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 13824,
+        "callbacks": 512,
+        "boundary_loss": 9.972997213480994e-05,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 1135,
+        "per_type_loss": [
+          0.00039310724241659045,
+          1.4773468137718737e-06,
+          2.1661210212187143e-06,
+          2.1691980691684876e-06
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 14336,
+        "callbacks": 512,
+        "boundary_loss": 7.170118624344468e-05,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 1083,
+        "per_type_loss": [
+          0.0002856339851859957,
+          3.5204598702875955e-07,
+          4.09933051059852e-07,
+          4.087867750968144e-07
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 14848,
+        "callbacks": 512,
+        "boundary_loss": 0.000156426802277565,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 130,
+        "per_type_loss": [
+          0.0006101835751906037,
+          7.191960662566999e-07,
+          7.405856194964144e-06,
+          7.398529305646662e-06
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 15360,
+        "callbacks": 512,
+        "boundary_loss": 0.00017805484822019935,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 620,
+        "per_type_loss": [
+          0.00068590824957937,
+          6.45782756691915e-06,
+          9.803784450923558e-06,
+          1.0049484444607515e-05
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 15872,
+        "callbacks": 512,
+        "boundary_loss": 6.668593414360657e-05,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 906,
+        "per_type_loss": [
+          0.0002629287482704967,
+          5.563447871281824e-07,
+          1.6336429098373628e-06,
+          1.6249824739134056e-06
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 16384,
+        "callbacks": 512,
+        "boundary_loss": 1.6633172035217285,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "negative": [
+          510,
+          510,
+          510,
+          510
+        ],
+        "clamp_count": 478,
+        "per_type_loss": [
+          2.1103434562683105,
+          1.8435461521148682,
+          1.3187241554260254,
+          1.38065505027771
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 16896,
+        "callbacks": 512,
+        "boundary_loss": 0.0001413940917700529,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 812,
+        "per_type_loss": [
+          0.0005495828809216619,
+          4.042662567371735e-06,
+          6.037572347850073e-06,
+          5.913274435442872e-06
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 17408,
+        "callbacks": 512,
+        "boundary_loss": 7.717077824054286e-05,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 822,
+        "per_type_loss": [
+          0.00030567910289391875,
+          6.590524890270899e-07,
+          1.1715991377059254e-06,
+          1.1733491191989742e-06
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 17920,
+        "callbacks": 512,
+        "boundary_loss": 2.3470983505249023,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "negative": [
+          511,
+          511,
+          511,
+          511
+        ],
+        "clamp_count": 621,
+        "per_type_loss": [
+          1.4156478643417358,
+          2.7057623863220215,
+          2.5003604888916016,
+          2.766622304916382
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 18432,
+        "callbacks": 512,
+        "boundary_loss": 0.00019012714619748294,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 811,
+        "per_type_loss": [
+          0.0007414973224513233,
+          4.196763256913982e-06,
+          7.42584006729885e-06,
+          7.388626272586407e-06
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 18944,
+        "callbacks": 512,
+        "boundary_loss": 9.267919085687026e-05,
+        "eligible_pairs": 512,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "clamp_count": 663,
+        "per_type_loss": [
+          0.00036554981488734484,
+          9.591435627953615e-07,
+          2.0949826193827903e-06,
+          2.1128107619006187e-06
+        ]
+      },
+      {
+        "match_id": "v10_002",
+        "start": 19456,
+        "callbacks": 414,
+        "boundary_loss": 0.00012436916586011648,
+        "eligible_pairs": 414,
+        "cross_chunk_pairs": 1,
+        "empty_eligible_chunk": 0,
+        "positive": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "negative": [
+          414,
+          414,
+          414,
+          414
+        ],
+        "clamp_count": 662,
+        "per_type_loss": [
+          0.0004746445920318365,
+          4.1207294998457655e-06,
+          9.233285709342454e-06,
+          9.47808257478755e-06
+        ]
+      }
+    ],
+    "checkpoint_selection_uses_this": false
+  },
+  "private_labels_scope": "Retrospective metric subsets only, excluded from objective/inputs",
+  "context_scope": "No previous-action feedback exists in 13D; fixed recorded physics, not live robustness",
+  "status": "baseline_ready_before_fitting",
+  "checkpoint_sha256": "579fa26010140514d2e9b7f0e2871bee569c594b7da8648e31ee1489007cd5b7",
+  "saved_v13_aggregate": {
+    "callbacks": 47271,
+    "total_loss": 0.16538622975349426,
+    "mode_cross_entropy": 0.11239364743232727,
+    "steering_loss": 0.05299258977174759,
+    "per_channel_loss": {
+      "throttle": 0.033022360432400415,
+      "steer": 0.07697444419624445,
+      "pitch": 0.009773434029320302,
+      "yaw": 0.0,
+      "roll": 0.0,
+      "jump": 0.012946626895982739,
+      "boost": 0.0,
+      "handbrake": 0.0
+    },
+    "per_channel_loss_definition": "native decoded channel MSE, diagnostic; optimization uses mode CE plus masked steering MSE",
+    "per_channel_mae": {
+      "throttle": 0.033022360432400415,
+      "steer": 0.14065021202979325,
+      "pitch": 0.009773434029320302,
+      "yaw": 0.0,
+      "roll": 0.0,
+      "jump": 0.012946626895982739,
+      "boost": 0.0,
+      "handbrake": 0.0
+    },
+    "throttle_mae": 0.033022360432400415,
+    "steer_mae": 0.14065021202979325,
+    "pitch_accuracy": 0.9902265659706797,
+    "pitch_mae": 0.009773434029320302,
+    "jump": {
+      "accuracy": 0.9870533731040173,
+      "precision": 0.8349056603773585,
+      "recall": 0.23474801061007958,
+      "tp": 177,
+      "fp": 35,
+      "fn": 577
+    },
+    "front_dodge": {
+      "accuracy": 0.9902265659706797,
+      "precision": 0.7623762376237624,
+      "recall": 0.2711267605633803,
+      "tp": 154,
+      "fp": 48,
+      "fn": 414
+    },
+    "mode_accuracy": 0.9622601595058281,
+    "mode_confusion_matrix": [
+      [
+        8328,
+        957,
+        2,
+        33
+      ],
+      [
+        200,
+        36997,
+        0,
+        0
+      ],
+      [
+        24,
+        139,
+        8,
+        15
+      ],
+      [
+        149,
+        265,
+        0,
+        154
+      ]
+    ],
+    "exact_native_action_agreement": 0.17960271625309387,
+    "analog_1e6_buttons_exact_agreement": 0.17960271625309387
+  },
+  "training_performed": false
+}

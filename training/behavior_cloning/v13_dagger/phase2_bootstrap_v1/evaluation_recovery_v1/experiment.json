@@ -1,0 +1,64 @@
+{
+  "experiment_version": "v13_13d_gru_bootstrap_20261005_v1",
+  "user_approved": true,
+  "approval_date": "2026-10-05",
+  "dataset_version": "v10_live_1v1_18d_20261005_v1",
+  "manifest_sha256": "080943fd8f9a81ada800e0a2f9ff3593b67f66d32272211d67030c03cf433a83",
+  "seed": 42,
+  "models": {
+    "B": {
+      "type": "GRU",
+      "input": 13,
+      "projection": 64,
+      "hidden": 64,
+      "layers": 1,
+      "activation": "ReLU",
+      "bidirectional": false
+    }
+  },
+  "head": "four teacher-mode logits plus one tanh continuous steering output; deterministic native eight-channel decode",
+  "native_channel_order": [
+    "throttle",
+    "steer",
+    "pitch",
+    "yaw",
+    "roll",
+    "jump",
+    "boost",
+    "handbrake"
+  ],
+  "mode_order": [
+    "Neutral",
+    "Chase",
+    "Jump",
+    "Front dodge"
+  ],
+  "loss": "unweighted mode cross-entropy + Chase-only steering squared error averaged over all callbacks, with coefficient 1",
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "max_epochs": 20,
+  "patience": 4,
+  "chunk_callbacks": 512,
+  "callback_order": "chronological within each match; fixed frozen match order; each training callback once per epoch; no balancing",
+  "hidden_state": "reset only at match boundaries; detach gradient every training chunk without changing hidden-state values",
+  "checkpoint_selection": "minimum teacher-forced validation loss; no test access for selection",
+  "final_evaluation": [
+    "teacher_forced_13d",
+    "student_forced_13d_no_action_feedback"
+  ],
+  "training_device": "CUDA when available; CPU otherwise",
+  "evaluation_device": "CPU, one thread, same selected checkpoint for both conditions",
+  "exact_action_agreement": "all eight decoded native channels equal frozen float32 analog and uint8 button targets exactly; no tolerance",
+  "additional_tolerant_action_agreement": "all buttons exact and all analog absolute errors <= 0.000001; reported separately",
+  "boundary_radius_callbacks": 5,
+  "long_gap_threshold_seconds": 0.1,
+  "test_policy": "No test evaluation; train fitting and validation selection/final diagnostics only",
+  "student_forced_scope": "Previous predicted action tracked but never fed to 13D input; recorded physics/prediction/timing unchanged",
+  "resampling": false,
+  "rebalancing": false,
+  "augmentation": false,
+  "private_teacher_state_inputs": false,
+  "deployment": false,
+  "ppo": false,
+  "shadow_gate_controller": "Original teacher only; student and shadow actions logged only"
+}

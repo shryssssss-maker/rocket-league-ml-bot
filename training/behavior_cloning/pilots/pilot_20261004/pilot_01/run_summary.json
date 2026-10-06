@@ -1,0 +1,11 @@
+{
+  "status": "natural_match_ended",
+  "error": null,
+  "protected_ok": true,
+  "natural_end_packet": {
+    "frame": 64459,
+    "T": 537.1583251953125,
+    "phase": "MatchPhase.Ended",
+    "source": "Actual supervisor RLBot packet"
+  }
+}

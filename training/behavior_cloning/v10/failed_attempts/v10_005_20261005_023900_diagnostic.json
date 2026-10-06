@@ -1,0 +1,18 @@
+{
+  "match_id": "v10_005",
+  "eligible": false,
+  "recorded_callbacks": 0,
+  "raw_directory_empty": true,
+  "observed_failure": "Previously running RLBot server shut down seven seconds after start_match request; no callbacks received",
+  "shutdown_root_cause": "Unknown from available evidence",
+  "archive": "failed_attempts/v10_005_20261005_023900",
+  "retry_assignment": {
+    "match_id": "v10_005",
+    "split": "test",
+    "teacher_side": "Orange",
+    "opponent_id": "human_c",
+    "play_session_id": "human_c_v10_session_01",
+    "play_style": "Normal natural play; no forced rare actions or different style inferred"
+  },
+  "changes": "Supervisor detects server exit and preserves primary status plus separate cleanup errors; teacher and recorder unchanged"
+}

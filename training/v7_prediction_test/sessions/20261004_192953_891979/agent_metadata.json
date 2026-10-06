@@ -1,0 +1,40 @@
+{
+  "agent_index": 0,
+  "agent_team": 1,
+  "name": "V7 Prediction Capture",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "versions": {
+    "rlbot": "2.0.0b55",
+    "rlbot-flatbuffers": "0.19.0",
+    "psutil": "7.2.2"
+  },
+  "session": "20261004_192953_891979",
+  "verification_policy": {
+    "id": "bounded_first_received_packet_proposal_v1",
+    "approved": true,
+    "verified_window": {
+      "max_frames": 5,
+      "max_seconds": 0.04176666666666667
+    },
+    "near_window": {
+      "max_frames": 12,
+      "max_seconds": 0.1001
+    },
+    "ball": {
+      "position": 100.0,
+      "velocity": 100.0,
+      "angular_velocity": 0.25,
+      "rotation_pyr": 0.3
+    },
+    "car": {
+      "position": 35.0,
+      "velocity": 100.0,
+      "angular_velocity": 0.25,
+      "rotation_pyr": 0.05
+    },
+    "boost_error": 0.5,
+    "near_tolerance_multiplier": 2.0,
+    "norms": "Euclidean position/velocity/angular-velocity error; maximum wrapped Euler-component error in radians",
+    "purpose": "Application evidence only; no prediction modification or assumed physics extrapolation"
+  }
+}

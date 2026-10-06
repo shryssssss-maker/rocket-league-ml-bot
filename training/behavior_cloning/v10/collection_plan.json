@@ -1,0 +1,97 @@
+{
+  "user_approved": true,
+  "authorization_basis": "User authorized V10 additional natural 1v1 collection and confirmed human_a as the available pilot opponent. First blue-side training match is a routine pre-collection assignment within that scope. No additional independent opponents are asserted.",
+  "coverage_targets_approved": true,
+  "coverage_targets_status": "User explicitly approved provisional rare-mode, sequence, per-split, teacher-side and independent-human coverage targets. These are review heuristics, not a BC-success guarantee or freeze/training authorization.",
+  "pilot_opponent_id": "human_a",
+  "opponents": {
+    "human_a": {
+      "description": "Same person who played pilot_01, pilot_02 and pilot_03; confirmed by user.",
+      "independent_person": true,
+      "additional_sessions_are_new_people": false
+    },
+    "human_b": {
+      "description": "Roommate; genuinely different physical person from human_a, explicitly confirmed by user.",
+      "independent_person": true,
+      "additional_sessions_are_new_people": false
+    },
+    "human_c": {
+      "description": "Third physical person, different from human_a and human_b; explicitly confirmed by user.",
+      "independent_person": true,
+      "additional_sessions_are_new_people": false
+    }
+  },
+  "coverage_targets": {
+    "jump_callbacks_total": 1000,
+    "dodge_callbacks_total": 3000,
+    "complete_sequences_total": 200,
+    "completed_sequences_by_split": {
+      "train": 100,
+      "validation": 30,
+      "test": 30
+    },
+    "min_matches_each_side_total": 3,
+    "min_human_opponents": 3
+  },
+  "matches": [
+    {
+      "match_id": "v10_001",
+      "split": "train",
+      "teacher_side": "Blue",
+      "opponent_id": "human_a",
+      "play_session_id": "human_a_v10_session_01",
+      "play_style": "Natural play; no different style asserted or rare actions forced"
+    },
+    {
+      "match_id": "v10_002",
+      "split": "validation",
+      "teacher_side": "Blue",
+      "opponent_id": "human_a",
+      "play_session_id": "human_a_v10_session_01",
+      "play_style": "Natural play; no different style asserted or rare actions forced"
+    },
+    {
+      "match_id": "v10_003",
+      "split": "test",
+      "teacher_side": "Blue",
+      "opponent_id": "human_a",
+      "play_session_id": "human_a_v10_session_01",
+      "play_style": "Natural play; no different style asserted or rare actions forced"
+    },
+    {
+      "match_id": "v10_004",
+      "split": "train",
+      "teacher_side": "Blue",
+      "opponent_id": "human_b",
+      "play_session_id": "human_b_v10_session_01",
+      "play_style": "Normal natural play; no forced rare actions or different style inferred"
+    },
+    {
+      "match_id": "v10_006",
+      "split": "train",
+      "teacher_side": "Orange",
+      "opponent_id": "human_b",
+      "play_session_id": "human_b_v10_session_01",
+      "play_style": "Normal natural play; no forced rare actions or different style inferred"
+    },
+    {
+      "match_id": "v10_007",
+      "split": "validation",
+      "teacher_side": "Blue",
+      "opponent_id": "human_b",
+      "play_session_id": "human_b_v10_session_01",
+      "play_style": "Normal natural play; no forced rare actions or different style inferred"
+    },
+    {
+      "match_id": "v10_005",
+      "split": "test",
+      "teacher_side": "Orange",
+      "opponent_id": "human_c",
+      "play_session_id": "human_c_v10_session_01",
+      "play_style": "Normal natural play; no forced rare actions or different style inferred"
+    }
+  ],
+  "play_session_definition": "human_a_v10_session_01 labels the upcoming V10 play session beginning with v10_001. It is distinct from the historical pilot collection, not an independent opponent. Further matches in the same sitting should retain this session ID.",
+  "missing_diversity": "Additional distinct people are still required. No human_b/human_c placeholder counts toward coverage.",
+  "automatic_freeze_or_training": false
+}

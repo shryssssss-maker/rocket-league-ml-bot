@@ -1,0 +1,14 @@
+{
+  "application_status_cases": [
+    "verified",
+    "near_match",
+    "failed",
+    "failed",
+    "failed"
+  ],
+  "missing_ball_recorded": true,
+  "empty_prediction_evidence_written_before_IndexError": true,
+  "receipt_counters": true,
+  "original_selector_unchanged": true,
+  "synthetic_prediction_slices_created": 0
+}

@@ -1,0 +1,387 @@
+{
+  "A": {
+    "kind": "A",
+    "checkpoint": "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v12\\runs\\v12_bc_mlp_gru_20261005_v1_20261005_033125_751956\\A_best.pt",
+    "checkpoint_sha256": "80cd51065035b601a3d9bd4d6f9c8c60a594a95f339f00bee72282465e567a24",
+    "best_epoch": 20,
+    "parameter_count": 11013,
+    "training_seconds": 17.828000000008615,
+    "history": [
+      {
+        "epoch": 1,
+        "train_total_loss": 0.3847311027035244,
+        "validation": {
+          "total_loss": 0.047874142975923295,
+          "mode_cross_entropy": 0.03452087013558707,
+          "steering_loss": 0.013353272840336222
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 2,
+        "train_total_loss": 0.044010357432774344,
+        "validation": {
+          "total_loss": 0.037832814758219015,
+          "mode_cross_entropy": 0.023637042954762374,
+          "steering_loss": 0.014195771803456641
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 3,
+        "train_total_loss": 0.03671471590829408,
+        "validation": {
+          "total_loss": 0.032070071802622266,
+          "mode_cross_entropy": 0.021863071387857296,
+          "steering_loss": 0.010207000414764966
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 4,
+        "train_total_loss": 0.03455601273259986,
+        "validation": {
+          "total_loss": 0.033363832465459334,
+          "mode_cross_entropy": 0.021204895035533505,
+          "steering_loss": 0.01215893742992583
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 5,
+        "train_total_loss": 0.03347913834536266,
+        "validation": {
+          "total_loss": 0.03007997039922471,
+          "mode_cross_entropy": 0.020717419859988314,
+          "steering_loss": 0.009362550539236394
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 6,
+        "train_total_loss": 0.03279176465582492,
+        "validation": {
+          "total_loss": 0.02874233059927748,
+          "mode_cross_entropy": 0.020416894963872154,
+          "steering_loss": 0.008325435635405325
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 7,
+        "train_total_loss": 0.03240275125973877,
+        "validation": {
+          "total_loss": 0.028615381515110998,
+          "mode_cross_entropy": 0.020194131073570643,
+          "steering_loss": 0.008421250441540355
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 8,
+        "train_total_loss": 0.032018880619447104,
+        "validation": {
+          "total_loss": 0.02805314523288227,
+          "mode_cross_entropy": 0.020076402879997096,
+          "steering_loss": 0.007976742352885173
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 9,
+        "train_total_loss": 0.03170308953021413,
+        "validation": {
+          "total_loss": 0.027667294809935117,
+          "mode_cross_entropy": 0.019950143160919545,
+          "steering_loss": 0.007717151649015573
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 10,
+        "train_total_loss": 0.031464721684730565,
+        "validation": {
+          "total_loss": 0.027845705816304852,
+          "mode_cross_entropy": 0.019872947898204287,
+          "steering_loss": 0.007972757918100565
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 11,
+        "train_total_loss": 0.03133817735768091,
+        "validation": {
+          "total_loss": 0.027624778365944437,
+          "mode_cross_entropy": 0.019790522681354894,
+          "steering_loss": 0.007834255684589543
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 12,
+        "train_total_loss": 0.031151061569321504,
+        "validation": {
+          "total_loss": 0.02759626598272124,
+          "mode_cross_entropy": 0.019717407867436837,
+          "steering_loss": 0.0078788581152844
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 13,
+        "train_total_loss": 0.031206353535583067,
+        "validation": {
+          "total_loss": 0.02822171228379028,
+          "mode_cross_entropy": 0.019678750401588608,
+          "steering_loss": 0.008542961882201671
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 14,
+        "train_total_loss": 0.03127422210476062,
+        "validation": {
+          "total_loss": 0.02755552799293029,
+          "mode_cross_entropy": 0.01963659000013129,
+          "steering_loss": 0.007918937992798998
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 15,
+        "train_total_loss": 0.030745879240508332,
+        "validation": {
+          "total_loss": 0.027540131479119156,
+          "mode_cross_entropy": 0.019560227482460748,
+          "steering_loss": 0.007979903996658407
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 16,
+        "train_total_loss": 0.030649252058850752,
+        "validation": {
+          "total_loss": 0.02716319796200887,
+          "mode_cross_entropy": 0.019491753139950923,
+          "steering_loss": 0.007671444822057944
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 17,
+        "train_total_loss": 0.030805738142026057,
+        "validation": {
+          "total_loss": 0.026952755080861462,
+          "mode_cross_entropy": 0.01944588651007047,
+          "steering_loss": 0.007506868570790989
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 18,
+        "train_total_loss": 0.030596393508704536,
+        "validation": {
+          "total_loss": 0.02693231261381561,
+          "mode_cross_entropy": 0.019410321303717615,
+          "steering_loss": 0.007521991310097992
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 19,
+        "train_total_loss": 0.030461858888466194,
+        "validation": {
+          "total_loss": 0.026830011962430546,
+          "mode_cross_entropy": 0.019335868990923686,
+          "steering_loss": 0.007494142971506857
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 20,
+        "train_total_loss": 0.030188672994388394,
+        "validation": {
+          "total_loss": 0.026816517184007384,
+          "mode_cross_entropy": 0.019224830561403467,
+          "steering_loss": 0.007591686622603916
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      }
+    ],
+    "state_note": "GRU hidden values carried between chronological chunks; gradients detached. Hidden values computed under preceding chunk weights are carried after optimizer updates; never reset at phases."
+  },
+  "B": {
+    "kind": "B",
+    "checkpoint": "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v12\\runs\\v12_bc_mlp_gru_20261005_v1_20261005_033125_751956\\B_best.pt",
+    "checkpoint_sha256": "0eaab20bd2860db2a981b4ca99a0a2256a7f95bc2dbdfd446b0354ffcce55295",
+    "best_epoch": 9,
+    "parameter_count": 26501,
+    "training_seconds": 14.953000000008615,
+    "history": [
+      {
+        "epoch": 1,
+        "train_total_loss": 0.30998051754679373,
+        "validation": {
+          "total_loss": 0.062033093145083235,
+          "mode_cross_entropy": 0.04495562381790383,
+          "steering_loss": 0.01707746932717941
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 2,
+        "train_total_loss": 0.05432100036604247,
+        "validation": {
+          "total_loss": 0.041401546985854756,
+          "mode_cross_entropy": 0.02790733968040694,
+          "steering_loss": 0.01349420730544782
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 3,
+        "train_total_loss": 0.04046491888601262,
+        "validation": {
+          "total_loss": 0.03415630226128722,
+          "mode_cross_entropy": 0.02241556348591549,
+          "steering_loss": 0.011740738775371731
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 4,
+        "train_total_loss": 0.03414423271489904,
+        "validation": {
+          "total_loss": 0.028731883071968684,
+          "mode_cross_entropy": 0.018952230206422765,
+          "steering_loss": 0.00977965286554592
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 5,
+        "train_total_loss": 0.030099461762989208,
+        "validation": {
+          "total_loss": 0.026784609248182156,
+          "mode_cross_entropy": 0.017253862402989432,
+          "steering_loss": 0.009530746845192726
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 6,
+        "train_total_loss": 0.02785635240788747,
+        "validation": {
+          "total_loss": 0.025029735233086135,
+          "mode_cross_entropy": 0.015881818961717382,
+          "steering_loss": 0.009147916271368753
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 7,
+        "train_total_loss": 0.026254840492135882,
+        "validation": {
+          "total_loss": 0.023785902958710282,
+          "mode_cross_entropy": 0.01473891001114884,
+          "steering_loss": 0.009046992947561443
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 8,
+        "train_total_loss": 0.02556450889285811,
+        "validation": {
+          "total_loss": 0.023046541596928705,
+          "mode_cross_entropy": 0.014493589587948587,
+          "steering_loss": 0.008552952008980118
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 9,
+        "train_total_loss": 0.02425055726488488,
+        "validation": {
+          "total_loss": 0.020937214156290077,
+          "mode_cross_entropy": 0.013470467446933296,
+          "steering_loss": 0.007466746709356783
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 10,
+        "train_total_loss": 0.02366702493566983,
+        "validation": {
+          "total_loss": 0.021076736618325525,
+          "mode_cross_entropy": 0.013002158655522577,
+          "steering_loss": 0.00807457796280295
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 11,
+        "train_total_loss": 0.025236128880164337,
+        "validation": {
+          "total_loss": 0.02770566250840084,
+          "mode_cross_entropy": 0.014295970315220409,
+          "steering_loss": 0.013409692193180433
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 12,
+        "train_total_loss": 0.02342454342519224,
+        "validation": {
+          "total_loss": 0.025887587621481162,
+          "mode_cross_entropy": 0.012433550608901167,
+          "steering_loss": 0.013454037012579993
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      },
+      {
+        "epoch": 13,
+        "train_total_loss": 0.024493453934805044,
+        "validation": {
+          "total_loss": 0.026486582830568775,
+          "mode_cross_entropy": 0.015025471617791383,
+          "steering_loss": 0.011461111212777394
+        },
+        "callbacks": 107400,
+        "match_state_initializations": 4
+      }
+    ],
+    "state_note": "GRU hidden values carried between chronological chunks; gradients detached. Hidden values computed under preceding chunk weights are carried after optimizer updates; never reset at phases."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "approved": true,
+  "approved_utc": "2026-10-05T01:41:08.130027+00:00",
+  "authorization": "User explicitly requested one natural five-minute match with human_b Orange and the same student Blue, and confirmed do it",
+  "readiness_sha256": "d60c5302a49ab551ac7144836a9b87fc31d7050fdb95150fb6530d6915650fab",
+  "maximum_runs": 1,
+  "opponent_id": "human_b"
+}

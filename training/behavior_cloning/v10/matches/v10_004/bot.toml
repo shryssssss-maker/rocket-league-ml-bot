@@ -1,0 +1,6 @@
+[settings]
+name = "V10 Original Teacher Recorder"
+agent_id = "local/v9_source_recorder"
+run_command = "run_agent.cmd"
+root_dir = "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v10\\matches\\v10_004"
+loadout_file = "C:\\Users\\shreyas\\Desktop\\model wars\\python-example-original\\src\\loadout.toml"

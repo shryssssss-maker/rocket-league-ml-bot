@@ -1,0 +1,270 @@
+{
+  "gate_version": "v13_context_audit_v1",
+  "phase": 1,
+  "status": "passed_with_scope",
+  "created_at": "2026-10-05T03:52:45.871837+05:30",
+  "manifest_sha256": "080943fd8f9a81ada800e0a2f9ff3593b67f66d32272211d67030c03cf433a83",
+  "v12_run": "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v12\\runs\\v12_bc_mlp_gru_20261005_v1_20261005_033125_751956",
+  "v12_verified_hashes": {
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v12\\bakeoff.py": "dc09b0912e0c92c6c4bb80b0b271c66e21aab0b4fb61c013107a7c9ddb9325d1",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v12\\experiment.json": "58ce29ff9a7005262c8449bcc0f0ed7696b0c80fa3722eb4737a356d23f4ed74",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v11\\audit.py": "2fc0b6b0097eb3f2e0545a90a584d5c6a98d8a3338b8c483a4f6e20e8a2a2f73",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v12\\runs\\v12_bc_mlp_gru_20261005_v1_20261005_033125_751956\\A_best.pt": "80cd51065035b601a3d9bd4d6f9c8c60a594a95f339f00bee72282465e567a24",
+    "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v12\\runs\\v12_bc_mlp_gru_20261005_v1_20261005_033125_751956\\B_best.pt": "0eaab20bd2860db2a981b4ca99a0a2256a7f95bc2dbdfd446b0354ffcce55295"
+  },
+  "checkpoint_tensor_shapes": {
+    "A": {
+      "parameters": 11013,
+      "input": [
+        7,
+        18
+      ],
+      "logits_shape": [
+        7,
+        4
+      ],
+      "steering_shape": [
+        7
+      ],
+      "input_output_dtype": "float32",
+      "hidden_shape": null,
+      "weights": {
+        "encoder.0.weight": {
+          "shape": [
+            128,
+            18
+          ],
+          "dtype": "torch.float32"
+        },
+        "encoder.0.bias": {
+          "shape": [
+            128
+          ],
+          "dtype": "torch.float32"
+        },
+        "encoder.2.weight": {
+          "shape": [
+            64,
+            128
+          ],
+          "dtype": "torch.float32"
+        },
+        "encoder.2.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "head.weight": {
+          "shape": [
+            5,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "head.bias": {
+          "shape": [
+            5
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "checkpoint_sha256": "80cd51065035b601a3d9bd4d6f9c8c60a594a95f339f00bee72282465e567a24",
+      "epoch": 20
+    },
+    "B": {
+      "parameters": 26501,
+      "input": [
+        7,
+        18
+      ],
+      "logits_shape": [
+        7,
+        4
+      ],
+      "steering_shape": [
+        7
+      ],
+      "input_output_dtype": "float32",
+      "hidden_shape": [
+        1,
+        1,
+        64
+      ],
+      "weights": {
+        "encoder.0.weight": {
+          "shape": [
+            64,
+            18
+          ],
+          "dtype": "torch.float32"
+        },
+        "encoder.0.bias": {
+          "shape": [
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "gru.weight_ih_l0": {
+          "shape": [
+            192,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "gru.weight_hh_l0": {
+          "shape": [
+            192,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "gru.bias_ih_l0": {
+          "shape": [
+            192
+          ],
+          "dtype": "torch.float32"
+        },
+        "gru.bias_hh_l0": {
+          "shape": [
+            192
+          ],
+          "dtype": "torch.float32"
+        },
+        "head.weight": {
+          "shape": [
+            5,
+            64
+          ],
+          "dtype": "torch.float32"
+        },
+        "head.bias": {
+          "shape": [
+            5
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "checkpoint_sha256": "0eaab20bd2860db2a981b4ca99a0a2256a7f95bc2dbdfd446b0354ffcce55295",
+      "epoch": 9
+    }
+  },
+  "audit": {
+    "input_order": [
+      "ball_forward",
+      "ball_right",
+      "ball_up",
+      "prediction_forward",
+      "prediction_right",
+      "prediction_up",
+      "ball_distance",
+      "car_speed",
+      "ball_present",
+      "prediction_valid",
+      "prediction_horizon",
+      "prediction_first_offset",
+      "callback_dt",
+      "previous_neutral",
+      "previous_chase",
+      "previous_jump",
+      "previous_dodge",
+      "previous_steer"
+    ],
+    "tensor_contract": {
+      "callback_input": "[L,18] float32, L <=512 during chunks; [1,18] during autoregressive evaluation",
+      "gru_internal_input": "[1,L,64] float32, batch_first=True",
+      "gru_hidden": "[1,1,64] float32; one layer, one direction, one match at a time",
+      "output": "mode logits [L,4] float32 and tanh continuous steering [L] float32; decoded native controls [L,8] float32",
+      "target": "mode int64 for CE; analog float32; frozen buttons uint8 converted to float32 only for native metric arrays"
+    },
+    "hidden_reset": "None at each match start in train/validation/final evaluation and each independent context pass. No goal/replay/kickoff/missing-ball resets. Training h.detach() at chunk boundaries truncates gradients without resetting values.",
+    "chronology": "Fixed frozen match order, consecutive slices start:start+512; tail retained. Every train callback once per epoch. Optimizer updates each chunk; hidden values computed under earlier weights carry into the next chunk.",
+    "teacher_forced": "Recorded 18D arrays passed unchanged; GRU hidden carries across consecutive chunks.",
+    "student_forced": "Recorded input copied callback-by-callback; replace indices 13:17 with previous argmax predicted mode one-hot and index17 with previous decoded steering (zero outside Chase). Initial previous action Neutral/zero. Recorded indices0:13 remain bitwise unchanged. No ground-truth prior actions used after initialization.",
+    "mutation_probe": {
+      "passed": true,
+      "only_indices_changed": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "source_arrays_unchanged": true,
+      "probe_kind": "six numerical rows, no trajectories/fitting or dataset test predictions"
+    },
+    "teacher_information": "Previous-action fields are intentionally teacher-forced in standard inputs. No private sequence ID/index/phase is read by Policy/train/teacher_loss. Final diagnostics use private labels only as retrospective metric masks. Current prediction is a service forecast supplied at the callback, not a later recorded ball outcome.",
+    "reproducibility": "Code/config/checkpoint hashes match recorded V12 run; safe weights_only state-dict loading succeeds. Seed42/runtime/device/selection history recorded. Exact rerun bit identity is not guaranteed because GPU determinism was not enforced. Optimizer state and per-chunk recurrent state were not saved, so checkpoints do not support exact interrupted-run continuation.",
+    "diagnosis": "No context mutation bug found in inspected predict implementation/numerical probe. Evidence supports sensitivity to previous-action context. Physical-state distribution shift and the precise learned shortcut mechanism are not established."
+  },
+  "unchanged": {
+    "v12": true,
+    "frozen_manifest": true,
+    "dataset_records": "Not read or written during this implementation audit",
+    "teacher_and_bot_directories": "Not imported or modified"
+  },
+  "new_training_started": false,
+  "live_launched": false,
+  "source_references": {
+    "sha": {
+      "file": "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v12\\bakeoff.py",
+      "line": 35
+    },
+    "write": {
+      "file": "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v12\\bakeoff.py",
+      "line": 41
+    },
+    "config": {
+      "file": "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v12\\bakeoff.py",
+      "line": 44
+    },
+    "Policy": {
+      "file": "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v12\\bakeoff.py",
+      "line": 50
+    },
+    "loss_parts": {
+      "file": "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v12\\bakeoff.py",
+      "line": 67
+    },
+    "decode": {
+      "file": "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v12\\bakeoff.py",
+      "line": 72
+    },
+    "selftest": {
+      "file": "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v12\\bakeoff.py",
+      "line": 79
+    },
+    "load_match": {
+      "file": "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v12\\bakeoff.py",
+      "line": 105
+    },
+    "teacher_loss": {
+      "file": "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v12\\bakeoff.py",
+      "line": 140
+    },
+    "train": {
+      "file": "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v12\\bakeoff.py",
+      "line": 154
+    },
+    "predict": {
+      "file": "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v12\\bakeoff.py",
+      "line": 191
+    },
+    "metrics": {
+      "file": "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v12\\bakeoff.py",
+      "line": 211
+    },
+    "evaluate": {
+      "file": "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v12\\bakeoff.py",
+      "line": 234
+    },
+    "degradation": {
+      "file": "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v12\\bakeoff.py",
+      "line": 250
+    },
+    "run": {
+      "file": "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v12\\bakeoff.py",
+      "line": 259
+    }
+  }
+}

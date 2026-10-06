@@ -1,0 +1,6 @@
+[settings]
+name = "Phase 4 13D Student Pilot"
+agent_id = "local/v13_phase4_student"
+run_command = "run_agent.cmd"
+root_dir = "C:\\Users\\shreyas\\Desktop\\model wars\\training\\behavior_cloning\\v13_dagger\\phase4_pilot_v1\\sessions\\20261005_063422_960966"
+loadout_file = "C:\\Users\\shreyas\\Desktop\\model wars\\python-example-original\\src\\loadout.toml"

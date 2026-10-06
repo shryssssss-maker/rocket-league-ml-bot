@@ -1,0 +1,6371 @@
+{
+  "status": "coverage_targets_met_awaiting_review",
+  "match_plan_authorized": true,
+  "coverage_targets_approved": true,
+  "coverage_targets": {
+    "jump_callbacks_total": 1000,
+    "dodge_callbacks_total": 3000,
+    "complete_sequences_total": 200,
+    "completed_sequences_by_split": {
+      "train": 100,
+      "validation": 30,
+      "test": 30
+    },
+    "min_matches_each_side_total": 3,
+    "min_human_opponents": 3
+  },
+  "answers": {
+    "jump_coverage_sufficient": true,
+    "front_dodge_coverage_sufficient": true,
+    "teacher_side_diversity_sufficient": true,
+    "opponent_session_diversity_sufficient": true,
+    "temporal_sequence_coverage_sufficient": true,
+    "dataset_ready_to_freeze_for_bc": "Yes under the approved collection criteria, subject to user freeze review; no automatic freeze or guarantee of BC success"
+  },
+  "remaining_gaps": [
+    "Coverage thresholds are provisional heuristics, not proof of learned recurrent behavior or generalization.",
+    "Natural collection does not guarantee extreme states or very long pending-sequence interruptions.",
+    "Match-level splitting does not establish opponent/session-disjoint evaluation; report identities explicitly."
+  ],
+  "opponent_session_assessment": "The approved independent-person target gates this answer. Recorded play sessions are reported separately; no extra numeric session stopping threshold was approved. Historical pilot sitting identities were not separately captured and are not invented.",
+  "eligible_matches": 9,
+  "new_matches": 6,
+  "eligible_callbacks": 239205,
+  "aggregate_counts": {
+    "modes": {
+      "chase": 177174,
+      "jump": 1108,
+      "neutral": 57564,
+      "front-dodge": 3359
+    },
+    "branches": {
+      "far_ball": 43807,
+      "pending_sequence": 17276,
+      "near_ball": 133617,
+      "missing_ball": 44505
+    },
+    "near_far": {
+      "far": 54614,
+      "near": 140086,
+      "missing_ball": 44505
+    },
+    "phases": {
+      "MatchPhase.Countdown": 18843,
+      "MatchPhase.Kickoff": 13661,
+      "MatchPhase.Active": 162153,
+      "MatchPhase.GoalScored": 12926,
+      "MatchPhase.Replay": 31553,
+      "MatchPhase.Ended": 69
+    },
+    "speed_bands": {
+      "below_750": 36419,
+      "strict_flip_window_750_800": 1948,
+      "800_to_1410": 129232,
+      "above_1410": 71606
+    },
+    "geometry_sectors": {
+      "ahead": 152573,
+      "right": 98099,
+      "above": 185573,
+      "left": 96599,
+      "behind": 42127,
+      "below_or_level": 9127,
+      "center": 2
+    }
+  },
+  "native_action_channels": {
+    "throttle": {
+      "count": 239205,
+      "values": {
+        "0.0": 62031,
+        "1.0": 177174
+      },
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "mean": 0.740678497523045
+    },
+    "steer": {
+      "count": 239205,
+      "minimum": -1.0,
+      "maximum": 1.0,
+      "mean": 0.003728804296249849,
+      "p50": 0.0,
+      "p90": 1.0,
+      "p95": 1.0,
+      "p99": 1.0
+    },
+    "pitch": {
+      "count": 239205,
+      "values": {
+        "-1.0": 3359,
+        "0.0": 235846
+      },
+      "minimum": -1.0,
+      "maximum": 0.0,
+      "mean": -0.014042348613114274
+    },
+    "yaw": {
+      "count": 239205,
+      "values": {
+        "0.0": 239205
+      },
+      "minimum": 0.0,
+      "maximum": 0.0,
+      "mean": 0.0
+    },
+    "roll": {
+      "count": 239205,
+      "values": {
+        "0.0": 239205
+      },
+      "minimum": 0.0,
+      "maximum": 0.0,
+      "mean": 0.0
+    },
+    "jump": {
+      "count": 239205,
+      "values": {
+        "False": 234738,
+        "True": 4467
+      },
+      "minimum": false,
+      "maximum": true,
+      "mean": 0.01867435881356995
+    },
+    "boost": {
+      "count": 239205,
+      "values": {
+        "False": 239205
+      },
+      "minimum": false,
+      "maximum": false,
+      "mean": 0.0
+    },
+    "handbrake": {
+      "count": 239205,
+      "values": {
+        "False": 239205
+      },
+      "minimum": false,
+      "maximum": false,
+      "mean": 0.0
+    }
+  },
+  "distributions": {
+    "steer": {
+      "count": 239205,
+      "minimum": -1.0,
+      "maximum": 1.0,
+      "mean": 0.003728804296249849,
+      "p50": 0.0,
+      "p90": 1.0,
+      "p95": 1.0,
+      "p99": 1.0
+    },
+    "callback_dt": {
+      "count": 239196,
+      "minimum": 0.00830078125,
+      "maximum": 0.241668701171875,
+      "mean": 0.016676038467140886,
+      "p50": 0.01666259765625,
+      "p90": 0.0166778564453125,
+      "p95": 0.016693115234375,
+      "p99": 0.024993896484375
+    },
+    "car_speed": {
+      "count": 239205,
+      "minimum": 0.0,
+      "maximum": 2299.999926688891,
+      "mean": 1223.9657440939202,
+      "p50": 1326.4165220631871,
+      "p90": 1853.7755485590133,
+      "p95": 2104.468744440494,
+      "p99": 2272.346436362876
+    },
+    "ball_forward": {
+      "count": 194700,
+      "minimum": -4105.485380751304,
+      "maximum": 4607.999999999995,
+      "mean": 721.6526111885216,
+      "p50": 346.362612811139,
+      "p90": 3257.482400631743,
+      "p95": 3839.0973708337,
+      "p99": 4607.062085836478
+    },
+    "ball_right": {
+      "count": 194700,
+      "minimum": -5953.152214602629,
+      "maximum": 4290.990046980945,
+      "mean": 8.266684554765751,
+      "p50": 3.1733810162267e-05,
+      "p90": 398.77692875181015,
+      "p95": 864.7727573004541,
+      "p99": 1979.7496970168054
+    },
+    "ball_up": {
+      "count": 194700,
+      "minimum": -3414.6716862742155,
+      "maximum": 4404.305465913325,
+      "mean": 261.1435497601595,
+      "p50": 122.69732323760236,
+      "p90": 753.7756575665403,
+      "p95": 1150.3941431315056,
+      "p99": 2313.768321489073
+    },
+    "ball_distance": {
+      "count": 194700,
+      "minimum": 0.0,
+      "maximum": 6085.849312985218,
+      "mean": 1269.2815425549163,
+      "p50": 817.0089557495803,
+      "p90": 3279.27439345434,
+      "p95": 3849.2690926415275,
+      "p99": 4608.622413212578
+    },
+    "ball_height": {
+      "count": 194700,
+      "minimum": 0.0,
+      "maximum": 1954.949951171875,
+      "mean": 291.83323699535805,
+      "p50": 136.47999572753906,
+      "p90": 765.1519653320314,
+      "p95": 1131.7404907226562,
+      "p99": 1471.4606604003914
+    },
+    "ball_speed": {
+      "count": 194700,
+      "minimum": 0.0,
+      "maximum": 3194.542302992273,
+      "mean": 797.4606715624517,
+      "p50": 714.2644489674963,
+      "p90": 1656.7502508356993,
+      "p95": 1797.4012254250995,
+      "p99": 1965.618921471438
+    },
+    "ball_spin": {
+      "count": 194700,
+      "minimum": 0.0,
+      "maximum": 6.000013593388681,
+      "mean": 3.695434616417543,
+      "p50": 4.263972854852344,
+      "p90": 5.999959501725216,
+      "p95": 5.99997712977043,
+      "p99": 6.000002020928265
+    },
+    "prediction_horizon": {
+      "count": 194700,
+      "minimum": 1.9911842346191406,
+      "maximum": 2.006805419921875,
+      "mean": 1.9989300956697604,
+      "p50": 1.99951171875,
+      "p90": 1.99951171875,
+      "p95": 1.999969482421875,
+      "p99": 2.0000037851929666
+    }
+  },
+  "grouped_coverage": {
+    "split": {
+      "train": {
+        "matches": 4,
+        "callbacks": 107400,
+        "jump": 504,
+        "front_dodge": 1542,
+        "sequence_starts": 115,
+        "sequence_completions": 115,
+        "sides": [
+          "Blue",
+          "Orange"
+        ]
+      },
+      "validation": {
+        "matches": 2,
+        "callbacks": 47271,
+        "jump": 186,
+        "front_dodge": 568,
+        "sequence_starts": 42,
+        "sequence_completions": 42,
+        "sides": [
+          "Blue",
+          "Orange"
+        ]
+      },
+      "test": {
+        "matches": 3,
+        "callbacks": 84534,
+        "jump": 418,
+        "front_dodge": 1249,
+        "sequence_starts": 93,
+        "sequence_completions": 92,
+        "sides": [
+          "Blue",
+          "Orange"
+        ]
+      }
+    },
+    "teacher_side": {
+      "Orange": {
+        "matches": 5,
+        "callbacks": 145747,
+        "jump": 684,
+        "front_dodge": 2069,
+        "sequence_starts": 154,
+        "sequence_completions": 153,
+        "sides": [
+          "Orange"
+        ]
+      },
+      "Blue": {
+        "matches": 4,
+        "callbacks": 93458,
+        "jump": 424,
+        "front_dodge": 1290,
+        "sequence_starts": 96,
+        "sequence_completions": 96,
+        "sides": [
+          "Blue"
+        ]
+      }
+    },
+    "opponent_id": {
+      "human_a": {
+        "matches": 6,
+        "callbacks": 165712,
+        "jump": 737,
+        "front_dodge": 2231,
+        "sequence_starts": 166,
+        "sequence_completions": 165,
+        "sides": [
+          "Blue",
+          "Orange"
+        ]
+      },
+      "human_b": {
+        "matches": 2,
+        "callbacks": 49766,
+        "jump": 214,
+        "front_dodge": 646,
+        "sequence_starts": 48,
+        "sequence_completions": 48,
+        "sides": [
+          "Blue",
+          "Orange"
+        ]
+      },
+      "human_c": {
+        "matches": 1,
+        "callbacks": 23727,
+        "jump": 157,
+        "front_dodge": 482,
+        "sequence_starts": 36,
+        "sequence_completions": 36,
+        "sides": [
+          "Orange"
+        ]
+      }
+    },
+    "play_session_id": {
+      "pilot_20261004_session_identity_not_separately_recorded": {
+        "matches": 3,
+        "callbacks": 96484,
+        "jump": 428,
+        "front_dodge": 1292,
+        "sequence_starts": 96,
+        "sequence_completions": 95,
+        "sides": [
+          "Orange"
+        ]
+      },
+      "human_a_v10_session_01": {
+        "matches": 3,
+        "callbacks": 69228,
+        "jump": 309,
+        "front_dodge": 939,
+        "sequence_starts": 70,
+        "sequence_completions": 70,
+        "sides": [
+          "Blue"
+        ]
+      },
+      "human_b_v10_session_01": {
+        "matches": 2,
+        "callbacks": 49766,
+        "jump": 214,
+        "front_dodge": 646,
+        "sequence_starts": 48,
+        "sequence_completions": 48,
+        "sides": [
+          "Blue",
+          "Orange"
+        ]
+      },
+      "human_c_v10_session_01": {
+        "matches": 1,
+        "callbacks": 23727,
+        "jump": 157,
+        "front_dodge": 482,
+        "sequence_starts": 36,
+        "sequence_completions": 36,
+        "sides": [
+          "Orange"
+        ]
+      }
+    }
+  },
+  "matches": [
+    {
+      "split": "train",
+      "teacher_side": "Orange",
+      "team": 1,
+      "opponent_id": "human_a",
+      "play_session_id": "pilot_20261004_session_identity_not_separately_recorded",
+      "play_style": "Natural pilot; style not separately recorded",
+      "is_pilot": true,
+      "match_id": "pilot_01",
+      "callbacks": 32258,
+      "invalid_rows": 0,
+      "dropped_processed_rows": 0,
+      "modes": {
+        "chase": 20154,
+        "jump": 169,
+        "neutral": 11416,
+        "front-dodge": 519
+      },
+      "branches": {
+        "far_ball": 5561,
+        "pending_sequence": 2630,
+        "near_ball": 14632,
+        "missing_ball": 9435
+      },
+      "near_far": {
+        "far": 7080,
+        "near": 15743,
+        "missing_ball": 9435
+      },
+      "phases": {
+        "MatchPhase.Countdown": 3129,
+        "MatchPhase.Kickoff": 2528,
+        "MatchPhase.Active": 17165,
+        "MatchPhase.GoalScored": 2286,
+        "MatchPhase.Replay": 7149,
+        "MatchPhase.Ended": 1
+      },
+      "speed_bands": {
+        "below_750": 5340,
+        "strict_flip_window_750_800": 234,
+        "800_to_1410": 14151,
+        "above_1410": 12533
+      },
+      "geometry_sectors": {
+        "ahead": 18469,
+        "right": 12402,
+        "above": 21441,
+        "left": 10421,
+        "behind": 4354,
+        "below_or_level": 1382
+      },
+      "distributions": {
+        "steer": {
+          "count": 32258,
+          "minimum": -1.0,
+          "maximum": 1.0,
+          "mean": 0.04819081514602336,
+          "p50": 0.0,
+          "p90": 1.0,
+          "p95": 1.0,
+          "p99": 1.0
+        },
+        "callback_dt": {
+          "count": 32257,
+          "minimum": 0.008331298828125,
+          "maximum": 0.241668701171875,
+          "mean": 0.016639282176996978,
+          "p50": 0.01666259765625,
+          "p90": 0.0166778564453125,
+          "p95": 0.016693115234375,
+          "p99": 0.02500152587890625
+        },
+        "car_speed": {
+          "count": 32258,
+          "minimum": 0.0,
+          "maximum": 2299.999881460262,
+          "mean": 1283.1095488219494,
+          "p50": 1382.3594287265564,
+          "p90": 2101.907594908319,
+          "p95": 2260.099515631261,
+          "p99": 2280.725735559822
+        },
+        "ball_forward": {
+          "count": 22823,
+          "minimum": -3681.023848438991,
+          "maximum": 4607.999999999995,
+          "mean": 923.5970354124646,
+          "p50": 453.825705168083,
+          "p90": 3689.2459928766907,
+          "p95": 3839.097393212903,
+          "p99": 4607.062085836478
+        },
+        "ball_right": {
+          "count": 22823,
+          "minimum": -3008.039014219073,
+          "maximum": 3698.3633746022233,
+          "mean": 58.603046596094465,
+          "p50": 0.000201422085128582,
+          "p90": 402.81111609192965,
+          "p95": 1073.9683113017427,
+          "p99": 2339.8267300578045
+        },
+        "ball_up": {
+          "count": 22823,
+          "minimum": -3413.026617743003,
+          "maximum": 3949.163406973018,
+          "mean": 207.97778424342428,
+          "p50": 119.13410976158394,
+          "p90": 614.4933467331782,
+          "p95": 962.2231433680181,
+          "p99": 2187.980662607414
+        },
+        "ball_distance": {
+          "count": 22823,
+          "minimum": 141.84364782139556,
+          "maximum": 4608.63646083344,
+          "mean": 1414.1585635799331,
+          "p50": 869.7267566836861,
+          "p90": 3782.242177243761,
+          "p95": 3849.2690926415275,
+          "p99": 4608.622413212578
+        },
+        "ball_height": {
+          "count": 22823,
+          "minimum": 85.0999984741211,
+          "maximum": 1537.179931640625,
+          "mean": 250.50636056735306,
+          "p50": 118.11000061035156,
+          "p90": 572.8060058593749,
+          "p95": 988.9749694824194,
+          "p99": 1447.841579589843
+        },
+        "ball_speed": {
+          "count": 22823,
+          "minimum": 0.0,
+          "maximum": 2038.1440323408165,
+          "mean": 711.1030061069966,
+          "p50": 583.3604130978085,
+          "p90": 1664.6311256081176,
+          "p95": 1808.9868201415961,
+          "p99": 1884.2195697291706
+        },
+        "ball_spin": {
+          "count": 22823,
+          "minimum": 0.0,
+          "maximum": 6.000013593388681,
+          "mean": 3.1511662557750677,
+          "p50": 3.2453842133184687,
+          "p90": 5.999961287810401,
+          "p95": 5.999977574160617,
+          "p99": 6.000010031263624
+        },
+        "prediction_horizon": {
+          "count": 22823,
+          "minimum": 1.9911842346191406,
+          "maximum": 2.006805419921875,
+          "mean": 1.9990935571243942,
+          "p50": 1.99951171875,
+          "p90": 1.99951171875,
+          "p95": 1.999969482421875,
+          "p99": 2.000023193359375
+        }
+      },
+      "sequences": [
+        {
+          "sequence_id": 1,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 2,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active",
+            "MatchPhase.Countdown",
+            "MatchPhase.GoalScored",
+            "MatchPhase.Replay"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 12,
+          "missing_pending_callbacks": 730
+        },
+        {
+          "sequence_id": 3,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 4,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 5,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active",
+            "MatchPhase.Countdown",
+            "MatchPhase.GoalScored",
+            "MatchPhase.Replay"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 862
+        },
+        {
+          "sequence_id": 6,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 7,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 11,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 8,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 9,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 10,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 11,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 12,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 13,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 14,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active",
+            "MatchPhase.Countdown",
+            "MatchPhase.GoalScored",
+            "MatchPhase.Replay"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 733
+        },
+        {
+          "sequence_id": 15,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 16,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 17,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active",
+            "MatchPhase.Countdown",
+            "MatchPhase.GoalScored",
+            "MatchPhase.Replay"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 725
+        },
+        {
+          "sequence_id": 18,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 19,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 3,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 20,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 21,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 22,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 23,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 12,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 24,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 25,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active",
+            "MatchPhase.Countdown",
+            "MatchPhase.GoalScored",
+            "MatchPhase.Replay"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 720
+        },
+        {
+          "sequence_id": 26,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 27,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 28,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 29,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 30,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 31,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 32,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 33,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 34,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 35,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 36,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 37,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 38,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 3,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 39,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        }
+      ],
+      "sequence_starts": 39,
+      "sequence_completions": 39,
+      "complete_sequences_with_all_four_phases": 39,
+      "missing_ball_pending_callbacks": 3770,
+      "phase_transitions": 64,
+      "prediction_reuse": 9435,
+      "prediction_valid_callbacks": 22823,
+      "prediction_empty_callbacks": 0,
+      "callback_dt_over_100ms": 1,
+      "record_path_max_seconds": 0.25,
+      "integrity": {
+        "raw_verified": true,
+        "tensor_roundtrip_exact": true,
+        "manifest_sha256": "1fbde017deee28000377899146085c37285ba33684d0c72944badc257c3e1e95"
+      }
+    },
+    {
+      "split": "validation",
+      "teacher_side": "Orange",
+      "team": 1,
+      "opponent_id": "human_a",
+      "play_session_id": "pilot_20261004_session_identity_not_separately_recorded",
+      "play_style": "Natural pilot; style not separately recorded",
+      "is_pilot": true,
+      "match_id": "pilot_02",
+      "callbacks": 27401,
+      "invalid_rows": 0,
+      "dropped_processed_rows": 0,
+      "modes": {
+        "chase": 19583,
+        "jump": 94,
+        "neutral": 7439,
+        "front-dodge": 285
+      },
+      "branches": {
+        "far_ball": 3733,
+        "pending_sequence": 1425,
+        "near_ball": 15871,
+        "missing_ball": 6372
+      },
+      "near_far": {
+        "far": 4685,
+        "near": 16344,
+        "missing_ball": 6372
+      },
+      "phases": {
+        "MatchPhase.Countdown": 2233,
+        "MatchPhase.Kickoff": 1733,
+        "MatchPhase.Active": 17054,
+        "MatchPhase.GoalScored": 1551,
+        "MatchPhase.Replay": 4821,
+        "MatchPhase.Ended": 9
+      },
+      "speed_bands": {
+        "below_750": 4795,
+        "strict_flip_window_750_800": 220,
+        "800_to_1410": 13169,
+        "above_1410": 9217
+      },
+      "geometry_sectors": {
+        "ahead": 16780,
+        "left": 9187,
+        "above": 20411,
+        "right": 11842,
+        "behind": 4249,
+        "below_or_level": 618
+      },
+      "distributions": {
+        "steer": {
+          "count": 27401,
+          "minimum": -1.0,
+          "maximum": 1.0,
+          "mean": 0.05452717115601627,
+          "p50": 0.0,
+          "p90": 1.0,
+          "p95": 1.0,
+          "p99": 1.0
+        },
+        "callback_dt": {
+          "count": 27400,
+          "minimum": 0.008331298828125,
+          "maximum": 0.216644287109375,
+          "mean": 0.016784063260050587,
+          "p50": 0.01666259765625,
+          "p90": 0.0166778564453125,
+          "p95": 0.016693115234375,
+          "p99": 0.02500152587890625
+        },
+        "car_speed": {
+          "count": 27401,
+          "minimum": 0.0,
+          "maximum": 2299.997509544511,
+          "mean": 1227.7714543791158,
+          "p50": 1343.9152136067376,
+          "p90": 1886.2188492514765,
+          "p95": 2128.766382071503,
+          "p99": 2191.7768639006076
+        },
+        "ball_forward": {
+          "count": 21029,
+          "minimum": -3678.4980533189287,
+          "maximum": 4607.999999999995,
+          "mean": 715.3570077641682,
+          "p50": 332.7098305125381,
+          "p90": 3257.48241070253,
+          "p95": 3839.097393212903,
+          "p99": 4607.062085836478
+        },
+        "ball_right": {
+          "count": 21029,
+          "minimum": -3182.727824279254,
+          "maximum": 2843.168357581968,
+          "mean": 4.365426477138117,
+          "p50": 0.05671617854432763,
+          "p90": 362.03869139521794,
+          "p95": 775.9580444397808,
+          "p99": 1536.358184737941
+        },
+        "ball_up": {
+          "count": 21029,
+          "minimum": -3412.0267731303884,
+          "maximum": 3945.1116418399392,
+          "mean": 194.00051234896694,
+          "p50": 113.51527484919126,
+          "p90": 500.2787202012793,
+          "p95": 722.7900648350977,
+          "p99": 1352.5083988820606
+        },
+        "ball_distance": {
+          "count": 21029,
+          "minimum": 131.41289790305623,
+          "maximum": 4608.63646083344,
+          "mean": 1151.2781150210126,
+          "p50": 691.1629907637749,
+          "p90": 3279.27439345434,
+          "p95": 3849.2690926415275,
+          "p99": 4608.622413212578
+        },
+        "ball_height": {
+          "count": 21029,
+          "minimum": 88.29999542236328,
+          "maximum": 1954.949951171875,
+          "mean": 258.578339778576,
+          "p50": 119.00999450683594,
+          "p90": 634.0599731445313,
+          "p95": 1001.6919921874988,
+          "p99": 1411.2716210937501
+        },
+        "ball_speed": {
+          "count": 21029,
+          "minimum": 0.0,
+          "maximum": 1945.6202637159934,
+          "mean": 763.4244743843173,
+          "p50": 657.2195627948342,
+          "p90": 1671.8142638706952,
+          "p95": 1789.0004761212715,
+          "p99": 1865.048316967135
+        },
+        "ball_spin": {
+          "count": 21029,
+          "minimum": 0.0,
+          "maximum": 6.000011736872196,
+          "mean": 3.453627308979416,
+          "p50": 3.6073834911016083,
+          "p90": 5.9999407668878115,
+          "p95": 5.999968324159538,
+          "p99": 6.000008898665739
+        },
+        "prediction_horizon": {
+          "count": 21029,
+          "minimum": 1.9911842346191406,
+          "maximum": 2.0004234313964844,
+          "mean": 1.9988399111055104,
+          "p50": 1.99951171875,
+          "p90": 1.99951171875,
+          "p95": 1.999969482421875,
+          "p99": 1.9999779510498046
+        }
+      },
+      "sequences": [
+        {
+          "sequence_id": 1,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 2,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 3,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 4,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 5,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 6,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 7,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 8,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 9,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 10,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 11,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 12,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 13,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 14,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 15,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 16,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 17,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 18,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 19,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active",
+            "MatchPhase.Countdown",
+            "MatchPhase.GoalScored",
+            "MatchPhase.Replay"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 805
+        },
+        {
+          "sequence_id": 20,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 12,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 21,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        }
+      ],
+      "sequence_starts": 21,
+      "sequence_completions": 21,
+      "complete_sequences_with_all_four_phases": 21,
+      "missing_ball_pending_callbacks": 805,
+      "phase_transitions": 44,
+      "prediction_reuse": 6372,
+      "prediction_valid_callbacks": 21029,
+      "prediction_empty_callbacks": 0,
+      "callback_dt_over_100ms": 2,
+      "record_path_max_seconds": 0.21899999999732245,
+      "integrity": {
+        "raw_verified": true,
+        "tensor_roundtrip_exact": true,
+        "manifest_sha256": "b2261723a0b2eef1aae8183c732e122b45395c43eded06cdee0bcb3cf779ed63"
+      }
+    },
+    {
+      "split": "test",
+      "teacher_side": "Orange",
+      "team": 1,
+      "opponent_id": "human_a",
+      "play_session_id": "pilot_20261004_session_identity_not_separately_recorded",
+      "play_style": "Natural pilot; style not separately recorded",
+      "is_pilot": true,
+      "match_id": "pilot_03",
+      "callbacks": 36825,
+      "invalid_rows": 0,
+      "dropped_processed_rows": 0,
+      "modes": {
+        "chase": 21981,
+        "jump": 165,
+        "neutral": 14191,
+        "front-dodge": 488
+      },
+      "branches": {
+        "far_ball": 6181,
+        "pending_sequence": 2450,
+        "near_ball": 15836,
+        "missing_ball": 12358
+      },
+      "near_far": {
+        "far": 7813,
+        "near": 16654,
+        "missing_ball": 12358
+      },
+      "phases": {
+        "MatchPhase.Countdown": 3714,
+        "MatchPhase.Kickoff": 2907,
+        "MatchPhase.Active": 17846,
+        "MatchPhase.GoalScored": 2960,
+        "MatchPhase.Replay": 9388,
+        "MatchPhase.Ended": 10
+      },
+      "speed_bands": {
+        "below_750": 6707,
+        "strict_flip_window_750_800": 287,
+        "800_to_1410": 15801,
+        "above_1410": 14030
+      },
+      "geometry_sectors": {
+        "ahead": 19966,
+        "left": 11327,
+        "above": 23345,
+        "right": 13140,
+        "behind": 4501,
+        "below_or_level": 1122
+      },
+      "distributions": {
+        "steer": {
+          "count": 36825,
+          "minimum": -1.0,
+          "maximum": 1.0,
+          "mean": 0.014079512024254247,
+          "p50": 0.0,
+          "p90": 0.5534319684037202,
+          "p95": 1.0,
+          "p99": 1.0
+        },
+        "callback_dt": {
+          "count": 36824,
+          "minimum": 0.00830078125,
+          "maximum": 0.04168701171875,
+          "mean": 0.016598550521457246,
+          "p50": 0.01666259765625,
+          "p90": 0.0166778564453125,
+          "p95": 0.016693115234375,
+          "p99": 0.024993896484375
+        },
+        "car_speed": {
+          "count": 36825,
+          "minimum": 0.0,
+          "maximum": 2299.99892650876,
+          "mean": 1275.6638221353257,
+          "p50": 1361.766314480117,
+          "p90": 1992.2217174523325,
+          "p95": 2251.2076753333404,
+          "p99": 2277.4716498651783
+        },
+        "ball_forward": {
+          "count": 24467,
+          "minimum": -3681.023848438991,
+          "maximum": 4607.999999999995,
+          "mean": 957.0225129721794,
+          "p50": 502.16744172910205,
+          "p90": 3838.779588167257,
+          "p95": 3839.097393212903,
+          "p99": 4607.062085836478
+        },
+        "ball_right": {
+          "count": 24467,
+          "minimum": -2917.266287000412,
+          "maximum": 3465.8312349793164,
+          "mean": 38.353354040477114,
+          "p50": 0.000201422085128582,
+          "p90": 362.03869139521794,
+          "p95": 857.5263432798978,
+          "p99": 1841.9835506801403
+        },
+        "ball_up": {
+          "count": 24467,
+          "minimum": -3413.026617743003,
+          "maximum": 3949.163406973018,
+          "mean": 220.01696868016535,
+          "p50": 119.91448958870339,
+          "p90": 671.9386127289176,
+          "p95": 995.0647840599573,
+          "p99": 1878.2093060998466
+        },
+        "ball_distance": {
+          "count": 24467,
+          "minimum": 132.3470218126867,
+          "maximum": 4608.63646083344,
+          "mean": 1438.1339759616858,
+          "p50": 900.8345051780802,
+          "p90": 3849.04952315404,
+          "p95": 3849.2690926415275,
+          "p99": 4608.622413212578
+        },
+        "ball_height": {
+          "count": 24467,
+          "minimum": 83.8699951171875,
+          "maximum": 1566.469970703125,
+          "mean": 248.72209631100193,
+          "p50": 125.86000061035156,
+          "p90": 532.3579956054689,
+          "p95": 956.0659667968754,
+          "p99": 1393.0043627929688
+        },
+        "ball_speed": {
+          "count": 24467,
+          "minimum": 0.0,
+          "maximum": 2024.1234795590628,
+          "mean": 710.4687213650394,
+          "p50": 556.4453440594629,
+          "p90": 1755.9337186636526,
+          "p95": 1811.549734155771,
+          "p99": 1893.451200775472
+        },
+        "ball_spin": {
+          "count": 24467,
+          "minimum": 0.0,
+          "maximum": 6.000010017255316,
+          "mean": 3.2366062055602662,
+          "p50": 3.566010000018107,
+          "p90": 5.9999481658140645,
+          "p95": 5.999971327365842,
+          "p99": 6.000002020928265
+        },
+        "prediction_horizon": {
+          "count": 24467,
+          "minimum": 1.9911842346191406,
+          "maximum": 2.000425338745117,
+          "mean": 1.9990554187647356,
+          "p50": 1.99951171875,
+          "p90": 1.99951171875,
+          "p95": 1.99951171875,
+          "p99": 1.9999699592590332
+        }
+      },
+      "sequences": [
+        {
+          "sequence_id": 1,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 2,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 3,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 4,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active",
+            "MatchPhase.Countdown",
+            "MatchPhase.GoalScored",
+            "MatchPhase.Replay"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 748
+        },
+        {
+          "sequence_id": 5,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 6,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 7,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 8,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 9,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 10,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 11,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 12,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 13,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 14,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 15,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 16,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 17,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 18,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active",
+            "MatchPhase.Countdown",
+            "MatchPhase.GoalScored",
+            "MatchPhase.Replay"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 751
+        },
+        {
+          "sequence_id": 19,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 20,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 21,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 22,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 23,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 24,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 25,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active",
+            "MatchPhase.Countdown",
+            "MatchPhase.GoalScored",
+            "MatchPhase.Replay"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 756
+        },
+        {
+          "sequence_id": 26,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 27,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 28,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active",
+            "MatchPhase.Countdown",
+            "MatchPhase.GoalScored",
+            "MatchPhase.Replay"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 788
+        },
+        {
+          "sequence_id": 29,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 30,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active",
+            "MatchPhase.Countdown",
+            "MatchPhase.GoalScored",
+            "MatchPhase.Replay"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 747
+        },
+        {
+          "sequence_id": 31,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 32,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 33,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 34,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 35,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 36,
+          "start_seen": true,
+          "completion_seen": false,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active",
+            "MatchPhase.Ended",
+            "MatchPhase.GoalScored",
+            "MatchPhase.Replay"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 852
+        }
+      ],
+      "sequence_starts": 36,
+      "sequence_completions": 35,
+      "complete_sequences_with_all_four_phases": 35,
+      "missing_ball_pending_callbacks": 4642,
+      "phase_transitions": 76,
+      "prediction_reuse": 12358,
+      "prediction_valid_callbacks": 24467,
+      "prediction_empty_callbacks": 0,
+      "callback_dt_over_100ms": 0,
+      "record_path_max_seconds": 0.01600000000325963,
+      "integrity": {
+        "raw_verified": true,
+        "tensor_roundtrip_exact": true,
+        "manifest_sha256": "c6772b2154ba086f53d92353c68f0fba772cb15c19abdce077bae61c51f61478"
+      }
+    },
+    {
+      "split": "train",
+      "teacher_side": "Blue",
+      "team": 0,
+      "opponent_id": "human_a",
+      "play_session_id": "human_a_v10_session_01",
+      "play_style": "Natural play; no different style asserted or rare actions forced",
+      "is_pilot": false,
+      "match_id": "v10_001",
+      "callbacks": 25376,
+      "invalid_rows": 0,
+      "dropped_processed_rows": 0,
+      "modes": {
+        "chase": 19000,
+        "jump": 121,
+        "neutral": 5878,
+        "front-dodge": 377
+      },
+      "branches": {
+        "far_ball": 4178,
+        "pending_sequence": 1970,
+        "near_ball": 14850,
+        "missing_ball": 4378
+      },
+      "near_far": {
+        "far": 5274,
+        "near": 15724,
+        "missing_ball": 4378
+      },
+      "phases": {
+        "MatchPhase.Countdown": 1587,
+        "MatchPhase.Kickoff": 1152,
+        "MatchPhase.Active": 18250,
+        "MatchPhase.GoalScored": 995,
+        "MatchPhase.Replay": 3383,
+        "MatchPhase.Ended": 9
+      },
+      "speed_bands": {
+        "below_750": 3772,
+        "strict_flip_window_750_800": 249,
+        "800_to_1410": 13552,
+        "above_1410": 7803
+      },
+      "geometry_sectors": {
+        "ahead": 16293,
+        "left": 11252,
+        "above": 19984,
+        "right": 9746,
+        "behind": 4705,
+        "below_or_level": 1014
+      },
+      "distributions": {
+        "steer": {
+          "count": 25376,
+          "minimum": -1.0,
+          "maximum": 1.0,
+          "mean": -0.047813631625130915,
+          "p50": 0.0,
+          "p90": 1.0,
+          "p95": 1.0,
+          "p99": 1.0
+        },
+        "callback_dt": {
+          "count": 25375,
+          "minimum": 0.008331298828125,
+          "maximum": 0.04166668653488159,
+          "mean": 0.016563218471451934,
+          "p50": 0.01666259765625,
+          "p90": 0.0166778564453125,
+          "p95": 0.016693115234375,
+          "p99": 0.016693115234375
+        },
+        "car_speed": {
+          "count": 25376,
+          "minimum": 0.0,
+          "maximum": 2299.9980209619002,
+          "mean": 1219.221736835543,
+          "p50": 1343.661578778057,
+          "p90": 1857.6295900730913,
+          "p95": 1859.4464446112365,
+          "p99": 2166.566798601655
+        },
+        "ball_forward": {
+          "count": 20998,
+          "minimum": -3680.9939306140504,
+          "maximum": 4607.999999999995,
+          "mean": 566.5015522077899,
+          "p50": 291.0192577947356,
+          "p90": 2612.4346783645597,
+          "p95": 3257.48241070253,
+          "p99": 4607.062085836478
+        },
+        "ball_right": {
+          "count": 20998,
+          "minimum": -3771.0725686505725,
+          "maximum": 4290.990046980945,
+          "mean": 25.372884482334026,
+          "p50": -0.07701987220160689,
+          "p90": 362.038600754051,
+          "p95": 990.6008601350899,
+          "p99": 2644.0667863559465
+        },
+        "ball_up": {
+          "count": 20998,
+          "minimum": -3412.9969080881738,
+          "maximum": 3949.133480918181,
+          "mean": 272.12729230101513,
+          "p50": 124.03814607283897,
+          "p90": 729.2092147172307,
+          "p95": 1181.2180048960952,
+          "p99": 2342.883106375021
+        },
+        "ball_distance": {
+          "count": 20998,
+          "minimum": 132.30020923232354,
+          "maximum": 4608.63646083344,
+          "mean": 1168.6027631606798,
+          "p50": 725.3097751441748,
+          "p90": 3279.27439345434,
+          "p95": 3849.0440348717657,
+          "p99": 4608.622413212578
+        },
+        "ball_height": {
+          "count": 20998,
+          "minimum": 83.97999572753906,
+          "maximum": 1806.52001953125,
+          "mean": 312.8014670002403,
+          "p50": 145.65999603271484,
+          "p90": 874.5619934082029,
+          "p95": 1222.5879455566403,
+          "p99": 1519.9908911132811
+        },
+        "ball_speed": {
+          "count": 20998,
+          "minimum": 0.0,
+          "maximum": 2574.034987009812,
+          "mean": 835.411772600694,
+          "p50": 770.3799521074595,
+          "p90": 1677.3445801977523,
+          "p95": 1798.5579887658648,
+          "p99": 1902.935031664504
+        },
+        "ball_spin": {
+          "count": 20998,
+          "minimum": 0.0,
+          "maximum": 6.000011768409945,
+          "mean": 3.700483565268909,
+          "p50": 4.003424763781746,
+          "p90": 5.999960393499363,
+          "p95": 5.999975669684044,
+          "p99": 5.999993824750832
+        },
+        "prediction_horizon": {
+          "count": 20998,
+          "minimum": 1.9911842346191406,
+          "maximum": 2.000425338745117,
+          "mean": 1.9988263074824193,
+          "p50": 1.99951171875,
+          "p90": 1.99951171875,
+          "p95": 1.999969482421875,
+          "p99": 1.9999704360961914
+        }
+      },
+      "sequences": [
+        {
+          "sequence_id": 1,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 2,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 3,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 4,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 5,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 6,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 7,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 8,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 9,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active",
+            "MatchPhase.Countdown",
+            "MatchPhase.GoalScored",
+            "MatchPhase.Replay"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 11,
+          "missing_pending_callbacks": 993
+        },
+        {
+          "sequence_id": 10,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 11,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 12,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 13,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 14,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 15,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 16,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 17,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 18,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 19,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 20,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 21,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 22,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 23,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 24,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 25,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 26,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 27,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 28,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        }
+      ],
+      "sequence_starts": 28,
+      "sequence_completions": 28,
+      "complete_sequences_with_all_four_phases": 28,
+      "missing_ball_pending_callbacks": 993,
+      "phase_transitions": 29,
+      "prediction_reuse": 4378,
+      "prediction_valid_callbacks": 20998,
+      "prediction_empty_callbacks": 0,
+      "callback_dt_over_100ms": 0,
+      "record_path_max_seconds": 0.01600000000325963,
+      "integrity": {
+        "raw_verified": true,
+        "tensor_roundtrip_exact": true,
+        "manifest_sha256": "fdaef3b02108707a80ce0bbb42b389e0b8013f7a59e31dee806cbf468719b327"
+      }
+    },
+    {
+      "split": "validation",
+      "teacher_side": "Blue",
+      "team": 0,
+      "opponent_id": "human_a",
+      "play_session_id": "human_a_v10_session_01",
+      "play_style": "Natural play; no different style asserted or rare actions forced",
+      "is_pilot": false,
+      "match_id": "v10_002",
+      "callbacks": 19870,
+      "invalid_rows": 0,
+      "dropped_processed_rows": 0,
+      "modes": {
+        "chase": 17614,
+        "jump": 92,
+        "neutral": 1881,
+        "front-dodge": 283
+      },
+      "branches": {
+        "far_ball": 4006,
+        "pending_sequence": 1480,
+        "near_ball": 13629,
+        "missing_ball": 755
+      },
+      "near_far": {
+        "far": 4826,
+        "near": 14289,
+        "missing_ball": 755
+      },
+      "phases": {
+        "MatchPhase.Countdown": 639,
+        "MatchPhase.Kickoff": 406,
+        "MatchPhase.Active": 18066,
+        "MatchPhase.GoalScored": 197,
+        "MatchPhase.Replay": 558,
+        "MatchPhase.Ended": 4
+      },
+      "speed_bands": {
+        "below_750": 1653,
+        "strict_flip_window_750_800": 235,
+        "800_to_1410": 12790,
+        "above_1410": 5192
+      },
+      "geometry_sectors": {
+        "ahead": 14166,
+        "right": 10163,
+        "above": 18152,
+        "left": 8952,
+        "behind": 4949,
+        "below_or_level": 963
+      },
+      "distributions": {
+        "steer": {
+          "count": 19870,
+          "minimum": -1.0,
+          "maximum": 1.0,
+          "mean": 0.03209624336834255,
+          "p50": 0.0,
+          "p90": 1.0,
+          "p95": 1.0,
+          "p99": 1.0
+        },
+        "callback_dt": {
+          "count": 19869,
+          "minimum": 0.008331298828125,
+          "maximum": 0.0250091552734375,
+          "mean": 0.01664779273725323,
+          "p50": 0.01666259765625,
+          "p90": 0.0166778564453125,
+          "p95": 0.0166778564453125,
+          "p99": 0.016693115234375
+        },
+        "car_speed": {
+          "count": 19870,
+          "minimum": 0.0,
+          "maximum": 2299.990641039895,
+          "mean": 1222.737841677503,
+          "p50": 1318.5806325448634,
+          "p90": 1438.6748802631928,
+          "p95": 1564.3383425959971,
+          "p99": 1746.6202546464326
+        },
+        "ball_forward": {
+          "count": 19115,
+          "minimum": -3678.438460903397,
+          "maximum": 4607.999999999995,
+          "mean": 442.51450596769524,
+          "p50": 263.6403549988637,
+          "p90": 1511.9187720246875,
+          "p95": 2823.431722204372,
+          "p99": 4607.062085836478
+        },
+        "ball_right": {
+          "count": 19115,
+          "minimum": -3199.6531645258683,
+          "maximum": 3028.498623542532,
+          "mean": -7.408390628684583,
+          "p50": 0.14612520259327155,
+          "p90": 411.81794886992975,
+          "p95": 836.6208888568063,
+          "p99": 1847.3644404794388
+        },
+        "ball_up": {
+          "count": 19115,
+          "minimum": -3411.967154411656,
+          "maximum": 4404.305465913325,
+          "mean": 360.7109116667359,
+          "p50": 139.61682734163944,
+          "p90": 1008.3070279383905,
+          "p95": 1702.6748767473168,
+          "p99": 3176.8214158249816
+        },
+        "ball_distance": {
+          "count": 19115,
+          "minimum": 136.63666052323103,
+          "maximum": 4608.63646083344,
+          "mean": 1104.4703946110799,
+          "p50": 744.4030527213924,
+          "p90": 2559.2084677294506,
+          "p95": 3279.27439345434,
+          "p99": 4608.622413212578
+        },
+        "ball_height": {
+          "count": 19115,
+          "minimum": 84.18999481201172,
+          "maximum": 1518.2999267578125,
+          "mean": 329.2885608019518,
+          "p50": 156.52999877929688,
+          "p90": 955.5099609375011,
+          "p95": 1222.4419921874999,
+          "p99": 1436.2630126953125
+        },
+        "ball_speed": {
+          "count": 19115,
+          "minimum": 0.0,
+          "maximum": 2114.341354225415,
+          "mean": 824.2319092350483,
+          "p50": 744.4648635922949,
+          "p90": 1588.0762735111527,
+          "p95": 1743.0713944235335,
+          "p99": 1872.1216334274677
+        },
+        "ball_spin": {
+          "count": 19115,
+          "minimum": 0.0,
+          "maximum": 6.000010058596911,
+          "mean": 3.9033783779348106,
+          "p50": 4.136124248924439,
+          "p90": 5.9999455502710966,
+          "p95": 5.999973215227421,
+          "p99": 6.000005846824069
+        },
+        "prediction_horizon": {
+          "count": 19115,
+          "minimum": 1.9916365146636963,
+          "maximum": 2.000425338745117,
+          "mean": 1.999014458118731,
+          "p50": 1.99951171875,
+          "p90": 1.99951171875,
+          "p95": 1.999969482421875,
+          "p99": 2.000007119178772
+        }
+      },
+      "sequences": [
+        {
+          "sequence_id": 1,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 2,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 3,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 4,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 5,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 6,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 7,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 8,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 9,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 10,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 11,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 12,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 13,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 14,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 15,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 16,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 17,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 18,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 19,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 20,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 21,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        }
+      ],
+      "sequence_starts": 21,
+      "sequence_completions": 21,
+      "complete_sequences_with_all_four_phases": 21,
+      "missing_ball_pending_callbacks": 0,
+      "phase_transitions": 9,
+      "prediction_reuse": 755,
+      "prediction_valid_callbacks": 19115,
+      "prediction_empty_callbacks": 0,
+      "callback_dt_over_100ms": 0,
+      "record_path_max_seconds": 0.01600000000325963,
+      "integrity": {
+        "raw_verified": true,
+        "tensor_roundtrip_exact": true,
+        "manifest_sha256": "80b99c348eb625048478d7d4d64f6c46d565978f40e4bca077c2aef4067715ff"
+      }
+    },
+    {
+      "split": "test",
+      "teacher_side": "Blue",
+      "team": 0,
+      "opponent_id": "human_a",
+      "play_session_id": "human_a_v10_session_01",
+      "play_style": "Natural play; no different style asserted or rare actions forced",
+      "is_pilot": false,
+      "match_id": "v10_003",
+      "callbacks": 23982,
+      "invalid_rows": 0,
+      "dropped_processed_rows": 0,
+      "modes": {
+        "chase": 19452,
+        "jump": 96,
+        "neutral": 4155,
+        "front-dodge": 279
+      },
+      "branches": {
+        "far_ball": 4593,
+        "pending_sequence": 1471,
+        "near_ball": 14880,
+        "missing_ball": 3038
+      },
+      "near_far": {
+        "far": 5752,
+        "near": 15192,
+        "missing_ball": 3038
+      },
+      "phases": {
+        "MatchPhase.Countdown": 1828,
+        "MatchPhase.Kickoff": 1294,
+        "MatchPhase.Active": 17821,
+        "MatchPhase.GoalScored": 1188,
+        "MatchPhase.Replay": 1850,
+        "MatchPhase.Ended": 1
+      },
+      "speed_bands": {
+        "below_750": 3259,
+        "strict_flip_window_750_800": 144,
+        "800_to_1410": 14783,
+        "above_1410": 5796
+      },
+      "geometry_sectors": {
+        "ahead": 16064,
+        "left": 11389,
+        "above": 19939,
+        "right": 9555,
+        "behind": 4880,
+        "below_or_level": 1005
+      },
+      "distributions": {
+        "steer": {
+          "count": 23982,
+          "minimum": -1.0,
+          "maximum": 1.0,
+          "mean": -0.03864015854606324,
+          "p50": 0.0,
+          "p90": 1.0,
+          "p95": 1.0,
+          "p99": 1.0
+        },
+        "callback_dt": {
+          "count": 23981,
+          "minimum": 0.008331298828125,
+          "maximum": 0.04168701171875,
+          "mean": 0.01670836660050803,
+          "p50": 0.01666259765625,
+          "p90": 0.0166778564453125,
+          "p95": 0.016693115234375,
+          "p99": 0.024993896484375
+        },
+        "car_speed": {
+          "count": 23982,
+          "minimum": 0.0,
+          "maximum": 2299.9989455062882,
+          "mean": 1191.8595943351093,
+          "p50": 1299.2305399816441,
+          "p90": 1479.5810351776781,
+          "p95": 2062.056050748075,
+          "p99": 2246.328279020971
+        },
+        "ball_forward": {
+          "count": 20944,
+          "minimum": -3680.9939306140504,
+          "maximum": 4607.999999999995,
+          "mean": 692.8705456870626,
+          "p50": 291.26944079326745,
+          "p90": 3257.482400631743,
+          "p95": 3839.0973708337,
+          "p99": 4607.062085836478
+        },
+        "ball_right": {
+          "count": 20944,
+          "minimum": -3129.602186665262,
+          "maximum": 2504.4409560061613,
+          "mean": -3.3625884755135544,
+          "p50": -0.018888923440399604,
+          "p90": 415.0667721825405,
+          "p95": 897.28093979866,
+          "p99": 2019.1269670614997
+        },
+        "ball_up": {
+          "count": 20944,
+          "minimum": -3412.9969080881738,
+          "maximum": 3949.133480918181,
+          "mean": 291.6111593674379,
+          "p50": 133.52868881529574,
+          "p90": 899.9205391626223,
+          "p95": 1307.7606892806941,
+          "p99": 2474.4983268379183
+        },
+        "ball_distance": {
+          "count": 20944,
+          "minimum": 126.7722906567316,
+          "maximum": 4608.63646083344,
+          "mean": 1232.643014967312,
+          "p50": 819.2972841755052,
+          "p90": 3279.27439345434,
+          "p95": 3849.2690926415275,
+          "p99": 4608.622413212578
+        },
+        "ball_height": {
+          "count": 20944,
+          "minimum": 85.68999481201172,
+          "maximum": 1710.7799072265625,
+          "mean": 295.29238270110443,
+          "p50": 143.2199935913086,
+          "p90": 768.1269775390626,
+          "p95": 1136.955926513671,
+          "p99": 1442.2776232910155
+        },
+        "ball_speed": {
+          "count": 20944,
+          "minimum": 0.0,
+          "maximum": 2822.3540739090713,
+          "mean": 809.8815507336024,
+          "p50": 747.9585721803307,
+          "p90": 1602.8373037956903,
+          "p95": 1756.5211989102215,
+          "p99": 1899.0032129692588
+        },
+        "ball_spin": {
+          "count": 20944,
+          "minimum": 0.0,
+          "maximum": 6.000010190375296,
+          "mean": 3.9236057430285096,
+          "p50": 4.692489682376056,
+          "p90": 5.9999638351177715,
+          "p95": 5.999978793476934,
+          "p99": 6.0000072077578
+        },
+        "prediction_horizon": {
+          "count": 20944,
+          "minimum": 1.9911842346191406,
+          "maximum": 2.000425338745117,
+          "mean": 1.9988329317335345,
+          "p50": 1.99951171875,
+          "p90": 1.99951171875,
+          "p95": 1.999969482421875,
+          "p99": 1.999986915588379
+        }
+      },
+      "sequences": [
+        {
+          "sequence_id": 1,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 2,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 3,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 4,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 5,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 6,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 7,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 8,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 9,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 10,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 11,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 12,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 13,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 14,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 15,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 16,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 17,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 18,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 19,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 20,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 12,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 21,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        }
+      ],
+      "sequence_starts": 21,
+      "sequence_completions": 21,
+      "complete_sequences_with_all_four_phases": 21,
+      "missing_ball_pending_callbacks": 0,
+      "phase_transitions": 34,
+      "prediction_reuse": 3038,
+      "prediction_valid_callbacks": 20944,
+      "prediction_empty_callbacks": 0,
+      "callback_dt_over_100ms": 0,
+      "record_path_max_seconds": 0.01600000000325963,
+      "integrity": {
+        "raw_verified": true,
+        "tensor_roundtrip_exact": true,
+        "manifest_sha256": "2623b7a444f66c35e3e89e2e3de56dda82d9e86ca30a105c8fbe886a55480535"
+      }
+    },
+    {
+      "split": "train",
+      "teacher_side": "Blue",
+      "team": 0,
+      "opponent_id": "human_b",
+      "play_session_id": "human_b_v10_session_01",
+      "play_style": "Normal natural play; no forced rare actions or different style inferred",
+      "is_pilot": false,
+      "match_id": "v10_004",
+      "callbacks": 24230,
+      "invalid_rows": 0,
+      "dropped_processed_rows": 0,
+      "modes": {
+        "chase": 19350,
+        "jump": 115,
+        "neutral": 4414,
+        "front-dodge": 351
+      },
+      "branches": {
+        "far_ball": 5326,
+        "pending_sequence": 1815,
+        "near_ball": 14050,
+        "missing_ball": 3039
+      },
+      "near_far": {
+        "far": 6197,
+        "near": 14994,
+        "missing_ball": 3039
+      },
+      "phases": {
+        "MatchPhase.Countdown": 2066,
+        "MatchPhase.Kickoff": 1290,
+        "MatchPhase.Active": 17828,
+        "MatchPhase.GoalScored": 1379,
+        "MatchPhase.Replay": 1660,
+        "MatchPhase.Ended": 7
+      },
+      "speed_bands": {
+        "below_750": 3546,
+        "strict_flip_window_750_800": 201,
+        "800_to_1410": 14610,
+        "above_1410": 5873
+      },
+      "geometry_sectors": {
+        "ahead": 16757,
+        "left": 11790,
+        "above": 20300,
+        "right": 9401,
+        "behind": 4434,
+        "below_or_level": 891
+      },
+      "distributions": {
+        "steer": {
+          "count": 24230,
+          "minimum": -1.0,
+          "maximum": 1.0,
+          "mean": -0.05664040340004181,
+          "p50": 0.0,
+          "p90": 1.0,
+          "p95": 1.0,
+          "p99": 1.0
+        },
+        "callback_dt": {
+          "count": 24229,
+          "minimum": 0.008331298828125,
+          "maximum": 0.04168701171875,
+          "mean": 0.01669555825235388,
+          "p50": 0.01666259765625,
+          "p90": 0.0166778564453125,
+          "p95": 0.016693115234375,
+          "p99": 0.024993896484375
+        },
+        "car_speed": {
+          "count": 24230,
+          "minimum": 0.0,
+          "maximum": 2299.9983459641085,
+          "mean": 1188.6872591131157,
+          "p50": 1310.0752147951735,
+          "p90": 1626.0901971611001,
+          "p95": 2053.7180357371794,
+          "p99": 2245.901171516964
+        },
+        "ball_forward": {
+          "count": 21191,
+          "minimum": -3667.9874106251873,
+          "maximum": 4607.999999999995,
+          "mean": 768.1993068272608,
+          "p50": 336.9163685552192,
+          "p90": 3257.482400631743,
+          "p95": 3839.097393212903,
+          "p99": 4607.062085836478
+        },
+        "ball_right": {
+          "count": 21191,
+          "minimum": -4832.00884712624,
+          "maximum": 3868.2473815631893,
+          "mean": -48.046473942937425,
+          "p50": -0.15713738182369497,
+          "p90": 362.038600754051,
+          "p95": 680.1428849497668,
+          "p99": 1700.0496224559797
+        },
+        "ball_up": {
+          "count": 21191,
+          "minimum": -3399.9652820300635,
+          "maximum": 3936.1525487639774,
+          "mean": 261.83492237929545,
+          "p50": 119.91448958870339,
+          "p90": 767.4094964838472,
+          "p95": 1119.336492761484,
+          "p99": 2218.8367363717402
+        },
+        "ball_distance": {
+          "count": 21191,
+          "minimum": 131.40510427908765,
+          "maximum": 5126.600588357397,
+          "mean": 1290.7744695786935,
+          "p50": 849.3706664069321,
+          "p90": 3279.27439345434,
+          "p95": 3849.2690926415275,
+          "p99": 4608.622413212578
+        },
+        "ball_height": {
+          "count": 21191,
+          "minimum": 84.27999877929688,
+          "maximum": 1687.18994140625,
+          "mean": 307.7556442099449,
+          "p50": 130.14999389648438,
+          "p90": 840.22998046875,
+          "p95": 1149.4349365234375,
+          "p99": 1491.6269287109344
+        },
+        "ball_speed": {
+          "count": 21191,
+          "minimum": 0.0,
+          "maximum": 2984.0559659143228,
+          "mean": 833.8215749503818,
+          "p50": 791.554636915113,
+          "p90": 1588.2857089696827,
+          "p95": 1770.1798788556184,
+          "p99": 2284.554780880435
+        },
+        "ball_spin": {
+          "count": 21191,
+          "minimum": 0.0,
+          "maximum": 6.000013221691492,
+          "mean": 3.9593447590867474,
+          "p50": 4.9117859047787045,
+          "p90": 5.999957609663199,
+          "p95": 5.999973504998851,
+          "p99": 5.999993603410356
+        },
+        "prediction_horizon": {
+          "count": 21191,
+          "minimum": 1.9911842346191406,
+          "maximum": 2.000425338745117,
+          "mean": 1.9989552002203796,
+          "p50": 1.99951171875,
+          "p90": 1.99951171875,
+          "p95": 1.999969482421875,
+          "p99": 1.9999755859375
+        }
+      },
+      "sequences": [
+        {
+          "sequence_id": 1,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 2,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 3,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 4,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 5,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 6,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 7,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 8,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 9,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 10,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 11,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 12,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 3,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 13,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 14,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 12,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 15,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 16,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 17,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 18,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 19,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 20,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 21,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 22,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 23,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 24,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 25,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 26,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        }
+      ],
+      "sequence_starts": 26,
+      "sequence_completions": 26,
+      "complete_sequences_with_all_four_phases": 26,
+      "missing_ball_pending_callbacks": 0,
+      "phase_transitions": 39,
+      "prediction_reuse": 3039,
+      "prediction_valid_callbacks": 21191,
+      "prediction_empty_callbacks": 0,
+      "callback_dt_over_100ms": 0,
+      "record_path_max_seconds": 0.01600000000325963,
+      "integrity": {
+        "raw_verified": true,
+        "tensor_roundtrip_exact": true,
+        "manifest_sha256": "c485b6ff551cb97144ef99d7a2de3778db49b4c8f606f9c1a6426a8049548669"
+      }
+    },
+    {
+      "split": "test",
+      "teacher_side": "Orange",
+      "team": 1,
+      "opponent_id": "human_c",
+      "play_session_id": "human_c_v10_session_01",
+      "play_style": "Normal natural play; no forced rare actions or different style inferred",
+      "is_pilot": false,
+      "match_id": "v10_005",
+      "callbacks": 23727,
+      "invalid_rows": 0,
+      "dropped_processed_rows": 0,
+      "modes": {
+        "chase": 18822,
+        "jump": 157,
+        "neutral": 4266,
+        "front-dodge": 482
+      },
+      "branches": {
+        "far_ball": 4697,
+        "pending_sequence": 2489,
+        "near_ball": 14161,
+        "missing_ball": 2380
+      },
+      "near_far": {
+        "far": 6287,
+        "near": 15060,
+        "missing_ball": 2380
+      },
+      "phases": {
+        "MatchPhase.Countdown": 2059,
+        "MatchPhase.Kickoff": 1432,
+        "MatchPhase.Active": 17844,
+        "MatchPhase.GoalScored": 1385,
+        "MatchPhase.Replay": 995,
+        "MatchPhase.Ended": 12
+      },
+      "speed_bands": {
+        "below_750": 4026,
+        "strict_flip_window_750_800": 227,
+        "800_to_1410": 14363,
+        "above_1410": 5111
+      },
+      "geometry_sectors": {
+        "ahead": 16638,
+        "right": 10521,
+        "above": 20098,
+        "left": 10826,
+        "behind": 4709,
+        "below_or_level": 1249
+      },
+      "distributions": {
+        "steer": {
+          "count": 23727,
+          "minimum": -1.0,
+          "maximum": 1.0,
+          "mean": 0.023612825267514112,
+          "p50": 0.0,
+          "p90": 1.0,
+          "p95": 1.0,
+          "p99": 1.0
+        },
+        "callback_dt": {
+          "count": 23726,
+          "minimum": 0.008331298828125,
+          "maximum": 0.04168701171875,
+          "mean": 0.016737615212786813,
+          "p50": 0.01666259765625,
+          "p90": 0.0166778564453125,
+          "p95": 0.016693115234375,
+          "p99": 0.024993896484375
+        },
+        "car_speed": {
+          "count": 23727,
+          "minimum": 0.0,
+          "maximum": 2299.9966909508125,
+          "mean": 1140.4557788205884,
+          "p50": 1271.955402043896,
+          "p90": 1508.3318187654365,
+          "p95": 1652.7920933375688,
+          "p99": 2190.127625470732
+        },
+        "ball_forward": {
+          "count": 21347,
+          "minimum": -4105.485380751304,
+          "maximum": 4607.999999999995,
+          "mean": 673.908550874395,
+          "p50": 341.73401676074394,
+          "p90": 3257.482400631743,
+          "p95": 3839.097393212903,
+          "p99": 4607.062085836478
+        },
+        "ball_right": {
+          "count": 21347,
+          "minimum": -5953.152214602629,
+          "maximum": 2888.2289745417133,
+          "mean": -35.66670429884241,
+          "p50": -0.03191250457527095,
+          "p90": 423.8412574695304,
+          "p95": 858.3898084731674,
+          "p99": 1889.829894721585
+        },
+        "ball_up": {
+          "count": 21347,
+          "minimum": -3414.6716862742155,
+          "maximum": 3951.5672640072175,
+          "mean": 258.931896185741,
+          "p50": 124.55590159765114,
+          "p90": 798.5797937952129,
+          "p95": 1163.089244807132,
+          "p99": 1836.9429143977825
+        },
+        "ball_distance": {
+          "count": 21347,
+          "minimum": 91.48565139344817,
+          "maximum": 6085.849312985218,
+          "mean": 1288.8459273878382,
+          "p50": 873.6395074725713,
+          "p90": 3279.27439345434,
+          "p95": 3849.2690926415275,
+          "p99": 4608.622413212578
+        },
+        "ball_height": {
+          "count": 21347,
+          "minimum": 85.9000015258789,
+          "maximum": 1953.010009765625,
+          "mean": 320.7849969305009,
+          "p50": 147.27000427246094,
+          "p90": 851.2299926757814,
+          "p95": 1207.9079467773438,
+          "p99": 1486.0615380859376
+        },
+        "ball_speed": {
+          "count": 21347,
+          "minimum": 0.0,
+          "maximum": 3194.542302992273,
+          "mean": 817.6143762663156,
+          "p50": 753.7025904924858,
+          "p90": 1614.8877182014335,
+          "p95": 1784.951863053449,
+          "p99": 2097.339107275107
+        },
+        "ball_spin": {
+          "count": 21347,
+          "minimum": 0.0,
+          "maximum": 6.00001006825523,
+          "mean": 3.787900626536913,
+          "p50": 4.58874280925626,
+          "p90": 5.999965618007754,
+          "p95": 5.999981339123627,
+          "p99": 5.999999268707242
+        },
+        "prediction_horizon": {
+          "count": 21347,
+          "minimum": 1.9911842346191406,
+          "maximum": 2.000425338745117,
+          "mean": 1.9988451178720998,
+          "p50": 1.99951171875,
+          "p90": 1.99951171875,
+          "p95": 1.999969482421875,
+          "p99": 1.9999704360961914
+        }
+      },
+      "sequences": [
+        {
+          "sequence_id": 1,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 2,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 3,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 4,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 5,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 6,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 7,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 8,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 9,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 10,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 12,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 11,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 12,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 13,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 14,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 15,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 16,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 17,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 18,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active",
+            "MatchPhase.Countdown",
+            "MatchPhase.GoalScored",
+            "MatchPhase.Replay"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 284
+        },
+        {
+          "sequence_id": 19,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 20,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 21,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 22,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 23,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 24,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 3,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 25,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 26,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 27,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 28,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 29,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 30,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 31,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 32,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 33,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 34,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 35,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 36,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        }
+      ],
+      "sequence_starts": 36,
+      "sequence_completions": 36,
+      "complete_sequences_with_all_four_phases": 36,
+      "missing_ball_pending_callbacks": 284,
+      "phase_transitions": 39,
+      "prediction_reuse": 2380,
+      "prediction_valid_callbacks": 21347,
+      "prediction_empty_callbacks": 0,
+      "callback_dt_over_100ms": 0,
+      "record_path_max_seconds": 0.01600000000325963,
+      "integrity": {
+        "raw_verified": true,
+        "tensor_roundtrip_exact": true,
+        "manifest_sha256": "1e1fe04beaa1b88c02d149d0ad4529019e1f8772e7776b0b036aeb20f53730d5"
+      }
+    },
+    {
+      "split": "train",
+      "teacher_side": "Orange",
+      "team": 1,
+      "opponent_id": "human_b",
+      "play_session_id": "human_b_v10_session_01",
+      "play_style": "Normal natural play; no forced rare actions or different style inferred",
+      "is_pilot": false,
+      "match_id": "v10_006",
+      "callbacks": 25536,
+      "invalid_rows": 0,
+      "dropped_processed_rows": 0,
+      "modes": {
+        "chase": 21218,
+        "jump": 99,
+        "neutral": 3924,
+        "front-dodge": 295
+      },
+      "branches": {
+        "far_ball": 5532,
+        "pending_sequence": 1546,
+        "near_ball": 15708,
+        "missing_ball": 2750
+      },
+      "near_far": {
+        "far": 6700,
+        "near": 16086,
+        "missing_ball": 2750
+      },
+      "phases": {
+        "MatchPhase.Countdown": 1588,
+        "MatchPhase.Kickoff": 919,
+        "MatchPhase.Active": 20279,
+        "MatchPhase.GoalScored": 985,
+        "MatchPhase.Replay": 1749,
+        "MatchPhase.Ended": 16
+      },
+      "speed_bands": {
+        "below_750": 3321,
+        "strict_flip_window_750_800": 151,
+        "800_to_1410": 16013,
+        "above_1410": 6051
+      },
+      "geometry_sectors": {
+        "ahead": 17440,
+        "right": 11329,
+        "above": 21903,
+        "left": 11455,
+        "behind": 5346,
+        "below_or_level": 883,
+        "center": 2
+      },
+      "distributions": {
+        "steer": {
+          "count": 25536,
+          "minimum": -1.0,
+          "maximum": 1.0,
+          "mean": -0.01412897942247772,
+          "p50": 0.0,
+          "p90": 1.0,
+          "p95": 1.0,
+          "p99": 1.0
+        },
+        "callback_dt": {
+          "count": 25535,
+          "minimum": 0.008331298828125,
+          "maximum": 0.04168701171875,
+          "mean": 0.016746296173255924,
+          "p50": 0.01666259765625,
+          "p90": 0.0166778564453125,
+          "p95": 0.016693115234375,
+          "p99": 0.024993896484375
+        },
+        "car_speed": {
+          "count": 25536,
+          "minimum": 0.0,
+          "maximum": 2299.999926688891,
+          "mean": 1217.5069340033674,
+          "p50": 1316.7329740883251,
+          "p90": 1517.9661219817108,
+          "p95": 1986.437926767142,
+          "p99": 2224.2398980606577
+        },
+        "ball_forward": {
+          "count": 22786,
+          "minimum": -3734.9183164484184,
+          "maximum": 4607.999999999995,
+          "mean": 677.4955449762915,
+          "p50": 314.8410913447724,
+          "p90": 2733.5040634380402,
+          "p95": 3839.0973708337,
+          "p99": 4607.062085836478
+        },
+        "ball_right": {
+          "count": 22786,
+          "minimum": -4382.7563879908685,
+          "maximum": 3686.5910612130156,
+          "mean": 30.74790051719146,
+          "p50": -0.01457116398960423,
+          "p90": 548.0473188867711,
+          "p95": 949.1519472823097,
+          "p99": 2194.7384239257417
+        },
+        "ball_up": {
+          "count": 22786,
+          "minimum": -3387.4745812793944,
+          "maximum": 3923.6737067310814,
+          "mean": 300.2982143235628,
+          "p50": 140.25761479983328,
+          "p90": 918.4343139348007,
+          "p95": 1342.8028496601971,
+          "p99": 2320.3060257693382
+        },
+        "ball_distance": {
+          "count": 22786,
+          "minimum": 0.0,
+          "maximum": 4608.63646083344,
+          "mean": 1278.1611714263818,
+          "p50": 901.1701274052218,
+          "p90": 3219.132578393534,
+          "p95": 3849.2690926415275,
+          "p99": 4608.622413212578
+        },
+        "ball_height": {
+          "count": 22786,
+          "minimum": 0.0,
+          "maximum": 1952.679931640625,
+          "mean": 314.35487778030057,
+          "p50": 151.5399932861328,
+          "p90": 785.5849914550781,
+          "p95": 1203.2599487304688,
+          "p99": 1666.066461181644
+        },
+        "ball_speed": {
+          "count": 22786,
+          "minimum": 0.0,
+          "maximum": 3103.2060696052254,
+          "mean": 887.2352206517455,
+          "p50": 784.323482992221,
+          "p90": 1662.5838744469074,
+          "p95": 1856.5606377687234,
+          "p99": 2539.6379927304997
+        },
+        "ball_spin": {
+          "count": 22786,
+          "minimum": 0.0,
+          "maximum": 6.000011735142542,
+          "mean": 4.235541995293149,
+          "p50": 5.652334897925789,
+          "p90": 5.999970542726722,
+          "p95": 5.999980741797878,
+          "p99": 5.999998098759741
+        },
+        "prediction_horizon": {
+          "count": 22786,
+          "minimum": 1.9911842346191406,
+          "maximum": 2.0004234313964844,
+          "mean": 1.9988854769739937,
+          "p50": 1.99951171875,
+          "p90": 1.99951171875,
+          "p95": 1.999969482421875,
+          "p99": 1.9999704360961914
+        }
+      },
+      "sequences": [
+        {
+          "sequence_id": 1,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 2,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 3,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 3,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 4,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 5,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 6,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 7,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 8,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 9,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 10,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 11,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 12,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 12,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 13,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 14,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 15,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 16,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 17,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 18,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 19,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 20,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Kickoff"
+          ],
+          "jump_callbacks": 5,
+          "dodge_callbacks": 13,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 21,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        },
+        {
+          "sequence_id": 22,
+          "start_seen": true,
+          "completion_seen": true,
+          "consumed_phases": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "pending_match_phases": [
+            "MatchPhase.Active"
+          ],
+          "jump_callbacks": 4,
+          "dodge_callbacks": 14,
+          "missing_pending_callbacks": 0
+        }
+      ],
+      "sequence_starts": 22,
+      "sequence_completions": 22,
+      "complete_sequences_with_all_four_phases": 22,
+      "missing_ball_pending_callbacks": 0,
+      "phase_transitions": 29,
+      "prediction_reuse": 2750,
+      "prediction_valid_callbacks": 22786,
+      "prediction_empty_callbacks": 0,
+      "callback_dt_over_100ms": 0,
+      "record_path_max_seconds": 0.01600000000325963,
+      "integrity": {
+        "raw_verified": true,
+        "tensor_roundtrip_exact": true,
+        "manifest_sha256": "346a46523752b41c94728bca6f2ed622783cfb06b865965da114a12c66c4612b"
+      }
+    }
+  ],
+  "failures": [],
+  "sequence_starts": 250,
+  "sequence_completions": 249,
+  "complete_sequences_with_all_four_phases": 249,
+  "prediction_reuse": 44505,
+  "invalid_eligible_rows": 0,
+  "dropped_processed_eligible_rows": 0,
+  "exact_match_split": {
+    "train": [
+      "pilot_01",
+      "v10_001",
+      "v10_004",
+      "v10_006"
+    ],
+    "validation": [
+      "pilot_02",
+      "v10_002"
+    ],
+    "test": [
+      "pilot_03",
+      "v10_003",
+      "v10_005"
+    ]
+  },
+  "pilot_files_unchanged": 57,
+  "protected_hashes_unchanged": 43,
+  "limitations": [
+    "All figures describe actually processed RLBot callbacks, not lossless transport or undelivered physics ticks.",
+    "Hidden sequence labels are diagnostic only; 18D features/actions remain unchanged. No resampling or rebalancing.",
+    "Opponent and play-session identities are declared by the user, not independently detected."
+  ],
+  "dataset_frozen": false,
+  "training_started": false
+}
