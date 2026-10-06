@@ -2,6 +2,10 @@
 
 The root `.gitadd` file is the project's staging allowlist. It includes the project documentation and the training source, historical text, compact evaluation evidence, and reports under `training/`. It excludes local environments, model weights, and the large diagnostic captures listed in `.gitignore`.
 
+The October research additions keep V0–V16 source, specifications, manifests, integrity hashes and review reports eligible for Git. Raw JSONL trajectories, tensor/array binaries, per-callback evidence, repeated summary publications, preflight output and model checkpoints are ignored. They remain on disk; ignoring them neither deletes them nor removes already-tracked files from Git. Frozen manifests may reference these local artifacts: a source checkout alone does not include the complete dataset or trained weights.
+
+Both `python-example/` and `python-example-original/` are independent repositories and are excluded from root staging. The source-only RocketSim investigation checkout is excluded too. This changes only root repository bookkeeping; neither bot checkout nor its history is modified. `.gitadd` anchors the training path at the repository root; `.gitignore` filters generated output within it. Never use `git add -f` to bypass these exclusions without reviewing the exact files.
+
 From the repository root, preview the exact paths first:
 
 ```powershell

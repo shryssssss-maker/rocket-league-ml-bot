@@ -1,5 +1,10 @@
 # rocket league ml bot
 
+> **Latest update — 7 October 2026**
+> This is an experimental **1v1 Rocket League imitation-learning project**. The current path uses the recovered original Python Example teacher, real Rocket League/RLBot demonstrations, and small neural students. CanoPy and the earlier 2v2 plan were superseded. A dataset is frozen; an accepted final gameplay baseline is **not**. Read the [October continuation](#october-continuation-current-1v1-direction) for V0–V16 results and current work.
+>
+> **Historical reading note:** the original nineteen sections below are preserved intact as the earlier project record. Their “current,” “planned,” and launch instructions refer to that snapshot. The dated continuation supersedes conflicting plans, including older decision-log/component-document wording; it does not authorize rerunning experiments.
+
 ### Rocket League · Machine learning · An overnight student AI competition
 
 **Build a bot that can play. Give every team the same starting point. Leave room to improve.**
@@ -30,6 +35,13 @@ Model Wars is developing a deliberately modest, genuinely ML-driven Rocket Leagu
 17. [Lessons and known limitations](#lessons-and-known-limitations)
 18. [Roadmap](#roadmap)
 19. [Licensing and references](#licensing-and-references)
+20. [October continuation: current 1v1 direction](#october-continuation-current-1v1-direction)
+21. [Recovered teacher and exact contracts](#recovered-teacher-and-exact-contracts)
+22. [V0–V11: validation and frozen demonstrations](#v0v11-validation-and-frozen-demonstrations)
+23. [V12–V13: BC and live student findings](#v12v13-bc-and-live-student-findings)
+24. [V14–V16: temporal objectives and observability](#v14v16-temporal-objectives-and-observability)
+25. [Current evidence limits and next gate](#current-evidence-limits-and-next-gate)
+26. [Research artifacts and Git hygiene](#research-artifacts-and-git-hygiene)
 
 ---
 
@@ -723,5 +735,273 @@ CanoPy's model card declares Apache-2.0, which is positive evidence, but the inv
 | CanoPy findings and source attribution | [Local feasibility report](training/reports/canopy_investigation_20261004_013501/CANOPY_FEASIBILITY_REPORT.md) |
 
 For the complete dated record, including every saved checkpoint and ordinary evaluation report in the historical inventory, read [update.md](update.md). For what the project intends to do next, read [MODEL_WARS_DECISION_LOG.md](MODEL_WARS_DECISION_LOG.md).
+
+[↑ Back to index](#index)
+
+---
+
+## October continuation: current 1v1 direction
+
+**This continuation records the work after the original README snapshot.** We rejected CanoPy as the teaching route because its exact published observation/inference contract could not be established. We recovered the official Python Example bot, verified its behavior in the real game, and moved to **1v1 only**. The older cold-start PPO results remain useful negative evidence.
+
+The event and live student run in **real Rocket League through RLBot**. Actual delivered RLBot `BallPrediction` is authoritative. RocketSim sampling was investigated, but its proposed prediction provider was rejected for production/live use. No RocketSim predictions, timestamp alignment, interpolation or provider blending are part of the current live contract.
+
+```mermaid
+flowchart TB
+    GAME["Real Rocket League · 1v1"] --> LIVE["RLBot packet + actual BallPrediction"]
+    LIVE --> TEACHER["Recovered original teacher"]
+    TEACHER --> DATA["Natural demonstrations<br/>Frozen V10 · 239,205 callbacks"]
+    DATA --> BC["Offline Behavior Cloning<br/>V12: 18D · V13: 13D"]
+    BC --> STUDENT["Experimental student<br/>Real-game validation"]
+    STUDENT --> GAME
+    LIVE --> SHADOW["Independent original shadow teacher<br/>Diagnostic labels only"]
+    STUDENT --> REVIEW["Forensics · temporal boundaries<br/>Representation / observability research"]
+    SHADOW --> REVIEW
+    REVIEW --> GATE["Review before the next experiment"]
+    classDef live fill:#e0f2fe,stroke:#0284c7,color:#0c4a6e;
+    classDef model fill:#ede9fe,stroke:#7c3aed,color:#4c1d95;
+    classDef evidence fill:#dcfce7,stroke:#16a34a,color:#14532d;
+    classDef gate fill:#fef3c7,stroke:#d97706,color:#78350f;
+    class GAME,LIVE live;
+    class TEACHER,BC,STUDENT,SHADOW model;
+    class DATA,REVIEW evidence;
+    class GATE gate;
+```
+
+DAgger was considered as a future method for collecting expert labels on learner-induced states. The live diagnostics exposed a prerequisite problem: a faithful shadow can continue a flip that the learner never started. **No DAgger aggregation/retraining or PPO refinement has followed these diagnostics.** The current work investigates that uncertainty before changing the policy or inputs.
+
+## Recovered teacher and exact contracts
+
+The separate [clean upstream reference](python-example-original/) is pinned to `fd061f457bf19175b4a9b3b3d7811a987044c64d`. The recovered source and the modified `python-example/` shell remain separate and protected. Launch adapters and diagnostics live under `training/`; they do not overwrite either bot directory. See the [source investigation](training/reports/python_example_original_investigation_20261004.md) and [student contract design](training/reports/student_contract_design_20261004.md).
+
+| Teacher behavior | Exact reference behavior |
+|---|---|
+| Target | Current ball; use a two-second prediction when 3D distance is strictly greater than 1,500 UU |
+| Prediction selector | `index = int((elapsed + 2 - first_slice_time) * 120)`; preserve original out-of-range/empty behavior |
+| Normal driving | Full throttle; `steer = clamp(5 * atan2(target_right, target_forward), -1, 1)` |
+| Flip trigger | Strict `750 < car speed < 800` UU/s |
+| Timed maneuver | Jump 0.05 s → release 0.05 s → front dodge 0.20 s → coast 0.80 s; transitions use strict `elapsed > duration` |
+| Memory | Pending sequence survives missing-ball callbacks and ordinary phase transitions as the original does |
+| Unsupported strategy/mechanics | No explicit opponent/defensive/aerial/recovery policy; no boost or handbrake |
+| Timing | Every processed native callback; preserve actual elapsed time and irregular callback gaps |
+
+The original continuous steering is preserved. The old 90-action table cannot exactly express this teacher and is not the BC target. The shared student head predicts four modes—**Neutral, Chase, Jump, Front dodge**—plus continuous Chase steering. The native decoder preserves the eight-channel order:
+
+```text
+throttle, steer, pitch, yaw, roll, jump, boost, handbrake
+```
+
+Yaw and roll remain zero; boost and handbrake remain false throughout the teacher dataset. The four modes specify supported controller combinations rather than eight independently learned arbitrary commands.
+
+### Observation evolution
+
+| Columns | Frozen feature ordering | Representation |
+|---|---|---|
+| 0–2 | `ball_forward`, `ball_right`, `ball_up` | Car-local current-ball displacement / 6,000 |
+| 3–5 | `prediction_forward`, `prediction_right`, `prediction_up` | Car-local selected predicted-ball displacement / 6,000 |
+| 6–7 | `ball_distance`, `car_speed` | 3D distance / 6,000; speed / 2,300 |
+| 8–9 | `ball_present`, `prediction_valid` | Availability masks, 0 or 1 |
+| 10–12 | `prediction_horizon`, `prediction_first_offset`, `callback_dt` | Divide by 2 s, 1/120 s, and 1/60 s respectively |
+| 13–17 | Previous Neutral/Chase/Jump/Dodge one-hot; previous steering | Prior actual teacher callback action in frozen V10 |
+
+The contract uses float32, native car forward/right/up geometry, and no team inversion. V13's versioned **13D projection removes only columns 13–17**. V10's original 18D data remains immutable. Missing-information masks, first-callback history and timing are audited explicitly; no vector truncation or silent padding is used. Teacher-private sequence labels are diagnostic metadata, never GRU inputs.
+
+[↑ Back to index](#index)
+
+## V0–V11: validation and frozen demonstrations
+
+Before BC, we separated action, observation, branch, timing and live-delivery checks into review gates.
+
+| Gate | Investigation and result | Evidence |
+|---|---|---|
+| V0 | Recovered teacher ran live and matched the remembered reference behavior | [Live reference](training/reports/python_example_original_live_validation_reconstructed_20261004.md) |
+| V1 | Four teacher modes and 1,001 continuous Chase steering values; native action round-trip and unsupported-combination checks | [Action transport](training/reports/v1_action_round_trip_20261004.md) |
+| V2 | Exact declared observation features across simulation-style/live-style adapters, including awkward orientations and unavailable information | [Observation parity](training/reports/v2_observation_parity_20261004.md) |
+| V3 | Original-source branch boundaries at distance 1,500 and speed 750/800 | [Branch equivalence](training/reports/v3_source_boundaries_20261004.md) |
+| V4 | Timed sequence equivalence under 1–5-frame gaps and retained/synthetic mixed schedules | [Temporal equivalence](training/reports/v4_temporal_equivalence_20261004.md) |
+| V5 | Missing ball, goal/replay/kickoff, interrupted sequences and long gaps preserve original memory behavior | [Transition memory](training/reports/v5_transition_memory_20261004.md) |
+| V6 | Original selector verified: 1,154 helper cases, 288 teacher cases, six lookup guards; native RocketSim sampling investigated separately | [Selector](training/reports/v6_prediction_selection_20261004.md), [sampling investigation](training/reports/v6_native_sampling_20261004.md) |
+| V7 | Bounded **live-only** snapshot comparison: 115 verified fixtures / 345 eligible snapshots; exact index, timestamp, target and all 18 float32 features; max induced steer difference `5.36e-8` | [Live subset comparison](training/reports/v7_live_subset_comparison_20261004.md) |
+| V8 | 1,374 processed live callbacks; exact native controls, sequence state and prediction selection; zero failures and max analog difference 0 | [Live temporal contract](training/reports/v8_temporal_teacher_equivalence_20261004.md) |
+| V9 | Three natural matches, 96,484 callbacks; clean recorder pilot, but rare-action/opponent/side coverage insufficient for freezing | [Pilot](training/reports/v9_dataset_pilot_20261004.md) |
+| V10 | Nine natural matches, 239,205 callbacks; approved coverage targets met and dataset frozen | [Collection review](training/reports/v10_collection_review_20261005.md), [freeze](training/reports/v10_dataset_freeze_20261005.md) |
+| V11 | All 171 manifest-listed artifacts verified before content reads; shapes, ordering, prior-action causality and match boundaries audited | [Read-only audit](training/reports/v11_frozen_dataset_preprocessing_audit_20261005.md) |
+
+V7 excluded four boost-verification failures and one major corner application failure; requested fixtures alone never counted as coverage. V7 proves adapter/selector equivalence on accepted snapshots, not teacher temporal behavior or cross-provider prediction parity. V8 deliberately paused reception, producing queue-full warnings: its accepted claim is **equivalence on processed callbacks**, not lossless delivery or agreement on unseen physics ticks. V4's mixed schedules do not reconstruct the entire original callback order.
+
+### Frozen V10 reference dataset
+
+Version: **`v10_live_1v1_18d_20261005_v1`**. The [manifest](training/behavior_cloning/datasets/v10_live_1v1_18d_20261005_v1/manifest.json) identifies raw/tensor paths, shapes, ordering, metadata and hashes. Raw and processed artifacts stay separate at their recorded locations.
+
+```text
+Manifest SHA256
+080943fd8f9a81ada800e0a2f9ff3593b67f66d32272211d67030c03cf433a83
+```
+
+| Split | Matches | Callbacks | Completed sequences |
+|---|---|---:|---:|
+| Train | `pilot_01`, `v10_001`, `v10_004`, `v10_006` | 107,400 | 115 |
+| Validation | `pilot_02`, `v10_002` | 47,271 | 42 |
+| Test | `pilot_03`, `v10_003`, `v10_005` | 84,534 | 92 |
+| **Total** | **9 matches** | **239,205** | **249** |
+
+| Mode | Callbacks | Share |
+|---|---:|---:|
+| Chase | 177,174 | 74.0678% |
+| Neutral | 57,564 | 24.0647% |
+| Jump | 1,108 | 0.4632% |
+| Front dodge | 3,359 | 1.4042% |
+
+There were 250 sequence starts and 249 completions, 140,086 near-ball callbacks, 54,614 far-ball callbacks and 44,505 missing-ball callbacks. Excluding the first callback of each match, median dt was approximately **16.663 ms**, p99 **24.994 ms**, and maximum **241.669 ms**. All processed rows were retained; zero invalid/dropped processed rows were reported. Collection/freeze audits preserved the 43 protected source hashes.
+
+**Leakage limitation:** splits are match-disjoint, but not fully opponent/session-disjoint. `human_a` spans train/validation/test. `human_b` appears in **two train matches only**, sharing `human_b_v10_session_01`. `human_c` appears in one test match. Pilot session identities were not separately recorded. This overlap is documented without retrospectively changing records or assignments. Coverage targets are provisional; meeting them is not proof that a model will learn rare maneuvers.
+
+[↑ Back to index](#index)
+
+## V12–V13: BC and live student findings
+
+### V12 — feed-forward versus recurrent BC
+
+[V12](training/reports/v12_bc_architecture_bakeoff_20261005.md) trained an **18→128→64 MLP** (11,013 parameters) and an **18→64→GRU(64)** model (26,501 parameters). Both used four mode logits plus continuous tanh steering, unweighted mode cross-entropy and Chase steering error. Seed 42, Adam `0.001`, up to 20 epochs and validation-based selection were fixed. The GRU carried state chronologically through 512-callback chunks, detached gradients between chunks, and reset hidden state only at match boundaries.
+
+| Final test metric | MLP | GRU |
+|---|---:|---:|
+| Teacher-forced mode accuracy | 99.42% | 99.57% |
+| Student-forced offline mode accuracy | 36.80% | 26.76% |
+| Teacher-forced steering MAE | 0.02411 | 0.02881 |
+| Student-forced steering MAE | 0.32655 | 0.32239 |
+| Student-forced jump-button recall | 0% | 1.80% |
+| Student-forced Front-dodge recall | 0% | 1.60% |
+
+The student-forced diagnostic replaced **only the five previous-action features** with prior decoded student predictions. Recorded physics, prediction and timing stayed fixed. It exposed unstable action-context dependence; it did **not** demonstrate learner-induced physical-state distribution shift. No deployable winner was selected. The test split was evaluated in the final V12 suite and was not reopened for later research tuning.
+
+### V13 — 13D bootstrap and shadow contract
+
+The [V13 context audit](training/reports/v13_context_audit_20261005.md) preceded a fresh seed-42 bootstrap with the exact 13D projection:
+
+```mermaid
+flowchart LR
+    IN["13 physical / prediction / timing features"] --> ENC["Linear 13 → 64<br/>ReLU"]
+    ENC --> GRU["GRU · 64 hidden units<br/>Causal state carried within match"]
+    GRU --> HEAD["Linear 64 → 5"]
+    HEAD --> MODE["4 mode logits"]
+    HEAD --> STEER["Continuous tanh steering"]
+    MODE --> DEC["Validated native decoder"]
+    STEER --> DEC
+    DEC --> OUT["8-channel ControllerState"]
+    classDef input fill:#e0f2fe,stroke:#0284c7,color:#0c4a6e;
+    classDef network fill:#ede9fe,stroke:#7c3aed,color:#4c1d95;
+    classDef output fill:#dcfce7,stroke:#16a34a,color:#14532d;
+    class IN input;
+    class ENC,GRU,HEAD network;
+    class MODE,STEER,DEC,OUT output;
+```
+
+The 26,181-parameter bootstrap achieved **96.23% validation mode accuracy**, **99.46% Chase accuracy**, steering MAE **0.14065**, native jump recall **23.47%**, pure Jump-mode accuracy **4.30%**, Front-dodge recall **27.11%**, and boundary accuracy **48.70%**. It was accepted only as an experimental bootstrap. The two 13D context evaluations agree by construction because previous-action inputs no longer exist; this is not robustness evidence. See the [bootstrap evaluation](training/behavior_cloning/v13_dagger/phase2_bootstrap_v1/evaluation_recovery_v1/report.md).
+
+Phase 3 kept the original teacher as sole live controller while the student and an independent original shadow logged actions. The corrected v2 run had **1,453 unique callbacks**, zero teacher/shadow mismatches, exact native actions/sequence/prediction agreement, and **1,453 verified teacher submissions**. Three real student sequence-start disagreements showed that independent shadow memory continued despite student disagreement. A Windows summary-publication failure in the initial diagnostic was fixed without changing gameplay logic; the v2 report distinguishes processed delivery from unseen ticks. See the [formal shadow report](training/behavior_cloning/v13_dagger/phase3_shadow_v2/sessions/20261005_044629_296920/contract_report.md).
+
+### Student-controlled live pilots and failure forensics
+
+Phase 4 first ran one bounded 90-second natural match with the Orange student and Blue `human_b`. Only student controls reached the game; teacher labels remained quarantined diagnostics. It then ran a separately approved full natural five-minute match, Blue student versus Orange `human_b`, including native replay/countdown/overtime behavior. See the [bounded pilot report](training/behavior_cloning/v13_dagger/phase4_pilot_v1/sessions/20261005_063422_960966/contract_report.md) and [full-match forensics](training/reports/v13_full_match_failure_forensics_20261005.md).
+
+The full match recorded **26,635 callbacks** and a **2–1 student win**, but the forensic evidence showed substantial failures:
+
+- All **33 shadow sequence starts** were missed; only two pure Jump callbacks appeared.
+- Four investigated kickoffs showed sustained jump/pitch and missing release before orientation loss; a Front-dodge output does not establish a valid physical dodge.
+- Inverted and upright Neutral pauses lasted approximately **9.5 s** and **14.0 s**; some orientation recovery episodes exceeded **19–21 s**.
+- **216 shadow Front-dodge labels** occurred while the actual learner car was grounded with `has_jumped=false`. Faithful independent teacher memory can therefore label a maneuver whose prerequisite action the learner did not perform.
+
+The win is not evidence of reliable timing, recovery or starter competence. Shadow disagreement is not an automatic training correction. [Train-only targeted diagnostics](training/reports/v13_targeted_diagnostics_20261005.md) examined causal neighbors around kickoff/recovery anchors without model fitting or validation/test reads. They did not authorize blind label aggregation or a contract change.
+
+[↑ Back to index](#index)
+
+## V14–V16: temporal objectives and observability
+
+### V14 — bounded temporal-boundary objective
+
+[V14 v2](training/reports/v14_temporal_objective_20261005.md) added **0.1 × adjacent-boundary BCE** to V13's original loss, targeting Jump onset, release, Front dodge and coast transitions from adjacent action labels/probabilities. Architecture, 13D inputs, seed, initialization family, optimizer, schedule, decoder and original validation-loss checkpoint selection stayed fixed. The proposed **8× core-phase weighting v1 was documented as an alternative and not run**.
+
+| Validation metric | V13 | V14 v2 |
+|---|---:|---:|
+| Completed timed cores | 0 / 42 | 0 / 42 |
+| Pure Jump-mode accuracy | 4.30% | 3.76% |
+| Boundary mode accuracy | 48.70% | 45.75% |
+| Chase accuracy | 99.46% | 98.76% |
+| Chase steering MAE | 0.14956 | 0.17952 |
+
+The selected epoch was 16. The temporal purpose was unsuccessful; Chase accuracy and steering regression guards failed. Small changes in individual jump/dodge statistics did not justify promotion. No test evaluation, live deployment, DAgger or PPO followed.
+
+### V15 — representation versus temporal-history investigation
+
+[V15](training/reports/v15_representation_investigation_20261006.md) used fixed 32-neighbor diagnostic voting with causal histories of 1, 2, 4, 8 and 16 callbacks. It investigated world-up alignment, angular velocity, prior teacher actions and world position separately. Native maneuver flags were absent from V10 and could not be invented retrospectively.
+
+Boundary accuracy rose **43.57% → 50.25%** from H1 to H16, below the preregistered gain threshold. Prior teacher actions gave strong offline association but failed to establish robustness when learner actions differed. The conclusion was **classification D: inconclusive; perform a focused native-maneuver observability audit**. Finite neighbor histories neither exhaust GRU memory nor prove that the official representation is sufficient/insufficient. No input or architecture was changed.
+
+### V16 — native maneuver-state observability audit
+
+The [isolated V16 protocol](training/behavior_cloning/v16_native_maneuver_audit/protocol.md) and [launch-readiness report](training/behavior_cloning/v16_native_maneuver_audit/launch_readiness_20261006.md) prepare six natural teacher-controlled 1v1 matches. Collection records actual native air/jump/dodge state, timing, direction and packet `last_input` alongside unchanged 13D observations, teacher actions, physical state and submission provenance. Private teacher sequence labels remain diagnostic only. Packet `last_input` is not assumed to equal the previous submitted action.
+
+| Match | Human | Declared play session | Teacher side |
+|---|---|---|---|
+| `v16_001` | `human_a` | `human_a_v10_session_01` | Blue |
+| `v16_002` | `human_b` | `human_b_v10_session_01` | Orange |
+| `v16_003` | `human_c` | `human_c_v10_session_01` | Blue |
+| `v16_004` | `human_a` | `human_a_v10_session_01` | Orange |
+| `v16_005` | `human_b` | `human_b_v10_session_01` | Blue |
+| `v16_006` | `human_c` | `human_c_v10_session_01` | Orange |
+
+**As inspected on 7 October, `v16_001` has launch/collection artifacts; no final V16 scientific report is present.** Collection is in progress, not an accepted result. Remaining match assignments are a plan, not evidence of completed matches. Once collection is complete and reviewed, the fixed leave-one-match-out observability analysis can test longer histories through H64 and native-state groups without policy fitting. No V16 scientific pass, feature adoption or learning improvement is claimed here.
+
+[↑ Back to index](#index)
+
+## Current evidence limits and next gate
+
+```mermaid
+flowchart LR
+    CONTRACT["Teacher/live contracts verified<br/>V0–V8 · scoped"] --> FREEZE["Demonstrations frozen<br/>V9–V11"]
+    FREEZE --> BC["BC tested<br/>V12–V13 · temporal failures"]
+    BC --> LOSS["Temporal loss ablation<br/>V14 · unsuccessful"]
+    LOSS --> OBS["Representation investigation<br/>V15 · inconclusive"]
+    OBS --> NATIVE["V16 native-state audit<br/>Collection / review pending"]
+    NATIVE --> REVIEW["Review evidence<br/>before any policy/input change"]
+    classDef done fill:#dcfce7,stroke:#16a34a,color:#14532d;
+    classDef research fill:#ede9fe,stroke:#7c3aed,color:#4c1d95;
+    classDef pending fill:#fef3c7,stroke:#d97706,color:#78350f;
+    class CONTRACT,FREEZE done;
+    class BC,LOSS,OBS research;
+    class NATIVE,REVIEW pending;
+```
+
+The immediate gate is evidence review from V16, not another automatic training run. Existing policies remain experimental. Dataset freeze and contract passes do not freeze a competent final bot. Match/opponent overlap, rare actions, native delivery gaps, teacher recovery limitations and off-policy maneuver prerequisites remain material constraints. Tournament operations remain parked; PPO refinement and DAgger aggregation require separate decisions.
+
+## Research artifacts and Git hygiene
+
+| Location | Purpose |
+|---|---|
+| `training/live_reference_test/`, `training/v1_*` through `training/v8_*` | Isolated recovery/contract diagnostics |
+| `training/behavior_cloning/pilots/`, `v10/` | Natural demonstrations and collection/freeze tooling |
+| `training/behavior_cloning/datasets/` | Versioned manifests, integrity records and frozen metadata |
+| `training/behavior_cloning/v11/`, `v12/` | Read-only audit and first BC bakeoff |
+| `training/behavior_cloning/v13_dagger/` | Context audit, bootstrap, shadow and live diagnostics; name does not imply DAgger training occurred |
+| `training/behavior_cloning/v14_temporal_objective/` | Approved v2 objective experiment and documented v1 alternative |
+| `training/behavior_cloning/v15_representation_investigation/`, `v16_native_maneuver_audit/` | Diagnostic observability investigations |
+| `training/reports/` | Dated Markdown/JSON evidence and review conclusions |
+
+<details>
+<summary><strong>Experimental checkpoint identities</strong></summary>
+
+| Artifact | SHA256 |
+|---|---|
+| V13 13D bootstrap | `579fa26010140514d2e9b7f0e2871bee569c594b7da8648e31ee1489007cd5b7` |
+| V14 v2 selected checkpoint | `fe25a208d3fedaef02db27481c40b6eb7d771331c67109d9d7e22a29c65fff82` |
+
+Neither checkpoint is an accepted final starter. Per-experiment reports identify configs, sources and selection evidence.
+
+</details>
+
+The root [.gitignore](.gitignore) excludes virtual environments, weights, raw trajectories, tensor/array binaries, repeated diagnostic publications, large callback/neighbor evidence and independent cloned repositories. Source, protocols, manifests, hashes and review reports remain eligible through [.gitadd](.gitadd); [GIT_ADD.md](GIT_ADD.md) explains the dry-run staging workflow. Ignore rules preserve local files and do not untrack files already committed.
+
+Many links above reference local research artifacts that are intentionally excluded from Git, including weights and raw data. A cloned source repository is therefore **not a complete dataset/model distribution**. Reproduction requires the exact manifest-listed external artifacts and pinned teacher checkout, verified by hashes before reads. Frozen artifacts and both bot directories must remain unchanged; a changed dataset or contract requires an explicitly reviewed version.
 
 [↑ Back to index](#index)

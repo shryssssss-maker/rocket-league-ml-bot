@@ -66,3 +66,31 @@ training/logs/reward_scales/
 .DS_Store
 Thumbs.db
 Desktop.ini
+
+# Independent upstream/working checkouts: preserve locally, do not stage as
+# accidental embedded-repository pointers from the root repository.
+/python-example/
+/python-example-original/
+/training/reports/v6_upstream_source_*/
+
+# Real-game trajectories, processed tensors and neighbor-search arrays.
+# Source, protocols, manifests, hashes and compact written reports stay visible.
+/training/**/*.jsonl
+/training/**/*.bin
+/training/**/*.npy
+/training/**/*.npz
+/training/**/*.h5
+/training/**/*.hdf5
+/training/**/*.parquet
+
+# Per-callback/per-publication evidence and generated launch/test configurations.
+/training/**/summary_snapshots/
+/training/**/publication_snapshots/
+/training/**/preflight/
+/training/**/prepared/
+/training/**/*_query_evidence.json
+/training/**/callback_windows.json
+/training/**/history.json
+
+# Failed download attempt and temporary diagnostic benchmark output.
+/training/reports/v6_upstream_source_/
